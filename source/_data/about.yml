@@ -13,7 +13,7 @@
       - 团队小组发动机 🧱
       - 壮汉人狠话不多 💢
   name: 顾锦涛
-  description: 是一名 全栈工程师、独立开发者
+  description: 是一名 独立开发者
   aboutsiteTips:
     tips: 追求
     title1: 源于
@@ -23,7 +23,7 @@
       - 工作
       - 生活
       - 旅游
-  helloAbout: HelloWorld!
+  helloAbout: Hello,World!
   skillsTips:
     tips: 技能
     title: 开启创造力
@@ -41,8 +41,8 @@
   map:
     title: 我现在住在
     StrengthenTitle: 中国，上海
-    background: https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg
-    backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+    background: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/shanghai.png?raw=true
+    backgroundDark: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/shanghai.png?raw=true
   selfInfo:
     selfInfoTips1: 生于
     selfInfoContentYear: 2001
@@ -53,7 +53,7 @@
   personalities:
     author_name: 执政官
     personality_type: ESFJ-A
-    photo_url: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+    photo_url: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao2.JPG?raw=true
     personality_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:
