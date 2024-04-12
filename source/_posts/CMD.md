@@ -2,7 +2,7 @@
 title: "CMD"
 date: 2023-11-25
 description: "Windows命令提示符"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage77.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage77.jpg?raw=true
 tags: ["Terminal"]
 category: "学习笔记"
 updated: 2023-11-25

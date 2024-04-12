@@ -2,7 +2,7 @@
 title: "Math"
 date: 2024-01-15
 description: "获取绝对值、向上/下取整、四舍五入、获取两个整数的较大/小值、返回a的b次幂、返回a的平/立方根、获取一个范围在[0,1.0)的随机数"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage95.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage95.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
 updated: 2024-01-15

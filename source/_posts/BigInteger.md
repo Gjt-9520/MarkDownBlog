@@ -2,7 +2,7 @@
 title: "BigInteger"
 date: 2024-01-19
 description: "构造方法(获取随机大整数、获取指定的大整数、获取指定进制的大整数、静态方法获取BigInteger的对象)、成员方法(加法、减法、乘法、除法,获取商和余数、比较是否相同、次幂、返回较大/小值、转为int类型整数)、底层原理"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage76.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage76.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
 updated: 2024-01-19

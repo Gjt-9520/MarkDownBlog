@@ -2,7 +2,7 @@
 title: "Vim"
 date: 2023-12-01
 description: "终端修改文件内容"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage101.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage101.jpg?raw=true
 tags: ["Terminal"]
 category: "学习笔记"
 updated: 2023-12-01

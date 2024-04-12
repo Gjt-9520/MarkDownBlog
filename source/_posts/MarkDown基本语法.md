@@ -2,7 +2,7 @@
 title: "MarkDown基本语法"
 date: 2023-11-26
 description: ""
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage93.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage93.jpg?raw=true
 tags: ["MarkDown"]
 category: "学习笔记"
 updated: 2023-11-26

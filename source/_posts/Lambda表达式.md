@@ -2,7 +2,7 @@
 title: "Lambda表达式"
 date: 2024-03-01
 description: "函数式编程、格式、好处、省略写法"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage89.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage89.jpg?raw=true
 tags: ["Java基础"]
 category: "学习笔记"
 updated: 2024-03-01

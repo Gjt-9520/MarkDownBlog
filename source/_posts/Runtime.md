@@ -2,7 +2,7 @@
 title: "Runtime"
 date: 2024-01-17
 description: "获取当前系统的运行环境对象、停止JVM、获得CPU的线程数、JVM能从/已经从系统中获取的总内存大小、JVM剩余内存大小、运行CMD命令"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage97.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage97.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
 updated: 2024-01-17

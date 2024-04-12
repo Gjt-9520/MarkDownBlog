@@ -2,7 +2,7 @@
 title: "BigDecimal"
 date: 2024-01-20
 description: "构造方法(通过传递double类型的小数来创建BigDecimal对象、通过传递字符串来创建BigDecimal对象)、成员方法(加法、减法、乘法、除法)、底层原理"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage75.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage75.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
 updated: 2024-01-20

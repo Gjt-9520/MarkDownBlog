@@ -2,7 +2,7 @@
 title: "ASCII码表"
 date: 2023-11-28
 description: "可显示字符、控制字符"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage74.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage74.jpg?raw=true
 tags: ["ASCII"]
 category: "学习笔记"
 updated: 2023-11-28

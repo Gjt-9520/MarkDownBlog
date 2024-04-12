@@ -2,7 +2,7 @@
 title: "Arrays"
 date: 2024-02-29
 description: "把数组拼接成一个字符串、二分查找法查找元素、拷贝数组(指定范围)、填充数组、按照默认方式/指定的规则进行数组排序"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage73.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage73.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
 updated: 2024-02-29

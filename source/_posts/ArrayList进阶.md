@@ -2,7 +2,7 @@
 title: "ArrayList进阶"
 date: 2024-03-14
 description: "底层原理、底层源码分析"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage72.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage72.jpg?raw=true
 tags: ["Java进阶","集合"]
 category: "学习笔记"
 updated: 2024-03-14

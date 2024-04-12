@@ -2,7 +2,7 @@
 title: "Collection"
 date: 2024-03-03
 description: "集合体系结构、常用方法(添加、清空、删除、判断是否包含给定的对象、判断集合是否为空、返回集合长度)、遍历方式(迭代器遍历、增强for遍历、Lambda表达式遍历)"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage78.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage78.jpg?raw=true
 tags: ["Java进阶","集合"]
 category: "学习笔记"
 updated: 2024-03-03

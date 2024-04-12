@@ -2,7 +2,7 @@
 title: "Java项目打包"
 date: 2024-01-14
 description: "将java项目打包成exe安装包,安装exe后,在无需安装JDK的情况下也能运行java项目"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage86.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage86.jpg?raw=true
 tags: ["打包"]
 category: "学习笔记"
 updated: 2024-01-14

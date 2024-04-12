@@ -2,7 +2,7 @@
 title: "JDK API"
 date: 2023-12-28
 description: ""
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage87.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage87.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
 updated: 2023-12-28

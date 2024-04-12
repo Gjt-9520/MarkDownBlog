@@ -2,7 +2,7 @@
 title: "int与String之间的转换"
 date: 2023-12-31
 description: "int、double、float、Long与String之间的转换"
-cover: https://github.com/Gjt-9520/ImageResources/blob/main/photos/original/Ximage83.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage83.jpg?raw=true
 tags: ["类型转换"]
 category: "学习笔记"
 updated: "int与String之间的转换"
