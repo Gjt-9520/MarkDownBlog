@@ -1,12 +1,6 @@
-menu:
-  文章:
-    归档: /archives/ || anzhiyu-icon-box-archive
-    分类: /categories/ || anzhiyu-icon-shapes
-    标签: /tags/ || anzhiyu-icon-tags
-  
-  常用:
-    网站: /link/ || anzhiyu-icon-link
-    相册: /album/ || anzhiyu-icon-images
+# menu:
+  # 常用:
+  #   网站: /link/ || anzhiyu-icon-link
   
   # 文章:
   #   隧道: /archives/ || anzhiyu-icon-box-archive
@@ -35,11 +29,18 @@ nav:
   travelling: false
   clock: false
   menu:
-    - title: 项目
+    - title: 功能
       item:
+        - name: 友链
+          link: /link/
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/link.png?raw=true
+        - name: 相册
+          link: /album/
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
         - name: 图床
           link: https://image-resources-gjt.vercel.app/
           icon: https://raw.githubusercontent.com/Gjt-9520/ImageResources/main/favicon.ico
+
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -799,7 +800,6 @@ aside:
     enable: true
     description: <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这里有关于<b style="color:#fff">学习编程、项目开发</b>相关的话题和看法，还有<b style="color:#fff">心得</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
     name_link: /about/
-
   card_announcement:
     enable: false
     content: 欢迎来看我的博客鸭~
@@ -965,7 +965,7 @@ note:
 
 icons:
   ali_iconfont_js: # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
-  fontawesome: false #是否启用fontawesome6图标
+  fontawesome: true #是否启用fontawesome6图标
   fontawesome_animation_css: #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css
 
 # other
