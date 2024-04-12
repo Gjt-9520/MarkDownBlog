@@ -1130,8 +1130,8 @@ visitorMail:
 
 # ptool 文章底部工具
 ptool:
-  enable: true
-  share_mobile: true
+  enable: false
+  share_mobile: false
   share_weibo: false
   share_copyurl: true
   categories: false # 是否显示分类
