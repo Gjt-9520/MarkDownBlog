@@ -16,7 +16,7 @@ if home_top_config.enable
 
           a#random-hover(href='javascript:toRandomPost()')
             i.anzhiyufont.anzhiyu-icon-paper-plane
-            .bannerText 随便逛逛
+            .bannerText 随机文章
               i.anzhiyufont.anzhiyu-icon-arrow-right
         .categoryGroup
           each item in home_top_config.category
@@ -91,7 +91,7 @@ if home_top_config.enable
             .banner-button-group
               .banner-button(onclick='event.stopPropagation();event.preventDefault();anzhiyu.hideTodayCard();')
                 i.anzhiyufont.anzhiyu-icon-arrow-circle-right
-                span.banner-button-text 更多推荐
+                span.banner-button-text 文章推荐
         
         link(rel="stylesheet", href=theme.home_top.banner.top_group_banner_css)
       

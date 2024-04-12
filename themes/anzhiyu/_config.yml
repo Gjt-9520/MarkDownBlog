@@ -29,7 +29,7 @@ nav:
   travelling: false
   clock: false
   menu:
-    - title: 功能
+    - title: 菜单
       item:
         - name: 友链
           link: /link/
