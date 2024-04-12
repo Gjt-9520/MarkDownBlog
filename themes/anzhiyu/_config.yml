@@ -4,9 +4,10 @@ menu:
     分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
   
-  我的:
-    友链: /link/ || anzhiyu-icon-link
+  常用:
+    网站: /link/ || anzhiyu-icon-link
     相册: /album/ || anzhiyu-icon-images
+    关于: /about/ || anzhiyu-icon-paper-plane
   
   # 文章:
   #   隧道: /archives/ || anzhiyu-icon-box-archive
@@ -140,11 +141,11 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: https://github.com/Gjt-9520/ImageResources/blob/main/blog_resources/img/taiyang.png?raw=true
+favicon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/taiyang.png?raw=true
 
 # Avatar (头像)
 avatar:
-  img: https://github.com/Gjt-9520/ImageResources/blob/main/blog_resources/img/gujintao.png?raw=true
+  img: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao.png?raw=true
   effect: false
 
 # Disable all banner image
@@ -750,7 +751,7 @@ hr_icon:
 
 # the subtitle on homepage (主页subtitle)
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect (打字效果)
   effect: true
   # Effect Speed Options (打字效果速度参数)
@@ -780,7 +781,7 @@ preloader:
   source: 1
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://github.com/Gjt-9520/ImageResources/blob/main/blog_resources/img/taiyang.png?raw=true # 自定加载动画义头像
+  avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/taiyang.png?raw=true # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
