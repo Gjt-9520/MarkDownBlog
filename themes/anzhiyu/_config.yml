@@ -1,15 +1,21 @@
 menu:
+  归档: /archives/ || anzhiyu-icon-box-archive
+  分类: /categories/ || anzhiyu-icon-shapes
+  标签: /tags/ || anzhiyu-icon-tags
+  友链: /link/ || anzhiyu-icon-link
+  相册: /album/ || anzhiyu-icon-images
+  
   # 文章:
   #   隧道: /archives/ || anzhiyu-icon-box-archive
   #   分类: /categories/ || anzhiyu-icon-shapes
   #   标签: /tags/ || anzhiyu-icon-tags
 
-  友链: /link/ || anzhiyu-icon-link
+  # 友链:
   #   友人帐: /link/ || anzhiyu-icon-link
   #   朋友圈: /fcircle/ || anzhiyu-icon-artstation
   #   留言板: /comments/ || anzhiyu-icon-envelope
 
-  相册: /album/ || anzhiyu-icon-images
+  # 我的:
   #   音乐馆: /music/ || anzhiyu-icon-music
   #   追番页: /bangumis/ || anzhiyu-icon-bilibili
   #   相册集: /album/ || anzhiyu-icon-images
