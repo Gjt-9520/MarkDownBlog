@@ -1,9 +1,12 @@
 menu:
-  归档: /archives/ || anzhiyu-icon-box-archive
-  分类: /categories/ || anzhiyu-icon-shapes
-  标签: /tags/ || anzhiyu-icon-tags
-  友链: /link/ || anzhiyu-icon-link
-  相册: /album/ || anzhiyu-icon-images
+  文章:
+    归档: /archives/ || anzhiyu-icon-box-archive
+    分类: /categories/ || anzhiyu-icon-shapes
+    标签: /tags/ || anzhiyu-icon-tags
+  
+  我的:
+    友链: /link/ || anzhiyu-icon-link
+    相册: /album/ || anzhiyu-icon-images
   
   # 文章:
   #   隧道: /archives/ || anzhiyu-icon-box-archive
@@ -28,7 +31,7 @@ menu:
 
 # nav相关配置
 nav:
-  enable: false
+  enable: true
   travelling: false
   clock: false
   menu:

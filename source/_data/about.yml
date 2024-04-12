@@ -1,6 +1,6 @@
 - class_name: 关于页
-  subtitle: 生活明朗，万物可爱✨
-  avatarImg: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.0/img/avatar.webp
+  subtitle: 生命不息,探索不止!
+  avatarImg: https://github.com/Gjt-9520/ImageResources/blob/main/blog_resources/img/gujintao.png?raw=true
   avatarSkills:
     left:
       - 🤖️ 数码科技爱好者
@@ -12,7 +12,7 @@
       - 脚踏实地行动派 🏃
       - 团队小组发动机 🧱
       - 壮汉人狠话不多 💢
-  name: 陈志伟
+  name: 顾锦涛
   description: 是一名 前端工程师、学生、独立开发者、博主
   aboutsiteTips:
     tips: 追求
@@ -23,7 +23,7 @@
       - 生活
       - 程序
       - 体验
-  helloAbout: Hello there!
+  helloAbout: HelloWorld!
   skillsTips:
     tips: 技能
     title: 开启创造力
@@ -31,11 +31,11 @@
     tips: 生涯
     title: 无限进步
     list:
-      - desc: EDU,软件工程专业
+      - desc: CST,计算机科学与技术专业
         color: "#357ef5"
-      - desc: EDU,软件工程专业
+      - desc: CST,计算机科学与技术专业
         color: "#357ef5"
-      - desc: EDU,软件工程专业
+      - desc: CST,计算机科学与技术专业
         color: "#357ef5"
     img: https://bu.dusays.com/2023/04/21/644287166329b.png
   statistic:
@@ -44,16 +44,16 @@
     cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
   map:
     title: 我现在住在
-    StrengthenTitle: 中国，长沙市
+    StrengthenTitle: 中国，上海
     background: https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg
     backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
   selfInfo:
     selfInfoTips1: 生于
-    selfInfoContentYear: 2002
-    selfInfoTips2: 湖南信息学院
-    selfInfoContent2: 软件工程
+    selfInfoContentYear: 2001
+    selfInfoTips2: 常州大学
+    selfInfoContent2: 计算机科学与技术
     selfInfoTips3: 现在职业
-    selfInfoContent3: 大三学生👨‍🎓
+    selfInfoContent3: 码农
   personalities:
     author_name: 执政官
     personality_type: ESFJ-A
@@ -62,8 +62,8 @@
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:
     maxim_tips: 座右铭
-    maxim_top: 生活明朗，
-    maxim_bottom: 万物可爱。
+    maxim_top: 生命不息，
+    maxim_bottom: 探索不止!
   buff:
     buff_tips: 特长
     buff_top: 脑回路新奇的 酸菜鱼
