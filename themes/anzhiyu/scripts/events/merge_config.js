@@ -125,7 +125,7 @@ hexo.extend.filter.register(
       footer: {
         owner: {
           enable: true,
-          since: 2020,
+          since: 2023,
         },
         custom_text: null,
         runtime: {

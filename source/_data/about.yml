@@ -13,16 +13,16 @@
       - 团队小组发动机 🧱
       - 壮汉人狠话不多 💢
   name: 顾锦涛
-  description: 是一名 前端工程师、学生、独立开发者、博主
+  description: 是一名 全栈工程师、独立开发者
   aboutsiteTips:
     tips: 追求
     title1: 源于
     title2: 热爱而去 感受
     word:
       - 学习
+      - 工作
       - 生活
-      - 程序
-      - 体验
+      - 旅游
   helloAbout: HelloWorld!
   skillsTips:
     tips: 技能
@@ -31,10 +31,6 @@
     tips: 生涯
     title: 无限进步
     list:
-      - desc: CST,计算机科学与技术专业
-        color: "#357ef5"
-      - desc: CST,计算机科学与技术专业
-        color: "#357ef5"
       - desc: CST,计算机科学与技术专业
         color: "#357ef5"
     img: https://bu.dusays.com/2023/04/21/644287166329b.png
