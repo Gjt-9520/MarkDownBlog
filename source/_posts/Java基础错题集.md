@@ -6,6 +6,8 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage85.jpg?ra
 tags: ["Java基础","练习"]
 category: "学习笔记"
 updated: 2023-12-17
+swiper_index: 1
+top_group_index: 1
 ---
 
 ## 回文数
