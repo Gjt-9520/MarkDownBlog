@@ -7,7 +7,6 @@ menu:
   常用:
     网站: /link/ || anzhiyu-icon-link
     相册: /album/ || anzhiyu-icon-images
-    关于: /about/ || anzhiyu-icon-paper-plane
   
   # 文章:
   #   隧道: /archives/ || anzhiyu-icon-box-archive
@@ -171,14 +170,14 @@ cover:
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/404.gif?raw=true
+  post_page: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/404.gif?raw=true
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: "请尝试站内搜索寻找文章"
-  background: https://bu.dusays.com/2023/05/08/645907596997d.gif
+  background: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/404.gif?raw=true
 
 post_meta:
   page: # Home Page
@@ -1067,7 +1066,7 @@ home_top:
   banner:
     tips: 
     title: 图床
-    image: https://github.com/Gjt-9520/ImageResources/blob/main/blog_resources/a4fe61d0-ec6f-11ea-acfd-5ab503a75443_converted.gif?raw=true
+    image: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image_resource.gif?raw=true
     link: https://image-resources-gjt.vercel.app/
 
 # 朋友圈配置
