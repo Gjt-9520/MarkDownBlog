@@ -36,7 +36,7 @@
     img: https://bu.dusays.com/2023/04/21/644287166329b.png
   statistic:
     link: /archives
-    text: 文章隧道
+    text: 文章总览
     cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
   map:
     title: 我现在住在
@@ -49,13 +49,13 @@
     selfInfoTips2: 常州大学
     selfInfoContent2: 计算机科学与技术
     selfInfoTips3: 现在职业
-    selfInfoContent3: 码农
+    selfInfoContent3: 独立开发者
   personalities:
-    author_name: 执政官
-    personality_type: ESFJ-A
+    author_name: 主人公
+    personality_type: ENFJ-A / ENFJ-T
     photo_url: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao2.JPG?raw=true
-    personality_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg
-    name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
+    personality_img: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/ENFJ_male.png?raw=true
+    name_url: https://www.16personalities.com/ch/enfj-%E4%BA%BA%E6%A0%BC
   maxim:
     maxim_tips: 座右铭
     maxim_top: 生命不息，
