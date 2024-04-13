@@ -3,8 +3,8 @@
     #flink-banners
       .banner-top-box
         .flink-banners-title
-          .banners-title-small 友情链接
-          .banners-title-big=theme.linkPageTop ? theme.linkPageTop.title : "与数百名博主无限进步"
+          .banners-title-small 
+          .banners-title-big=theme.linkPageTop ? theme.linkPageTop.title : "无限进步"
         .banner-button-group
           if (theme.friends_vue.apiurl)
             a.banner-button.secondary.no-text-decoration(onclick="friendChainRandomTransmission()")
@@ -36,15 +36,15 @@
                       img.no-lightbox(title=evenNum[index].name, src=url_for(evenNumAvatar + hundredSuffix) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=evenNum[index].name)
                     a.tags-group-icon.no-text-decoration(href=url_for(oddNum[index].link), title=oddNum[index].name)
                       img.no-lightbox(title=oddNum[index].name, src=url_for(oddNumAvatar + hundredSuffix) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=oddNum[index].name)
-  .title-h2-a
-    .title-h2-a-left
-      h2(style='padding-top:0;margin:.6rem 0 .6rem') 🎣 钓鱼
-      a.random-post-start.no-text-decoration(href='javascript:fetchRandomPost();')
-        i.anzhiyufont.anzhiyu-icon-arrow-rotate-right
-    .title-h2-a-right
-      a.random-post-all.no-text-decoration(href='/link/') 全部友链
-  #random-post
-  script(defer data-pjax src=url_for(theme.asset.random_friends_post_js))
+  //- .title-h2-a
+  //-   .title-h2-a-left
+  //-     h2(style='padding-top:0;margin:.6rem 0 .6rem') 🎣 钓鱼
+  //-     a.random-post-start.no-text-decoration(href='javascript:fetchRandomPost();')
+  //-       i.anzhiyufont.anzhiyu-icon-arrow-rotate-right
+  //-   .title-h2-a-right
+  //-     a.random-post-all.no-text-decoration(href='/link/') 全部友链
+  //- #random-post
+  //- script(defer data-pjax src=url_for(theme.asset.random_friends_post_js))
   
   .flink
     if site.data.link
