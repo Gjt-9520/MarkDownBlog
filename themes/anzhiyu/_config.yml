@@ -31,15 +31,15 @@ nav:
   menu:
     - title: 菜单
       item:
-        - name: 关于
-          link: /about/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
+        # - name: 关于
+        #   link: /about/
+        #   icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
         - name: 友链
           link: /link/
           icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/link.png?raw=true
-        - name: 相册
-          link: /album/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
+        # - name: 相册
+        #   link: /album/
+        #   icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
         - name: 图床
           link: https://image-resources-gjt.vercel.app/
           icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image.png?raw=true
