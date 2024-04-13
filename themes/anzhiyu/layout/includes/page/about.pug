@@ -6,10 +6,6 @@ if site.data.about
     - let aboutName = item.name || theme.author
     - let aboutDescription = item.description || config.description
     - let helloAbout = item.helloAbout
-    //- - let skillsTips = item.skillsTips
-    //- - let careers = item.careers
-    //- - let crrList = careers.list
-    //- - let crrItem = careers.item
     - let avatarSkills = item.avatarSkills
     #about-page
       .author-box
@@ -27,7 +23,7 @@ if site.data.about
       //- p.p.center.small=subtitle
       .author-content
         .author-content-item.myInfoAndSayHello
-          .title1 你好，很高兴认识你
+          .title1 你好 很高兴认识你
           .title2
             | 我叫 
             span.inline-word=aboutName
@@ -56,39 +52,6 @@ if site.data.about
           .shape.shape-3(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
         .content
           h1=helloAbout
-      
-      //- .author-content
-      //-   .author-content-item.skills
-      //-     .card-content
-      //-       .author-content-item-tips=skillsTips.tips
-      //-       span.author-content-item-title=skillsTips.title
-      //-       .skills-style-group
-      //-         include ../anzhiyu/tags-group-all.pug
-      //-         if site.data.creativity
-      //-           .skills-list
-      //-             each i in site.data.creativity
-      //-               each item, index in i.creativity_list
-      //-                 .skill-info
-      //-                   .skill-icon(style=`background: ${item.color}`)
-      //-                     img.no-lightbox(title=item.name, src=item.icon, alt=item.name)
-      //-                   .skill-name
-      //-                     span=item.name 
-      //-             .etc ...
-        
-        //- .author-content-item.careers
-        //-   .card-content
-        //-     .author-content-item-tips=careers.tips
-        //-     span.author-content-item-title=careers.title
-        //-     .careers-group
-        //-       if crrList
-        //-         each career in crrList
-        //-           .career-item
-        //-             .circle(style=`background:${career.color ? career.color : "#357ef5"}`)
-        //-             .name=career.desc
-        //-       else
-        //-         .careers-none
-        //-     if careers.img
-        //-       img.author-content-img.no-lightbox(alt=careers.tips, src=url_for(careers.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'`)
       
       .author-content
         if theme.LA.enable
@@ -174,15 +137,6 @@ if site.data.about
             i.anzhiyufont.anzhiyu-icon-dice-d20
 
       .author-content
-        - let {game_tips, game_title, game_bg} = item.game
-        .author-content-item.game-yuanshen(style=`background: url(${game_bg}) top / cover no-repeat;`)
-          .card-content
-            .author-content-item-tips=game_tips
-            span.author-content-item-title=game_title
-            .content-bottom
-              .icon-group
-                .loading-bar(role='presentation', aria-hidden='true' style=`${game_title != "原神" ? "display: none": ""}`)
- 
         .author-content-item.comic-content
           .card-content
             - let {comic_tips, comic_title, comic_list} = item.comic
@@ -195,27 +149,6 @@ if site.data.about
                     .comic-item-cover
                       img(src=i.cover, alt=i.name)
       
-      //- .author-content
-      //-   - let {music_tips, music_title, music_link, music_bg} = item.music
-      //-   - let {like_tips, like_title, like_bottom, like_bg} = item.like
-      //-   .author-content-item.like-technology(style=`background: url(${like_bg}) top / cover no-repeat;`)
-      //-     .card-content
-      //-       .author-content-item-tips=like_tips
-      //-       span.author-content-item-title=like_title
-      //-       .content-bottom
-      //-         .tips=like_bottom
-      //-   .author-content-item.like-music(style=`background: url(${music_bg}) top / cover no-repeat;`)
-      //-     .card-content
-      //-       .author-content-item-tips=music_tips
-      //-       span.author-content-item-title=music_title
-      //-       .content-bottom
-      //-         .tips=`跟 ${aboutName} 一起欣赏更多音乐`
-      //-       .banner-button-group
-      //-         a.banner-button(onclick=`pjax.loadUrl("${music_link}")`)
-      //-           i.anzhiyufont.anzhiyu-icon-arrow-circle-right
-      //-           |  
-      //-           span.banner-button-text 更多推荐
-
       if page.content
         .author-content
           .create-site-post.author-content-item.single
