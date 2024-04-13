@@ -1,6 +1,6 @@
 - class_name: 关于页
   subtitle: 生命不息,探索不止!
-  avatarImg: https://github.com/Gjt-9520/ImageResources/blob/main/blog_resources/img/gujintao.png?raw=true
+  avatarImg: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao.png?raw=true
   avatarSkills:
     left:
       - 🤖️ 数码科技爱好者
@@ -23,7 +23,7 @@
       - 工作
       - 生活
       - 旅游
-  helloAbout: Hello,World!
+  helloAbout: Hello World
   skillsTips:
     tips: 技能
     title: 开启创造力
