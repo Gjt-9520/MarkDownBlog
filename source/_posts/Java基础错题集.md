@@ -13,7 +13,7 @@ top_group_index: 1
 ## 回文数
 
 回文数是指正序(从左向右)和倒序(从右向左)读都是一样的整数    
-输入一个整数,如果是回文数,打印`true`;否则,打印`false`     
+输入一个整数,如果是回文数,打印true;否则,打印false     
 
 ```java
 import java.util.Scanner;
@@ -81,7 +81,7 @@ public class test {
 
 2. 方法二    
 当一个数第一次被比自己小的数（不包含1）整除成功后，就可以立刻判断出这个数不是质数   
-即使用`break`跳出循环   
+即使用break跳出循环   
 
 ```java
 import java.util.Scanner; 
@@ -153,7 +153,7 @@ public class test {
 ```
 
 4. 方法四  
-如果x`%`2不等于0,那么x`%`(2的倍数)一定也不为0   
+如果x%2不等于0,那么x%(2的倍数)一定也不为0   
 即只需要判断一个数是否能被小于它的质数除尽即可    
 
 ## 数组元素依次从大到小打印
@@ -1100,9 +1100,9 @@ public class test {
 
 ## 判断年份是闰年还是平年
 
-二月有29天是闰年,一年有366天是闰年,用`JDK7`和`JDK8`两种方式完成
+二月有29天是闰年,一年有366天是闰年,用JDK7和JDK8两种方式完成
 
-1. `JDK7`: 
+1. JDK7: 
 
 ```java
 import java.util.Calendar;
@@ -1132,7 +1132,7 @@ public class Test {
 }
 ```
 
-2. `JDK8`:  
+2. JDK8:  
 
 ```java
 import java.time.LocalDate;

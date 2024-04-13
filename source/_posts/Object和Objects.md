@@ -10,8 +10,8 @@ updated: 2024-01-18
 
 ## Object
 
-`Object`是`Java`中的顶级父类,所有的类都直接或间接的继承于`Object`类    
-`Object`类中的方法可以被所有子类访问   
+Object是Java中的顶级父类,所有的类都直接或间接的继承于Object类    
+Object类中的方法可以被所有子类访问   
 
 ### 构造方法
 
@@ -25,7 +25,7 @@ updated: 2024-01-18
 
 返回对象的字符串表示形式: `包名 + @ + 地址值`
 
-**如果想要看到对象的属性值,重写父类`Object`类中的`toString`方法,在重写的方法中把对象的属性值进行拼接**
+**如果想要看到对象的属性值,重写父类Object类中的toString方法,在重写的方法中把对象的属性值进行拼接**
 
 范例: 
 
@@ -84,11 +84,11 @@ public class Test {
 - `System.out`: 获取打印的对象
 - `prinln()`: 方法   
 
-**核心逻辑**: 当打印一个对象的时候,底层会调用对象的`toString`方法   
+**核心逻辑**: 当打印一个对象的时候,底层会调用对象的toString方法   
 把对象变成字符串,然后再打印在控制台上,打印完毕换行处理    
 
-思考: 默认情况下,`toString`方法返回的是地址值,但是地址值对于我们无意义,想要看到对象的属性值,怎么办?    
-**处理方案**:  重写父类`Object`类中的`toString`方法
+思考: 默认情况下,toString方法返回的是地址值,但是地址值对于我们无意义,想要看到对象的属性值,怎么办?    
+**处理方案**:  重写父类Object类中的toString方法
 
 范例:    
 
@@ -145,7 +145,7 @@ public class Test {
 
 比较两个对象(默认: 比较两个对象的地址值)是否相等
 
-**如果想要比较对象的属性值,重写父类`Object`类中的`equals`方法,在重写的方法中把对象的属性值进行比较**
+**如果想要比较对象的属性值,重写父类Object类中的equals方法,在重写的方法中把对象的属性值进行比较**
 
 范例: 
 
@@ -199,11 +199,11 @@ public class Test {
 }
 ```
 
-如果`equals`方法不能满足需求,可以重写`equals`方法    
+如果equals方法不能满足需求,可以重写equals方法    
 
-快速重写`equals`方法:     
+快速重写equals方法:     
 快捷键`alt + insert`选择`equals()和hashCode()`   
-**重写之后的`equals`方法,比较的就是对象内部的属性值**
+**重写之后的equals方法,比较的就是对象内部的属性值**
 
 范例: 
 
@@ -296,8 +296,8 @@ public class Test {
 对象克隆: 把A对象里的属性值完全拷贝给B对象,也叫对象拷贝/对象复制
 
 步骤:    
-1. 重写`Object`类中的`clone`方法     
-2. JavaBean类需要实现`Cloneable`接口      
+1. 重写Object类中的clone方法     
+2. JavaBean类需要实现Cloneable接口      
 3. 创建原对象并调用原方法      
 
 范例: 
@@ -589,14 +589,14 @@ public class Test {
 ```
 
 细节:      
-1. 方法的底层先判断student1是否为空,如果student1为空,直接返回`false`     
-2. 如果student1不为空,则利用student1再次调用`equals`方法     
-3. 此时的student1是`Student`类型,即最终会调用`Student`类中的`equals`方法     
-4. `Student`类中的`equals`方法: 如果没有重写,比较两者的地址值; 如果重写了,比较两者内部的属性值       
+1. 方法的底层先判断student1是否为空,如果student1为空,直接返回false     
+2. 如果student1不为空,则利用student1再次调用equals方法     
+3. 此时的student1是`Student`类型,即最终会调用`Student`类中的equals方法     
+4. `Student`类中的equals方法: 如果没有重写,比较两者的地址值; 如果重写了,比较两者内部的属性值       
 
 #### `Objects.isNull(Object o)`
 
-判断对象是否为空: 为空返回`true`; 不为空返回`false`    
+判断对象是否为空: 为空返回true; 不为空返回false    
 
 范例:            
 
@@ -616,7 +616,7 @@ public class Test {
 
 #### `Objects.nonNull(Object o)`    
 
-判断对象是否为空: 不为空返回`true`; 为空返回`false`      
+判断对象是否为空: 不为空返回true; 为空返回false      
 
 范例:            
 

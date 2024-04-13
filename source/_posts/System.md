@@ -18,11 +18,11 @@ updated: 2024-01-16
 
 #### `System.exit(int status)`
 
-终止`JVM`   
+终止JVM   
 
 `status`: 状态码     
-0: 表示当前`JVM`是正常停止   
-非0: 表示当前`JVM`是异常停止   
+0: 表示当前JVM是正常停止   
+非0: 表示当前JVM是异常停止   
 
 范例: 
 

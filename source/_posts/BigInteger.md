@@ -10,12 +10,12 @@ updated: 2024-01-19
 
 ## BigInteger
 
-在`Java`中,整数有四种类型: `byte`、`short`、`int`、`long`    
+在Java中,整数有四种类型: `byte`、`short`、int、`long`    
 
 在底层中占用字节个数:      
 - `byte` -- 1个字节   
 - `short` -- 2个字节   
-- `int` -- 4个字节    
+- int -- 4个字节    
 - `long` -- 8个字节    
 
 `BigInteger`表示的范围更大
@@ -48,7 +48,7 @@ public class Test {
 
 #### `BigInteger(int num,Random rnd)`
 
-获取随机大整数,范围: [0 ~ $2^n$ - 1]
+获取随机大整数,范围: [0 ~ 2^n - 1]
 
 范例:    
 
@@ -307,7 +307,7 @@ public class Test {
 
 #### `int/double/longValue(BigInteger val)`
 
-转为`int`/`double`/`long`类型整数，超出范围数据有误      
+转为int/`double`/`long`类型整数，超出范围数据有误      
 
 范例:   
 

@@ -33,7 +33,7 @@ public class test {
 ### 方法2
 
 `String str = Integer.toString(i);`   
-`toString`方法的底层是直接`new`了一个字符串对象    
+toString方法的底层是直接new了一个字符串对象    
 
 范例: 
 
@@ -49,7 +49,7 @@ public class test {
 ```
 
 `String str = Integer.toString(i,n);`   
-其中`i`表示转成字符串的数字,`n`表示要转成的进制表示    
+其中i表示转成字符串的数字,`n`表示要转成的进制表示    
 
 范例: 
 
@@ -93,7 +93,7 @@ public class test {
 ### 方法1
 
 `int i = Integer.parseInt(str);`    
-其中`Integer.parseInt(str)`返回原始`int`   
+其中`Integer.parseInt(str)`返回原始int   
 直接使用静态方法,不会产生多余的对象    
 
 范例: 
@@ -129,7 +129,7 @@ public class test {
 ### 方法2
 
 `int i = Integer.valueOf(str);`    
-其中`Integer.valueOf(str)`返回一个`Integer`对象   
+其中`Integer.valueOf(str)`返回一个Integer对象   
 
 范例: 
 

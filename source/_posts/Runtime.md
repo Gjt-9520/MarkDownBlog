@@ -10,7 +10,7 @@ updated: 2024-01-17
 
 ## Runtime
 
-表示当前`JVM`的运行环境   
+表示当前JVM的运行环境   
 
 ### 常用方法
 
@@ -22,23 +22,23 @@ updated: 2024-01-17
 
 #### `Runtime.exit(int status)`
 
-停止`JVM`
+停止JVM
 
 #### `Runtime.availableProcessors()`
 
-获取`CPU`的线程数
+获取CPU的线程数
 
 #### `Runtime.maxMemory()`
 
-`JVM`能从系统中获取的总内存大小(单位: `byte`)
+JVM能从系统中获取的总内存大小(单位: `byte`)
 
 #### `Runtime.totalMemory()`
 
-`JVM`已经从系统中获取的总内存大小(单位: `byte`)
+JVM已经从系统中获取的总内存大小(单位: `byte`)
 
 #### `Runtime.freeMemory()`
 
-`JVM`剩余内存大小(单位: `byte`)
+JVM剩余内存大小(单位: `byte`)
 
 #### `Process exec(String command)`
 

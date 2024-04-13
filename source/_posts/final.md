@@ -163,7 +163,7 @@ public class Test {
 
 ## final
 
-`final`即最终的,被`final`修饰的不可被改变
+final即最终的,被final修饰的不可被改变
 
 ### 被final修饰的方法
 
@@ -176,7 +176,7 @@ public class Test {
 ### 被final修饰的变量
 
 叫做常量,只能被赋值一次     
-使用场景: 当一个变量的值,不想让其再发生改变了,就用`final`来修饰   
+使用场景: 当一个变量的值,不想让其再发生改变了,就用final来修饰   
 
 #### 常量
 
@@ -190,8 +190,8 @@ public class Test {
 ##### 细节
 
 1. **常量记录的数据是不能发生改变的**   
-2. `final`修饰的变量是基本类型: 那么变量存储的**数据值**不能发生改变    
-3. `final`修饰的变量是引用类型: 那么变量存储的**地址值**不能发生改变,对象内部的**属性值**可以改变   
+2. final修饰的变量是基本类型: 那么变量存储的**数据值**不能发生改变    
+3. final修饰的变量是引用类型: 那么变量存储的**地址值**不能发生改变,对象内部的**属性值**可以改变   
 
 范例: 
 
@@ -229,11 +229,11 @@ public class Student {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //`final`修饰的变量是基本类型: 那么变量存储的**数据值**不能发生改变
+        //final修饰的变量是基本类型: 那么变量存储的**数据值**不能发生改变
         final double PI = 3.1415926;
         //`PI = 2;`报错
 
-        //`final`修饰的变量是引用类型: 那么变量存储的**地址值**不能发生改变,对象内部的属性值可以改变
+        //final修饰的变量是引用类型: 那么变量存储的**地址值**不能发生改变,对象内部的属性值可以改变
         final Student STUDENT = new Student("张三",24);
         //`student = new Student();`报错
         STUDENT.setName("王五");
