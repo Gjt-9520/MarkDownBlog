@@ -79,7 +79,7 @@ social:
 
 # 作者卡片 状态
 author_status:
-  enable: false
+  enable: true
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   # statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
