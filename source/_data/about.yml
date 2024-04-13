@@ -16,7 +16,7 @@
   description: 是一名 独立开发者
   aboutsiteTips:
     tips: 追求
-    title1: 源于热爱 
+    title1: 因为热爱 
     title2: 而用心
     word:
       - 学习
@@ -42,64 +42,61 @@
     selfInfoContent3: 独立开发者
   personalities:
     author_name: 主人公
-    personality_type: ENFJ-A / ENFJ-T
+    personality_type: ENFJ-A
     photo_url: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao.png?raw=true
     personality_img: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/ENFJ_male.png?raw=true
     name_url: https://www.16personalities.com/ch/enfj-%E4%BA%BA%E6%A0%BC
   maxim:
     maxim_tips: 座右铭
-    maxim_top: 生命不息，
-    maxim_bottom: 探索不止!
+    maxim_top: 长风破浪会有时,
+    maxim_bottom: 直挂云帆济沧海!
   buff:
     buff_tips: 特长
-    buff_top: 十万个为什么 ?
-    buff_bottom: 动手能力 MAX
+    buff_top: 审美 Online
+    buff_bottom: 动手能力 MAX 
   comic:
     comic_tips: 珍藏佳作
     comic_title: 
     comic_list:
-      - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
-      - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
-      - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
-      - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
-      - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
-      - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
+      - name: 
+        href: 
+        cover: 
+      - name: 蝴蝶效应
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E8%9D%B4%E8%9D%B6%E6%95%88%E5%BA%94.webp
+      - name: 彗星来的那一夜
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E5%BD%97%E6%98%9F%E6%9D%A5%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%9C.webp
+      - name: 十二猴子
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E5%8D%81%E4%BA%8C%E7%8C%B4%E5%AD%90.webp
+      - name: 环太平洋
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B.webp
+      - name: 星际穿越
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E6%98%9F%E9%99%85%E7%A9%BF%E8%B6%8A.webp    
+      - name: 银翼杀手2049
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E9%93%B6%E7%BF%BC%E6%9D%80%E6%89%8B2049.webp
+      - name: 黑客帝国2
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD2.webp
+      - name: 蝙蝠侠:黑暗骑士
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E8%9D%99%E8%9D%A0%E4%BE%A0-%E9%BB%91%E6%9A%97%E9%AA%91%E5%A3%AB.webp
+      - name: 流浪地球2
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832.webp  
+      - name: 盗梦空间
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E7%9B%97%E6%A2%A6%E7%A9%BA%E9%97%B4.webp
+      - name: 三体
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E4%B8%89%E4%BD%93.webp
+      - name: 前目的地
+        href: 
+        cover: https://raw.githubusercontent.com/Gjt-9520/Resource/main/Blogimage/%E5%BD%B1%E8%A7%86%E5%8A%A8%E6%BC%AB/%E5%89%8D%E7%9B%AE%E7%9A%84%E5%9C%B0.webp
+      - name: 
+        href: 
+        cover:                 
