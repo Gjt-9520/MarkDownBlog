@@ -16,24 +16,24 @@
   description: 是一名 独立开发者
   aboutsiteTips:
     tips: 追求
-    title1: 源于
-    title2: 热爱 而去感受
+    title1: 源于 热爱 
+    title2: 而去 感受
     word:
       - 学习
       - 工作
       - 生活
       - 旅游
   helloAbout: Hello World
-  skillsTips:
-    tips: 技能
-    title: 开启创造力
-  careers:
-    tips: 生涯
-    title: 无限进步
-    list:
-      - desc: CST,计算机科学与技术专业
-        color: "#357ef5"
-    img: https://bu.dusays.com/2023/04/21/644287166329b.png
+  # skillsTips:
+  #   tips: 技能
+  #   title: 开启创造力
+  # careers:
+  #   tips: 生涯
+  #   title: 无限进步
+  #   list:
+  #     - desc: CST,计算机科学与技术专业
+  #       color: "#357ef5"
+  #   img: https://bu.dusays.com/2023/04/21/644287166329b.png
   statistic:
     link: /archives
     text: 文章总览
@@ -65,12 +65,11 @@
     buff_top: 脑回路新奇的 酸菜鱼
     buff_bottom: 二次元指数 MAX
   game:
-    game_tips: 爱好游戏
-    game_title: 原神
-    game_uid: "UID: 125766904"
+    game_tips: 游戏
+    game_title: 王者荣耀
     game_bg: https://bu.dusays.com/2023/04/22/64433bf26e25d.webp
   comic:
-    comic_tips: 爱好番剧
+    comic_tips: 影视动漫
     comic_title: 追番
     comic_list:
       - name: 约定的梦幻岛
@@ -88,13 +87,13 @@
       - name: JOJO的奇妙冒险 黄金之风
         href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
         cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
-  like:
-    like_tips: 关注偏好
-    like_title: 数码科技
-    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
-    like_bottom: 手机、电脑软硬件
-  music:
-    music_tips: 音乐偏好
-    music_title: 许嵩、民谣、华语流行
-    music_bg: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
-    music_link: /music
+  # like:
+  #   like_tips: 关注偏好
+  #   like_title: 数码科技
+  #   like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
+  #   like_bottom: 手机、电脑软硬件
+  # music:
+  #   music_tips: 音乐偏好
+  #   music_title: 许嵩、民谣、华语流行
+  #   music_bg: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
+  #   music_link: /music
