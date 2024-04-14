@@ -5,7 +5,9 @@ description: "返回对象的字符串表现形式、比较两个对象是否相
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage96.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-01-18
+updated: 2024-01-19
+swiper_index:
+top_group_index:
 ---
 
 ## Object
@@ -21,7 +23,7 @@ Object类中的方法可以被所有子类访问
 
 ![Object成员方法1-3](../images/Object成员方法1-3.png)
 
-#### `toString()`
+#### toString()
 
 返回对象的字符串表示形式: `包名 + @ + 地址值`
 
@@ -79,7 +81,7 @@ public class Test {
 ```
 
 其中`System.out.println(stu);`的细节:   
-- `System`: 类名
+- System: 类名
 - `out`: 静态变量
 - `System.out`: 获取打印的对象
 - `prinln()`: 方法   
@@ -141,7 +143,7 @@ public class Test {
 }
 ```
 
-#### `equals(Object obj)`
+#### equals(Object obj)
 
 比较两个对象(默认: 比较两个对象的地址值)是否相等
 
@@ -202,7 +204,7 @@ public class Test {
 如果equals方法不能满足需求,可以重写equals方法    
 
 快速重写equals方法:     
-快捷键`alt + insert`选择`equals()和hashCode()`   
+快捷键`alt + insert`选择equals()和hashCode()   
 **重写之后的equals方法,比较的就是对象内部的属性值**
 
 范例: 
@@ -291,7 +293,7 @@ public class Test {
 }
 ```
 
-#### `clone(int a)`
+#### clone(int a)
 
 对象克隆: 把A对象里的属性值完全拷贝给B对象,也叫对象拷贝/对象复制
 
@@ -514,11 +516,11 @@ public class CloneUser {
 
 ##### 实际开发中实现深克隆   
 
-利用第三方的工具: `Gson`   
+利用第三方的工具: Gson   
 
 步骤: 
 1. 把第三方写的代码导入到项目中     
-a.项目中新建`lib`目录   
+a.项目中新建lib目录   
 b.将第三方代码XXX.jar复制到目录中     
 c.右键选择添加到库      
 2. 编写代码   
@@ -562,13 +564,13 @@ public class CloneUser {
 
 ## Objects
 
-`Objects`是一个工具类,提供了一些方法去完成一些功能    
+Objects是一个工具类,提供了一些方法去完成一些功能    
 
 ### 成员方法
 
 ![Objects成员方法](../images/Objects成员方法.png)    
 
-#### `Objects.equals(Object o1,Object o2)`
+#### Objects.equals(Object o1,Object o2)
 
 先做非空判断,比较两个对象    
 
@@ -591,10 +593,10 @@ public class Test {
 细节:      
 1. 方法的底层先判断student1是否为空,如果student1为空,直接返回false     
 2. 如果student1不为空,则利用student1再次调用equals方法     
-3. 此时的student1是`Student`类型,即最终会调用`Student`类中的equals方法     
-4. `Student`类中的equals方法: 如果没有重写,比较两者的地址值; 如果重写了,比较两者内部的属性值       
+3. 此时的student1是Student类型,即最终会调用Student类中的equals方法     
+4. Student类中的equals方法: 如果没有重写,比较两者的地址值; 如果重写了,比较两者内部的属性值       
 
-#### `Objects.isNull(Object o)`
+#### Objects.isNull(Object o)
 
 判断对象是否为空: 为空返回true; 不为空返回false    
 
@@ -614,7 +616,7 @@ public class Test {
 }
 ```
 
-#### `Objects.nonNull(Object o)`    
+#### Objects.nonNull(Object o)                 
 
 判断对象是否为空: 不为空返回true; 为空返回false      
 

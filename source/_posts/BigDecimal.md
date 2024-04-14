@@ -1,11 +1,13 @@
 ---
 title: "BigDecimal"
 date: 2024-01-20
-description: "构造方法(通过传递double类型的小数来创建BigDecimal对象、通过传递字符串来创建BigDecimal对象)、成员方法(加法、减法、乘法、除法)、底层原理"
+description: "计算机中的小数"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage75.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-01-20
+updated: 2024-01-21
+swiper_index:
+top_group_index:
 ---
 
 ## BigDecimal
@@ -14,24 +16,24 @@ updated: 2024-01-20
 
 ![计算机中的小数](../images/计算机中的小数.png)
 
-`BigDecimal`是**不可变的**,任意精度的有符号十进制数
+BigDecimal是**不可变的**,任意精度的有符号十进制数
 
-`BigDecimal`的作用:    
+BigDecimal的作用:    
 1. 用于小数的精确计算(解决小数运算精度失真问题)   
 2. 用来表示很大的小数
 
 ### 构造方法
   
-1. `public BigDecimal(double val)` -- 通过传递`double`类型的小数来创建`BigDecimal`对象       
-2. `public BigDecimal(String val)` -- 通过传递字符串来创建`BigDecimal`对象         
+1. `public BigDecimal(double val)` -- 通过传递double类型的小数来创建BigDecimal对象       
+2. `public BigDecimal(String val)` -- 通过传递字符串来创建BigDecimal对象         
 
 注意事项: 
-1. **如果要表示的数字不大,没有超出`double`的取值范围,建议使用静态方法创建`BigDecimal`对象**
-2. **如果要表示的数字比较大,超出`double`的取值范围,建议使用传递字符串类型的构造方法**
+1. **如果要表示的数字不大,没有超出double的取值范围,建议使用静态方法创建BigDecimal对象**
+2. **如果要表示的数字比较大,超出double的取值范围,建议使用传递字符串类型的构造方法**
 
-#### `BigDecimal(double val)`
+#### BigDecimal(double val)
 
-通过传递`double`类型的小数来创建`BigDecimal`对象      
+通过传递double类型的小数来创建BigDecimal对象      
 
 细节: **此构造方法的结果有一定的不可预知性,不建议使用**       
 
@@ -49,9 +51,9 @@ public class Test {
 }
 ```
 
-#### `BigDecimal(String val)`
+#### BigDecimal(String val)
 
-通过传递字符串来创建`BigDecimal`对象      
+通过传递字符串来创建BigDecimal对象      
 
 细节: **此构造方法的结果精确,建议使用**    
 
@@ -73,9 +75,9 @@ public class Test {
 
 ![BigDecimal成员方法](../images/BigDecimal成员方法.png)
 
-#### `valueOf(double val)`
+#### valueOf(double val)
 
-静态方法创建`BigDecimal`对象
+静态方法创建BigDecimal对象
 
 细节: **如果传递的是 0 ~ 10 之间的整数(包含0和10),那么方法会返回已经创建好的对象,不会重新创建**    
 
@@ -100,7 +102,7 @@ public class Test {
 }
 ```
 
-#### `add(BigDecimal val)`
+#### add(BigDecimal val)
 
 范例:    
 
@@ -117,7 +119,7 @@ public class Test {
 }
 ```
 
-#### `subtract(BigDecimal val)`
+#### subtract(BigDecimal val)
 
 范例:    
 
@@ -134,7 +136,7 @@ public class Test {
 }
 ```
 
-#### `multiply(BigDecimal val)`
+#### multiply(BigDecimal val)
 
 范例:    
 
@@ -151,7 +153,7 @@ public class Test {
 }
 ```
 
-#### `divide(BigDecimal val)`
+#### divide(BigDecimal val)
 
 范例:    
 
@@ -168,7 +170,7 @@ public class Test {
 }
 ```
 
-#### `divide(BigDecimal val,精确几位,舍入模式)`
+#### divide(BigDecimal val,精确几位,舍入模式)
 
 范例:    
 
@@ -190,7 +192,7 @@ public class Test {
 
 ### 底层原理
 
-将`BidDecimal`对象的数据,分成字符,转换为`ASCII`码表中对应的数字存储到数组当中
+将BidDecimal对象的数据,分成字符,转换为ASCII码表中对应的数字存储到数组当中
 
 ![BigDecimal底层原理1](../images/BigDecimal底层原理1.png)
 

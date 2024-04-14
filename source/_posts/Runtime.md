@@ -1,11 +1,13 @@
 ---
 title: "Runtime"
 date: 2024-01-17
-description: "获取当前系统的运行环境对象、停止JVM、获得CPU的线程数、JVM能从/已经从系统中获取的总内存大小、JVM剩余内存大小、运行CMD命令"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage97.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-01-17
+updated: 2024-01-18
+swiper_index:
+top_group_index:
 ---
 
 ## Runtime
@@ -16,33 +18,33 @@ updated: 2024-01-17
 
 ![Runtime常用方法](../images/Runtime常用方法.png)
 
-#### `Runtime getRuntime()`
+#### Runtime getRuntime()
 
 获取当前系统的运行环境对象
 
-#### `Runtime.exit(int status)`
+#### Runtime.exit(int status)
 
 停止JVM
 
-#### `Runtime.availableProcessors()`
+#### Runtime.availableProcessors()
 
 获取CPU的线程数
 
-#### `Runtime.maxMemory()`
+#### Runtime.maxMemory()
 
-JVM能从系统中获取的总内存大小(单位: `byte`)
+JVM能从系统中获取的总内存大小(单位: byte)
 
-#### `Runtime.totalMemory()`
+#### Runtime.totalMemory()
 
-JVM已经从系统中获取的总内存大小(单位: `byte`)
+JVM已经从系统中获取的总内存大小(单位: byte)
 
-#### `Runtime.freeMemory()`
+#### Runtime.freeMemory()
 
-JVM剩余内存大小(单位: `byte`)
+JVM剩余内存大小(单位: byte)
 
-#### `Process exec(String command)`
+#### Process exec(String command)
 
-运行`cmd`命令
+运行cmd命令
 
 范例: 
 

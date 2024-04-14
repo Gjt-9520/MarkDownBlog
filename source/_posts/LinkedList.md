@@ -5,16 +5,18 @@ description: "特点、特有方法、底层原理、底层源码分析"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage91.jpg?raw=true
 tags: ["Java进阶","集合"]
 category: "学习笔记"
-updated: 2024-03-15
+updated: 2024-03-16
+swiper_index:
+top_group_index:
 ---
 
 ## LinkedList
 
-`LinkedList`: `Linked` -- 链表,`List` -- 属于`List`系列的一员
+LinkedList: `Linked` -- 链表,List -- 属于List系列的一员
 
 ![双向链表](../images/双向链表.png)
 
-`LinkedList`本身多了很多直接操作首尾元素的特有方法
+LinkedList本身多了很多直接操作首尾元素的特有方法
 
 ## 特点
 
@@ -26,7 +28,7 @@ updated: 2024-03-15
 
 ## LinkedList底层原理
 
-`LinkedList`底层数据结构是双链表
+LinkedList底层数据结构是双链表
 
 ## LinkedList底层源码分析
 

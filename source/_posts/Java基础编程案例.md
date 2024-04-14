@@ -1,11 +1,13 @@
 ---
 title: "Java基础编程案例"
 date: 2023-12-24
-description: "卖飞机票、找质数、开发验证码、数组元素的复制、评委打分、数字加密/解密、抢红包、模拟双色球"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage84.jpg?raw=true
 tags: ["Java基础","练习"]
 category: "学习笔记"
-updated: 2023-12-24
+updated: 2023-12-25
+swiper_index:
+top_group_index:
 ---
 
 ## 卖飞机票

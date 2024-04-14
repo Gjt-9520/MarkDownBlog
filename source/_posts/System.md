@@ -5,22 +5,24 @@ description: "终止JVM、返回当前系统的时间毫秒值形式、数组拷
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage99.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-01-16
+updated: 2024-01-17
+swiper_index:
+top_group_index:
 ---
 
 ## System
   
-`System`是一个工具类,提供了一些与系统相关的方法   
+System是一个工具类,提供了一些与系统相关的方法   
 
 ### 常用方法
 
 ![System常用方法](../images/System常用方法.png)
 
-#### `System.exit(int status)`
+#### System.exit(int status)
 
 终止JVM   
 
-`status`: 状态码     
+status: 状态码     
 0: 表示当前JVM是正常停止   
 非0: 表示当前JVM是异常停止   
 
@@ -34,7 +36,7 @@ public class Test {
 }
 ```
 
-#### `System.currentTimeMillis()`
+#### System.currentTimeMillis()
 
 返回当前系统的时间毫秒值形式   
 
@@ -58,7 +60,7 @@ public class Test {
 }
 ```
 
-#### `System.arraycopy(数据源数组,起始索引,目的地数组,起始索引,拷贝个数)`
+#### System.arraycopy(数据源数组,起始索引,目的地数组,起始索引,拷贝个数)
 
 数组拷贝   
 

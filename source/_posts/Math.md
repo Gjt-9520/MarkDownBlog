@@ -1,11 +1,13 @@
 ---
 title: "Math"
 date: 2024-01-15
-description: "获取绝对值、向上/下取整、四舍五入、获取两个整数的较大/小值、返回a的b次幂、返回a的平/立方根、获取一个范围在[0,1.0)的随机数"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage95.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-01-15
+updated: 2024-01-16
+swiper_index:
+top_group_index:
 ---
 
 ## Math
@@ -17,11 +19,11 @@ updated: 2024-01-15
 
 ![Math常用方法](../images/Math常用方法.png)
 
-#### `Math.abs(int a)`
+#### Math.abs(int a)
 
 获取绝对值   
 
-存在`Bug`,以int类型为例,取值范围为: -2147483648 ~ 2147483647   
+存在Bug,以int类型为例,取值范围为: -2147483648 ~ 2147483647   
 如果没有正数与负数对应,那么传递的负数结果有误   
 
 范例: 
@@ -37,10 +39,10 @@ public class Test {
 }
 ```
 
--2147483648没有正数与之对应,所以其结果会产生`Bug`    
-解决方案: JDK15以后,使用`Math.absExact()`,如果不在取值范围内,程序会自动报错   
+-2147483648没有正数与之对应,所以其结果会产生Bug    
+解决方案: JDK15以后,使用Math.absExact(),如果不在取值范围内,程序会自动报错   
 
-#### `Math.ceil(double a)`
+#### Math.ceil(double a)
 
 向上取整  
 进一法: 往正无穷大方向获取距离最近的整数   
@@ -62,7 +64,7 @@ public class Test {
 }
 ```
 
-#### `Math.floor(double a)`
+#### Math.floor(double a)
 
 向下取整   
 去尾法: 往负无穷大方向获取距离最近的整数   
@@ -84,7 +86,7 @@ public class Test {
 }
 ```
 
-#### `Math.round(float a)`
+#### Math.round(float a)
 
 四舍五入
 
@@ -105,7 +107,7 @@ public class Test {
 }
 ```
 
-#### `Math.max(int a,int b)`
+#### Math.max(int a,int b)
 
 获取两个整数的较大值
 
@@ -120,7 +122,7 @@ public class Test {
 }
 ```
 
-#### `Math.min(int a,int b)`
+#### Math.min(int a,int b)
 
 获取两个整数的较小值
 
@@ -135,7 +137,7 @@ public class Test {
 }
 ```
 
-#### `Math.pow(double a,double b)`
+#### Math.pow(double a,double b)
 
 返回a的b次幂   
 根据第二个参数b,返回不同的值   
@@ -159,7 +161,7 @@ public class Test {
 }
 ```
 
-#### `Math.sqrt(double a)`
+#### Math.sqrt(double a)
 
 返回a的平方根
 
@@ -174,7 +176,7 @@ public class Test {
 }
 ```
 
-#### `Math.cbrt(double a)`
+#### Math.cbrt(double a)
 
 返回a的立方根
 
@@ -189,7 +191,7 @@ public class Test {
 }
 ```
 
-#### `Math.random()`
+#### Math.random()
 
 获取一个范围在`[0,1.0)`的随机数
 

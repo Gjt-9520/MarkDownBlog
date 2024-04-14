@@ -1,30 +1,32 @@
 ---
 title: "BigInteger"
 date: 2024-01-19
-description: "构造方法(获取随机大整数、获取指定的大整数、获取指定进制的大整数、静态方法获取BigInteger的对象)、成员方法(加法、减法、乘法、除法,获取商和余数、比较是否相同、次幂、返回较大/小值、转为int类型整数)、底层原理"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage76.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-01-19
+updated: 2024-01-20
+swiper_index:
+top_group_index:
 ---
 
 ## BigInteger
 
-在Java中,整数有四种类型: `byte`、`short`、int、`long`    
+在Java中,整数有四种类型: byte、short、int、long    
 
 在底层中占用字节个数:      
-- `byte` -- 1个字节   
-- `short` -- 2个字节   
+- byte -- 1个字节   
+- short -- 2个字节   
 - int -- 4个字节    
-- `long` -- 8个字节    
+- long -- 8个字节    
 
-`BigInteger`表示的范围更大
+BigInteger表示的范围更大
 
 ### 构造方法
 
 ![BigInteger构造方法](../images/BigInteger构造方法.png)
 
-**`BigInteger`对象一旦创建,内部记录的值不能发生改变**   
+**BigInteger对象一旦创建,内部记录的值不能发生改变**   
 
 范例:       
 
@@ -46,7 +48,7 @@ public class Test {
 }
 ```
 
-#### `BigInteger(int num,Random rnd)`
+#### BigInteger(int num,Random rnd)
 
 获取随机大整数,范围: [0 ~ 2^n - 1]
 
@@ -66,7 +68,7 @@ public class Test {
 }
 ```
 
-#### `BigInteger(String val)`
+#### BigInteger(String val)
 
 获取指定的大整数    
 
@@ -86,7 +88,7 @@ public class Test {
 }
 ```
 
-#### `BigInteger(String val,int radix)`
+#### BigInteger(String val,int radix)
 
 获取指定进制的大整数  
  
@@ -108,14 +110,14 @@ public class Test {
 }
 ```
 
-#### `valueOf(long val)`
+#### valueOf(long val)
 
-静态方法获取`BigInteger`的对象
+静态方法获取BigInteger的对象
 
 细节:     
-1. **表示的范围是在`long`的取值范围之内**     
+1. **表示的范围是在long的取值范围之内**     
 2. **在内部对常用的数字 -16 ~ 16 进行了优化**    
-提前把 -16 ~ 16 先创建好`BigInteger`的对象,如果多次获取不会重新创建新的对象
+提前把 -16 ~ 16 先创建好BigInteger的对象,如果多次获取不会重新创建新的对象
 
 范例:    
 
@@ -145,7 +147,7 @@ public class Test {
 
 ![BigInteger成员方法](../images/BigInteger成员方法.png)
 
-#### `add(BigInteger val)`
+#### add(BigInteger val)
 
 加法   
 
@@ -165,7 +167,7 @@ public class Test {
 }
 ```
 
-#### `subtract(BigInteger val)`
+#### subtract(BigInteger val)
 
 减法   
 
@@ -185,7 +187,7 @@ public class Test {
 }
 ```
 
-#### `multiply(BigInteger val)`
+#### multiply(BigInteger val)
 
 乘法    
 
@@ -205,7 +207,7 @@ public class Test {
 }
 ```
 
-#### `divide(BigInteger val)`
+#### divide(BigInteger val)
 
 除法,获取商     
 
@@ -225,7 +227,7 @@ public class Test {
 }
 ```
 
-#### `divideAndRemainder(BigInteger val)`
+#### divideAndRemainder(BigInteger val)
 
 除法,获取商和余数     
 - 商: `BigInteger[0]`     
@@ -247,7 +249,7 @@ public class Test {
 }
 ```
 
-#### `equals(Object o)`
+#### equals(Object o)
 
 比较是否相同     
 
@@ -266,7 +268,7 @@ public class Test {
 }
 ```
 
-#### `pow(int exponent)`
+#### pow(int exponent)
 
 次幂      
 
@@ -284,7 +286,7 @@ public class Test {
 }
 ```
 
-#### `max/min(BigInteger val)`
+#### max/min(BigInteger val)
 
 返回较大值/较小值        
 
@@ -305,9 +307,9 @@ public class Test {
 }
 ```
 
-#### `int/double/longValue(BigInteger val)`
+#### int/double/longValue(BigInteger val)
 
-转为int/`double`/`long`类型整数，超出范围数据有误      
+转为int/double/long类型整数，超出范围数据有误      
 
 范例:   
 
@@ -329,7 +331,7 @@ public class Test {
 
 ### 底层原理
 
-将`BigInteger`对象的数据,转成二进制的补码,然后从右往左分成两组(32位一组)和一个符号位
+将BigInteger对象的数据,转成二进制的补码,然后从右往左分成两组(32位一组)和一个符号位
 
 接着,把这两组和一个符号位转成各自的十进制,存储到一个数组当中
 

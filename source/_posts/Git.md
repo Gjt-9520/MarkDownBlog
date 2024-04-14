@@ -5,7 +5,9 @@ description: "使用流程、常用指令"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage80.jpg?raw=true
 tags: ["Terminal"]
 category: "学习笔记"
-updated: 2023-12-02
+updated: 2023-12-03
+swiper_index:
+top_group_index:
 ---
 
 ## [Git 官方文档链接](https://git-scm.com/docs)
@@ -76,7 +78,7 @@ updated: 2023-12-02
 
 ### 添加文件到暂存区
 
-git add指令,即跟踪文件   
+`git add`指令,即跟踪文件   
 
 `git add [文件1] [文件2] ...` -- 添加一个或多个文件到暂存区  
 `git add [本地路径]` -- 添加指定目录(包括子目录)到暂存区  
@@ -157,7 +159,7 @@ git add指令,即跟踪文件
 **删除本地分支**:  
 `git branch -d [本地分支]` -- 删除本地分支(需要做各种检查)    
 `git branch -D [本地分支]` -- 强制删除本地分支(不做各种检查)   
-`git branch -M main` -- 将当前分支重命名为`main`,并删除所有其他分支  
+`git branch -M main` -- 将当前分支重命名为main,并删除所有其他分支  
 
 **查看本地分支与远端分支的关联**:  
 `git branch -vv` -- 查看本地分支与远端分支的关联  
@@ -215,7 +217,7 @@ git add指令,即跟踪文件
 
 `git push` -- (当前分支已经和远端分支关联)推送到远端分支  
 
-`git push -u origin main` -- 将本地的main分支推送到远程仓库`origin`,并将本地的`main`分支与远程的`main`分支关联起来(如果远程仓库中已经存在一个`main`分支,则会将其覆盖)
+`git push -u origin main` -- 将本地的main分支推送到远程仓库`origin`,并将本地的main分支与远程的main分支关联起来(如果远程仓库中已经存在一个main分支,则会将其覆盖)
 
 **从远程仓库(远端分支)中抓取**:    
 

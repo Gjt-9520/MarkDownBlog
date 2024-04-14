@@ -5,7 +5,9 @@ description: "int、double、float、Long与String之间的转换"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage83.jpg?raw=true
 tags: ["类型转换"]
 category: "学习笔记"
-updated: "int与String之间的转换"
+updated: 2024-01-01
+swiper_index:
+top_group_index:
 ---
 
 ## int --> String
@@ -15,7 +17,7 @@ updated: "int与String之间的转换"
 ### 方法1
 
 `String str = String.valueOf(i);`    
-直接使用`String`类的静态方法,只产生一个对象   
+直接使用String类的静态方法,只产生一个对象   
 
 范例: 
 
@@ -49,7 +51,7 @@ public class test {
 ```
 
 `String str = Integer.toString(i,n);`   
-其中i表示转成字符串的数字,`n`表示要转成的进制表示    
+其中i表示转成字符串的数字,n表示要转成的进制表示    
 
 范例: 
 
@@ -93,7 +95,7 @@ public class test {
 ### 方法1
 
 `int i = Integer.parseInt(str);`    
-其中`Integer.parseInt(str)`返回原始int   
+其中Integer.parseInt(str)返回原始int   
 直接使用静态方法,不会产生多余的对象    
 
 范例: 
@@ -110,7 +112,7 @@ public class test {
 ```
 
 `int i = Integer.parseInt(str,n);`    
-其中`str`表示转成数字的字符串,`n`表示要转成的进制表示   
+其中str表示转成数字的字符串,n表示要转成的进制表示   
 
 范例: 
 
@@ -129,7 +131,7 @@ public class test {
 ### 方法2
 
 `int i = Integer.valueOf(str);`    
-其中`Integer.valueOf(str)`返回一个Integer对象   
+其中Integer.valueOf(str)返回一个Integer对象   
 
 范例: 
 

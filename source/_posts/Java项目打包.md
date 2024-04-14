@@ -1,23 +1,25 @@
 ---
 title: "Java项目打包"
 date: 2024-01-14
-description: "将java项目打包成exe安装包,安装exe后,在无需安装JDK的情况下也能运行java项目"
+description: "在无需安装JDK的情况下也能运行java项目"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage86.jpg?raw=true
 tags: ["打包"]
 category: "学习笔记"
-updated: 2024-01-14
+updated: 2024-01-15
+swiper_index:
+top_group_index:
 ---
 
 ## 软件
 
 ### exe4j
 
-`exe4j`是Java可执行文件生成工具  
-**`exe4j`支持的JDK版本是8~11**    
+exe4j是Java可执行文件生成工具  
+**exe4j支持的JDK版本是8~11**    
 
 ### Inno Setup
 
-`Inno Setup`是`Windows`程序免费安装程序   
+Inno Setup是Windows程序免费安装程序   
 
 ## 前提
 
@@ -29,15 +31,15 @@ updated: 2024-01-14
 
 ### 核心步骤
 
-1. 把所有项目代码打包成一个`jar`包  
-2. 把`jar`包转换成`exe`的安装包   
-3. 把第二步的`exe`、资源(如图片等)、JDK整合在一起,变成最终的`exe`安装包  
+1. 把所有项目代码打包成一个jar包  
+2. 把jar包转换成exe的安装包   
+3. 把第二步的exe、资源(如图片等)、JDK整合在一起,变成最终的exe安装包  
 
 ### 具体步骤
 
 #### 代码打包成jar包
 
-创建`jar`包: 
+创建jar包: 
 
 ![项目结构](../images/项目结构.png)
 
@@ -47,25 +49,25 @@ updated: 2024-01-14
 
 ![创建jar3](../images/创建jar3.png)
 
-构建工件(`Artifact`): 
+构建工件(Artifact): 
 
 ![构建工件1](../images/构建工件1.png)
 
 ![构建工件2](../images/构建工件2.png)
 
-jar包默认位置: `out/artifacts/XXX_jar/XXX.jar`: 
+jar包默认位置: out/artifacts/XXX_jar/XXX.jar: 
 
 ![jar包默认位置](../images/jar包默认位置.png)
 
 #### 整合资源文件
 
 1. 将创建好的jar包拷贝到桌面上
-2. 在桌面上新建一个文件夹`resource`
-3. 将项目中的资源复制到文件夹`resource`
+2. 在桌面上新建一个文件夹resource
+3. 将项目中的资源复制到文件夹resource
 
 #### 将jar包打包成exe安装包
 
-打开`exe4j`软件: 
+打开exe4j软件: 
 
 ![jar转exe模式](../images/jar转exe模式.png)
 
@@ -107,13 +109,13 @@ jar包默认位置: `out/artifacts/XXX_jar/XXX.jar`:
 
 ![添加jar14](../images/添加jar14.png)
 
-点击`Exit`后,会提升是否需要保存刚刚的配置信息,可以点击`Yes`,并选择一个路径进行保存: 
+点击Exit后,会提升是否需要保存刚刚的配置信息,可以点击Yes,并选择一个路径进行保存: 
 
 ![添加jar15](../images/添加jar15.png)
 
 #### 将jdk、资源文件、jar包转换后的exe三者再次打包成最终的exe
 
-打开`Inno Setup`软件: 
+打开Inno Setup软件: 
 
 ![创建安装程序1](../images/创建安装程序1.png)
 
@@ -158,13 +160,13 @@ jar包默认位置: `out/artifacts/XXX_jar/XXX.jar`:
 
 ![创建安装程序19](../images/创建安装程序19.png)
 
-当绿色滚动条结束后,会自动安装`exe`文件    
+当绿色滚动条结束后,会自动安装exe文件    
 此时可以点击否,先不安装      
-在桌面上,会多了一个`XXX.exe`文件和一个后缀名为`iss`的文件    
+在桌面上,会多了一个XXX.exe文件和一个后缀名为iss的文件    
   
-`XXX.exe`: 打包成功的项目安装包    
-`iss`文件: 刚刚设置的脚本文件    
+XXX.exe: 打包成功的项目安装包    
+iss文件: 刚刚设置的脚本文件    
 
 ## 安装
 
-点击`XXX.exe`安装项目,并在安装目录中找到`XXX.exe`即可在无需安装JDK的情况下运行项目   
+点击XXX.exe安装项目,并在安装目录中找到XXX.exe即可在无需安装JDK的情况下运行项目   

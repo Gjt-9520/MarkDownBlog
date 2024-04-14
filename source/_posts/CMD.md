@@ -5,7 +5,9 @@ description: "Windows命令提示符"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage77.jpg?raw=true
 tags: ["Terminal"]
 category: "学习笔记"
-updated: 2023-11-25
+updated: 2023-11-26
+swiper_index:
+top_group_index:
 ---
 
 ## CMD技巧

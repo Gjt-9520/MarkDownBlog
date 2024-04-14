@@ -5,12 +5,14 @@ description: "函数式编程、格式、好处、省略写法"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage89.jpg?raw=true
 tags: ["Java基础"]
 category: "学习笔记"
-updated: 2024-03-01
+updated: 2024-03-02
+swiper_index:
+top_group_index:
 ---
 
 ## 函数式编程
 
-函数式编程(`Functional programming`)是一种思想特点               
+函数式编程(Functional programming)是一种思想特点               
 
 函数式编程思想: 忽略面向对象的复杂语法,**强调做什么,而不是谁去做**
 
@@ -56,7 +58,7 @@ Lambda表达式是JDK8开始后的一种新语法形式
 **注意事项 :**
 1. **Lambda表达式可以用来简化匿名内部类的书写**
 2. **Lambda表达式只能简化函数式接口的匿名内部类的写法**     
-**函数式接口: 有且仅有一个抽象方法的接口,接口上方可以加`@FunctionalInterface`注解**
+**函数式接口: 有且仅有一个抽象方法的接口,接口上方可以加@FunctionalInterface注解**
 
 范例: 
 

@@ -5,7 +5,9 @@ description: "集合和数组的对比、ArrayList的构造方法和成员方法
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage71.jpg?raw=true
 tags: ["Java基础","集合"]
 category: "学习笔记"
-updated: 2024-01-01
+updated: 2024-01-02
+swiper_index:
+top_group_index:
 ---
 
 ## 集合和数组的对比
@@ -32,7 +34,7 @@ updated: 2024-01-01
 
 `E`(泛型): 限定集合中存储数据的类型   
 
-创建的是`ArrayList`的对象,而`ArrayList`是Java已经写好的一个类,这个类在底层做了一些处理:   
+创建的是ArrayList的对象,而ArrayList是Java已经写好的一个类,这个类在底层做了一些处理:   
 打印对象不是地址值,而是集合中存储的数据内容,并且在展示的时候会用`[]`把所有的数据进行包裹   
 
 范例: 
@@ -107,7 +109,7 @@ public class test {
     }
 ```
 
-根据`int size();`方法,可以遍历集合   
+根据int size();方法,可以遍历集合   
 
 ```java
 import java.util.ArrayList;
@@ -301,7 +303,7 @@ public class test {
 练习: 
 
 定义一个集合,存入3个用户对象   
-用户的属性为: `id`,`username`,`userpassword`   
+用户的属性为: id,username,userpassword                    
 
 要求: 定义一个方法,根据id查找对应的用户信息    
 1. 如果存在,则返回索引;如果不存在,则返回-1    
@@ -392,7 +394,7 @@ public class test {
 
 定义JavaBean类: Phone   
 Phone属性: 品牌,价格   
-`main`方法中定义一个集合,存入三个手机对象   
+main方法中定义一个集合,存入三个手机对象   
 分别为: 小米 1000.0; 苹果 8000.0; 华为 6000.0   
 定义一个方法,将价格低于3000的手机信息返回  
 
@@ -463,7 +465,7 @@ public class test {
 练习: 
 
 请定义教师(Teacher)类,属性包含姓名和专业名称   
-将若干教师对象存入`ArrayList`集合中,并遍历集合打印教师信息     
+将若干教师对象存入ArrayList集合中,并遍历集合打印教师信息     
  
 姓名: 赵老师,专业: javase   
 姓名: 钱老师,专业: javaee   
@@ -532,7 +534,7 @@ public class TeacherTest {
 姓名: 赵六,工资: 4500   
 姓名: 田七,工资: 5000    
 
-先需要将所有的员工信息都存入`ArrayList`集合中,并完成如下操作:    
+先需要将所有的员工信息都存入ArrayList集合中,并完成如下操作:    
 1. 判断是否有姓名为"王五"的员工,如果有,改名为"王小五"   
 2. 判断是否有姓名为"赵六"的员工,如果有,将其删除    
 3. 给姓名为"田七"的员工,涨500工资    

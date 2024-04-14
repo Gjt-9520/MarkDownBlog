@@ -275,7 +275,7 @@ for (String s: list) {
 2. `Index 10 out of bounds for length 5`      
 程序试图访问数组的第10个元素,但数组的长度只有5       
 3. `at com.gujintao.test.main(test.java: 8)`     
-这个异常发生在`com.gujintao.test`包的`main`方法内,位置是第8行     
+这个异常发生在`com.gujintao.test`包的main方法内,位置是第8行     
 
 ## 快捷键
 
@@ -332,7 +332,7 @@ for (String s: list) {
 
 ### 快速生成方法
 
-选中方法后,在`main()`方法外创建方法 `ctrl + enter`   
+选中方法后,在main()方法外创建方法 `ctrl + enter`   
 
 ### 列选择模式 
 

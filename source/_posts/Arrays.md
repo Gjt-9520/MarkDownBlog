@@ -1,11 +1,13 @@
 ---
 title: "Arrays"
 date: 2024-02-29
-description: "把数组拼接成一个字符串、二分查找法查找元素、拷贝数组(指定范围)、填充数组、按照默认方式/指定的规则进行数组排序"
+description: "操作数组的工具类"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage73.jpg?raw=true
 tags: ["Java基础","API"]
 category: "学习笔记"
-updated: 2024-02-29
+updated: 2024-03-01
+swiper_index:
+top_group_index:
 ---
 
 ## Arrays
@@ -84,7 +86,7 @@ public class Test {
 1. 只能给引用数据类型的数组进行排序
 2. 如果是基本数据类型的数组,需要变成其对应的包装类       
 
-`sort`底层原理:      
+sort底层原理:      
 利用插入排序+二分查找的方式进行排序            
 默认把0索引的数据当作是有序的序列,1索引到最后当作是无序的序列           
 遍历无序序列得到里面的每一个元素,假设当前遍历得到的元素是A                

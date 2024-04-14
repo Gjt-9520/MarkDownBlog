@@ -5,7 +5,9 @@ description: "final修饰的方法、类、变量"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage79.jpg?raw=true
 tags: ["Java基础","面向对象"]
 category: "学习笔记"
-updated: 2024-01-08
+updated: 2024-01-09
+swiper_index:
+top_group_index:
 ---
 
 ## 包
@@ -19,7 +21,7 @@ updated: 2024-01-08
 ### 使用其他类的规则
 
 1. 使用同一个包中的类时,不需要导包  
-2. 使用`java.lang`包中的类时,不需要导包
+2. 使用java.lang包中的类时,不需要导包
 3. 其他情况都需要导包
 4. 如果同时使用两个包中的同名类,需要用全类名(这样就不需要导包)
 全类名(全限定名): `包名+类名`

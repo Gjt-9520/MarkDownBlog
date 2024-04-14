@@ -1,11 +1,13 @@
 ---
 title: "List"
 date: 2024-03-04
-description: "特点、特有方法、遍历方式(普通for遍历、迭代器遍历、增强for遍历、Lambda表达式遍历、列表迭代器遍历)"
+description: "普通for遍历、迭代器遍历、增强for遍历、Lambda表达式遍历、列表迭代器遍历"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage92.jpg?raw=true
 tags: ["Java进阶","集合"]
 category: "学习笔记"
-updated: 2024-03-04
+updated: 2024-03-05
+swiper_index:
+top_group_index:
 ---
 
 ## 特点 
@@ -16,8 +18,8 @@ updated: 2024-03-04
 
 ## 特有方法
 
-1. `Collection`的方法`List`都继承了
-2. `List`集合因为有索引,所以多了很多索引操作的方法
+1. Collection的方法List都继承了
+2. List集合因为有索引,所以多了很多索引操作的方法
 
 ![List索引操作的方法](../images/List索引操作的方法.png)
 
@@ -76,7 +78,7 @@ public class Test {
 
 2. `remove(int index)`: 删除指定索引处的元素,返回被删除的元素               
 a.**调用方法的时候,如果方法出现了重载,优先调用实参和形参类型一致的那个方法**                
-b.**`remove`方法不会自动装箱**
+b.**remove方法不会自动装箱**
 
 范例: 
 
@@ -110,7 +112,7 @@ public class Test {
 
 ## 遍历方式
 
-1. 普通for遍历(**因为`List`集合存在索引**) -- **如果遍历的时候想操作索引,使用普通for遍历**
+1. 普通for遍历(**因为List集合存在索引**) -- **如果遍历的时候想操作索引,使用普通for遍历**
 2. 迭代器遍历 -- **在遍历的过程中需要删除元素,使用迭代器遍历**
 3. 增强for遍历 -- **仅遍历,使用增强for遍历**
 4. Lambda表达式遍历 -- **仅遍历,使用Lambda表达式遍历**
@@ -168,10 +170,10 @@ public class Test {
 
 ### 遍历迭代器遍历      
 
-和迭代器类似,但是有一个方法`add(E element)`: 在遍历的过程中,可以添加元素             
+和迭代器类似,但是有一个方法add(E element): 在遍历的过程中,可以添加元素             
 
 细节: **迭代器遍历时,不能用集合的方法进行增加或者删除**         
-**否则就会报错`ConcurrentModificationException`(并发修改异常)**           
+**否则就会报错ConcurrentModificationException(并发修改异常)**           
 
 
 范例: 

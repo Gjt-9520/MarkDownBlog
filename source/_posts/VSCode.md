@@ -5,7 +5,9 @@ description: "快捷键、技巧"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage102.jpg?raw=true
 tags: ["编译器"]
 category: "学习笔记"
-updated: 2023-11-29
+updated: 2023-11-30
+swiper_index:
+top_group_index:
 ---
 
 ## 打开最近打开的文件
