@@ -6,8 +6,8 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage93.jpg?ra
 tags: ["MarkDown"]
 category: "学习笔记"
 updated: 2023-11-27
-swiper_index: 3
-top_group_index: 3
+swiper_index: 
+top_group_index: 
 ---
 
 ## [官方教程](https://markdown.com.cn/)
