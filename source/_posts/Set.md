@@ -2,7 +2,7 @@
 title: "Set"
 date: 2024-03-19
 description: ""
-cover: https:github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage103.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage103.jpg?raw=true
 tags: ["Java进阶","集合"]
 category: "学习笔记"
 updated: 2024-03-20
@@ -26,23 +26,23 @@ public class Test {
     public static void main(String[] args) throws Exception {
         Set<String> s = new HashSet<>();
         
-        添加元素(不重复)
-        如果当前是元素是第一次添加,那么添加成功,返回true
-        如果当前是元素不是第一次添加,那么添加失败,返回false
+        // 添加元素(不重复)
+        // 如果当前是元素是第一次添加,那么添加成功,返回true
+        // 如果当前是元素不是第一次添加,那么添加失败,返回false
         boolean r1 = s.add("张三");
         boolean r2 = s.add("张三");
-        打印结果: "[张三]"
+        // 打印结果: "[张三]"
         System.out.println(s);
-        打印结果: "true"
+        // 打印结果: "true"
         System.out.println(r1);
-        打印结果: "false"
+        // 打印结果: "false"
         System.out.println(r2);
 
-        打印集合(无序)
+        // 打印集合(无序)
         s.add("李四");
         s.add("王五");
         s.add("赵六");
-        打印结果: "[张三, 王五, 赵六]"
+        // 打印结果: "[张三, 王五, 赵六]"
         System.out.println(s);
     }
 }

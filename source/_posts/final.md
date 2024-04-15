@@ -142,19 +142,19 @@ import Domain1.Teacher;
 
 public class Test {
     public static void main(String[] args) {
-        //使用同一个包中的类时,不需要导包
+        // 使用同一个包中的类时,不需要导包
         Student student = new Student("张三",23);
         System.out.println(student.getName() + "," + student.getAge());
 
-        //使用java.lang包中的类时,不需要导包
+        // 使用java.lang包中的类时,不需要导包
         String str = "abc";
         System.out.println(str);
 
-        //使用其他包中类,需要导包
+        // 使用其他包中类,需要导包
         Teacher teacher = new Teacher("赵老师",20);
         System.out.println(teacher.getName() + "," + teacher.getAge());
 
-        //如果同时使用两个包中的同名类,需要用全类名(这样就不需要导包)
+        // 如果同时使用两个包中的同名类,需要用全类名(这样就不需要导包)
         Domain1.Teacher teacher1 = new Domain1.Teacher("李四",24);
         Domain2.Teacher teacher2 = new Domain2.Teacher("王五",25);
         System.out.println(teacher1.getName() + "," + teacher1.getAge());
@@ -231,23 +231,23 @@ public class Student {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //final修饰的变量是基本类型: 那么变量存储的**数据值**不能发生改变
+        // final修饰的变量是基本类型: 那么变量存储的**数据值**不能发生改变
         final double PI = 3.1415926;
-        //`PI = 2;`报错
+        // `PI = 2;`报错
 
-        //final修饰的变量是引用类型: 那么变量存储的**地址值**不能发生改变,对象内部的属性值可以改变
+        // final修饰的变量是引用类型: 那么变量存储的**地址值**不能发生改变,对象内部的属性值可以改变
         final Student STUDENT = new Student("张三",24);
-        //`student = new Student();`报错
+        // `student = new Student();`报错
         STUDENT.setName("王五");
         STUDENT.setAge(25);
-        //打印结果: "王五,25"
+        // 打印结果: "王五,25"
         System.out.println(STUDENT.getName() + "," + STUDENT.getAge());
 
         final int[] ARR = {1,2,3,4,5};
-        //`ARR = new int[10];`报错
+        // `ARR = new int[10];`报错
         ARR[0] = 10;
         ARR[4] = 11;
-        //打印结果: "10 2 3 4 11 "
+        // 打印结果: "10 2 3 4 11 "
         for (int j: ARR) {
             System.out.print(j + " ");
         }
@@ -268,10 +268,10 @@ public class StudentSystem {
     private static final String BACK = "5";
     private static final String EXIT = "6";
 
-    //学生管理系统主界面
+    // 学生管理系统主界面
     public static void mainMenu() {
         Scanner scanner = new Scanner(System.in);
-        //定义学生集合
+        // 定义学生集合
         ArrayList<Student> list = new ArrayList<>();
         Student stu1 = new Student("202301","张三生",29,"南京");
         Student stu2 = new Student("202302","李四维",21,"上海");

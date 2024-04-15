@@ -31,9 +31,9 @@ top_group_index:
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "2"
+        // 打印结果: "2"
         System.out.println(Math.abs(-2));
-        //打印结果: "-2147483648"
+        // 打印结果: "-2147483648"
         System.out.println(Math.abs(-2147483648));
     }
 }
@@ -52,13 +52,13 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "13.0"
+        // 打印结果: "13.0"
         System.out.println(Math.ceil(12.32));
-        //打印结果: "13.0"
+        // 打印结果: "13.0"
         System.out.println(Math.ceil(12.52));
-        //打印结果: "-12.0"
+        // 打印结果: "-12.0"
         System.out.println(Math.ceil(-12.32));
-        //打印结果: "-12.0"
+        // 打印结果: "-12.0"
         System.out.println(Math.ceil(-12.52));
     }
 }
@@ -74,13 +74,13 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "12.0"
+        // 打印结果: "12.0"
         System.out.println(Math.floor(12.32));
-        //打印结果: "12.0"
+        // 打印结果: "12.0"
         System.out.println(Math.floor(12.52));
-        //打印结果: "-13.0"
+        // 打印结果: "-13.0"
         System.out.println(Math.floor(-12.32));
-        //打印结果: "-13.0"
+        // 打印结果: "-13.0"
         System.out.println(Math.floor(-12.52));
     }
 }
@@ -95,13 +95,13 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "12"
+        // 打印结果: "12"
         System.out.println(Math.round(12.32));
-        //打印结果: "13"
+        // 打印结果: "13"
         System.out.println(Math.round(12.52));
-        //打印结果: "-12"
+        // 打印结果: "-12"
         System.out.println(Math.round(-12.32));
-        //打印结果: "-13"
+        // 打印结果: "-13"
         System.out.println(Math.round(-12.52));
     }
 }
@@ -116,7 +116,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "12"
+        // 打印结果: "12"
         System.out.println(Math.max(12,11));
     }
 }
@@ -131,7 +131,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "11"
+        // 打印结果: "11"
         System.out.println(Math.min(12,11));
     }
 }
@@ -151,11 +151,11 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "8.0"
+        // 打印结果: "8.0"
         System.out.println(Math.pow(2,3));
-        //打印结果: "2.0"
+        // 打印结果: "2.0"
         System.out.println(Math.pow(4,0.5));
-        //打印结果: "0.25"
+        // 打印结果: "0.25"
         System.out.println(Math.pow(2,-2));
     }
 }
@@ -170,7 +170,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "2.0"
+        // 打印结果: "2.0"
         System.out.println(Math.sqrt(4));
     }
 }
@@ -185,7 +185,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "2.0"
+        // 打印结果: "2.0"
         System.out.println(Math.cbrt(8));
     }
 }
@@ -200,7 +200,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //打印结果: "0.975375166736634"(随机值)
+        // 打印结果: "0.975375166736634"(随机值)
         System.out.println(Math.random());
     }
 }
@@ -256,9 +256,9 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        //打印出0~99999之间的自幂数
-        //判断是否存在两位的自幂数
-        //统计水仙花数、四叶玫瑰数、五角星数的个数
+        // 打印出0~99999之间的自幂数
+        // 判断是否存在两位的自幂数
+        // 统计水仙花数、四叶玫瑰数、五角星数的个数
         System.out.print("打印出0~99999之间的自幂数: ");
         printNumber();
 
@@ -266,7 +266,7 @@ public class Test {
         System.out.print("请输入一个数: ");
         int number = scanner.nextInt();
 
-        //根据位数判断是哪种自幂数
+        // 根据位数判断是哪种自幂数
         int result = isRight(number);
         if (result == 1) {
             System.out.println(",而且是独身数");
@@ -289,62 +289,62 @@ public class Test {
         }
     }
 
-    //打印出0~99999之间的自幂数
-    //判断是否存在两位的自幂数
-    //统计水仙花数、四叶玫瑰数、五角星数的个数
+    // 打印出0~99999之间的自幂数
+    // 判断是否存在两位的自幂数
+    // 统计水仙花数、四叶玫瑰数、五角星数的个数
     public static void printNumber() {
-        //统计水仙花数的个数
+        // 统计水仙花数的个数
         int threeCount = 0;
-        //证明没有两位的自幂数
+        // 证明没有两位的自幂数
         int twoCount = 0;
-        //统计四叶玫瑰数的个数
+        // 统计四叶玫瑰数的个数
         int fourCount = 0;
-        //统计五角星数的个数
+        // 统计五角星数的个数
         int fiveCount = 0;
         for (int j = 0; j < 99999; j++) {
             int number = j;
-            //作为获取各位上的数字时变化的数
+            // 作为获取各位上的数字时变化的数
             int oldNumber = number;
-            //作为最终结果比对的数
+            // 作为最终结果比对的数
             int numberResult = number;
-            //获取位数
+            // 获取位数
             int numberCount = 0;
             while (number > 0) {
                 number = number / 10;
                 numberCount++;
             }
-            //获取各个数位上的数字的次幂之和
+            // 获取各个数位上的数字的次幂之和
             int result = 0;
             for (int i = 0; i < numberCount; i++) {
-                //获取个位上的数字
+                // 获取个位上的数字
                 int digitNumber = oldNumber % 10;
                 result += Math.pow(digitNumber,numberCount);
                 oldNumber /= 10;
             }
             if (result == numberResult) {
-                //打印出1~99999之间的自幂数
+                // 打印出1~99999之间的自幂数
                 System.out.print(result + " ");
 
-                //统计两位的自幂数的个数
+                // 统计两位的自幂数的个数
                 if (numberCount == 2) {
                     twoCount++;
 
-                    //统计水仙花数的个数
+                    // 统计水仙花数的个数
                 } else if (numberCount == 3) {
                     threeCount++;
 
-                    //统计四叶玫瑰数的个数
+                    // 统计四叶玫瑰数的个数
                 } else if (numberCount == 4) {
                     fourCount++;
 
-                    //统计五角星数的个数
+                    // 统计五角星数的个数
                 } else if (numberCount == 5) {
                     fiveCount++;
                 }
             }
         }
         System.out.println();
-        //判断是否存在两位的自幂数
+        // 判断是否存在两位的自幂数
         if (twoCount != 0) {
             System.out.println("存在两位的自幂数");
         } else {
@@ -355,34 +355,34 @@ public class Test {
         System.out.println("五角星数的个数为: " + fiveCount);
     }
 
-    //判断是否是自幂数,返回自幂数的位数
+    // 判断是否是自幂数,返回自幂数的位数
     public static int isRight(int number) {
-        //作为获取各位上的数字时变化的数
+        // 作为获取各位上的数字时变化的数
         int oldNumber = number;
-        //作为最终结果比对的数
+        // 作为最终结果比对的数
         int numberResult = number;
-        //获取位数
+        // 获取位数
         int numberCount = 0;
         while (number > 0) {
             number = number / 10;
             numberCount++;
         }
-        //获取各个数位上的数字的次幂之和
+        // 获取各个数位上的数字的次幂之和
         int result = 0;
         for (int i = 0; i < numberCount; i++) {
-            //获取个位上的数字
+            // 获取个位上的数字
             int digitNumber = oldNumber % 10;
             result += Math.pow(digitNumber,numberCount);
             oldNumber /= 10;
         }
-        //判断是否是自幂数
+        // 判断是否是自幂数
         if (result == numberResult) {
             System.out.print(numberResult + "是自幂数");
-            //是自幂数,返回位数
+            // 是自幂数,返回位数
             return numberCount;
         } else {
             System.out.print(numberResult + "不是自幂数");
-            //不是自幂数,返回-1
+            // 不是自幂数,返回-1
             return -1;
         }
     }

@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## [Git 官方文档链接](https://git-scm.com/docs)
+## [Git 官方文档链接](https:// git-scm.com/docs)
 
 ## Git工作流程  
 

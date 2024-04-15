@@ -27,7 +27,7 @@ public class test {
         double oldPrice = sc.nextDouble();
         System.out.println("请输入出行的月份(1~12): ");
         int month = sc.nextInt();
-        //验证输入月份的合法性
+        // 验证输入月份的合法性
         int season;
         int error_1 = 0;
         while (true) {
@@ -38,11 +38,11 @@ public class test {
             System.out.println("请重新输入出行的月份(1~12): ");
             month = sc.nextInt();
         }
-        //判断淡季/旺季
+        // 判断淡季/旺季
         season = getSeason(month);
         System.out.println("头等舱(0),经济舱(1),请输入您的舱位: ");
         int choose = sc.nextInt();
-        //验证选择淡季/旺季的合法性
+        // 验证选择淡季/旺季的合法性
         double newPrice;
         double error_2 = 0.0;
         while (true) {
@@ -53,7 +53,7 @@ public class test {
             System.out.println("头等舱(0),经济舱(1),请重新输入您的舱位: ");
             choose = sc.nextInt();
         }
-        //计算出对应季对应舱的实际价格
+        // 计算出对应季对应舱的实际价格
         newPrice = getMoney(choose, season, oldPrice);
         System.out.println("您需要支付的实际价格为: " + newPrice);
     }
@@ -62,14 +62,14 @@ public class test {
         int season;
         int error_1 = 2;
         if (month >= 5 && month <= 10) {
-            //旺季season=0
+            // 旺季season=0
             season = 0;
         } else if ((month >= 1 && month <= 4) || (month >= 11 && month <= 12)) {
-            //淡季season=1
+            // 淡季season=1
             season = 1;
         } else {
             System.out.print("输入不合法!");
-            //输入不合法
+            // 输入不合法
             return error_1;
         }
         return season;
@@ -79,20 +79,20 @@ public class test {
         double newPrice;
         double error_2 = 0.1;
         if (season == 1 && choose == 0) {
-            //旺季头等舱
+            // 旺季头等舱
             newPrice = 0.9 * oldPrice;
         } else if (season == 1 && choose == 1) {
-            //旺季经济舱
+            // 旺季经济舱
             newPrice = 0.85 * oldPrice;
         } else if (season == 2 && choose == 0) {
-            //淡季头等舱
+            // 淡季头等舱
             newPrice = 0.7 * oldPrice;
         } else if (season == 2 && choose == 1) {
-            //淡季经济舱
+            // 淡季经济舱
             newPrice = 0.65 * oldPrice;
         } else {
             System.out.print("输入不合法!");
-            //输入不合法
+            // 输入不合法
             return error_2;
         }
         return newPrice;
@@ -110,24 +110,24 @@ public class test {
 public class test {
     public static void main(String[] args) {
         int[] arr = new int[100];
-        //模拟索引
+        // 模拟索引
         int an = 0;
-        //计数器
+        // 计数器
         int count = 0;
-        //遍历101~200,依次得到该范围内的每一个数number
+        // 遍历101~200,依次得到该范围内的每一个数number
         for (int number = 101; number <= 200; number++) {
-            //假设number一开始就是素数
+            // 假设number一开始就是素数
             boolean flag = true;
-            //判断当前number是否是一个素数
+            // 判断当前number是否是一个素数
             for (int i = 2; i < number; i++) {
                 if (number % i == 0) {
                     flag = false;
-                    //跳出单层循环,即内循环
+                    // 跳出单层循环,即内循环
                     break;
                 }
             }
             if (flag) {
-                //将所有素数存入数组
+                // 将所有素数存入数组
                 arr[an] = number;
                 an++;
                 count++;
@@ -156,15 +156,15 @@ import java.util.Random;
 public class test {
     public static void main(String[] args) {
         Random ra = new Random();
-        //前4位的字母,A~z随机生成
+        // 前4位的字母,A~z随机生成
         for (int i = 0; i < 4; i++) {
-            //随机取大写字母65~90
+            // 随机取大写字母65~90
             int A_number = ra.nextInt(25) + 65;
-            //随机取小写字母97~122
+            // 随机取小写字母97~122
             int a_number = ra.nextInt(25) + 97;
             System.out.print(getTemp(A_number,a_number));
         }
-        //最后1位的数字,0~9随机生成
+        // 最后1位的数字,0~9随机生成
         int number = ra.nextInt(10);
         System.out.print(number);
     }
@@ -172,7 +172,7 @@ public class test {
     public static char getTemp(int A, int a) {
         Random ra = new Random();
         char temp;
-        //随机选择字母大/小写
+        // 随机选择字母大/小写
         int x = ra.nextInt(2);
         if (x == 0) {
             temp = (char) A;
@@ -190,21 +190,21 @@ import java.util.Random;
 public class test {
     public static void main(String[] args) {
         char[] arr = new char[52];
-        //65~90大写字母存入数组
+        // 65~90大写字母存入数组
         for (int i = 0, n1 = 65; i < 26; i++, n1++) {
             arr[i] = (char) n1;
         }
-        //97~122小写字母存入数组
+        // 97~122小写字母存入数组
         for (int i = 26, n2 = 97; i < 52; i++, n2++) {
             arr[i] = (char) n2;
         }
-        //前4位随机抽取大小写字母
+        // 前4位随机抽取大小写字母
         Random ra = new Random();
         for (int i = 0; i < 4; i++) {
             int radius = ra.nextInt(arr.length);
             System.out.print(arr[radius]);
         }
-        //最后1位随机抽取数字0~9
+        // 最后1位随机抽取数字0~9
         int number = ra.nextInt(10);
         System.out.print(number);
     }
@@ -219,22 +219,22 @@ public class test {
         char[] arr = new char[52];
         for (int i = 0; i < arr.length; i++) {
             if (i < 26) {
-                //65~90大写字母存入数组
+                // 65~90大写字母存入数组
                 arr[i] = (char) ('A' + i);
             } else {
-                //97~122小写字母存入数组
+                // 97~122小写字母存入数组
                 arr[i] = (char) ('a' + i - 26);
             }
         }
-        //前4位随机抽取大小写字母
+        // 前4位随机抽取大小写字母
         Random ra = new Random();
-        //链接字符
+        // 链接字符
         String result = "";
         for (int i = 0; i < 4; i++) {
             int radius = ra.nextInt(arr.length);
             result += arr[radius];
         }
-        //最后1位随机抽取数字0~9
+        // 最后1位随机抽取数字0~9
         int number = ra.nextInt(10);
         System.out.print(result + number);
     }
@@ -281,11 +281,11 @@ public class test {
         double lastScore = (double) (sum - min - max) / (scoreArr.length - 2);
         System.out.println("选手的得分为: " + lastScore);
     }
-    // 获取所有评委分数存储到数组中
+    //  获取所有评委分数存储到数组中
     public static int[] getScore() {
         Scanner sc = new Scanner(System.in);
         int[] score = new int[6];
-        //将条件控制语句`i++`移动到判断语句中
+        // 将条件控制语句`i++`移动到判断语句中
         for (int i = 0; i < score.length; ) {
             System.out.println("请输入第" + (i + 1) + "位评委打的分数: ");
             int putIn = sc.nextInt();
@@ -298,7 +298,7 @@ public class test {
         }
         return score;
     }
-    //获取数组中的最大值
+    // 获取数组中的最大值
     public static int maxScore(int[] score) {
         int max = score[0];
         for (int i = 1; i < score.length; i++) {
@@ -308,7 +308,7 @@ public class test {
         }
         return max;
     }
-    //获取数组中的最小值
+    // 获取数组中的最小值
     public static int minScore(int[] score) {
         int min = score[0];
         for (int i = 1; i < score.length; i++) {
@@ -318,7 +318,7 @@ public class test {
         }
         return min;
     }
-    //数组求和
+    // 数组求和
     public static int getSum(int[] score) {
         int sum = 0;
         for (int i = 0; i < score.length; i++) {
@@ -338,22 +338,22 @@ public class test {
 public class test {
     public static void main(String[] args) {
         int[] arr = {1,9,8,3};
-        //数组的每一位+5
+        // 数组的每一位+5
         for (int i = 0; i < arr.length; i++) {
             arr[i] += 5;
         }
-        //数组的每一位%10
+        // 数组的每一位%10
         for (int i = 0; i < arr.length; i++) {
             arr[i] %= 10;
         }
-        //数组反转
+        // 数组反转
         for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
             int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
         }
         System.out.print("加密后: ");
-        //拼接数组的每一位,组成加密后的密码
+        // 拼接数组的每一位,组成加密后的密码
         int result = 0;
         for (int i = 0; i < arr.length; i++) {
             result = result * 10 + arr[i];
@@ -372,17 +372,17 @@ public class test {
         System.out.print("请输入4位数密码: ");
         int oldPwd = sc.nextInt();
         int[] arr = new int[4];
-        //将反转后的密码的每一位存入数组中
+        // 将反转后的密码的每一位存入数组中
         for (int i = 0; i < arr.length; i++) {
             int number = oldPwd % 10;
             oldPwd /= 10;
             arr[i] = number;
         }
-        //数组的每一位+5
+        // 数组的每一位+5
         for (int i = 0; i < arr.length; i++) {
             arr[i] += 5;
         }
-        //数组的每一位%10
+        // 数组的每一位%10
         for (int i = 0; i < arr.length; i++) {
             arr[i] %= 10;
         }
@@ -402,12 +402,12 @@ public class test {
         Scanner sc = new Scanner(System.in);
         System.out.print("请输入密码: ");
         int pwd = sc.nextInt();
-        //定义一个变量临时记录密码的值
+        // 定义一个变量临时记录密码的值
         int oldPwd = pwd;
-        //验证密码的合法性
+        // 验证密码的合法性
         int pwdLength = 0;
         if(pwd > 0) {
-            //判断出密码的长度
+            // 判断出密码的长度
             while (pwd != 0) {
                 pwd /= 10;
                 pwdLength++;
@@ -415,10 +415,10 @@ public class test {
         }else {
             System.out.println("输入不合法!");
         }
-        //创建数组存储密码
+        // 创建数组存储密码
         int[] arr = new int[pwdLength];
-        //密码的每一位存入数组中
-        //模拟索引
+        // 密码的每一位存入数组中
+        // 模拟索引
         int index = arr.length-1;
         while(oldPwd != 0){
             int number = oldPwd % 10;
@@ -426,15 +426,15 @@ public class test {
             arr[index] = number;
             index --;
         }
-        //数组的每一位+5
+        // 数组的每一位+5
         for (int i = 0; i < arr.length; i++) {
             arr[i] += 5;
         }
-        //数组的每一位%10
+        // 数组的每一位%10
         for (int i = 0; i < arr.length; i++) {
             arr[i] %= 10;
         }
-        //数组反转
+        // 数组反转
         for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
             int temp = arr[i];
             arr[i] = arr[j];
@@ -462,17 +462,17 @@ public class test {
         Scanner sc = new Scanner(System.in);
         System.out.print("请输入加密后的数据: ");
         int pwd = sc.nextInt();
-        //定义一个临时变量存储加密后的数据
+        // 定义一个临时变量存储加密后的数据
         int newPwd = pwd;
-        //计算出存储该数据的数组长度
+        // 计算出存储该数据的数组长度
         int pwdLength = 0;
         while (pwd != 0) {
             pwd /= 10;
             pwdLength++;
         }
-        //创建数组存储加密后的数据
+        // 创建数组存储加密后的数据
         int[] pwdArr = new int[pwdLength];
-        //模拟索引
+        // 模拟索引
         int index = pwdArr.length - 1;
         while (newPwd != 0) {
             int number = newPwd % 10;
@@ -480,20 +480,20 @@ public class test {
             pwdArr[index] = number;
             index--;
         }
-        //数组反转
+        // 数组反转
         for (int i = 0, j = pwdLength - 1; i < j; i++, j--) {
             int temp = pwdArr[i];
             pwdArr[i] = pwdArr[j];
             pwdArr[j] = temp;
         }
-        //数组的每一位是对10求余得到的,需要还原
-        //分析: 0~9加5后对应5~14,5~9对10求余得5~9,10~14对10求余得0~4
+        // 数组的每一位是对10求余得到的,需要还原
+        // 分析: 0~9加5后对应5~14,5~9对10求余得5~9,10~14对10求余得0~4
         for (int i = 0; i < pwdArr.length; i++) {
             if (pwdArr[i] >= 0 && pwdArr[i] <= 4) {
                 pwdArr[i] += 10;
             }
         }
-        //数组中的每一位是加5得到的,需要还原
+        // 数组中的每一位是加5得到的,需要还原
         for (int i = 0; i < pwdArr.length; i++) {
             pwdArr[i] -= 5;
         }
@@ -524,7 +524,7 @@ public class test {
     public static void main(String[] args) {
         Random ra = new Random();
         int[] awardArr = {2, 588, 888, 1000, 10000};
-        //使数组元素随机交换位置
+        // 使数组元素随机交换位置
         for (int i = 0; i < 5; i++) {
             int temp = awardArr[i];
             int j = ra.nextInt(awardArr.length);
@@ -544,15 +544,15 @@ import java.util.Random;
 public class test {
     public static void main(String[] args) {
         int[] oldArr = {2, 588, 888, 1000, 10000};
-        //定义新数组用于存储抽奖结果
+        // 定义新数组用于存储抽奖结果
         int[] newArr = new int[oldArr.length];
         Random ra = new Random();
         for (int i = 0; i < newArr.length; ) {
-            //获取随机索引
+            // 获取随机索引
             int index = ra.nextInt(oldArr.length);
-            //获取奖项
+            // 获取奖项
             int prize = oldArr[index];
-            //判断奖项是否存在于新数组中,如果存在则重新抽取;如果不存在,就把奖项存入新数组
+            // 判断奖项是否存在于新数组中,如果存在则重新抽取;如果不存在,就把奖项存入新数组
             boolean flag = judge(newArr, oldArr[index]);
             if (!flag) {
                 newArr[i] = prize;
@@ -561,7 +561,7 @@ public class test {
             }
         }
     }
-    //判断奖项是否已经存在于新数组中,如果存在就返回true;如果不存在就返回false
+    // 判断奖项是否已经存在于新数组中,如果存在就返回true;如果不存在就返回false
     public static boolean judge(int[] newArr, int prize) {
         for (int i = 0; i < newArr.length; i++) {
             if (newArr[i] == prize) {
@@ -583,28 +583,28 @@ import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
-        //获取红色球中奖号码
+        // 获取红色球中奖号码
         int[] getRed_Number = getRed_prizeArr();
-        //获取蓝色球中奖号码
+        // 获取蓝色球中奖号码
         int[] getBlue_Number = getBlue_prizeArr();
-        //获取输入的双色球号码(6个红色球号码+1个蓝色球号码)
+        // 获取输入的双色球号码(6个红色球号码+1个蓝色球号码)
         int[] putIn_Number = putIn();
-        //打印投注的双色球号码
+        // 打印投注的双色球号码
         System.out.println("您投注的双色球为: ");
         for (int i = 0; i < putIn_Number.length; i++) {
             System.out.print(putIn_Number[i] + " ");
         }
-        //打印中奖的双色球号码
+        // 打印中奖的双色球号码
         int[] prizeNumber = sum(getRed_Number, getBlue_Number);
         System.out.println("\n中奖双色球为: ");
         for (int i = 0; i < prizeNumber.length; i++) {
             System.out.print(prizeNumber[i] + " ");
         }
-        //红色球中奖数量
+        // 红色球中奖数量
         int redCount = redRight(putIn_Number, getRed_Number);
-        //蓝色球中奖数量
+        // 蓝色球中奖数量
         int blueCount = blueRight(putIn_Number, prizeNumber);
-        //打印结果
+        // 打印结果
         int result = condition(redCount, blueCount);
         if (result != 0) {
             System.out.println("\n恭喜你!获得" + result + "等奖!");
@@ -613,7 +613,7 @@ public class test {
         }
     }
 
-    //返回红色球中奖数量
+    // 返回红色球中奖数量
     public static int redRight(int[] putIn, int[] prize) {
         int count = 0;
         for (int i = 0; i < putIn.length - 1; i++) {
@@ -625,7 +625,7 @@ public class test {
         return count;
     }
 
-    //返回蓝色球中奖数量
+    // 返回蓝色球中奖数量
     public static int blueRight(int[] putIn, int[] prize) {
         int count = 0;
         boolean flag = prize[prize.length - 1] == putIn[putIn.length - 1];
@@ -635,7 +635,7 @@ public class test {
         return count;
     }
 
-    //根据红色球和蓝色球数量对应的中奖条件,返回几等奖
+    // 根据红色球和蓝色球数量对应的中奖条件,返回几等奖
     public static int condition(int redCount, int blueCount) {
         int prize = 0;
         if (redCount >= 0 && redCount <= 2 && blueCount == 1) {
@@ -654,7 +654,7 @@ public class test {
         return prize;
     }
 
-    //判断数字是否存在于数组中,如果存在,返回true;如果不存在,返回false
+    // 判断数字是否存在于数组中,如果存在,返回true;如果不存在,返回false
     public static boolean flag(int[] arr, int number) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == number) {
@@ -664,20 +664,20 @@ public class test {
         return false;
     }
 
-    //获取输入的双色球号码: 6个红色球号码+1个蓝色球号码,存入数组中并返回
+    // 获取输入的双色球号码: 6个红色球号码+1个蓝色球号码,存入数组中并返回
     public static int[] putIn() {
-        //创建两个数组分别存储6个红色球号码和1个蓝色球号码
+        // 创建两个数组分别存储6个红色球号码和1个蓝色球号码
         int[] myRed = new int[6];
         int[] myBlue = new int[1];
         Scanner sc = new Scanner(System.in);
         System.out.println("红色球号码选择范围: 1~33 蓝色球号码选择范围: 1~16\n请从号码范围中选择输入且不要重复输入相同的号码!");
-        //获取输入的6个红色球号码
+        // 获取输入的6个红色球号码
         for (int i = 0; i < myRed.length; ) {
             System.out.println("请输入第" + (i + 1) + "个红色球号码: ");
-            //验证红色球号码合法性
+            // 验证红色球号码合法性
             int red = sc.nextInt();
-            //1.确保红色球号码在范围1~33之间
-            //2.确保不重复输入相同的号码
+            // 1.确保红色球号码在范围1~33之间
+            // 2.确保不重复输入相同的号码
             if (red >= 1 && red <= 33 && !flag(myRed, red)) {
                 myRed[i] = red;
                 i++;
@@ -685,10 +685,10 @@ public class test {
                 System.out.println("输入不合法!");
             }
         }
-        //获取输入的1个蓝色球号码
+        // 获取输入的1个蓝色球号码
         for (int i = 0; i < myBlue.length; ) {
             System.out.println("请输入1个蓝色球号码: ");
-            //验证蓝色球号码合法性
+            // 验证蓝色球号码合法性
             int blue = sc.nextInt();
             if (blue >= 1 && blue <= 16) {
                 myBlue[i] = blue;
@@ -700,10 +700,10 @@ public class test {
         return sum(myRed, myBlue);
     }
 
-    //6个红色球号码+1个蓝色球号码,合并成一个数组并返回
+    // 6个红色球号码+1个蓝色球号码,合并成一个数组并返回
     public static int[] sum(int[] red, int[] blue) {
         int[] myChoose = new int[7];
-        //将6个红色球号码存入索引0~5,将1个蓝色球号码存入索引6
+        // 将6个红色球号码存入索引0~5,将1个蓝色球号码存入索引6
         for (int i = 0; i < myChoose.length; i++) {
             if (i < 6) {
                 myChoose[i] = red[i];
@@ -714,28 +714,28 @@ public class test {
         return myChoose;
     }
 
-    //获取随机的1个蓝色球中奖号码,写入数组中并返回
+    // 获取随机的1个蓝色球中奖号码,写入数组中并返回
     public static int[] getBlue_prizeArr() {
         Random ra = new Random();
         int[] Blue_prize = new int[1];
-        //从1~17中随机选择一个数字填入数组
+        // 从1~17中随机选择一个数字填入数组
         Blue_prize[0] = ra.nextInt(16) + 1;
         return Blue_prize;
     }
 
-    //获取随机的6个红色球中奖号码,写入数组中并返回
+    // 获取随机的6个红色球中奖号码,写入数组中并返回
     public static int[] getRed_prizeArr() {
-        //将1~33写入红色球数组
+        // 将1~33写入红色球数组
         int[] redArr = new int[33];
         int number = 1;
         for (int i = 0; i < redArr.length; i++) {
             redArr[i] = number;
             number++;
         }
-        //将红色球数组内的元素位置随机打乱
+        // 将红色球数组内的元素位置随机打乱
         int[] confusion = confusion(redArr);
-        //将(已经随机打乱元素位置的)红色球数组的前6位元素复制到新数组中
-        //即将前6位红色球中奖号码复制到新数组中
+        // 将(已经随机打乱元素位置的)红色球数组的前6位元素复制到新数组中
+        // 即将前6位红色球中奖号码复制到新数组中
         int[] Red_prize = new int[6];
         for (int i = 0; i < 6; i++) {
             Red_prize[i] = confusion[i];
@@ -743,7 +743,7 @@ public class test {
         return Red_prize;
     }
 
-    //打乱数组元素位置后返回该数组
+    // 打乱数组元素位置后返回该数组
     public static int[] confusion(int[] arr) {
         Random ra = new Random();
         for (int i = 0; i < arr.length; i++) {

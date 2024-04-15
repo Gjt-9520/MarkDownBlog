@@ -77,10 +77,10 @@ public class Test {
     public static void main(String[] args) {
         int[] arr1 = {1,2,3,4,5,6,7,8,9,10};
         int[] arr2 = new int[10];
-        //从arr1的索引4开始拷贝3个元素,即5,6,7
-        //从arr2的索引2开始拷贝3个元素,即5,6,7
+        // 从arr1的索引4开始拷贝3个元素,即5,6,7
+        // 从arr2的索引2开始拷贝3个元素,即5,6,7
         System.arraycopy(arr1,4,arr2,2,3);
-        //打印结果: "0 0 5 6 7 0 0 0 0 0"
+        // 打印结果: "0 0 5 6 7 0 0 0 0 0"
         for (int i: arr2) {
             System.out.print(i + " ");
         }
@@ -148,24 +148,24 @@ public class Test {
         Student[] arr1 = {s1,s2,s3};
         Student[] arr2 = new Student[3];
 
-        //正常情况
+        // 正常情况
         System.arraycopy(arr1,0,arr2,0,3);
         for (Student student1: arr2) {
             System.out.println(student1.getName() + "," + student1.getAge());
         }
         System.out.println();
 
-        //特殊情况: 数据源数组和目的地数组都是引用数据类型,那么子类类型可以赋值给父类类型
+        // 特殊情况: 数据源数组和目的地数组都是引用数据类型,那么子类类型可以赋值给父类类型
         Person[] arr3 = new Person[3];
         System.arraycopy(arr1,0,arr3,0,3);
-        //使用普通for循环,需要强制类型转换
+        // 使用普通for循环,需要强制类型转换
         for (int i = 0; i < arr3.length; i++) {
             Student student2 = (Student) arr3[i];
             System.out.println(student2.getName() + "," + student2.getAge());
         }
         System.out.println();
 
-        //而使用增强型for循环 ,则无需强制类型转换
+        // 而使用增强型for循环 ,则无需强制类型转换
         for (Person p: arr3) {
             System.out.println(p.getName() + "," + p.getAge());
         }

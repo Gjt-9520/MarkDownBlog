@@ -26,9 +26,9 @@ updated: 2023-11-30
 
 ```java
 public class HelloWorld {
-    //输入psvm后回车,自动生成main()方法
+    // 输入psvm后回车,自动生成main()方法
     public static void main(String[] args) {
-        //输入sout后回车,自动生成输出语句
+        // 输入sout后回车,自动生成输出语句
         System.out.println();
     }
 }
@@ -47,7 +47,7 @@ public class HelloWorld {
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
-        //输出: 张三笑着打招呼说道: 你好啊,小美
+        // 输出: 张三笑着打招呼说道: 你好啊,小美
         System.out.printf("%s笑着打招呼说道: 你好啊,%s","张三","小美");
     }
 }
@@ -64,7 +64,7 @@ public class HelloWorld {
 ```java
 public class test {
     public static void main(String[] args) {
-        //100.fori快速生成循环次数为100的for循环
+        // 100.fori快速生成循环次数为100的for循环
         for (int i = 0; i < 100; i++) {
             System.out.printIn("HelloWorld");
         }
@@ -135,17 +135,17 @@ public class test2 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("请输入一个整数: ");
-        //nextInt(): 接受整数
+        // nextInt(): 接受整数
         int number1 = sc.nextInt();
         System.out.println("一个整数: " + number1);
 
         System.out.println("请输入一个小数: ");
-        //nextDouble(): 接受小数
+        // nextDouble(): 接受小数
         double number2 = sc.nextDouble();
         System.out.println("一个小数: " + number2);
 
         System.out.println("请输入一个字符串: ");
-        //next(): 接受字符串
+        // next(): 接受字符串
         String word1 = sc.next();
         System.out.println("一个字符串: " + word1);
     }
@@ -165,7 +165,7 @@ import java.util.Scanner;
 public class test2 {
     public static void main(String[] args) {
         System.out.println("请输入一个字符串: ");
-        //nextLine()接受字符串
+        // nextLine()接受字符串
         String word2 = sc.nextLine();
         System.out.println("一个字符串: " + word2);
     }
@@ -215,7 +215,7 @@ public class test {
 public class test {
     public static void main(String[] args) {
         int[] array = {12, 213, 414};
-        //array.fori快速生成数组遍历
+        // array.fori快速生成数组遍历
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
@@ -231,7 +231,7 @@ public class test {
 public class test {
     public static void main(String[] args) {
         int[] array = {12, 213, 414};
-        //array.forr快速生成数组遍历
+        // array.forr快速生成数组遍历
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.println(array[i]);
         }
@@ -246,7 +246,7 @@ public class test {
 范例:                   
 
 ```java
-//list.for快速生成增强for
+// list.for快速生成增强for
 for (String s: list) {
     System.out.print(s);
 }

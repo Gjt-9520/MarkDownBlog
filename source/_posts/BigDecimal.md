@@ -45,7 +45,7 @@ import java.math.BigDecimal;
 public class Test {
     public static void main(String[] args) {
         BigDecimal bd = new BigDecimal(0.97);
-        //打印结果: "0.9699999999999999733546474089962430298328399658203125"
+        // 打印结果: "0.9699999999999999733546474089962430298328399658203125"
         System.out.println(bd);
     }
 }
@@ -65,7 +65,7 @@ import java.math.BigDecimal;
 public class Test {
     public static void main(String[] args) {
         BigDecimal bd = new BigDecimal("0.97");
-        //打印结果: "0.97"
+        // 打印结果: "0.97"
         System.out.println(bd);
     }
 }
@@ -90,13 +90,13 @@ public class Test {
     public static void main(String[] args) {
         BigDecimal bd1 = BigDecimal.valueOf(2);
         BigDecimal bd2 = BigDecimal.valueOf(2);
-        //打印结果: "2"
+        // 打印结果: "2"
         System.out.println(bd1);
-        //打印结果: "true"
+        // 打印结果: "true"
         System.out.println(bd1 == bd2);
         BigDecimal bd3 = BigDecimal.valueOf(0.7);
         BigDecimal bd4 = BigDecimal.valueOf(0.7);
-        //打印结果: "false"
+        // 打印结果: "false"
         System.out.println(bd3 == bd4);
     }
 }
@@ -113,7 +113,7 @@ public class Test {
     public static void main(String[] args) {
         BigDecimal bd1 = BigDecimal.valueOf(10.0);
         BigDecimal bd2 = BigDecimal.valueOf(2.0);
-        //打印结果: "12.0"
+        // 打印结果: "12.0"
         System.out.println(bd1.add(bd2));
     }
 }
@@ -130,7 +130,7 @@ public class Test {
     public static void main(String[] args) {
         BigDecimal bd1 = BigDecimal.valueOf(10.0);
         BigDecimal bd2 = BigDecimal.valueOf(2.0);
-        //打印结果: "8.0"
+        // 打印结果: "8.0"
         System.out.println(bd1.subtract(bd2));
     }
 }
@@ -147,7 +147,7 @@ public class Test {
     public static void main(String[] args) {
         BigDecimal bd1 = BigDecimal.valueOf(10.0);
         BigDecimal bd2 = BigDecimal.valueOf(2.0);
-        //打印结果: "20.00"
+        // 打印结果: "20.00"
         System.out.println(bd1.multiply(bd2));
     }
 }
@@ -164,7 +164,7 @@ public class Test {
     public static void main(String[] args) {
         BigDecimal bd1 = BigDecimal.valueOf(10.0);
         BigDecimal bd2 = BigDecimal.valueOf(2.0);
-        //打印结果: "5"
+        // 打印结果: "5"
         System.out.println(bd1.divide(bd2));
     }
 }
@@ -182,9 +182,9 @@ public class Test {
     public static void main(String[] args) {
         BigDecimal bd1 = BigDecimal.valueOf(10.0);
         BigDecimal bd2 = BigDecimal.valueOf(3.0);
-        //打印结果: "3.33"
-        //精确几位: 小数点后保留2位
-        //舍入模式: 四舍五入
+        // 打印结果: "3.33"
+        // 精确几位: 小数点后保留2位
+        // 舍入模式: 四舍五入
         System.out.println(bd1.divide(bd2,2,RoundingMode.HALF_UP));
     }
 }

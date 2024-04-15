@@ -45,34 +45,34 @@ import java.util.Collection;
 
 public class Test {
     public static void main(String[] args) {
-        //Collection是一个接口,不能直接创建其对象,只能创建其实现类的对象
+        // Collection是一个接口,不能直接创建其对象,只能创建其实现类的对象
         Collection<String> coll = new ArrayList<>();
 
-        //添加
+        // 添加
         coll.add("aaa");
-        //打印结果: "[aaa]"
+        // 打印结果: "[aaa]"
         System.out.println(coll);
         System.out.println();
 
-        //清空
+        // 清空
         coll.clear();
-        //打印结果: "[]"
+        // 打印结果: "[]"
         System.out.println(coll);
         System.out.println();
 
-        //删除
+        // 删除
         coll.add("apple");
         coll.add("pig");
-        //打印结果: "[apple,pig]"
+        // 打印结果: "[apple,pig]"
         System.out.println(coll);
         coll.remove("pig");
-        //打印结果: "[apple]"
+        // 打印结果: "[apple]"
         System.out.println(coll);
         System.out.println();
 
-        //判断元素是否包含
-        //打印结果: "不包含pig"
-        //打印结果: "包含apple"
+        // 判断元素是否包含
+        // 打印结果: "不包含pig"
+        // 打印结果: "包含apple"
         if (coll.contains("pig")) {
             System.out.println("包含pig");
         } else {
@@ -85,12 +85,12 @@ public class Test {
         }
         System.out.println();
 
-        //判断是否为空
-        //打印结果: "false"
+        // 判断是否为空
+        // 打印结果: "false"
         System.out.println(coll.isEmpty());
 
-        //返回集合长度
-        //打印结果: "1"
+        // 返回集合长度
+        // 打印结果: "1"
         System.out.println(coll.size());
     }
 }
@@ -134,7 +134,7 @@ public class Student {
         this.age = age;
     }
 
-    //重写equals方法
+    // 重写equals方法
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -157,9 +157,9 @@ public class StudentTest {
         Student stu3 = new Student("张三",23);
         coll.add(stu1);
         coll.add(stu2);
-        //打印结果: "true"
+        // 打印结果: "true"
         System.out.println(coll.contains(stu1));
-        //打印结果: "true"
+        // 打印结果: "true"
         System.out.println(coll.contains(stu3));
     }
 }
@@ -201,13 +201,13 @@ public class Test {
         list.add("我");
         list.add("是");
         list.add("你");
-        //获取一个迭代器对象
-        //迭代器就好比一个指针,默认指向集合的0索引处
+        // 获取一个迭代器对象
+        // 迭代器就好比一个指针,默认指向集合的0索引处
         Iterator<String> it = list.iterator();
-        //判断是否有元素
-        //打印结果: "你是我,我是你"
+        // 判断是否有元素
+        // 打印结果: "你是我,我是你"
         while (it.hasNext()) {
-            //获取元素并移动指针
+            // 获取元素并移动指针
             System.out.print(it.next());
         }
     }
@@ -235,15 +235,15 @@ public class Test {
         list.add("我");
         list.add("是");
         list.add("你");
-        //获取一个迭代器对象
-        //迭代器就好比一个指针,默认指向集合的0索引处
+        // 获取一个迭代器对象
+        // 迭代器就好比一个指针,默认指向集合的0索引处
         Iterator<String> it = list.iterator();
-        //判断是否有元素
+        // 判断是否有元素
         while (it.hasNext()) {
-            //获取元素并移动指针
-            //打印结果: "你是我,我是你Exception in thread "main" java.util.NoSuchElementException..."
-            System.out.print(it.next());    //  你    我      我      你
-            System.out.print(it.next());    //  是    ,      是      Exception in thread "main" java.util.NoSuchElementException...
+            // 获取元素并移动指针
+            // 打印结果: "你是我,我是你Exception in thread "main" java.util.NoSuchElementException..."
+            System.out.print(it.next());    //   你    我      我      你
+            System.out.print(it.next());    //   是    ,      是      Exception in thread "main" java.util.NoSuchElementException...
         }
     }
 }
@@ -269,20 +269,20 @@ public class Test {
         list.add("我");
         list.add("是");
         list.add("你");
-        //获取一个迭代器对象
-        //迭代器就好比一个指针,默认指向集合的0索引处
+        // 获取一个迭代器对象
+        // 迭代器就好比一个指针,默认指向集合的0索引处
         Iterator<String> it = list.iterator();
-        //判断是否有元素
+        // 判断是否有元素
         while (it.hasNext()) {
-            //获取元素并移动指针
+            // 获取元素并移动指针
             String str = it.next();
 
             if (str.equals("我")) {
-                //用集合的方法进行删除
+                // 用集合的方法进行删除
                 list.remove("我");
             }
         }
-        //打印结果: "Exception in thread "main" java.util.ConcurrentModificationException..."
+        // 打印结果: "Exception in thread "main" java.util.ConcurrentModificationException..."
         System.out.print(list);
     }
 }
@@ -307,20 +307,20 @@ public class Test {
         list.add("我");
         list.add("是");
         list.add("你");
-        //获取一个迭代器对象
-        //迭代器就好比一个指针,默认指向集合的0索引处
+        // 获取一个迭代器对象
+        // 迭代器就好比一个指针,默认指向集合的0索引处
         Iterator<String> it = list.iterator();
-        //判断是否有元素
+        // 判断是否有元素
         while (it.hasNext()) {
-            //获取元素并移动指针
+            // 获取元素并移动指针
             String str = it.next();
 
             if (str.equals("我")) {
-                //用迭代器的方法进行删除
+                // 用迭代器的方法进行删除
                 it.remove();
             }
         }
-        //打印结果: "[你,是,,,是,你]"
+        // 打印结果: "[你,是,,,是,你]"
         System.out.print(list);
     }
 }
@@ -359,9 +359,9 @@ public class Test {
         list.add("是");
         list.add("你");
         
-        //注意: s其实就是一个第三方变量,在循环的过程中依次表示集合中的每一个数据
+        // 注意: s其实就是一个第三方变量,在循环的过程中依次表示集合中的每一个数据
         for (String s: list) {
-            //打印结果: "你是我,我是你"
+            // 打印结果: "你是我,我是你"
             System.out.print(s);
         }
     }
@@ -392,7 +392,7 @@ public class Test {
         for (String s: list) {
             s = "它";
         }
-        //打印结果: "[你,是,我,,,我,是,你]"
+        // 打印结果: "[你,是,我,,,我,是,你]"
         System.out.print(list);
     }
 }
@@ -426,10 +426,10 @@ public class Test {
         list.add("是");
         list.add("你");
 
-        //匿名内部类的形式
+        // 匿名内部类的形式
         list.forEach(new Consumer<String>() {
             @Override
-            //s依次表示集合中的每一个数据
+            // s依次表示集合中的每一个数据
             public void accept(String s) {
                 System.out.print(s);
             }
@@ -437,7 +437,7 @@ public class Test {
 
         System.out.println();
 
-        //Lambda表达式的形式
+        // Lambda表达式的形式
         list.forEach(s -> System.out.print(s));
     }
 }

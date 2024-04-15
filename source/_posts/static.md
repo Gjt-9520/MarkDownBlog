@@ -86,15 +86,15 @@ public class Student {
 ```java
 public class StudentTest {
     public static void main(String[] args) {
-        //类名调用(推荐)
+        // 类名调用(推荐)
         Student.teacherName1 = "王老师";
         Student stu1 = new Student("张三", 22, "男");
         Student stu2 = new Student("李四", 23, "女");
-        //对象名调用
+        // 对象名调用
         stu1.teacherName2 = "赵老师";
-        //打印结果: "张三,22,男,王老师,赵老师"
+        // 打印结果: "张三,22,男,王老师,赵老师"
         stu1.show();
-        //打印结果: 李四正在学习"
+        // 打印结果: 李四正在学习"
         stu2.learn();
     }
 }
@@ -130,11 +130,11 @@ public class StudentTest {
 
 ```java
 public class ArrayUtil {
-    //私有化构造方法
+    // 私有化构造方法
     private ArrayUtil() {
     }
 
-    //用于返回整数数组的内容
+    // 用于返回整数数组的内容
     public static String printArr(int[] arr) {
         StringBuilder result = new StringBuilder("[");
         for (int i = 0; i < arr.length - 1; i++) {
@@ -144,7 +144,7 @@ public class ArrayUtil {
         return result.toString();
     }
 
-    //用于返回平均分
+    // 用于返回平均分
     public static double getAverage(double[] arr) {
         double sum = arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -293,50 +293,50 @@ public class StudentTest {
 
 ```java
 public class Student {
-    //普通成员变量name
+    // 普通成员变量name
     String name;
-    //普通成员变量age
+    // 普通成员变量age
     int age;
-    //静态变量teacherName
+    // 静态变量teacherName
     static String teacherName;
 
-    //非静态的成员方法show1(Student this),其中Student this是隐藏的
-    //this表示当前方法调用者的地址值,在这里即Student
-    //this是虚拟机赋值的
+    // 非静态的成员方法show1(Student this),其中Student this是隐藏的
+    // this表示当前方法调用者的地址值,在这里即Student
+    // this是虚拟机赋值的
     public void show1() {
         System.out.println("this所记录的地址值: " + this);
 
-        //非静态方法可以访问所有
-        //隐藏this.name和this.age
-        //在这里,非静态方法show1()访问非静态变量如name、age和静态变量teacherName
+        // 非静态方法可以访问所有
+        // 隐藏this.name和this.age
+        // 在这里,非静态方法show1()访问非静态变量如name、age和静态变量teacherName
         System.out.println(name + "," + age + "," + teacherName);
 
-        //隐藏this.show2()
-        //在这里,非静态方法show1()访问非静态方法show2()
+        // 隐藏this.show2()
+        // 在这里,非静态方法show1()访问非静态方法show2()
         show2();
 
-        //隐藏this.method()
-        //在这里,非静态方法show1()访问静态方法method1()
+        // 隐藏this.method()
+        // 在这里,非静态方法show1()访问静态方法method1()
         method1();
     }
 
-    //非静态的成员方法show2()
+    // 非静态的成员方法show2()
     public void show2() {
         System.out.println("这是非静态方法");
     }
 
-    //静态的成员方法method()
-    //静态方法中没有this关键字
+    // 静态的成员方法method()
+    // 静态方法中没有this关键字
     public static void method1() {
-        //静态方法只能访问静态
-        //在这里,静态方法method()只能访问静态变量teacherName
+        // 静态方法只能访问静态
+        // 在这里,静态方法method()只能访问静态变量teacherName
         System.out.println(teacherName);
 
-        //在这里,静态方法method()只能访问静态方法method2
+        // 在这里,静态方法method()只能访问静态方法method2
         method2();
     }
 
-    //静态的成员方法method2()
+    // 静态的成员方法method2()
     public static void method2() {
         System.out.println("这是静态方法");
     }

@@ -45,7 +45,7 @@ import java.util.ArrayList;
 public class test {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        //打印结果: "[]"
+        // 打印结果: "[]"
         System.out.println(list);
 
     }
@@ -64,47 +64,47 @@ import java.util.ArrayList;
 public class test {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        //添加元素`111``222``333`
+        // 添加元素`111``222``333`
         boolean flag1 = list.add("111");
         list.add("222");
         list.add("333");
-        //打印结果: "true",即添加成功
+        // 打印结果: "true",即添加成功
         System.out.println(flag1);
-        //打印结果: "[111, 222, 333]"
+        // 打印结果: "[111, 222, 333]"
         System.out.println(list);
 
-        //删除元素`111`,返回能否删除
+        // 删除元素`111`,返回能否删除
         boolean flag2 = list.remove("111");
-        //打印结果: "true",即删除成功
+        // 打印结果: "true",即删除成功
         System.out.println(flag2);
-        //删除元素`444`,返回能否删除
+        // 删除元素`444`,返回能否删除
         boolean flag3 = list.remove("444");
-        //打印结果: "false",即删除失败
+        // 打印结果: "false",即删除失败
         System.out.println(flag3);
-        //打印结果: "[222, 333]"
+        // 打印结果: "[222, 333]"
         System.out.println(list);
-        //删除索引为1的元素,返回被删除的元素
+        // 删除索引为1的元素,返回被删除的元素
         String str1 = list.remove(1);
-        //打印结果: "333"
+        // 打印结果: "333"
         System.out.println(str1);
-        //打印结果: "[222]"
+        // 打印结果: "[222]"
         System.out.println(list);
 
-        //修改索引为0的值为`444`,返回被修改的元素
+        // 修改索引为0的值为`444`,返回被修改的元素
         String str2 = list.set(0, "444");
-        //打印结果: "222"
+        // 打印结果: "222"
         System.out.println(str2);
-        //打印结果: "[444]"
+        // 打印结果: "[444]"
         System.out.println(list);
 
-        //查询索引为0的元素
+        // 查询索引为0的元素
         String str3 = list.get(0);
-        //打印结果: "444"
+        // 打印结果: "444"
         System.out.println(str3);
 
-        //获取集合的长度
+        // 获取集合的长度
         int length = list.size();
-        //打印结果: "1"
+        // 打印结果: "1"
         System.out.println(length);
     }
 ```
@@ -117,7 +117,7 @@ import java.util.ArrayList;
 public class test {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        //添加元素`111``222``333`
+        // 添加元素`111``222``333`
         list.add("111");
         list.add("222");
         list.add("333");
@@ -167,7 +167,7 @@ import java.util.ArrayList;
 public class test {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        //int和Integer之间是可以互相转化的
+        // int和Integer之间是可以互相转化的
         arrayList.add(1);
         arrayList.add(2);
         arrayList.add(3);
@@ -368,9 +368,9 @@ public class test {
         System.out.println("请输入要查询的用户id: ");
         String putInId = sc.next();
         int index = getIndex(putInId, list);
-        //返回索引/-1
+        // 返回索引/-1
         System.out.println(index);
-        //返回true/false
+        // 返回true/false
         System.out.println(getCheck(index));
     }
 
@@ -592,7 +592,7 @@ public class EmployeeTest {
                 employee.setName("王小五");
             } else if (employee.getName().equals("赵六")) {
                 list.remove(employee);
-                //一旦删除元素,后面的元素会往前走,索引再加1就会有元素遗漏,所以删除后要i--
+                // 一旦删除元素,后面的元素会往前走,索引再加1就会有元素遗漏,所以删除后要i--
                 i--;
             } else if (employee.getName().equals("田七")) {
                 employee.setSalary(employee.getSalary() + 500);

@@ -30,7 +30,7 @@ public class ArraySort {
         Integer[] arr = {1,2,3,8,65,3234,66,23,21,90};
         
         /*
-        //匿名内部类的形式
+        // 匿名内部类的形式
         Arrays.sort(arr,new Comparator<Integer>() {
             @Override
             public int compare(Integer o1,Integer o2) {
@@ -39,7 +39,7 @@ public class ArraySort {
         });
         */
 
-        //Lambda表达式的形式
+        // Lambda表达式的形式
         Arrays.sort(arr,(Integer o1,Integer o2) -> {
                     return o1 - o2;
                 }
@@ -72,7 +72,7 @@ interface Swim {
 ```java
 public class Test {
     public static void main(String[] args) {
-        //匿名内部类的形式
+        // 匿名内部类的形式
         method(new Swim() {
             @Override
             public void Swimming() {
@@ -80,7 +80,7 @@ public class Test {
             }
         });
 
-        //Lambda表达式的形式
+        // Lambda表达式的形式
         method(
                 () -> {
                     System.out.println("正在游泳!!!");
@@ -117,7 +117,7 @@ public class Test {
     public static void main(String[] args) {
         Integer[] arr = {1,2,3,8,65,3234,66,23,21,90};
 
-        //Lambda表达式完整格式
+        // Lambda表达式完整格式
         /*
         Arrays.sort(arr,(Integer o1,Integer o2) -> {
                     return o1 - o2;
@@ -125,7 +125,7 @@ public class Test {
         );
         */
 
-        //Lambda表达式省略写法
+        // Lambda表达式省略写法
         Arrays.sort(arr,(o1,o2) -> o1 - o2);
 
         System.out.println(Arrays.toString(arr));

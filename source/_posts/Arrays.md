@@ -39,38 +39,38 @@ public class Test {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
 
-        //toString: 将数组变成字符串
-        //打印结果: "[1,2,3,4,5,6,7,8,9,10]"
+        // toString: 将数组变成字符串
+        // 打印结果: "[1,2,3,4,5,6,7,8,9,10]"
         System.out.println(Arrays.toString(arr));
         System.out.println();
 
-        //binarySearch: 二分查找法查找元素
-        //打印结果: "7"
+        // binarySearch: 二分查找法查找元素
+        // 打印结果: "7"
         System.out.println(Arrays.binarySearch(arr,8));
         System.out.println();
 
-        //copyOf: 拷贝数组
+        // copyOf: 拷贝数组
         int[] newArr1 = Arrays.copyOf(arr,20);
-        //打印结果: "[1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0,0,0,0]"
+        // 打印结果: "[1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0,0,0,0]"
         System.out.println(Arrays.toString(newArr1));
         System.out.println();
 
-        //copyOfRange: 拷贝数组(指定范围)
+        // copyOfRange: 拷贝数组(指定范围)
         int[] newArr2 = Arrays.copyOfRange(arr,0,4);
-        //打印结果: "[1,2,3,4]"
+        // 打印结果: "[1,2,3,4]"
         System.out.println(Arrays.toString(newArr2));
         System.out.println();
 
-        //fill(元素): 填充数组
+        // fill(元素): 填充数组
         Arrays.fill(newArr2,1);
-        //打印结果: "[1,1,1,1,1]"
+        // 打印结果: "[1,1,1,1,1]"
         System.out.println(Arrays.toString(newArr2));
         System.out.println();
 
-        //sort: 按照默认方式(快速排序进行升序)进行数组排序
+        // sort: 按照默认方式(快速排序进行升序)进行数组排序
         int[] newArr3 = {1,2,3,8,65,3234,66,23,21,90};
         Arrays.sort(newArr3);
-        //打印结果: "[1,2,3,8,21,23,65,66,90,3234]"
+        // 打印结果: "[1,2,3,8,21,23,65,66,90,3234]"
         System.out.println(Arrays.toString(newArr3));
         System.out.println();
     }
@@ -116,12 +116,12 @@ import java.util.Comparator;
 
 public class ArraySort {
     public static void main(String[] args) {
-        //sort(排序规则): 按照指定的规则排序
+        // sort(排序规则): 按照指定的规则排序
         Integer[] arr = {1,2,3,8,65,3234,66,23,21,90};
-        //第一个参数是要排序的数组
-        //第二个参数是排序规则,是一个接口
-        //所以我们在调用方法的时候,需要传递这个接口的实现类对象,作为排序规则
-        //但是这个实现类只需要使用一次,因此采取匿名内部类的方式就行
+        // 第一个参数是要排序的数组
+        // 第二个参数是排序规则,是一个接口
+        // 所以我们在调用方法的时候,需要传递这个接口的实现类对象,作为排序规则
+        // 但是这个实现类只需要使用一次,因此采取匿名内部类的方式就行
         Arrays.sort(arr,new Comparator<Integer>() {
             @Override
             public int compare(Integer o1,Integer o2) {

@@ -23,18 +23,18 @@ public class test {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个整数: ");
         int x = sc.nextInt();
-        //定义一个临时变量来记录x的值,用于最后进行比较
+        // 定义一个临时变量来记录x的值,用于最后进行比较
         int temp = x;
         int y = 0;
         while(x != 0){
-            //取x的个位上的数字
+            // 取x的个位上的数字
             int position = x % 10;
-            //再将x的个位数删除,即循环实现取得x每个位置上的数字
+            // 再将x的个位数删除,即循环实现取得x每个位置上的数字
             x = x / 10;
-            //将每个位置上的数字倒序拼接给y,y即x的倒序数
+            // 将每个位置上的数字倒序拼接给y,y即x的倒序数
             y = y * 10 + position;
         }
-        //判断x与其倒序数是否一致,即判断回文数
+        // 判断x与其倒序数是否一致,即判断回文数
         System.out.println(temp == y);
     }
 }
@@ -58,12 +58,12 @@ public class test {
         System.out.println("请输入一个正整数: "); 
         int x = sc.nextInt(); 
         if (x > 0) {
-            //假设x一开始就是个质数
+            // 假设x一开始就是个质数
             boolean flag = true; 
-            //看2~(x-1)之间有无数字i可以被x整除
+            // 看2~(x-1)之间有无数字i可以被x整除
             for (int i = 2;  i <= (x-1);  i++) {
                 if (x % i == 0) {
-                    //有数字能被整除,则x不是质数
+                    // 有数字能被整除,则x不是质数
                     flag = false; 
                 }
             }
@@ -92,14 +92,14 @@ public class test {
         System.out.println("请输入一个正整数: "); 
         int x = sc.nextInt(); 
         if (x > 0) {
-            //假设x一开始就是个质数
+            // 假设x一开始就是个质数
             boolean flag = true; 
-            //看2~(x-1)之间有无数字i可以被x整除
+            // 看2~(x-1)之间有无数字i可以被x整除
             for (int i = 2;  i <= (x-1);  i++) {
                 if (x % i == 0) {
-                    //有数字能被整除,则x不是质数
+                    // 有数字能被整除,则x不是质数
                     flag = false; 
-                    //x不是质数,break跳出循环
+                    // x不是质数,break跳出循环
                     break; 
                 }
             }
@@ -129,14 +129,14 @@ public class test {
         System.out.println("请输入一个正整数: "); 
         int x = sc.nextInt(); 
         if (x > 0) {
-            //假设x一开始就是个质数
+            // 假设x一开始就是个质数
             boolean flag = true; 
-            //看2~(x的算数平方根)之间有无数字i可以被x整除
+            // 看2~(x的算数平方根)之间有无数字i可以被x整除
             for (int i = 2;  i <= Math.sqrt(x);  i++) {
                 if (x % i == 0) {
-                    //有数字能被整除,则x不是质数
+                    // 有数字能被整除,则x不是质数
                     flag = false; 
-                    //x不是质数,break跳出循环
+                    // x不是质数,break跳出循环
                     break; 
                 }
             }
@@ -177,13 +177,13 @@ public class test {
     }
 
     public static void maxToMin(int a, int b, int c) {
-        //最大值
+        // 最大值
         int temp1 = a > b ? a :  b;
         int max = temp1 > c ? temp1 :  c;
-        //最小值
+        // 最小值
         int temp2 = a < b ? a :  b;
         int min = temp2 < c ? temp2 :  c;
-        //中间值
+        // 中间值
         int sum = a + b + c;
         int middle = sum - max - min;
         System.out.println("从大到小以此为: " + max + " " + middle + " " + min);
@@ -266,7 +266,7 @@ public class test {
             System.out.print(arr[i] + " ");
         }
         int randomIndex = r.nextInt(arr.length);
-        //通过随机索引,将数组里的每一个元素和剩下的元素随机交换数据
+        // 通过随机索引,将数组里的每一个元素和剩下的元素随机交换数据
         for (int i = 0; i < arr.length; i++) {
             int temp = arr[i];
             arr[i] = arr[randomIndex];
@@ -293,12 +293,12 @@ public class test {
         Scanner sc = new Scanner(System.in);
         System.out.print("请输入密码: ");
         int pwd = sc.nextInt();
-        //定义一个变量临时记录密码的值
+        // 定义一个变量临时记录密码的值
         int oldPwd = pwd;
-        //验证密码的合法性
+        // 验证密码的合法性
         int pwdLength = 0;
         if(pwd > 0) {
-            //判断出密码的长度
+            // 判断出密码的长度
             while (pwd != 0) {
                 pwd /= 10;
                 pwdLength++;
@@ -306,10 +306,10 @@ public class test {
         }else {
             System.out.println("输入不合法!");
         }
-        //创建数组存储密码
+        // 创建数组存储密码
         int[] arr = new int[pwdLength];
-        //密码的每一位存入数组中
-        //模拟索引
+        // 密码的每一位存入数组中
+        // 模拟索引
         int index = arr.length-1;
         while(oldPwd != 0){
             int number = oldPwd % 10;
@@ -317,15 +317,15 @@ public class test {
             arr[index] = number;
             index --;
         }
-        //数组的每一位+5
+        // 数组的每一位+5
         for (int i = 0; i < arr.length; i++) {
             arr[i] += 5;
         }
-        //数组的每一位%10
+        // 数组的每一位%10
         for (int i = 0; i < arr.length; i++) {
             arr[i] %= 10;
         }
-        //数组反转
+        // 数组反转
         for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
             int temp = arr[i];
             arr[i] = arr[j];
@@ -357,15 +357,15 @@ import java.util.Random;
 public class test {
     public static void main(String[] args) {
         int[] oldArr = {2, 588, 888, 1000, 10000};
-        //定义新数组用于存储抽奖结果
+        // 定义新数组用于存储抽奖结果
         int[] newArr = new int[oldArr.length];
         Random ra = new Random();
         for (int i = 0; i < newArr.length; ) {
-            //获取随机索引
+            // 获取随机索引
             int index = ra.nextInt(oldArr.length);
-            //获取奖项
+            // 获取奖项
             int prize = oldArr[index];
-            //判断奖项是否存在于新数组中,如果存在则重新抽取;如果不存在,就把奖项存入新数组
+            // 判断奖项是否存在于新数组中,如果存在则重新抽取;如果不存在,就把奖项存入新数组
             boolean flag = judge(newArr, oldArr[index]);
             if (!flag) {
                 newArr[i] = prize;
@@ -374,7 +374,7 @@ public class test {
             }
         }
     }
-    //判断奖项是否已经存在于新数组中,如果存在就返回true;如果不存在就返回false
+    // 判断奖项是否已经存在于新数组中,如果存在就返回true;如果不存在就返回false
     public static boolean judge(int[] newArr, int prize) {
         for (int i = 0; i < newArr.length; i++) {
             if (newArr[i] == prize) {
@@ -398,10 +398,10 @@ public class role {
     private int blood;
     private String gender;
     private String outlook;
-    //长相描述
+    // 长相描述
     String[] boyfaces = {"风流俊雅", "气宇轩昂", "相貌英俊", "五官端正", "相貌平平", "一塌糊涂", "面目狰狞"};
     String[] girlfaces = {"美奂绝伦", "沉鱼落雁", "婷婷玉立", "身材娇好", "相貌平平", "相貌简陋", "惨不忍睹"};
-    //攻击描述
+    // 攻击描述
     String[] attacks_desc = {
             "%s使出了一招【背心钉】,转到对方的身后,一掌向%s背心的灵台穴拍去,",
             "%s使出了一招【游空探爪】,飞起身形自半空中变掌为抓锁向%s,",
@@ -410,7 +410,7 @@ public class role {
             "%s阴手翻起阳手跟进,一招【没遮拦】,结结实实的捶向%s,",
             "%s上步抢身,招中套招,一招【劈挂连环】,连环攻向%s,"
     };
-    //受伤描述
+    // 受伤描述
     String[] injureds_desc = {
             "结果%s退了半步,毫发无损,",
             "结果给%s造成一处瘀伤,",
@@ -471,23 +471,23 @@ public class role {
         }
     }
 
-    //定义一个方法用于攻击别人
+    // 定义一个方法用于攻击别人
     public void attack(role role) {
         Random random = new Random();
-        //使用随机招式
+        // 使用随机招式
         String attackMode = attacks_desc[random.nextInt(attacks_desc.length)];
-        //造成随机10~29点伤害
+        // 造成随机10~29点伤害
         int harm = random.nextInt(20) + 10;
-        //剩余血量
+        // 剩余血量
         int nowBlood = role.getBlood() - harm;
-        //如果剩余血量小于0,则剩余血量赋值为0;否则保持不变
+        // 如果剩余血量小于0,则剩余血量赋值为0;否则保持不变
         nowBlood = nowBlood < 0 ? 0 :  nowBlood;
-        //修改被攻击者的血量为剩余血量
+        // 修改被攻击者的血量为剩余血量
         role.setBlood(nowBlood);
         System.out.printf(attackMode, this.getName(), role.getName());
         System.out.print("造成了" + harm + "点伤害,");
         String injuredMode = "";
-        //根据血量呈现不同的受伤效果
+        // 根据血量呈现不同的受伤效果
         if (nowBlood >= 90 && nowBlood< 100) {
             injuredMode = injureds_desc[0];
         }else if(nowBlood >= 80 && nowBlood< 90){
@@ -597,104 +597,104 @@ public class StudentTest {
         Student stu4 = new Student();
         Scanner sc = new Scanner(System.in);
         showArr(arr);
-        //要求1: 添加的时候需要进行学号的唯一性判断
+        // 要求1: 添加的时候需要进行学号的唯一性判断
         System.out.println("请输入添加的学生的学号: ");
         int addId = sc.nextInt();
         stu4.setId(addId);
         int index = getIndex(arr, addId);
         if (index >= 0) {
-            //学号已存在
+            // 学号已存在
             System.out.println("学号已存在,输入不合法!");
         } else {
-            //学号不存在
-            //判断数组是否还有空间,返回数组的元素个数
+            // 学号不存在
+            // 判断数组是否还有空间,返回数组的元素个数
             int count = getCount(arr);
             if (count != arr.length) {
-                //数组中还有空间
+                // 数组中还有空间
                 System.out.println("请输入学生的姓名: ");
                 String addName = sc.next();
                 stu4.setName(addName);
                 System.out.println("请输入学生的年龄: ");
                 int addAge = sc.nextInt();
                 stu4.setAge(addAge);
-                //将添加的学生对象放入空元素的索引位置,即添加到数组中
+                // 将添加的学生对象放入空元素的索引位置,即添加到数组中
                 arr[count] = stu4;
-                //要求2: 添加完毕之后,遍历所有学生信息
+                // 要求2: 添加完毕之后,遍历所有学生信息
                 showArr(arr);
-                //要求3: 通过id删除学生信息
+                // 要求3: 通过id删除学生信息
                 Student[] deleteArr = deleteArr(arr);
-                //要求4: 删除完毕之后,遍历所有学生信息
+                // 要求4: 删除完毕之后,遍历所有学生信息
                 showArr(deleteArr);
-                //要求5: id为X的学生,年龄+1岁
+                // 要求5: id为X的学生,年龄+1岁
                 Student[] processArr = processArr(deleteArr);
                 showArr(processArr);
             } else {
-                //数组中没有空间
-                //将数组长度+1,并将原数组元素拷贝到新数组
+                // 数组中没有空间
+                // 将数组长度+1,并将原数组元素拷贝到新数组
                 Student[] copyLongArr = copyLongArr(arr);
                 copyLongArr[copyLongArr.length - 1] = stu4;
-                //要求2: 添加完毕之后,遍历所有学生信息
+                // 要求2: 添加完毕之后,遍历所有学生信息
                 showArr(copyLongArr);
-                //要求3: 通过id删除学生信息
+                // 要求3: 通过id删除学生信息
                 Student[] deleteArr = deleteArr(copyLongArr);
-                //要求4: 删除完毕之后,遍历所有学生信息
+                // 要求4: 删除完毕之后,遍历所有学生信息
                 showArr(deleteArr);
-                //要求5: id为X的学生,年龄+1岁
+                // 要求5: id为X的学生,年龄+1岁
                 Student[] processArr = processArr(deleteArr);
                 showArr(processArr);
             }
         }
     }
 
-    //要求5: id为X的学生,年龄+1岁
+    // 要求5: id为X的学生,年龄+1岁
     public static Student[] processArr(Student[] arr) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入处理的学生的id: ");
         int processId = sc.nextInt();
         int index = getIndex(arr, processId);
         if (index >= 0) {
-            //存在处理的学生的id
-            //将该id的学生的年龄+1岁
+            // 存在处理的学生的id
+            // 将该id的学生的年龄+1岁
             int oldAge = arr[index].getAge();
             arr[index].setAge(oldAge + 1);
         } else {
-            //不存在处理的学生的id
+            // 不存在处理的学生的id
             System.out.println("不存在相同的学生的id,处理失败!");
         }
         return arr;
     }
 
-    //要求3: 通过id删除学生信息,返回数组
+    // 要求3: 通过id删除学生信息,返回数组
     public static Student[] deleteArr(Student[] arr) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入删除的学生的id: ");
         int deleteId = sc.nextInt();
         int index = getIndex(arr, deleteId);
         if (index >= 0) {
-            //存在删除的学生的id
-            //将该id的元素赋值为空
+            // 存在删除的学生的id
+            // 将该id的元素赋值为空
             arr[index] = null;
         } else {
-            //不存在删除的学生的id
+            // 不存在删除的学生的id
             System.out.println("不存在相同的学生的id,删除失败!");
         }
         return arr;
     }
 
-    //要求2: 遍历所有学生信息
+    // 要求2: 遍历所有学生信息
     public static void showArr(Student[] arr) {
         for (int i = 0; i < arr.length; i++) {
             Student stu = arr[i];
-            //遍历并打印出数组中存在的学生对象的所有信息
+            // 遍历并打印出数组中存在的学生对象的所有信息
             if (stu != null) {
                 System.out.println(stu.getId() + "," + stu.getName() + "," + stu.getAge());
             }
         }
     }
 
-    //将数组长度+1,并将原数组元素拷贝到新数组
+    // 将数组长度+1,并将原数组元素拷贝到新数组
     public static Student[] copyLongArr(Student[] arr) {
-        //数组长度+1
+        // 数组长度+1
         Student[] newArr = new Student[arr.length + 1];
         for (int i = 0; i < arr.length; i++) {
             newArr[i] = arr[i];
@@ -703,31 +703,31 @@ public class StudentTest {
     }
 
 
-    //判断数组是否还有空间,返回数组元素个数
+    // 判断数组是否还有空间,返回数组元素个数
     public static int getCount(Student[] arr) {
-        //计数器
+        // 计数器
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             Student stu = arr[i];
-            //数组元素不为空,元素数量+1
+            // 数组元素不为空,元素数量+1
             if (stu != null) {
                 count++;
             }
         }
-        //count也表示空元素的索引位置
+        // count也表示空元素的索引位置
         return count;
     }
 
-    //判断元素是否存在于数组中: 如果数组中存在该元素,则返回其元素的索引位置;反之,返回索引-1
+    // 判断元素是否存在于数组中: 如果数组中存在该元素,则返回其元素的索引位置;反之,返回索引-1
     public static int getIndex(Student[] arr, int id) {
-        //元素索引
+        // 元素索引
         int index = 0;
         for (int i = 0; i < arr.length; i++) {
             Student student = arr[i];
             if (student != null) {
-                //判断数组中的每一个学生对象的id是否与输入的学生对象的id一致
+                // 判断数组中的每一个学生对象的id是否与输入的学生对象的id一致
                 if (student.getId() == id) {
-                    //返回有相同id的元素的索引位置
+                    // 返回有相同id的元素的索引位置
                     return index;
                 }
             }
@@ -761,39 +761,39 @@ public class test {
 
         String moneyStr = "";
         while (true) {
-            //从右往左获取数据,因为右侧是数据的个位
+            // 从右往左获取数据,因为右侧是数据的个位
             int ge = money % 10;
             String capitalNumber = getCapitalNumber(ge);
-            //把转换之后的大写拼接到moneyStr当中
+            // 把转换之后的大写拼接到moneyStr当中
             moneyStr = capitalNumber + moneyStr;
-            //第一次循环: "伍" + "" = "伍"
-            //第二次循环: "叁" + "伍" = "叁伍"
-            //去掉刚刚获取的数据
+            // 第一次循环: "伍" + "" = "伍"
+            // 第二次循环: "叁" + "伍" = "叁伍"
+            // 去掉刚刚获取的数据
             money = money / 10;
-            //如果数字上的每一位全部获取到了,那么money记录的就是0,此时循环结束
+            // 如果数字上的每一位全部获取到了,那么money记录的就是0,此时循环结束
             if (money == 0) {
                 break;
             }
         }
 
-        //字符串补齐到7位
+        // 字符串补齐到7位
         int count = 7 - moneyStr.length();
         for (int i = 0; i < count; i++) {
             moneyStr = "零" + moneyStr;
         }
 
-        //插入单位
+        // 插入单位
         String[] arr = {"佰", "拾", "万", "仟", "佰", "拾", "元"};
         String result = "";
         for (int i = 0; i < moneyStr.length(); i++) {
             char c = moneyStr.charAt(i);
-            //把大写数字和单位拼接到result当中
+            // 把大写数字和单位拼接到result当中
             result = result + c + arr[i];
         }
         System.out.println("转换后: " + result);
     }
 
-    //把阿拉伯数字转换成大写数字
+    // 把阿拉伯数字转换成大写数字
     public static String getCapitalNumber(int number) {
         String[] arr = {"零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"};
         return arr[number];
@@ -822,12 +822,12 @@ public class test {
         String english = sc.nextLine();
         StringBuilder sb = new StringBuilder();
         StringBuilder result = new StringBuilder();
-        //将字符串反转
+        // 将字符串反转
         String reverseEnglish = sb.append(english).reverse().toString();
         int i;
         for (i = 0; i < reverseEnglish.length(); i++) {
             boolean flag = reverseEnglish.charAt(i) == ' ';
-            //如果字符是空格,则跳出循环,遍历次数i即为最后一个单词的长度
+            // 如果字符是空格,则跳出循环,遍历次数i即为最后一个单词的长度
             if (flag) {
                 break;
             }
@@ -852,13 +852,13 @@ public class test {
     }
 
     public static int search(String str, String tar) {
-        //计数器
+        // 计数器
         int count = 0;
         int index = -1;
-        // 定义循环,判断条件为在字符串中找到了目标子串
+        //  定义循环,判断条件为在字符串中找到了目标子串
         while ((index = str.indexOf(tar)) != -1) {
             count++;
-            //把查找过的部分剪切掉,从找到的索引+子串长度的位置开始截取
+            // 把查找过的部分剪切掉,从找到的索引+子串长度的位置开始截取
             str = str.substring(index + tar.length());
         }
         return count;
@@ -875,7 +875,7 @@ public class test {
 
     }
 
-    //将关键字全部替换之后,求长度差,再用长度差/关键字长度,即可得到关键字数量
+    // 将关键字全部替换之后,求长度差,再用长度差/关键字长度,即可得到关键字数量
     public static int search(String str, String tar) {
         String newStr = str.replace(tar, "");
         return (str.length() - newStr.length()) / tar.length();
@@ -899,20 +899,20 @@ public class Demo6 {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个整数数字");
         int num = sc.nextInt();
-        //创建索引代表数字要插入的位置
+        // 创建索引代表数字要插入的位置
         int index = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] <= num) {
-                //如果元素小于等于要插入的数字，则直接存放进新数组
+                // 如果元素小于等于要插入的数字，则直接存放进新数组
                 brr[i] = arr[i];
-                //把i后面的一个位置记录下来
+                // 把i后面的一个位置记录下来
                 index = i + 1;
             } else {
-                //如果元素大于要插入的数字,则往后一个位置存放进新数组
+                // 如果元素大于要插入的数字,则往后一个位置存放进新数组
                 brr[i + 1] = arr[i];
             }
         }
-        //把数字放入到索引的位置
+        // 把数字放入到索引的位置
         brr[index] = num;
         for (int i = 0; i < brr.length; i++) {
             System.out.print(brr[i] + " ");
@@ -932,7 +932,7 @@ public interface Inter {
 ```java
 class Outer {
     static Inter method() {
-        //创建并返回一个实现了Inter接口的匿名内部类对象
+        // 创建并返回一个实现了Inter接口的匿名内部类对象
         return new Inter() {
             @Override
             public void show() {
@@ -963,41 +963,41 @@ import java.util.Random;
 
 public class test {
     public static void main(String[] args) {
-        //创建一个一维数组
+        // 创建一个一维数组
         int[] tempArr1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         Random random = new Random();
-        //遍历一维数组,得到每一个元素,拿着每一个元素跟随机索引上的数据进行交换
+        // 遍历一维数组,得到每一个元素,拿着每一个元素跟随机索引上的数据进行交换
         for (int i = 0; i < tempArr1.length; i++) {
-            //获取随机索引
+            // 获取随机索引
             int randomIndex = random.nextInt(16);
-            //拿着每一个元素跟随机索引上的数据进行交换
+            // 拿着每一个元素跟随机索引上的数据进行交换
             int temp = tempArr1[i];
             tempArr1[i] = tempArr1[randomIndex];
             tempArr1[randomIndex] = temp;
         }
-        //创建一个4*4的二维数组
+        // 创建一个4*4的二维数组
         int[][] tempArr2 = new int[4][4];
-        //遍历一维数组
+        // 遍历一维数组
         for (int i = 0; i < tempArr1.length; ) {
             if (i < 4) {
-                //将一维数组中索引0~3的元素添加到第1个一维数组中
+                // 将一维数组中索引0~3的元素添加到第1个一维数组中
                 for (int j = 0; j < 4; j++) {
                     tempArr2[0][j] = tempArr1[i];
                     i++;
                 }
-                //将一维数组中索引4~7的元素添加到第2个一维数组中
+                // 将一维数组中索引4~7的元素添加到第2个一维数组中
             } else if (i < 8) {
                 for (int j = 0; j < 4; j++) {
                     tempArr2[1][j] = tempArr1[i];
                     i++;
                 }
-                //将一维数组中索引8~11的元素添加到第3个一维数组中
+                // 将一维数组中索引8~11的元素添加到第3个一维数组中
             } else if (i < 12) {
                 for (int j = 0; j < 4; j++) {
                     tempArr2[2][j] = tempArr1[i];
                     i++;
                 }
-                //将一维数组中索引12~15的元素添加到第4个一维数组中
+                // 将一维数组中索引12~15的元素添加到第4个一维数组中
             } else {
                 for (int j = 0; j < 4; j++) {
                     tempArr2[3][j] = tempArr1[i];
@@ -1005,7 +1005,7 @@ public class test {
                 }
             }
         }
-        //遍历二维数组
+        // 遍历二维数组
         for (int[] i :  tempArr2) {
             for (int j :  i) {
                 System.out.print(j + " ");
@@ -1023,30 +1023,30 @@ import java.util.Random;
 
 public class test {
     public static void main(String[] args) {
-        //创建一个一维数组
+        // 创建一个一维数组
         int[] tempArr1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         Random random = new Random();
-        //遍历一维数组,得到每一个元素,拿着每一个元素跟随机索引上的数据进行交换
+        // 遍历一维数组,得到每一个元素,拿着每一个元素跟随机索引上的数据进行交换
         for (int i = 0; i < tempArr1.length; i++) {
-            //获取随机索引
+            // 获取随机索引
             int randomIndex = random.nextInt(16);
-            //拿着每一个元素跟随机索引上的数据进行交换
+            // 拿着每一个元素跟随机索引上的数据进行交换
             int temp = tempArr1[i];
             tempArr1[i] = tempArr1[randomIndex];
             tempArr1[randomIndex] = temp;
         }
-        //创建一个4*4的二维数组
+        // 创建一个4*4的二维数组
         int[][] tempArr2 = new int[4][4];
-        //遍历一维数组
+        // 遍历一维数组
         for (int i = 0; i < tempArr1.length; i++) {
-            //将一维数组中索引0~3,4~7,8~11,12~15的元素分别添加到二维数组中
-            //0~3 / 4 = 0; 0~3 % 4 = 0~3
-            //4~7 / 4 = 1; 4~7 % 4 = 0~3
-            //8~11 / 4 = 2; 8~11 % 4 = 0~3
-            //12~15 / 4 = 3; 12~15 % 4 = 0~3
+            // 将一维数组中索引0~3,4~7,8~11,12~15的元素分别添加到二维数组中
+            // 0~3 / 4 = 0; 0~3 % 4 = 0~3
+            // 4~7 / 4 = 1; 4~7 % 4 = 0~3
+            // 8~11 / 4 = 2; 8~11 % 4 = 0~3
+            // 12~15 / 4 = 3; 12~15 % 4 = 0~3
             tempArr2[i / 4][i % 4] = tempArr1[i];
         }
-        //遍历二维数组
+        // 遍历二维数组
         for (int[] i :  tempArr2) {
             for (int j :  i) {
                 System.out.print(j + " ");
@@ -1064,30 +1064,30 @@ import java.util.Random;
 
 public class test {
     public static void main(String[] args) {
-        //创建一个一维数组
+        // 创建一个一维数组
         int[] tempArr1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         Random random = new Random();
-        //遍历一维数组,得到每一个元素,拿着每一个元素跟随机索引上的数据进行交换
+        // 遍历一维数组,得到每一个元素,拿着每一个元素跟随机索引上的数据进行交换
         for (int i = 0; i < tempArr1.length; i++) {
-            //获取随机索引
+            // 获取随机索引
             int randomIndex = random.nextInt(16);
-            //拿着每一个元素跟随机索引上的数据进行交换
+            // 拿着每一个元素跟随机索引上的数据进行交换
             int temp = tempArr1[i];
             tempArr1[i] = tempArr1[randomIndex];
             tempArr1[randomIndex] = temp;
         }
-        //创建一个4*4的二维数组
+        // 创建一个4*4的二维数组
         int[][] tempArr2 = new int[4][4];
-        //遍历二维数组
+        // 遍历二维数组
         int index = 0;
         for (int i = 0; i < tempArr2.length; i++) {
             for (int j = 0; j < tempArr2[i].length; j++) {
-                //给其中的每一个数据赋一维数组中每一个元素的值
+                // 给其中的每一个数据赋一维数组中每一个元素的值
                 tempArr2[i][j] = tempArr1[index];
                 index++;
             }
         }
-        //遍历二维数组
+        // 遍历二维数组
         for (int[] i :  tempArr2) {
             for (int j :  i) {
                 System.out.print(j + " ");

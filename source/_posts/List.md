@@ -42,35 +42,35 @@ public class Test {
         list.add("是");
         list.add("你");
 
-        //打印结果: "[你,是,我,我,是,你]"
+        // 打印结果: "[你,是,我,我,是,你]"
         System.out.println(list);
         System.out.println();
 
-        //在指定位置插入指定的元素
+        // 在指定位置插入指定的元素
         list.add(2,"靠");
-        //打印结果: "[你,是,靠,我,我,是,你]"
+        // 打印结果: "[你,是,靠,我,我,是,你]"
         System.out.println(list);
         System.out.println();
 
-        //删除指定索引处的元素,返回被删除的元素
+        // 删除指定索引处的元素,返回被删除的元素
         String remove = list.remove(2);
-        //打印结果: "靠"
+        // 打印结果: "靠"
         System.out.println(remove);
-        //打印结果: "[你,是,我,我,是,你]"
+        // 打印结果: "[你,是,我,我,是,你]"
         System.out.println(list);
         System.out.println();
 
-        //修改指定索引处的元素,返回被修改的元素
+        // 修改指定索引处的元素,返回被修改的元素
         String set = list.set(4,"儿子");
-        //打印结果: "是"
+        // 打印结果: "是"
         System.out.println(set);
-        //打印结果: "[你,是,我,我,儿子,你]"
+        // 打印结果: "[你,是,我,我,儿子,你]"
         System.out.println(list);
         System.out.println();
 
-        //返回指定索引处的元素
+        // 返回指定索引处的元素
         String get = list.get(4);
-        //打印结果: "儿子"
+        // 打印结果: "儿子"
         System.out.println(get);
     }
 }
@@ -93,18 +93,18 @@ public class Test {
         list.add(2);
         list.add(3);
 
-        //删除的是索引为1的元素,而不是删除元素1
-        //调用方法的时候,如果方法出现了重载,优先调用实参和形参类型一致的那个方法
-        //因此这里调用的是remove(int index)方法
+        // 删除的是索引为1的元素,而不是删除元素1
+        // 调用方法的时候,如果方法出现了重载,优先调用实参和形参类型一致的那个方法
+        // 因此这里调用的是remove(int index)方法
         list.remove(1);
-        //打印结果: "[1,3]"
+        // 打印结果: "[1,3]"
         System.out.println(list);
 
-        //手动装箱,把基本数据类型的1变成Integer型
+        // 手动装箱,把基本数据类型的1变成Integer型
         Integer i = Integer.valueOf(1);
-        //而这里调用的是remove(Object obj)方法
+        // 而这里调用的是remove(Object obj)方法
         list.remove(i);
-        //打印结果: "[3]"
+        // 打印结果: "[3]"
         System.out.println(list);
     }
 }
@@ -136,30 +136,30 @@ public class Test {
         list.add("五");
         list.add("六");
 
-        //普通for遍历
+        // 普通for遍历
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
         }
         System.out.println();
 
-        //迭代器遍历
+        // 迭代器遍历
         Iterator<String> it = list.iterator();
         while (it.hasNext()) {
             System.out.print(it.next());
         }
         System.out.println();
 
-        //增强for遍历
+        // 增强for遍历
         for (String s: list) {
             System.out.print(s);
         }
         System.out.println();
 
-        //Lambda表达式遍历
+        // Lambda表达式遍历
         list.forEach(s -> System.out.print(s));
         System.out.println();
 
-        //列表迭代器遍历
+        // 列表迭代器遍历
         ListIterator<String> lit = list.listIterator();
         while(lit.hasNext()){
             System.out.print(lit.next());
@@ -193,16 +193,16 @@ public class Test {
         list.add("五");
         list.add("六");
 
-        //列表迭代器遍历
+        // 列表迭代器遍历
         ListIterator<String> it = list.listIterator();
         while (it.hasNext()) {
             String str = it.next();
             if (str.equals("四")) {
-                //用迭代器的方法进行添加
+                // 用迭代器的方法进行添加
                 it.add("4");
             }
         }
-        //打印结果: "[一,二,三,四,4,五,六]"
+        // 打印结果: "[一,二,三,四,4,五,六]"
         System.out.print(list);
     }
 }
