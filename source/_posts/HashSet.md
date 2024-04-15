@@ -16,6 +16,12 @@ HashSet: `Hash` -- 哈希表,`Set` -- 属于`Set`系列的一员
 
 HashSet集合底层采取**哈希表**存储数据
 
+## 特点
+
+1. **无序**:存取顺序不一致
+2. 不重复:可以去除重复
+3. 无索引:没有带索引的方法,所以不能使用普通的for循环遍历,也不能通过索引来获取元素
+
 ### 哈希表
 
 哈希表是一种对于增删改查数据性能都较好的结构
@@ -138,11 +144,16 @@ public class StudentTest {
         hashset.add(student3);
         hashset.add(student4);
         for (Student student : hashset) {
-            //打印结果: "Student{name='张三', number=23}"
-            //打印结果: "Student{name='王五', number=23}"
-            //打印结果: "Student{name='李四', number=23}"
+            // 打印结果: "Student{name='张三', number=23}"
+            // 打印结果: "Student{name='王五', number=23}"
+            // 打印结果: "Student{name='李四', number=23}"
             System.out.println(student);
         }
     }
 }
 ```
+
+## 应用
+
+1. 如果只要数据去重,默认使用HashSet               
+2. 如果要数据去重且存取有序,使用LinkedHashSet  
