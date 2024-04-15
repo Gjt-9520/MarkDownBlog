@@ -240,14 +240,14 @@ public class Test {
         // `student = new Student();`报错
         STUDENT.setName("王五");
         STUDENT.setAge(25);
-        // 打印结果: "王五,25"
+        // 打印结果:"王五,25"
         System.out.println(STUDENT.getName() + "," + STUDENT.getAge());
 
         final int[] ARR = {1,2,3,4,5};
         // `ARR = new int[10];`报错
         ARR[0] = 10;
         ARR[4] = 11;
-        // 打印结果: "10 2 3 4 11 "
+        // 打印结果:"10 2 3 4 11 "
         for (int j: ARR) {
             System.out.print(j + " ");
         }

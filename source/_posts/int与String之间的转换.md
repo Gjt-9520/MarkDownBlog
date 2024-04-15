@@ -26,7 +26,7 @@ public class test {
     public static void main(String[] args) {
         int i = 123;
         String str = String.valueOf(i);
-        // 打印结果: "123"
+        // 打印结果:"123"
         System.out.println(str);
     }
 }
@@ -44,7 +44,7 @@ public class test {
     public static void main(String[] args) {
         int i = 123;
         String str = Integer.toString(i);
-        // 打印结果: "123"
+        // 打印结果:"123"
         System.out.println(str);
     }
 }
@@ -61,7 +61,7 @@ public class test {
         int i = 123;
         // 将十进制数123转换为用2进制表示的字符串1111011
         String str = Integer.toString(i,2);
-        // 打印结果: "1111011"
+        // 打印结果:"1111011"
         System.out.println(str);
     }
 }
@@ -82,7 +82,7 @@ public class test {
         for (int i = 0; i < arr.length; i++) {
             str += arr[i];
         }
-        // 打印结果: "123"
+        // 打印结果:"123"
         System.out.println(str);
     }
 }
@@ -105,7 +105,7 @@ public class test {
     public static void main(String[] args) {
         String str = "123";
         int i = Integer.parseInt(str);
-        // 打印结果: "123"
+        // 打印结果:"123"
         System.out.println(i);
     }
 }
@@ -122,7 +122,7 @@ public class test {
         String str = "11100111";
         // 将二进制数11100111转换成十进制数字231
         int i = Integer.parseInt(str,2);
-        // 打印结果: "231"
+        // 打印结果:"231"
         System.out.println(i);
     }
 }
@@ -140,7 +140,7 @@ public class test {
     public static void main(String[] args) {
         String str = "123";
         int i = Integer.valueOf(str);
-        // 打印结果: "123"
+        // 打印结果:"123"
         System.out.println(i);
     }
 }

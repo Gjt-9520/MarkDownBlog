@@ -50,29 +50,29 @@ public class Test {
 
         // 添加
         coll.add("aaa");
-        // 打印结果: "[aaa]"
+        // 打印结果:"[aaa]"
         System.out.println(coll);
         System.out.println();
 
         // 清空
         coll.clear();
-        // 打印结果: "[]"
+        // 打印结果:"[]"
         System.out.println(coll);
         System.out.println();
 
         // 删除
         coll.add("apple");
         coll.add("pig");
-        // 打印结果: "[apple,pig]"
+        // 打印结果:"[apple,pig]"
         System.out.println(coll);
         coll.remove("pig");
-        // 打印结果: "[apple]"
+        // 打印结果:"[apple]"
         System.out.println(coll);
         System.out.println();
 
         // 判断元素是否包含
-        // 打印结果: "不包含pig"
-        // 打印结果: "包含apple"
+        // 打印结果:"不包含pig"
+        // 打印结果:"包含apple"
         if (coll.contains("pig")) {
             System.out.println("包含pig");
         } else {
@@ -86,11 +86,11 @@ public class Test {
         System.out.println();
 
         // 判断是否为空
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(coll.isEmpty());
 
         // 返回集合长度
-        // 打印结果: "1"
+        // 打印结果:"1"
         System.out.println(coll.size());
     }
 }
@@ -157,9 +157,9 @@ public class StudentTest {
         Student stu3 = new Student("张三",23);
         coll.add(stu1);
         coll.add(stu2);
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(coll.contains(stu1));
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(coll.contains(stu3));
     }
 }
@@ -205,7 +205,7 @@ public class Test {
         // 迭代器就好比一个指针,默认指向集合的0索引处
         Iterator<String> it = list.iterator();
         // 判断是否有元素
-        // 打印结果: "你是我,我是你"
+        // 打印结果:"你是我,我是你"
         while (it.hasNext()) {
             // 获取元素并移动指针
             System.out.print(it.next());
@@ -241,7 +241,7 @@ public class Test {
         // 判断是否有元素
         while (it.hasNext()) {
             // 获取元素并移动指针
-            // 打印结果: "你是我,我是你Exception in thread "main" java.util.NoSuchElementException..."
+            // 打印结果:"你是我,我是你Exception in thread "main" java.util.NoSuchElementException..."
             System.out.print(it.next());    //   你    我      我      你
             System.out.print(it.next());    //   是    ,      是      Exception in thread "main" java.util.NoSuchElementException...
         }
@@ -282,7 +282,7 @@ public class Test {
                 list.remove("我");
             }
         }
-        // 打印结果: "Exception in thread "main" java.util.ConcurrentModificationException..."
+        // 打印结果:"Exception in thread "main" java.util.ConcurrentModificationException..."
         System.out.print(list);
     }
 }
@@ -320,7 +320,7 @@ public class Test {
                 it.remove();
             }
         }
-        // 打印结果: "[你,是,,,是,你]"
+        // 打印结果:"[你,是,,,是,你]"
         System.out.print(list);
     }
 }
@@ -361,7 +361,7 @@ public class Test {
         
         // 注意: s其实就是一个第三方变量,在循环的过程中依次表示集合中的每一个数据
         for (String s: list) {
-            // 打印结果: "你是我,我是你"
+            // 打印结果:"你是我,我是你"
             System.out.print(s);
         }
     }
@@ -392,7 +392,7 @@ public class Test {
         for (String s: list) {
             s = "它";
         }
-        // 打印结果: "[你,是,我,,,我,是,你]"
+        // 打印结果:"[你,是,我,,,我,是,你]"
         System.out.print(list);
     }
 }

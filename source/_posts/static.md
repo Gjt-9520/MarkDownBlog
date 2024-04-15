@@ -92,9 +92,9 @@ public class StudentTest {
         Student stu2 = new Student("李四", 23, "女");
         // 对象名调用
         stu1.teacherName2 = "赵老师";
-        // 打印结果: "张三,22,男,王老师,赵老师"
+        // 打印结果:"张三,22,男,王老师,赵老师"
         stu1.show();
-        // 打印结果: 李四正在学习"
+        // 打印结果:李四正在学习"
         stu2.learn();
     }
 }

@@ -31,9 +31,9 @@ top_group_index:
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "2"
+        // 打印结果:"2"
         System.out.println(Math.abs(-2));
-        // 打印结果: "-2147483648"
+        // 打印结果:"-2147483648"
         System.out.println(Math.abs(-2147483648));
     }
 }
@@ -52,13 +52,13 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "13.0"
+        // 打印结果:"13.0"
         System.out.println(Math.ceil(12.32));
-        // 打印结果: "13.0"
+        // 打印结果:"13.0"
         System.out.println(Math.ceil(12.52));
-        // 打印结果: "-12.0"
+        // 打印结果:"-12.0"
         System.out.println(Math.ceil(-12.32));
-        // 打印结果: "-12.0"
+        // 打印结果:"-12.0"
         System.out.println(Math.ceil(-12.52));
     }
 }
@@ -74,13 +74,13 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "12.0"
+        // 打印结果:"12.0"
         System.out.println(Math.floor(12.32));
-        // 打印结果: "12.0"
+        // 打印结果:"12.0"
         System.out.println(Math.floor(12.52));
-        // 打印结果: "-13.0"
+        // 打印结果:"-13.0"
         System.out.println(Math.floor(-12.32));
-        // 打印结果: "-13.0"
+        // 打印结果:"-13.0"
         System.out.println(Math.floor(-12.52));
     }
 }
@@ -95,13 +95,13 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "12"
+        // 打印结果:"12"
         System.out.println(Math.round(12.32));
-        // 打印结果: "13"
+        // 打印结果:"13"
         System.out.println(Math.round(12.52));
-        // 打印结果: "-12"
+        // 打印结果:"-12"
         System.out.println(Math.round(-12.32));
-        // 打印结果: "-13"
+        // 打印结果:"-13"
         System.out.println(Math.round(-12.52));
     }
 }
@@ -116,7 +116,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "12"
+        // 打印结果:"12"
         System.out.println(Math.max(12,11));
     }
 }
@@ -131,7 +131,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "11"
+        // 打印结果:"11"
         System.out.println(Math.min(12,11));
     }
 }
@@ -151,11 +151,11 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "8.0"
+        // 打印结果:"8.0"
         System.out.println(Math.pow(2,3));
-        // 打印结果: "2.0"
+        // 打印结果:"2.0"
         System.out.println(Math.pow(4,0.5));
-        // 打印结果: "0.25"
+        // 打印结果:"0.25"
         System.out.println(Math.pow(2,-2));
     }
 }
@@ -170,7 +170,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "2.0"
+        // 打印结果:"2.0"
         System.out.println(Math.sqrt(4));
     }
 }
@@ -185,7 +185,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "2.0"
+        // 打印结果:"2.0"
         System.out.println(Math.cbrt(8));
     }
 }
@@ -200,7 +200,7 @@ public class Test {
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 打印结果: "0.975375166736634"(随机值)
+        // 打印结果:"0.975375166736634"(随机值)
         System.out.println(Math.random());
     }
 }

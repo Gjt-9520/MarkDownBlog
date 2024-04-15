@@ -69,12 +69,12 @@ public class Test {
         String str1 = obj.toString();
         Student stu = new Student();
         String str2 = stu.toString();
-        // 打印结果: "java.lang.Object@880ec60"(包名 + @ + 地址值)
+        // 打印结果:"java.lang.Object@880ec60"(包名 + @ + 地址值)
         System.out.println(str1);
-        // 打印结果: "Student@7f63425a"(包名 + @ + 地址值)
+        // 打印结果:"Student@7f63425a"(包名 + @ + 地址值)
         System.out.println(str2);
         
-        // 打印结果: "Student@7f63425a"(包名 + @ + 地址值)
+        // 打印结果:"Student@7f63425a"(包名 + @ + 地址值)
         System.out.println(stu);
     }
 }
@@ -137,7 +137,7 @@ public class Student {
 public class Test {
     public static void main(String[] args) {
         Student stu = new Student();
-        // 打印结果: "Student{name='null',age=0}"
+        // 打印结果:"Student{name='null',age=0}"
         System.out.println(stu);
     }
 }
@@ -195,7 +195,7 @@ public class Test {
     public static void main(String[] args) {
         Student stu1 = new Student("张三",23);
         Student stu2 = new Student("张三",23);
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(stu1.equals(stu2));
     }
 }
@@ -268,7 +268,7 @@ public class Test {
     public static void main(String[] args) {
         Student stu1 = new Student("张三",23);
         Student stu2 = new Student("张三",23);
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(stu1.equals(stu2));
     }
 }
@@ -281,11 +281,11 @@ public class Test {
     public static void main(String[] args) {
         String str = "abc";
         StringBuilder sb = new StringBuilder("abc");
-        // 打印结果: "false"
+        // 打印结果:"false"
         // 调用的是String类中的equals方法
         // 先判断是否是字符串: 如果是字符串,再比较内部的属性; 如果不是字符串,直接返回false
         System.out.println(str.equals(sb));
-        // 打印结果: "false"
+        // 打印结果:"false"
         // 调用的是StringBuilder类中的equals方法
         // StringBuilder类中没有重写equals方法,默认继承Object类中的equals方法
         System.out.println(sb.equals(str));
@@ -413,9 +413,9 @@ public class CloneUser {
         // 克隆对象
         // Java会在底层帮我们创建一个对象,并把原对象的数据拷贝过去
         User user2 = (User) user1.clone();
-        // 打印结果: "角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println(user1);
-        // 打印结果: "角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println(user2);
     }
 }
@@ -448,15 +448,15 @@ public class CloneUser {
         int[] data1 = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0};
         // 创建用户对象
         User user1 = new User(1,"张三","123456","animal7",data1);
-        // 打印结果: "原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("原对象数组:" + user1);
         // 克隆对象
         // Java会在底层帮我们创建一个对象,并把原对象的数据拷贝过去
         User user2 = (User) user1.clone();
         data1[0] = 100;
-        // 打印结果: "原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("原对象数组:" + user1);
-        // 打印结果: "克隆对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"克隆对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("克隆对象数组:" + user2);
     }
 }
@@ -500,15 +500,15 @@ public class CloneUser {
         int[] data1 = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0};
         // 创建用户对象
         User user1 = new User(1,"张三","123456","animal7",data1);
-        // 打印结果: "原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("原对象数组:" + user1);
         // 克隆对象
         // Java会在底层帮我们创建一个对象,并把原对象的数据拷贝过去
         User user2 = (User) user1.clone();
         data1[0] = 100;
-        // 打印结果: "原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("原对象数组:" + user1);
-        // 打印结果: "克隆对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"克隆对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("克隆对象数组:" + user2);
     }
 }
@@ -544,7 +544,7 @@ public class CloneUser {
         int[] data1 = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0};
         // 创建用户对象
         User user1 = new User(1,"张三","123456","animal7",data1);
-        // 打印结果: "原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("原对象数组:" + user1);
 
         Gson gson = new Gson();
@@ -554,9 +554,9 @@ public class CloneUser {
         User user2 = gson.fromJson(str,User.class);
         
         data1[0] = 100;
-        // 打印结果: "原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"原对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[100 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("原对象数组:" + user1);
-        // 打印结果: "克隆对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
+        // 打印结果:"克隆对象数组:角色编号为：1,用户名为：张三密码为：123456,游戏图片为:animal7,游戏进度:[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,0 ]"
         System.out.println("克隆对象数组:" + user2);
     }
 }
@@ -584,7 +584,7 @@ public class Test {
         Student student1 = new Student("张三",23);
         Student student2 = null;
 
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(Objects.equals(student1,student2));
     }
 }
@@ -610,7 +610,7 @@ public class Test {
         Student student1 = new Student("张三",23);
         Student student2 = null;
 
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(Objects.isNull(student2));
     }
 }
@@ -630,7 +630,7 @@ public class Test {
         Student student1 = new Student("张三",23);
         Student student2 = null;
 
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(Objects.nonNull(student1));
     }
 }

@@ -40,37 +40,37 @@ public class Test {
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
 
         // toString: 将数组变成字符串
-        // 打印结果: "[1,2,3,4,5,6,7,8,9,10]"
+        // 打印结果:"[1,2,3,4,5,6,7,8,9,10]"
         System.out.println(Arrays.toString(arr));
         System.out.println();
 
         // binarySearch: 二分查找法查找元素
-        // 打印结果: "7"
+        // 打印结果:"7"
         System.out.println(Arrays.binarySearch(arr,8));
         System.out.println();
 
         // copyOf: 拷贝数组
         int[] newArr1 = Arrays.copyOf(arr,20);
-        // 打印结果: "[1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0,0,0,0]"
+        // 打印结果:"[1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0,0,0,0]"
         System.out.println(Arrays.toString(newArr1));
         System.out.println();
 
         // copyOfRange: 拷贝数组(指定范围)
         int[] newArr2 = Arrays.copyOfRange(arr,0,4);
-        // 打印结果: "[1,2,3,4]"
+        // 打印结果:"[1,2,3,4]"
         System.out.println(Arrays.toString(newArr2));
         System.out.println();
 
         // fill(元素): 填充数组
         Arrays.fill(newArr2,1);
-        // 打印结果: "[1,1,1,1,1]"
+        // 打印结果:"[1,1,1,1,1]"
         System.out.println(Arrays.toString(newArr2));
         System.out.println();
 
         // sort: 按照默认方式(快速排序进行升序)进行数组排序
         int[] newArr3 = {1,2,3,8,65,3234,66,23,21,90};
         Arrays.sort(newArr3);
-        // 打印结果: "[1,2,3,8,21,23,65,66,90,3234]"
+        // 打印结果:"[1,2,3,8,21,23,65,66,90,3234]"
         System.out.println(Arrays.toString(newArr3));
         System.out.println();
     }

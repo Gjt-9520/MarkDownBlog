@@ -144,9 +144,9 @@ public class StudentTest {
         hashset.add(student3);
         hashset.add(student4);
         for (Student student : hashset) {
-            // 打印结果: "Student{name='张三', number=23}"
-            // 打印结果: "Student{name='王五', number=23}"
-            // 打印结果: "Student{name='李四', number=23}"
+            // 打印结果:"Student{name='张三', number=23}"
+            // 打印结果:"Student{name='王五', number=23}"
+            // 打印结果:"Student{name='李四', number=23}"
             System.out.println(student);
         }
     }

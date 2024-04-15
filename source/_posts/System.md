@@ -80,7 +80,7 @@ public class Test {
         // 从arr1的索引4开始拷贝3个元素,即5,6,7
         // 从arr2的索引2开始拷贝3个元素,即5,6,7
         System.arraycopy(arr1,4,arr2,2,3);
-        // 打印结果: "0 0 5 6 7 0 0 0 0 0"
+        // 打印结果:"0 0 5 6 7 0 0 0 0 0"
         for (int i: arr2) {
             System.out.print(i + " ");
         }

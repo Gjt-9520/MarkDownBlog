@@ -31,18 +31,18 @@ public class Test {
         // 如果当前是元素不是第一次添加,那么添加失败,返回false
         boolean r1 = s.add("张三");
         boolean r2 = s.add("张三");
-        // 打印结果: "[张三]"
+        // 打印结果:"[张三]"
         System.out.println(s);
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(r1);
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(r2);
 
         // 打印集合(无序)
         s.add("李四");
         s.add("王五");
         s.add("赵六");
-        // 打印结果: "[张三, 王五, 赵六]"
+        // 打印结果:"[张三, 王五, 赵六]"
         System.out.println(s);
     }
 }

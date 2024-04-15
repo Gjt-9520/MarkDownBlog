@@ -40,9 +40,9 @@ public class Test {
         // 不会修改参与计算的BigInteger对象中的值，而是创建了一个新的BigInteger对象记录
         BigInteger result = bd1.add(bd2);
         System.out.println(result);
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(bd1 == result);
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(bd2 == result);
     }
 }
@@ -82,7 +82,7 @@ import java.math.BigInteger;
 public class Test {
     public static void main(String[] args) {
         BigInteger bd = new BigInteger("999999999999999999999");
-        // 打印结果: "999999999999999999999"
+        // 打印结果:"999999999999999999999"
         System.out.println(bd);
     }
 }
@@ -104,7 +104,7 @@ import java.math.BigInteger;
 public class Test {
     public static void main(String[] args) {
         BigInteger bd = new BigInteger("100",2);
-        // 打印结果: "4"(二进制100的十进制值)
+        // 打印结果:"4"(二进制100的十进制值)
         System.out.println(bd);
     }
 }
@@ -127,17 +127,17 @@ import java.math.BigInteger;
 public class Test {
     public static void main(String[] args) {
         BigInteger bd1 = BigInteger.valueOf(100);
-        // 打印结果: "100"
+        // 打印结果:"100"
         System.out.println(bd1);
 
         BigInteger bd2 = BigInteger.valueOf(14);
         BigInteger bd3 = BigInteger.valueOf(14);
-        // 打印结果: "true"
+        // 打印结果:"true"
         System.out.println(bd2 == bd3);
 
         BigInteger bd4 = BigInteger.valueOf(17);
         BigInteger bd5 = BigInteger.valueOf(17);
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(bd4 == bd5);
     }
 }
@@ -161,7 +161,7 @@ public class Test {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
         BigInteger bd3 = bd1.add(bd2);
-        // 打印结果: "15"
+        // 打印结果:"15"
         System.out.println(bd3);
     }
 }
@@ -181,7 +181,7 @@ public class Test {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
         BigInteger bd3 = bd1.subtract(bd2);
-        // 打印结果: "5"
+        // 打印结果:"5"
         System.out.println(bd3);
     }
 }
@@ -201,7 +201,7 @@ public class Test {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
         BigInteger bd3 = bd1.multiply(bd2);
-        // 打印结果: "50"
+        // 打印结果:"50"
         System.out.println(bd3);
     }
 }
@@ -221,7 +221,7 @@ public class Test {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
         BigInteger bd3 = bd1.divide(bd2);
-        // 打印结果: "2"
+        // 打印结果:"2"
         System.out.println(bd3);
     }
 }
@@ -243,7 +243,7 @@ public class Test {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
         BigInteger[] bdArr = bd1.divideAndRemainder(bd2);
-        // 打印结果: "商为2,余数为0"
+        // 打印结果:"商为2,余数为0"
         System.out.println("商为" + bdArr[0] + ",余数为" + bdArr[1]);
     }
 }
@@ -262,7 +262,7 @@ public class Test {
     public static void main(String[] args) {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
-        // 打印结果: "false"
+        // 打印结果:"false"
         System.out.println(bd1.equals(bd2));
     }
 }
@@ -280,7 +280,7 @@ import java.math.BigInteger;
 public class Test {
     public static void main(String[] args) {
         BigInteger bd1 = BigInteger.valueOf(10);
-        // 打印结果: "1000"
+        // 打印结果:"1000"
         System.out.println(bd1.pow(3));
     }
 }
@@ -299,9 +299,9 @@ public class Test {
     public static void main(String[] args) {
         BigInteger bd1 = BigInteger.valueOf(10);
         BigInteger bd2 = BigInteger.valueOf(5);
-        // 打印结果: "10"
+        // 打印结果:"10"
         System.out.println(bd1.max(bd2));
-        // 打印结果: "5"
+        // 打印结果:"5"
         System.out.println(bd1.min(bd2));
     }
 }
@@ -319,11 +319,11 @@ import java.math.BigInteger;
 public class Test {
     public static void main(String[] args) {
         BigInteger bd1 = BigInteger.valueOf(1000);
-        // 打印结果: "1000"
+        // 打印结果:"1000"
         System.out.println(bd1.intValue());
-        // 打印结果: "1000.0"
+        // 打印结果:"1000.0"
         System.out.println(bd1.doubleValue());
-        // 打印结果: "1000"
+        // 打印结果:"1000"
         System.out.println(bd1.longValue());
     }
 }

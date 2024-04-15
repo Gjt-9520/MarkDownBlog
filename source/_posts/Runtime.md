@@ -54,10 +54,10 @@ public class Test {
         // 获取Runtime的对象
         Runtime runtime = Runtime.getRuntime();
         // 获取CPU的线程数
-        // 打印结果: "8"
+        // 打印结果:"8"
         System.out.println(runtime.availableProcessors());
         // JVM能从系统中获取的总内存大小(单位: byte)
-        // 打印结果: "4068"(MB)
+        // 打印结果:"4068"(MB)
         System.out.println(runtime.maxMemory() / 1024 / 1024);
         // JVM已经从系统中获取的总内存大小(单位: byte)
         System.out.println(runtime.totalMemory());
