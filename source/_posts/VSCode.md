@@ -14,6 +14,10 @@ top_group_index:
 
 `ctrl + R`   
 
+## 运行任务
+
+`ctrl + shift + B`
+
 ## 注释
 
 单行注释 `ctrl + K + C` 或 `ctrl + /`   
