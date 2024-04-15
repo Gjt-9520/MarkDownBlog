@@ -6,8 +6,8 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage102.jpg?r
 tags: ["编译器"]
 category: "学习笔记"
 updated: 2023-11-30
-swiper_index:
-top_group_index:
+swiper_index: 3
+top_group_index: 3
 ---
 
 # 打开最近打开的文件
