@@ -27,3 +27,21 @@ TreeSet: `Tree` -- 树,`Set` -- 属于`Set`系列的一员
 练习: 
 
 存储整数并进行排序
+
+```java
+import java.util.TreeSet;
+
+public class test {
+    public static void main(String[] args) {
+        TreeSet<Integer> set = new TreeSet<>();
+        set.add(12);
+        set.add(123);
+        set.add(21);
+        set.add(11);
+        for (Integer integer : set) {
+            // 打印结果:"11 12 21 123 "
+            System.out.print(integer + " ");
+        }
+    }
+}
+```
