@@ -1,11 +1,11 @@
 ---
 title: "Set"
-date: 2024-03-19
+date: 2024-03-17
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage103.jpg?raw=true
 tags: ["Java进阶","集合"]
 category: "学习笔记"
-updated: 2024-03-20
+updated: 2024-03-18
 swiper_index:
 top_group_index:
 ---
@@ -61,5 +61,33 @@ Collection的方法Set都继承了
 利用Set系列的集合,添加字符串,并使用多种方式遍历
 
 ```java
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
+public class Test {
+    public static void main(String[] args) throws Exception {
+        Set<String> s = new HashSet<>();
+        s.add("张三");
+        s.add("李四");
+        s.add("王五");
+        s.add("赵六");
+
+        // 迭代器遍历
+        Iterator<String> it = s.iterator();
+        while (it.hasNext()) {
+            System.out.print(it.next() + " ");
+        }
+        System.out.println();
+
+        // 增强for
+        for (String s2 : s) {
+            System.out.print(s2 + " ");
+        }
+        System.out.println();
+
+        // Lambda表达式
+        s.forEach(str -> System.out.print(str + " "));
+    }
+}
 ```
