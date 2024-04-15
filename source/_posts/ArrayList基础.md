@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## 集合和数组的对比
+# 集合和数组的对比
 
 1. 长度   
 数组: 长度固定   
@@ -22,13 +22,13 @@ top_group_index:
 
 ![基本数据类型对应的包装类](../images/基本数据类型对应的包装类.png)
 
-## ArrayList
+# ArrayList
 
 注意: 因为集合会自动扩容,所以长度可变   
 但是**集合长度的默认值为0**   
 例如`for (int i = 0; i < arrayList.size(); i++)`这种代码,其条件判断语句永远也到达不了   
 
-### 构造方法
+## 构造方法
 
 `ArrayList<E> list = new ArrayList<>();`   
 
@@ -52,7 +52,7 @@ public class test {
 }
 ```
 
-### 成员方法
+## 成员方法
 
 ![ArrayList成员方法](../images/ArrayList成员方法.png)
 

@@ -10,12 +10,12 @@ swiper_index:
 top_group_index:
 ---
 
-## 集合体系结构 
+# 集合体系结构 
 
 1. 单列集合(Collection)
 2. 双列集合(Map)
 
-## 单列集合(Collection)
+# 单列集合(Collection)
 
 ![单列集合](../images/单列集合.png)
 
@@ -24,7 +24,7 @@ top_group_index:
 
 Collection是单列集合的祖宗接口,它的功能是全部单列集合都可以继承使用的
 
-### 常用方法
+## 常用方法
 
 ![Collection常用方法](../images/Collection常用方法.png)
 
@@ -165,23 +165,23 @@ public class StudentTest {
 }
 ```
 
-### 遍历方式
+## 遍历方式
 
 1. 迭代器遍历 -- **在遍历的过程中需要删除元素,使用迭代器遍历**
 2. 增强for遍历 -- **仅遍历,使用增强for遍历**
 3. Lambda表达式遍历 -- **仅遍历,使用Lambda表达式遍历**
 
-#### 迭代器遍历
+## 迭代器遍历
 
 细节: **迭代器不依赖索引**
 
 迭代器在Java中的类是Iterator,迭代器是集合专用的遍历方式  
 
-##### 获取迭代器和常用方法
+### 获取迭代器和常用方法
 
 ![Collection迭代器获取和常用方法](../images/Collection迭代器获取和常用方法.png)
 
-##### 格式
+### 格式
 
 ![迭代器格式](../images/迭代器格式.png)
 
@@ -326,17 +326,17 @@ public class Test {
 }
 ```
 
-##### 迭代器底层源码分析
+### 迭代器底层源码分析
 
 ![迭代器底层源码分析](../images/迭代器底层源码分析.png)
 
-#### 增强for遍历
+## 增强for遍历
 
 1. 增强for的底层就是迭代器,为了简化迭代器的代码书写的
 2. 在JDK5之后出现的,其内部原理就是一个Iterator迭代器
 3. **所有的单列集合和数组**才能用增强for进行遍历
 
-##### 格式
+### 格式
 
 ![增强for格式](../images/增强for格式.png)
 
@@ -398,11 +398,11 @@ public class Test {
 }
 ```
 
-#### Lambda表达式遍历
+## Lambda表达式遍历
 
 得益于JDK8开始的新技术Lambda表达式,提供了一种更简单,更直接的遍历集合的方式
 
-##### 格式
+### 格式
 
 ![Lambda表达式遍历](../images/Lambda表达式遍历.png)
 

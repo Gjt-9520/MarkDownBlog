@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## 特点
+# 特点
 
 1. 无序:存取顺序不一致
 2. 不重复:可以去除重复
@@ -48,7 +48,7 @@ public class Test {
 }
 ```
 
-## 实现类
+# 实现类
 
 - HashSet:**无序**、不重复、无索引
 - LinkedHashSet:**有序**、不重复、无索引

@@ -8,17 +8,17 @@ category: "学习笔记"
 updated: 2023-11-30
 ---
 
-## IDEA项目结构
+# IDEA项目结构
 
 `project`(项目)包含了`module`(模块)包含了`package`(包)包含了class(类)
 
-## 技巧
+# 技巧
 
-### 快速生成main()方法
+## 快速生成main()方法
 
 `psvm`
 
-### 快速生成打印输出语句
+## 快速生成打印输出语句
 
 `sout`
 
@@ -55,7 +55,7 @@ public class HelloWorld {
 
 `System.out.printf("ab%s","c");`表示: 只打印abc,不换行    
 
-### 快速生成for循环
+## 快速生成for循环
 
 `循环次数.fori`
 
@@ -72,7 +72,7 @@ public class test {
 }
 ```
 
-### 键盘录入
+## 键盘录入
 
 定义: Java已经写好一个类叫`Scanner`,这个类可以接收键盘输入的数字   
 
@@ -174,7 +174,7 @@ public class test2 {
 
 **第一套体系和第二套体系不能混用**
 
-### 获取随机数
+## 获取随机数
   
 步骤:    
 1. 导包: `import java.util.Random;`   
@@ -205,7 +205,7 @@ public class test {
 }
 ```
 
-### 快速生成数组遍历
+## 快速生成数组遍历
 
 正序遍历: `数组名.fori`
 
@@ -239,7 +239,7 @@ public class test {
 }
 ```
 
-### 快速生成增强for
+## 快速生成增强for
 
 `单列集合/数组名.for`
 
@@ -252,14 +252,14 @@ for (String s: list) {
 }
 ```
 
-### 快速生成JavaBean
+## 快速生成JavaBean
 
 1. 快捷键 `alt + insert`     
 选择构造函数、`Getter`和`Setter`
 2. 安装`IDEA`插件: `ptg`     
 右键点击`Ptg To JavaBean`   
 
-### 快速生成正则表达式
+## 快速生成正则表达式
 
 步骤:                 
 1. 安装`IDEA`插件: `any-rule`     
@@ -267,7 +267,7 @@ for (String s: list) {
 3. 删除前后的`/^`和`/`,这个表示从头开始匹配到末尾,这个在Java的`matches`方法已经实现,所以重复,可删除
 4. 在正则表达式中的`\`中再加上一个`\`,因为在Java中`\\`表示`\`
 
-### 阅读异常
+## 阅读异常
 
 例如: 索引越界异常       
 1. `Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException:  `    
@@ -277,15 +277,15 @@ for (String s: list) {
 3. `at com.gujintao.test.main(test.java: 8)`     
 这个异常发生在`com.gujintao.test`包的main方法内,位置是第8行     
 
-## 快捷键
+# 快捷键
 
-### 代码操作
+## 代码操作
 
 自动格式化代码 `ctrl + alt + L`    
 自动抽取方法 `ctrl + alt + M`      
 快速生成JavaBean `alt + insert`      
 
-### 复制、粘贴、剪切、删除
+## 复制、粘贴、剪切、删除
 
 剪切当前行或选中内容 `ctrl + X`   
 复制当前行或选中内容 `ctrl + C`    
@@ -293,74 +293,74 @@ for (String s: list) {
 复制当前行并粘贴到下一行 `ctrl + D`      
 删除当前行 `ctrl + Y`     
 
-### 选中单词
+## 选中单词
 
 选中当前光标所在的单词 `ctrl + W`       
 取消选中当前光标所在的单词 `ctrl + shift + W`       
 
-### 撤销操作
+## 撤销操作
 
 撤销上一步操作 `ctrl + Z`    
 恢复上一步被撤销的操作 `ctrl + shift + Z`     
 
-### 注释
+## 注释
 
 多行注释 `ctrl + shift + /`       
 注释当前行或选中内容 `ctrl + /`      
 
-### 移动代码
+## 移动代码
 
 代码上下移动 `shift + alt + up / down`       
 代码右移 `tab`        
 代码左移 `tab + shift`        
 
-### 运行 
+## 运行 
 
 `ctrl + shift + F10`   
  
-### 显示参数 
+## 显示参数 
 
 `ctrl + P`    
 
-### 拆分变量为声明和赋值
+## 拆分变量为声明和赋值
 
 选中变量后,拆分变量为声明和赋值 `alt + enter`   
 
-### 快速生成包围
+## 快速生成包围
 
 选中代码后,为代码添加包围 `ctrl + alt + T`   
 
-### 快速生成方法
+## 快速生成方法
 
 选中方法后,在main()方法外创建方法 `ctrl + enter`   
 
-### 列选择模式 
+## 列选择模式 
 
 `alt + shift + insert`   
 或者按住`alt`不松,鼠标左键也可以实现列选择   
 
-### 小写转变成大写 
+## 小写转变成大写 
 
 `ctrl + shift + U`   
 
-### 搜索 
+## 搜索 
 
 `ctrl + N`   
 
-### 查看类的方法 
+## 查看类的方法 
 
 `ctrl + F12`   
 
-### 跟进、后退、前进
+## 跟进、后退、前进
  
 跟进 `ctrl + B`   
 后退 `ctrl + alt + ←`   
 前进 `ctrl + alt + →`    
 
-### 查看项目
+## 查看项目
 
 `alt + 1`
 
-### 查看结构
+## 查看结构
 
 `alt + 7`

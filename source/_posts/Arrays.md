@@ -10,11 +10,11 @@ swiper_index:
 top_group_index:
 ---
 
-## Arrays
+# Arrays
 
 操作数组的工具类
 
-### 常用方法
+## 常用方法
 
 ![Arrays常用方法](../images/Arrays常用方法.png)
 
@@ -77,7 +77,7 @@ public class Test {
 }
 ```
 
-#### `sort(排序规则)`: 按照指定的规则排序    
+## `sort(排序规则)`: 按照指定的规则排序    
 
 1. 参数一: 要排序的数组
 2. 参数二: 排序规则            

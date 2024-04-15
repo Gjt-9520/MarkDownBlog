@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## 函数式编程
+# 函数式编程
 
 函数式编程(Functional programming)是一种思想特点               
 
@@ -18,7 +18,7 @@ top_group_index:
 
 Lambda表达式就是函数式思想的体现
 
-## Lambda表达式
+# Lambda表达式
 
 范例: 
 
@@ -51,7 +51,7 @@ public class ArraySort {
 
 Lambda表达式是JDK8开始后的一种新语法形式
 
-### 格式
+## 格式
 
 ![Lambda表达式格式](../images/Lambda表达式格式.png)
 
@@ -94,12 +94,12 @@ public class Test {
 }
 ```
 
-### 好处 
+## 好处 
 
 Lambda是一个匿名函数,可以把Lambda表达式理解为一段可以传递的代码           
 它可以写出更简洁、更灵活的代码,作为一种更紧凑的代码风格,使Java语言的表达能力得到提升
 
-### 省略写法
+## 省略写法
 
 核心: **可推导,可省略**
 

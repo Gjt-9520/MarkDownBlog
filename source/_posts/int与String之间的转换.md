@@ -10,11 +10,11 @@ swiper_index:
 top_group_index:
 ---
 
-## int --> String
+# int --> String
 
 `int、double、float、Long --> String`的方法大同小异    
 
-### 方法1
+## 方法1
 
 `String str = String.valueOf(i);`    
 直接使用String类的静态方法,只产生一个对象   
@@ -32,7 +32,7 @@ public class test {
 }
 ```
 
-### 方法2
+## 方法2
 
 `String str = Integer.toString(i);`   
 toString方法的底层是直接new了一个字符串对象    
@@ -67,7 +67,7 @@ public class test {
 }
 ```
 
-### 方法3
+## 方法3
 
 `String str = "" + i;`    
 会产生两个String对象    
@@ -88,11 +88,11 @@ public class test {
 }
 ```
 
-## String --> int
+# String --> int
 
 `String --> int、double、float、Long`的方法大同小异    
 
-### 方法1
+## 方法1
 
 `int i = Integer.parseInt(str);`    
 其中Integer.parseInt(str)返回原始int   
@@ -128,7 +128,7 @@ public class test {
 }
 ```
 
-### 方法2
+## 方法2
 
 `int i = Integer.valueOf(str);`    
 其中Integer.valueOf(str)返回一个Integer对象   

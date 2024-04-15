@@ -10,39 +10,39 @@ swiper_index:
 top_group_index:
 ---
 
-## Runtime
+# Runtime
 
 表示当前JVM的运行环境   
 
-### 常用方法
+## 常用方法
 
 ![Runtime常用方法](../images/Runtime常用方法.png)
 
-#### Runtime getRuntime()
+## Runtime getRuntime()
 
 获取当前系统的运行环境对象
 
-#### Runtime.exit(int status)
+## Runtime.exit(int status)
 
 停止JVM
 
-#### Runtime.availableProcessors()
+## Runtime.availableProcessors()
 
 获取CPU的线程数
 
-#### Runtime.maxMemory()
+## Runtime.maxMemory()
 
 JVM能从系统中获取的总内存大小(单位: byte)
 
-#### Runtime.totalMemory()
+## Runtime.totalMemory()
 
 JVM已经从系统中获取的总内存大小(单位: byte)
 
-#### Runtime.freeMemory()
+## Runtime.freeMemory()
 
 JVM剩余内存大小(单位: byte)
 
-#### Process exec(String command)
+## Process exec(String command)
 
 运行cmd命令
 

@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## LinkedList
+# LinkedList
 
 LinkedList: `Linked` -- 链表,List -- 属于List系列的一员
 
@@ -18,7 +18,7 @@ LinkedList: `Linked` -- 链表,List -- 属于List系列的一员
 
 LinkedList本身多了很多直接操作首尾元素的特有方法
 
-## 特点
+# 特点
 
 **查询慢,增删快**(如果操作是首位元素,速度也是快的)   
 
@@ -26,15 +26,15 @@ LinkedList本身多了很多直接操作首尾元素的特有方法
 2. **有索引**: 可以通过索引操作元素
 3. **可重复**: 存储的元素可以重复
 
-## 特有方法
+# 特有方法
 
 ![LinkedList特有API](../images/LinkedList特有API.png)
 
-## LinkedList底层原理
+# LinkedList底层原理
 
 LinkedList底层数据结构是双链表
 
-## LinkedList底层源码分析
+# LinkedList底层源码分析
 
 ![LinkedList底层源码分析1](../images/LinkedList底层源码分析1.png)
 

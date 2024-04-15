@@ -10,20 +10,20 @@ swiper_index:
 top_group_index:
 ---
 
-## Object
+# Object
 
 Object是Java中的顶级父类,所有的类都直接或间接的继承于Object类    
 Object类中的方法可以被所有子类访问   
 
-### 构造方法
+## 构造方法
 
 `public Object()` -- 空参构造
 
-### 成员方法
+## 成员方法
 
 ![Object成员方法1-3](../images/Object成员方法1-3.png)
 
-#### toString()
+## toString()
 
 返回对象的字符串表示形式: `包名 + @ + 地址值`
 
@@ -143,7 +143,7 @@ public class Test {
 }
 ```
 
-#### equals(Object obj)
+## equals(Object obj)
 
 比较两个对象(默认: 比较两个对象的地址值)是否相等
 
@@ -293,7 +293,7 @@ public class Test {
 }
 ```
 
-#### clone(int a)
+## clone(int a)
 
 对象克隆: 把A对象里的属性值完全拷贝给B对象,也叫对象拷贝/对象复制
 
@@ -421,7 +421,7 @@ public class CloneUser {
 }
 ```
 
-##### 浅克隆(浅拷贝)
+### 浅克隆(浅拷贝)
 
 不管对象内部的属性是基本数据类型还是引用数据类型,**都完全拷贝过来**    
 
@@ -462,7 +462,7 @@ public class CloneUser {
 }
 ```
 
-##### 深克隆(深拷贝)
+### 深克隆(深拷贝)
 
 - **基本数据类型拷贝过来**
 - **字符串复用**
@@ -514,7 +514,7 @@ public class CloneUser {
 }
 ```
 
-##### 实际开发中实现深克隆   
+### 实际开发中实现深克隆   
 
 利用第三方的工具: Gson   
 
@@ -562,15 +562,15 @@ public class CloneUser {
 }
 ```
 
-## Objects
+# Objects
 
 Objects是一个工具类,提供了一些方法去完成一些功能    
 
-### 成员方法
+## 成员方法
 
 ![Objects成员方法](../images/Objects成员方法.png)    
 
-#### Objects.equals(Object o1,Object o2)
+## Objects.equals(Object o1,Object o2)
 
 先做非空判断,比较两个对象    
 
@@ -596,7 +596,7 @@ public class Test {
 3. 此时的student1是Student类型,即最终会调用Student类中的equals方法     
 4. Student类中的equals方法: 如果没有重写,比较两者的地址值; 如果重写了,比较两者内部的属性值       
 
-#### Objects.isNull(Object o)
+## Objects.isNull(Object o)
 
 判断对象是否为空: 为空返回true; 不为空返回false    
 
@@ -616,7 +616,7 @@ public class Test {
 }
 ```
 
-#### Objects.nonNull(Object o)                 
+## Objects.nonNull(Object o)                 
 
 判断对象是否为空: 不为空返回true; 为空返回false      
 

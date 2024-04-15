@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## BigInteger
+# BigInteger
 
 在Java中,整数有四种类型: byte、short、int、long    
 
@@ -22,7 +22,7 @@ top_group_index:
 
 BigInteger表示的范围更大
 
-### 构造方法
+## 构造方法
 
 ![BigInteger构造方法](../images/BigInteger构造方法.png)
 
@@ -48,7 +48,7 @@ public class Test {
 }
 ```
 
-#### BigInteger(int num,Random rnd)
+## BigInteger(int num,Random rnd)
 
 获取随机大整数,范围: [0 ~ 2^n - 1]
 
@@ -68,7 +68,7 @@ public class Test {
 }
 ```
 
-#### BigInteger(String val)
+## BigInteger(String val)
 
 获取指定的大整数    
 
@@ -88,7 +88,7 @@ public class Test {
 }
 ```
 
-#### BigInteger(String val,int radix)
+## BigInteger(String val,int radix)
 
 获取指定进制的大整数  
  
@@ -110,7 +110,7 @@ public class Test {
 }
 ```
 
-#### valueOf(long val)
+## valueOf(long val)
 
 静态方法获取BigInteger的对象
 
@@ -143,11 +143,11 @@ public class Test {
 }
 ```
 
-### 成员方法
+## 成员方法
 
 ![BigInteger成员方法](../images/BigInteger成员方法.png)
 
-#### add(BigInteger val)
+## add(BigInteger val)
 
 加法   
 
@@ -167,7 +167,7 @@ public class Test {
 }
 ```
 
-#### subtract(BigInteger val)
+## subtract(BigInteger val)
 
 减法   
 
@@ -187,7 +187,7 @@ public class Test {
 }
 ```
 
-#### multiply(BigInteger val)
+## multiply(BigInteger val)
 
 乘法    
 
@@ -207,7 +207,7 @@ public class Test {
 }
 ```
 
-#### divide(BigInteger val)
+## divide(BigInteger val)
 
 除法,获取商     
 
@@ -227,7 +227,7 @@ public class Test {
 }
 ```
 
-#### divideAndRemainder(BigInteger val)
+## divideAndRemainder(BigInteger val)
 
 除法,获取商和余数     
 - 商: `BigInteger[0]`     
@@ -249,7 +249,7 @@ public class Test {
 }
 ```
 
-#### equals(Object o)
+## equals(Object o)
 
 比较是否相同     
 
@@ -268,7 +268,7 @@ public class Test {
 }
 ```
 
-#### pow(int exponent)
+## pow(int exponent)
 
 次幂      
 
@@ -286,7 +286,7 @@ public class Test {
 }
 ```
 
-#### max/min(BigInteger val)
+## max/min(BigInteger val)
 
 返回较大值/较小值        
 
@@ -307,7 +307,7 @@ public class Test {
 }
 ```
 
-#### int/double/longValue(BigInteger val)
+## int/double/longValue(BigInteger val)
 
 转为int/double/long类型整数，超出范围数据有误      
 
@@ -329,7 +329,7 @@ public class Test {
 }
 ```
 
-### 底层原理
+## 底层原理
 
 将BigInteger对象的数据,转成二进制的补码,然后从右往左分成两组(32位一组)和一个符号位
 

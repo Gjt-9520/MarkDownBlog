@@ -10,17 +10,17 @@ swiper_index:
 top_group_index:
 ---
 
-## JVM
+# JVM
 
 定义:Java的虚拟机   
 说明:JDK包含了JRE,JRE包含了JVM    
 
-## JDK
+# JDK
 
 定义:Java的开发工具包   
 说明:包括JVM、核心类库、开发工具   
 
-## JRE
+# JRE
 
 定义:Java的运行环境    
 说明:包括JVM、核心类库、运行工具    

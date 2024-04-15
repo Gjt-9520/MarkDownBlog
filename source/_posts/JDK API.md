@@ -10,9 +10,9 @@ swiper_index:
 top_group_index:
 ---
 
-## [JDK API 官方文档链接](https:// www.oracle.com/cn/java/technologies/java-se-api-doc.html)
+# [JDK API 官方文档链接](https:// www.oracle.com/cn/java/technologies/java-se-api-doc.html)
 
-## API
+# API
 
 Application Programming Interface即应用程序编程接口
 

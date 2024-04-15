@@ -10,9 +10,9 @@ swiper_index:
 top_group_index:
 ---
 
-## [Git 官方文档链接](https:// git-scm.com/docs)
+# [Git 官方文档链接](https:// git-scm.com/docs)
 
-## Git工作流程  
+# Git工作流程  
 
 ![Git工作流程图](../images/Git工作流程图.jpg)
 
@@ -25,7 +25,7 @@ top_group_index:
 `pull`(拉取): 从远程库拉到本地库,自动进行合并(`merge`),然后放到到工作区,相当于`fetch+merge`    
 `push`(推送): 修改完成后,需要和团队成员共享代码时,将代码推送到远程仓库  
 
-## 基本配置  
+# 基本配置  
 
 **设置当前用户信息**:        
 `git config user.name "[用户名]"` -- 针对当前本地仓库,设置用户名  
@@ -72,11 +72,11 @@ top_group_index:
 `U` -- 表示更新但未合并  
 `' '` -- (空格)表示文件未发生更改  
 
-## Git-add和Git-commit工作流程   
+# Git-add和Git-commit工作流程   
 
 ![Git-add和Git-commit](../images/Git-add工作流程图.jpg)
 
-### 添加文件到暂存区
+## 添加文件到暂存区
 
 `git add`指令,即跟踪文件   
 
@@ -124,7 +124,7 @@ top_group_index:
 
 `git reset --hard [提交记录]` -- 删除工作区的改动代码,撤销`git commit`,撤销`git add`     
 
-### 将工作区内容或暂存区内容添加到仓库  
+## 将工作区内容或暂存区内容添加到仓库  
 
 `git commit [文件1] [文件2] ...` -- 将已被跟踪的文件(已经`git add`)提交到本地仓库,进入`Vim`命令界面输入提交记录的信息      
 
@@ -141,7 +141,7 @@ top_group_index:
 `git diff --cached [文件]`或者`git diff --staged [文件]` -- 显示暂存区和本地仓库之间的差异  
 `git diff [提交记录1] [提交记录2]` -- 显示两次提交之间的差异  
 
-## 分支
+# 分支
 
 **查看本地分支**:  
 `git branch` -- 查看本地分支   
@@ -164,7 +164,7 @@ top_group_index:
 **查看本地分支与远端分支的关联**:  
 `git branch -vv` -- 查看本地分支与远端分支的关联  
 
-## Git开发流程
+# Git开发流程
 
 ![Git开发流程](../images/Git开发流程图.jpg)
 
@@ -187,13 +187,13 @@ top_group_index:
 修复完成后,需要合并到`master`、`test`、`develop`分支  
 还有一些其他分支,例如`test`分支(用于代码测试)、`pre`分支(用于预上线)  
  
-## 配置ssh公钥  
+# 配置ssh公钥  
 
 `ssh-keygen -t rsa` -- 本地生成`ssh`公钥  
 `cat ~/.ssh/id_rsa.pub` -- 查看本地生成的`ssh`公钥  
 `ssh -T git@gitee.com` -- 验证是否配置成功(以`Gitee`为例)  
 
-## 远程仓库
+# 远程仓库
 
 **添加远程仓库**:  
 `git remote add [远程仓库名] [仓库路径]`  
@@ -231,7 +231,7 @@ top_group_index:
 
 远程仓库名默认是`origin`,取决于远端服务器设置   
 
-## 解决冲突流程 
+# 解决冲突流程 
 
 ![解决合并冲突](../images/解决合并冲突.jpg)
 

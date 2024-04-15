@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## BigDecimal
+# BigDecimal
 
 计算机中的小数:   
 
@@ -22,7 +22,7 @@ BigDecimal的作用:
 1. 用于小数的精确计算(解决小数运算精度失真问题)   
 2. 用来表示很大的小数
 
-### 构造方法
+## 构造方法
   
 1. `public BigDecimal(double val)` -- 通过传递double类型的小数来创建BigDecimal对象       
 2. `public BigDecimal(String val)` -- 通过传递字符串来创建BigDecimal对象         
@@ -31,7 +31,7 @@ BigDecimal的作用:
 1. **如果要表示的数字不大,没有超出double的取值范围,建议使用静态方法创建BigDecimal对象**
 2. **如果要表示的数字比较大,超出double的取值范围,建议使用传递字符串类型的构造方法**
 
-#### BigDecimal(double val)
+## BigDecimal(double val)
 
 通过传递double类型的小数来创建BigDecimal对象      
 
@@ -51,7 +51,7 @@ public class Test {
 }
 ```
 
-#### BigDecimal(String val)
+## BigDecimal(String val)
 
 通过传递字符串来创建BigDecimal对象      
 
@@ -71,11 +71,11 @@ public class Test {
 }
 ```
 
-### 成员方法
+## 成员方法
 
 ![BigDecimal成员方法](../images/BigDecimal成员方法.png)
 
-#### valueOf(double val)
+## valueOf(double val)
 
 静态方法创建BigDecimal对象
 
@@ -102,7 +102,7 @@ public class Test {
 }
 ```
 
-#### add(BigDecimal val)
+## add(BigDecimal val)
 
 范例:    
 
@@ -119,7 +119,7 @@ public class Test {
 }
 ```
 
-#### subtract(BigDecimal val)
+## subtract(BigDecimal val)
 
 范例:    
 
@@ -136,7 +136,7 @@ public class Test {
 }
 ```
 
-#### multiply(BigDecimal val)
+## multiply(BigDecimal val)
 
 范例:    
 
@@ -153,7 +153,7 @@ public class Test {
 }
 ```
 
-#### divide(BigDecimal val)
+## divide(BigDecimal val)
 
 范例:    
 
@@ -170,7 +170,7 @@ public class Test {
 }
 ```
 
-#### divide(BigDecimal val,精确几位,舍入模式)
+## divide(BigDecimal val,精确几位,舍入模式)
 
 范例:    
 
@@ -190,7 +190,7 @@ public class Test {
 }
 ```
 
-### 底层原理
+## 底层原理
 
 将BidDecimal对象的数据,分成字符,转换为ASCII码表中对应的数字存储到数组当中
 

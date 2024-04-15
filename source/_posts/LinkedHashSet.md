@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-## LinkedHashSet
+# LinkedHashSet
 
 `LinkedHashSet`: `Linked` -- 链表,`HashSet` -- 是其父类
 
@@ -18,7 +18,7 @@ top_group_index:
 2. 不重复:可以去除重复
 3. 无索引:没有带索引的方法,所以不能使用普通的for循环遍历,也不能通过索引来获取元素
 
-### 原理
+## 原理
 
 底层数据结构是哈希表,但是每个元素又额外多了一个双链表的机制记录存储的顺序
 
@@ -104,7 +104,7 @@ public class StudentTest {
 }
 ```
 
-## 应用
+# 应用
 
 1. 如果只要数据去重,默认使用HashSet               
 2. 如果要数据去重且存取有序,使用LinkedHashSet      

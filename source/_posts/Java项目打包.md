@@ -10,34 +10,34 @@ swiper_index:
 top_group_index:
 ---
 
-## 软件
+# 软件
 
-### exe4j
+## exe4j
 
 exe4j是Java可执行文件生成工具  
 **exe4j支持的JDK版本是8~11**    
 
-### Inno Setup
+## Inno Setup
 
 Inno Setup是Windows程序免费安装程序   
 
-## 前提
+# 前提
 
 1. 一定要包含图形化界面  
 2. 代码及其资源要打包起来  
 3. JDK要打包起来  
 
-## 步骤
+# 步骤
 
-### 核心步骤
+## 核心步骤
 
 1. 把所有项目代码打包成一个jar包  
 2. 把jar包转换成exe的安装包   
 3. 把第二步的exe、资源(如图片等)、JDK整合在一起,变成最终的exe安装包  
 
-### 具体步骤
+## 具体步骤
 
-#### 代码打包成jar包
+## 代码打包成jar包
 
 创建jar包: 
 
@@ -59,13 +59,13 @@ jar包默认位置: out/artifacts/XXX_jar/XXX.jar:
 
 ![jar包默认位置](../images/jar包默认位置.png)
 
-#### 整合资源文件
+## 整合资源文件
 
 1. 将创建好的jar包拷贝到桌面上
 2. 在桌面上新建一个文件夹resource
 3. 将项目中的资源复制到文件夹resource
 
-#### 将jar包打包成exe安装包
+## 将jar包打包成exe安装包
 
 打开exe4j软件: 
 
@@ -113,7 +113,7 @@ jar包默认位置: out/artifacts/XXX_jar/XXX.jar:
 
 ![添加jar15](../images/添加jar15.png)
 
-#### 将jdk、资源文件、jar包转换后的exe三者再次打包成最终的exe
+## 将jdk、资源文件、jar包转换后的exe三者再次打包成最终的exe
 
 打开Inno Setup软件: 
 
@@ -167,6 +167,6 @@ jar包默认位置: out/artifacts/XXX_jar/XXX.jar:
 XXX.exe: 打包成功的项目安装包    
 iss文件: 刚刚设置的脚本文件    
 
-## 安装
+# 安装
 
 点击XXX.exe安装项目,并在安装目录中找到XXX.exe即可在无需安装JDK的情况下运行项目   

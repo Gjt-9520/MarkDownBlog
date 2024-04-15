@@ -10,19 +10,19 @@ swiper_index:
 top_group_index:
 ---
 
-## ArrayList底层原理
+# ArrayList底层原理
 
 ArrayList: `Array` -- 数组,List -- 属于List系列的一员            
 
 ArrayList底层数据结构是数组(`Object[] elementData`)
 
-## 特点
+# 特点
 
 1. **有序**: 存和取的元素顺序一致
 2. **有索引**: 可以通过索引操作元素
 3. **可重复**: 存储的元素可以重复
 
-## 底层原理
+# 底层原理
 
 ![ArrayList底层原理1](../images/ArrayList底层原理1.png)
 
@@ -34,7 +34,7 @@ ArrayList底层数据结构是数组(`Object[] elementData`)
 
 ![ArrayList底层原理5](../images/ArrayList底层原理5.png)
 
-## ArrayList底层源码分析
+# ArrayList底层源码分析
 
 ![ArrayList底层原理源码1](../images/ArrayList底层原理源码1.png)
 

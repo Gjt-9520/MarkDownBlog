@@ -10,16 +10,16 @@ swiper_index:
 top_group_index:
 ---
 
-## Math
+# Math
 
 进行数学计算的工具类    
 **私有化构造方法,所有的方法都是静态的**    
 
-### 常用方法
+## 常用方法
 
 ![Math常用方法](../images/Math常用方法.png)
 
-#### Math.abs(int a)
+## Math.abs(int a)
 
 获取绝对值   
 
@@ -42,7 +42,7 @@ public class Test {
 -2147483648没有正数与之对应,所以其结果会产生Bug    
 解决方案: JDK15以后,使用Math.absExact(),如果不在取值范围内,程序会自动报错   
 
-#### Math.ceil(double a)
+## Math.ceil(double a)
 
 向上取整  
 进一法: 往正无穷大方向获取距离最近的整数   
@@ -64,7 +64,7 @@ public class Test {
 }
 ```
 
-#### Math.floor(double a)
+## Math.floor(double a)
 
 向下取整   
 去尾法: 往负无穷大方向获取距离最近的整数   
@@ -86,7 +86,7 @@ public class Test {
 }
 ```
 
-#### Math.round(float a)
+## Math.round(float a)
 
 四舍五入
 
@@ -107,7 +107,7 @@ public class Test {
 }
 ```
 
-#### Math.max(int a,int b)
+## Math.max(int a,int b)
 
 获取两个整数的较大值
 
@@ -122,7 +122,7 @@ public class Test {
 }
 ```
 
-#### Math.min(int a,int b)
+## Math.min(int a,int b)
 
 获取两个整数的较小值
 
@@ -137,7 +137,7 @@ public class Test {
 }
 ```
 
-#### Math.pow(double a,double b)
+## Math.pow(double a,double b)
 
 返回a的b次幂   
 根据第二个参数b,返回不同的值   
@@ -161,7 +161,7 @@ public class Test {
 }
 ```
 
-#### Math.sqrt(double a)
+## Math.sqrt(double a)
 
 返回a的平方根
 
@@ -176,7 +176,7 @@ public class Test {
 }
 ```
 
-#### Math.cbrt(double a)
+## Math.cbrt(double a)
 
 返回a的立方根
 
@@ -191,7 +191,7 @@ public class Test {
 }
 ```
 
-#### Math.random()
+## Math.random()
 
 获取一个范围在`[0,1.0)`的随机数
 

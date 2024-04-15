@@ -10,12 +10,12 @@ swiper_index:
 top_group_index:
 ---
 
-## static
+# static
 
 static表示静态,是Java的一个修饰符,可以修饰成员方法、成员变量    
 **只要是所有对象都共享的,就需要用static来修饰**    
 
-### 静态变量
+## 静态变量
 
 被static修饰的成员变量,叫做静态变量
 
@@ -100,11 +100,11 @@ public class StudentTest {
 }
 ```
 
-#### 内存图
+## 内存图
 
 ![static静态变量内存图](../images/static.png)
 
-### 静态方法
+## 静态方法
 
 被static修饰的成员方法,叫做静态方法   
 
@@ -253,7 +253,7 @@ public class StudentTest {
 }
 ```
 
-### 注意事项
+## 注意事项
 
 1. **静态方法只能访问静态**  
 静态方法只能访问静态变量和静态方法   
@@ -263,7 +263,7 @@ public class StudentTest {
 解释: 非静态方法往往是和对象相关的,所以虚拟机会默认隐藏this关键字   
 而静态方法是共享的,和某一个对象无关,所以静态方法中没有this关键字  
 
-#### 代码角度理解
+## 代码角度理解
 
 ```java
 public class StudentTest {
@@ -343,7 +343,7 @@ public class Student {
 }
 ```
 
-#### 内存角度理解
+## 内存角度理解
 
 静态: 随着类的加载而加载     
 非静态: 和对象有关   
@@ -361,6 +361,6 @@ public class Student {
 
 ![非静态方法可以访问所有](../images/非静态方法可以访问所有.png)
 
-## 重新认识main方法
+# 重新认识main方法
 
 ![重新认识main方法](../images/重新认识main方法.png)
