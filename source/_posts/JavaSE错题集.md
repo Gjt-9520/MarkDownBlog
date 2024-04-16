@@ -1,7 +1,7 @@
 ---
 title: "JavaSE错题集"
 date: 2023-12-17
-description: ""
+description: "错题巩固"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage85.jpg?raw=true
 tags: ["JavaSE","练习"]
 category: "学习笔记"
@@ -1253,6 +1253,73 @@ public class Test {
         } else {
             return sum(step - 1) + sum(step - 2);
         }
+    }
+}
+```
+
+# 郊游选景点
+
+某个班级80名学生,现在需要组成秋游活动,班长提供了四个景点,依次是(A,B,C,D)                 
+每个学生只能选择一个景点,请统计出最终哪个景点想去的人数最多          
+
+```java
+import java.util.*;
+
+public class sightChoose {
+    public static void main(String[] args) {
+        // 定义arr数组,存储四个景点
+        String[] arr = {"A", "B", "C", "D"};
+        // 定义ArrayList集合,存储投票的结果
+        ArrayList<String> list = new ArrayList<>();
+        // 随机生成80个投票结果,存入集合中
+        Random r = new Random();
+        for (int i = 0; i < 80; i++) {
+            list.add(arr[r.nextInt(4)]);
+        }
+        // 定义map集合进行统计
+        HashMap<String, Integer> map = new HashMap<>();
+        for (String sight : list) {
+            // 判断当前景点是否在map集合中已经存在
+            if (map.containsKey(sight)) {
+                // 已经存在
+                // 获取当前景点已经被投票的次数
+                Integer count = map.get(sight);
+                // 当前景点又被投票一次
+                count++;
+                // 将当前景点的投票次数再次存入map集合中
+                map.put(sight, count);
+            } else {
+                // 不存在
+                map.put(sight, 1);
+            }
+        }
+        printMap(map, getMax(map));
+    }
+
+    // 获取票数中的最大值
+    public static int getMax(HashMap<String, Integer> map) {
+        int max = 0;
+        Set<Map.Entry<String, Integer>> entries = map.entrySet();
+        for (Map.Entry<String, Integer> entry : entries) {
+            int vote = entry.getValue();
+            if (vote > max) {
+                max = vote;
+            }
+        }
+        return max;
+    }
+
+    // 根据票数最大值找到对应的景点,并打印map集合
+    public static void printMap(HashMap<String, Integer> map, int maxVote) {
+        map.forEach((sight, vote) ->
+                System.out.println("景点" + sight + "的票数为" + vote)
+        );
+        System.out.print("想去人数最多的景点是:");
+        map.forEach((sight, vote) -> {
+            if (maxVote == vote) {
+                System.out.print(sight + " ");
+            }
+        });
     }
 }
 ```

@@ -1,7 +1,7 @@
 ---
 title: "JavaSE编程案例"
 date: 2023-12-24
-description: ""
+description: "基础部分"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage84.jpg?raw=true
 tags: ["JavaSE","练习"]
 category: "学习笔记"
