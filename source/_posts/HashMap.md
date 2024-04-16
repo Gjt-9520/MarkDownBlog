@@ -253,7 +253,7 @@ public class sightChoose {
     public static void main(String[] args) {
         // 定义arr数组,存储四个景点
         String[] arr = {"A", "B", "C", "D"};
-        // 定义ArrayList集合,存储投票的结果
+        // 定义list集合,存储投票的结果
         ArrayList<String> list = new ArrayList<>();
         // 随机生成80个投票结果,存入集合中
         Random r = new Random();
@@ -307,3 +307,6 @@ public class sightChoose {
     }
 }
 ```
+
+# 底层原理
+

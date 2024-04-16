@@ -1257,7 +1257,7 @@ public class Test {
 }
 ```
 
-# 郊游选景点
+# 秋游选景点
 
 某个班级80名学生,现在需要组成秋游活动,班长提供了四个景点,依次是(A,B,C,D)                 
 每个学生只能选择一个景点,请统计出最终哪个景点想去的人数最多          
@@ -1269,7 +1269,7 @@ public class sightChoose {
     public static void main(String[] args) {
         // 定义arr数组,存储四个景点
         String[] arr = {"A", "B", "C", "D"};
-        // 定义ArrayList集合,存储投票的结果
+        // 定义list集合,存储投票的结果
         ArrayList<String> list = new ArrayList<>();
         // 随机生成80个投票结果,存入集合中
         Random r = new Random();
