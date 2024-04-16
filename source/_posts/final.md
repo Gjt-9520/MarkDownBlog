@@ -3,7 +3,7 @@ title: "final"
 date: 2024-01-08
 description: "final修饰的方法、类、变量"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage79.jpg?raw=true
-tags: ["Java基础","面向对象"]
+tags: ["JavaSE","面向对象"]
 category: "学习笔记"
 updated: 2024-01-09
 swiper_index:

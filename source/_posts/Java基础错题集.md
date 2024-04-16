@@ -1,9 +1,9 @@
 ---
-title: "Java基础错题集"
+title: "JavaSE错题集"
 date: 2023-12-17
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage85.jpg?raw=true
-tags: ["Java基础","练习"]
+tags: ["JavaSE","练习"]
 category: "学习笔记"
 updated: 2023-12-17
 swiper_index: 2

@@ -3,7 +3,7 @@ title: "JVM、JDK和JRE"
 date: 2023-12-03
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage88.jpg?raw=true
-tags: ["Java基础"]
+tags: ["JavaSE"]
 category: "学习笔记"
 updated: 2023-12-04
 swiper_index:

@@ -3,7 +3,7 @@ title: "System"
 date: 2024-01-16
 description: "终止JVM、返回当前系统的时间毫秒值形式、数组拷贝"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage99.jpg?raw=true
-tags: ["Java基础","API"]
+tags: ["JavaSE","API"]
 category: "学习笔记"
 updated: 2024-01-17
 swiper_index:
