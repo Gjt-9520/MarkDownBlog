@@ -9,6 +9,7 @@ updated: 2024-03-22
 swiper_index:
 top_group_index:
 ---
+
 # 集合体系结构 
 
 1. 单列集合(Collection)
@@ -127,7 +128,7 @@ public class test {
 2. 键值对
 3. Lambda表达式
 
-## 键找值
+### 键找值
 
 步骤:
 1. 通过keySet()方法获取所有的键,把这些键放到一个单列集合当中
@@ -182,7 +183,7 @@ public class test {
 }
 ```
 
-## 键值对(键值对对象/Entry对象)
+### 键值对(键值对对象/Entry对象)
 
 步骤:
 1. 通过entrySet()方法获取所有的键值对对象,方法返回一个Set集合
@@ -235,7 +236,7 @@ public class test {
 }
 ```
 
-## Lambda表达式
+### Lambda表达式
 
 ![Map遍历之Lambda表达式](../images/Map遍历之Lambda表达式.png)
 
