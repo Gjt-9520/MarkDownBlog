@@ -366,3 +366,7 @@ for (String s: list) {
 ## 查看结构
 
 `alt + 7`
+
+# 源码结构细节
+
+![IDEA源码结构细节](../images/IDEA源码结构细节.png)

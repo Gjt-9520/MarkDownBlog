@@ -194,9 +194,8 @@ public class StudentTest {
 输出字符串:"a(5)b(4)c(3)d(2)e(1)"
 
 ```java
-import java.util.ArrayList;
-import java.util.StringJoiner;
 import java.util.TreeMap;
+import java.util.StringJoiner;
 
 public class Test {
     public static void main(String[] args) {
@@ -218,9 +217,9 @@ public class Test {
             }
         }
 
+//        // 遍历map集合并打印
 //        // 利用StringJoiner进行拼接
 //        StringJoiner sb1 = new StringJoiner("", "", "");
-//        // 遍历map集合并打印
 //        map.forEach((character, integer) ->
 //                // 按照指定格式进行拼接
 //                sb1.add(character + "").add("(").add(integer + "").add(")")
@@ -228,9 +227,9 @@ public class Test {
 //        // 打印结果:"a(5)b(4)c(3)d(2)e(1)"
 //        System.out.println(sb1);
 
+        // 遍历map集合并打印
         // 利用StringBuilder进行拼接
         StringBuilder sb2 = new StringBuilder();
-        // 遍历map集合并打印
         map.forEach((character, integer) ->
                 // 按照指定格式进行拼接
                 sb2.append(character).append("(").append(integer).append(")")
