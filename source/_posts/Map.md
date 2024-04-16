@@ -6,8 +6,8 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage104.jpg?r
 tags: ["JavaSE","集合"]
 category: "学习笔记"
 updated: 2024-03-22
-swiper_index:
-top_group_index:
+swiper_index: 2
+top_group_index: 2
 ---
 
 # 集合体系结构 
@@ -274,5 +274,17 @@ public class test {
 
 ## 总结
 
-1. 如果题目中没有要求对结果进行排序,默认使用HashMap
-2. 如果题目中要求对结果进行排序,使用TreeMap
+1. 默认使用HashMap(效率最高)
+2. 如果要求**保证存取有序**,使用LinkedHashMap
+3. 如果要求**对结果进行排序**,使用TreeMap
+
+# 常见面试问题
+
+**你觉得在Map集合中,Java会不会提供一个如果键重复但不会覆盖的put方法?**                           
+
+此时putIfAbsent本身不重要                                                     
+传递一个思想:代码中的逻辑都有两面性,如果我们只知道了其中的A面,而且代码中还发现了有变量可以控制两面性的发生,那么该逻辑一定会有B面                                 
+
+习惯：                  
+boolean类型的变量控制,一般只有AB两面,因为boolean只有两个值                          
+int类型的变量控制,一般至少有三面,因为int可以取多个值                          

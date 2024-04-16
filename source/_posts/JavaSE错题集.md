@@ -6,8 +6,8 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage85.jpg?ra
 tags: ["JavaSE","练习"]
 category: "学习笔记"
 updated: 2023-12-17
-swiper_index: 2
-top_group_index: 2
+swiper_index: 
+top_group_index: 
 ---
 
 # 循环语句

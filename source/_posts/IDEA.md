@@ -6,8 +6,8 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage82.jpg?ra
 tags: ["编译器"]
 category: "学习笔记"
 updated: 2023-12-01
-swiper_index: 4
-top_group_index: 4
+swiper_index: 
+top_group_index: 
 ---
 
 # IDEA项目结构
