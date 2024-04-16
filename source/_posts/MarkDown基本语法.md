@@ -14,7 +14,7 @@ top_group_index:
 
 # 标题(Heading)
 
-```MarkDown
+```markdown
 # H1
 # H2
 ## H3
@@ -22,25 +22,25 @@ top_group_index:
 
 # 粗体(Bold)
 
-```MarkDown
+```markdown
 **bold text**
 ```
 
 # 斜体(Italic)
 
-```MarkDown
+```markdown
 *italicized text*
 ```
 
 # 引用块(Blockquote)
 
-```MarkDown
+```markdown
 > blockquote
 ```
 
 # 有序列表(Ordered List)
 
-```MarkDown
+```markdown
 1. First item
 2. Second item
 3. Third item
@@ -48,7 +48,7 @@ top_group_index:
 
 # 无序列表(Unordered List)
 
-```MarkDown
+```markdown
 - First item
 - Second item
 - Third item
@@ -56,31 +56,31 @@ top_group_index:
 
 # 代码(Code)
 
-```MarkDown
+```markdown
 `code`
 ```
 
 # 分隔线(Horizontal Rule)	
 
-```MarkDown
+```markdown
 ---
 ```
 
 # 链接(Link)
 
-```MarkDown
+```markdown
 [title](https:// www.example.com)
 ```
 
 # 图片(Image)
 
-```MarkDown
+```markdown
 ![alt text](image path)
 ```
 
 或者
 
-```MarkDown
+```markdown
 ![alt text][alt text]
 
 [alt text]:base64 image path
@@ -88,7 +88,7 @@ top_group_index:
 
 # 视频(Video)
 
-```MarkDown
+```markdown
 <iframe width="100%" height="468" src="video path" title="YouTube video player" 
 frameborder="0" allow="accelerometer;  autoplay;  clipboard-write;  encrypted-media;  
 gyroscope;  picture-in-picture;  web-share" allowfullscreen></iframe>
@@ -96,7 +96,7 @@ gyroscope;  picture-in-picture;  web-share" allowfullscreen></iframe>
 
 # 表格(Table)
 
-```MarkDown
+```markdown
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
@@ -105,7 +105,7 @@ gyroscope;  picture-in-picture;  web-share" allowfullscreen></iframe>
 
 # 代码块(Fenced Code Block)
 
-```MarkDown
+```markdown
 {
   "firstName": "John",
   "lastName": "Smith",
@@ -115,30 +115,30 @@ gyroscope;  picture-in-picture;  web-share" allowfullscreen></iframe>
 
 # 脚注(Footnote)
 
-```MarkDown
+```markdown
 Here's a sentence with a footnote. [^1]
 [^1]: This is the footnote.
 ```
 
 # 标题编号(Heading ID)
 
-```MarkDown
+```markdown
 ## My Great Heading {#custom-id}
 ```
 
 # 定义列表(Definition List)
 
-```MarkDown
+```markdown
 ## My Great Heading {#custom-id}
 ```
 # 删除线(Strikethrough)
 
-```MarkDown
+```markdown
 ~~The world is flat.~~
 ```
 # 任务列表(Task List)
 
-```MarkDown
+```markdown
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media

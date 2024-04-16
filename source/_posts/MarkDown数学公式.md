@@ -19,7 +19,7 @@ top_group_index:
 
 ![希腊字母](../images/MD希腊字母.png)
 
-```MarkDown
+```markdown
 $\alpha$
 $\beta$
 $\chi$
@@ -32,7 +32,7 @@ $\Theta$
 
 ![数学结构](../images/MD数学结构.png)
 
-```MarkDown
+```markdown
 $$
 \frac{abc}{xyz}
 $$
@@ -46,7 +46,7 @@ $$
 
 ![定界符](../images/MD定界符.png)
 
-```MarkDown
+```markdown
 $$
 |
 $$         
@@ -68,7 +68,7 @@ $$
 
 ![可变大小的符号](../images/MD可变大小的符号.png)
 
-```MarkDown
+```markdown
 $$
 \bigcap\bigcup\bigoplus\bigotimes\sum\int\oint\iint
 $$
@@ -78,7 +78,7 @@ $$
 
 ![函数名称](../images/MD函数名称.png)
 
-```MarkDown
+```markdown
 $$
 \tan(at-n\pi)\\
 \sin\\
@@ -92,7 +92,7 @@ $$
 ![二进制运算符和关系运算符](../images/MD二进制运算符和关系运算符.png)
 
 
-```MarkDown
+```markdown
 $\times$
 $\ast$
 $\div$
@@ -107,7 +107,7 @@ $\lessgtr$
 
 ![箭头符号](../images/MD箭头符号.png)
 
-```MarkDown
+```markdown
 $\leftarrow$       
 $\Leftarrow$             
 $\nLeftarrow$                  
@@ -118,7 +118,7 @@ $\rightleftarrows$
 
 ![其他符号](../images/MD其他符号.png)
 
-```MarkDown
+```markdown
 $\heartsuit$                
 $\infty$               
 $\iiint$                 
@@ -129,7 +129,7 @@ $\partial$
 
 使用`^`来输出上标,使用`_`来输出下标,使用{}包含作用范围
 
-```MarkDown
+```markdown
 $$
 \sin^2(\theta) + \cos^2(\theta) = 1
 $$
@@ -151,7 +151,7 @@ $$
 
 矩阵中的各元素通过用`$`来分隔,`\\`来换行
 
-```MarkDown
+```markdown
 $$
 \begin{matrix}
 0&1&2\\
@@ -197,7 +197,7 @@ $$
 
 用`\begin{cases}`和`\end{cases}`来构造分段函数,中间则用`\\`来分段
 
-```MarkDown
+```markdown
 $$
 f(x) = 
 \begin{cases}
@@ -211,30 +211,30 @@ $$
 
 1. 字体1: 
 
-```MarkDown
+```markdown
 $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZabc123}$
 ```
 
 2. 字体2: 
 
-```MarkDown
+```markdown
 $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZabc123}$
 ```
 
 3. 字体3: 
 
-```MarkDown
+```markdown
 $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZabc123}$
 ```
 
 4. 字体4: 
 
-```MarkDown
+```markdown
 $\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZabc123}$
 ```
 
 5. 字体5: 
 
-```MarkDown
+```markdown
 $\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZabc123}$
 ```
