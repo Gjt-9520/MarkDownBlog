@@ -1,5 +1,5 @@
 ---
-title: "JDK API"
+title: "JDK API概述"
 date: 2023-12-28
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage87.jpg?raw=true
