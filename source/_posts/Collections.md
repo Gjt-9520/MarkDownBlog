@@ -2,7 +2,7 @@
 title: "Collections"
 date: 2024-03-27
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage109.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage58.jpg?raw=true
 tags: ["JavaSE","集合"]
 category: "学习笔记"
 updated: 2024-03-28
