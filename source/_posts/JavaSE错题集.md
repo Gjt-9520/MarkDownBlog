@@ -1339,3 +1339,113 @@ public class sightChoose {
     }
 }
 ```
+
+## 带有概率的随机点名
+
+班级里有N个学生           
+
+要求:70%的概率随机到男生,30%的概率随机到女生
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Test {
+    public static void main(String[] args) {
+        ArrayList<Integer> number = new ArrayList<>();
+        Collections.addAll(number, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0);
+        ArrayList<String> boyName = new ArrayList<>();
+        Collections.addAll(boyName, "男1", "男2", "男3", "男4", "男5");
+        ArrayList<String> girlName = new ArrayList<>();
+        Collections.addAll(girlName, "女1", "女2", "女3", "女4", "女5");
+        Random r = new Random();
+        int getNumber = number.get(r.nextInt(number.size()));
+        if (getNumber == 1) {
+            int boyIndex = r.nextInt(boyName.size());
+            System.out.println(boyName.get(boyIndex));
+        } else {
+            int girlIndex = r.nextInt(girlName.size());
+            System.out.println(girlName.get(girlIndex));
+        }
+    }
+}
+```
+
+## 不重复的随机点名
+
+班级里有N个学生           
+
+要求:被点到的学生不会再被点到,但是如果班级里的所有学生都点完了,需要重新开启第二轮点名
+
+方法一:
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        ArrayList<String> name1 = new ArrayList<>();
+        Collections.addAll(name1, "男1", "男2", "男3", "男4", "男5", "女1", "女2", "女3", "女4", "女5");
+        ArrayList<String> name2 = new ArrayList<>();
+        int count = 1;
+        stop:
+        while (true) {
+            System.out.println("-----第" + count + "轮点名开始-----");
+            while (name1.size() != 0) {
+                System.out.print("输入1随机点名,输入其他退出点名,是否点名:");
+                Scanner sc = new Scanner(System.in);
+                String putIn = sc.next();
+                if (putIn.equals("1")) {
+                    Random r = new Random();
+                    int getNameIndex = r.nextInt(name1.size());
+                    String name = name1.remove(getNameIndex);
+                    System.out.println(name);
+                    name2.add(name);
+                } else {
+                    break stop;
+                }
+            }
+            System.out.println("-----第" + count + "轮点名结束-----");
+            count++;
+            name1.addAll(name2);
+            name2.clear();
+        }
+    }
+}
+```
+
+方法二:
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Test {
+    public static void main(String[] args) {
+        ArrayList<String> name1 = new ArrayList<>();
+        Collections.addAll(name1, "男1", "男2", "男3", "男4", "男5", "女1", "女2", "女3", "女4", "女5");
+        ArrayList<String> list2 = new ArrayList<>();
+        // 外循环:表示轮数
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("-----第" + i + "轮点名-----");
+            // 获取集合的长度
+            int count = name1.size();
+            Random r = new Random();
+            // 内循环:每一轮中随机循环抽取的过程
+            for (int j = 0; j < count; j++) {
+                int index = r.nextInt(name1.size());
+                String name = name1.remove(index);
+                list2.add(name);
+                System.out.println(name);
+            }
+            name1.addAll(list2);
+            list2.clear();
+        }
+    }
+}
+```
