@@ -1050,17 +1050,17 @@ home_top:
       path: /categories/学习笔记/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
-      icon: anzhiyu-icon-dove
+      icon: anzhiyu-icon-book
     - name: 项目
       path: /categories/项目开发/
       shadow: var(--anzhiyu-shadow-red)
-      class: red
-      icon: anzhiyu-icon-fire
+      class: green
+      icon: anzhiyu-icon-dove
     - name: 生活
       path: /categories/生活日常/
       shadow: var(--anzhiyu-shadow-green)
-      class: green
-      icon: anzhiyu-icon-book
+      class: red
+      icon: anzhiyu-icon-fire
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper: 
     enable: true
