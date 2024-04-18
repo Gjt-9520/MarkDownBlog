@@ -1,12 +1,27 @@
-- class_name: 
+- class_name: Git仓库 
   flink_style: flexcard
   hundredSuffix: ""
   link_list:
+    - name: GitHub
+      link: https://github.com
+      descr: Git仓库云托管平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GitHub.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GitHubPage.png?raw=true
     - name: Gitee
       link: https://gitee.com/
       descr: Git仓库云托管平台(中国)
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GITEE.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GiteePage.png?raw=true
+
+- class_name: 编程学习网站
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: BiliBili
+      link: https://www.bilibili.com/
+      descr: 在线视频平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/bilibili.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/BiliBiliPage.png?raw=true
     - name: LeetCode
       link: https://leetcode.cn/
       descr: 在线编程练习平台
@@ -27,6 +42,16 @@
       descr: IT技术社区和在线学习平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/csdn.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/CSDNPage.png?raw=true
+    - name: RUNOOB
+      link: https://www.runoob.com/
+      descr: 初学者在线学习平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOB.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOBPage.png?raw=true
+
+- class_name: 托管服务
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
     - name: Netlify
       link: https://app.netlify.com/
       descr: 托管服务平台
@@ -37,44 +62,63 @@
       descr: 托管服务平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercel.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercelPage.png?raw=true
-    - name: BiliBili
-      link: https://www.bilibili.com/
-      descr: 在线视频平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/bilibili.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/BiliBiliPage.png?raw=true
+
+- class_name: 框架
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:    
     - name: Astro
       link: https://astro.build/
       descr: Astro框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astro.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astroPage.png?raw=true
-    - name: MongoDB
-      link: https://www.mongodb.com/
-      descr: NoSQL数据库管理系统
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongoDB.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongodbPage.png?raw=true
-    - name: Algolia
-      link: https://www.algolia.com/
-      descr: Algolia Search搜索引擎
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Algolia.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/algoliaPage.png?raw=true
-    - name: RUNOOB
-      link: https://www.runoob.com/
-      descr: 初学者在线学习平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOB.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOBPage.png?raw=true
-    - name: GitHub
-      link: https://github.com
-      descr: Git仓库云托管平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GitHub.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GitHubPage.png?raw=true
-    
-    - name: Cloudflare
-      link: https://www.cloudflare.com/
-      descr: 网络基础设施和安全服务
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflare.jpg?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflarePage.png?raw=true
     - name: Hexo
       link: https://hexo.io/zh-cn/
       descr: Hexo框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/hexo.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HexoPage.png?raw=true
+    
+- class_name: 数据库
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:   
+    - name: MongoDB
+      link: https://www.mongodb.com/
+      descr: NoSQL数据库管理系统
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongoDB.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongodbPage.png?raw=true
+    
+- class_name: 搜索引擎
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:      
+    - name: Algolia
+      link: https://www.algolia.com/
+      descr: Algolia Search搜索引擎平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Algolia.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/algoliaPage.png?raw=true
+
+- class_name: 网络安全
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: CloudFlare
+      link: https://www.cloudflare.com/
+      descr: 网络基础设施和安全服务平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflare.jpg?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflarePage.png?raw=true
+
+- class_name: 客户端应用
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: PythonGUI
+      link: https://openjfx.cn/
+      descr: Python客户端应用平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/PythonGUI.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/PythonGUIPage.png?raw=true
+    - name: JavaFX
+      link: https://openjfx.cn/
+      descr: Java客户端应用平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFX.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFXPage.png?raw=true

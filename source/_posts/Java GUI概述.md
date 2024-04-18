@@ -3,7 +3,7 @@ title: "Java GUI概述"
 date: 2024-03-30
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage108.jpg?raw=true
-tags: ["GUI"]
+tags: ["Java GUI"]
 category: "学习笔记"
 updated: 2024-03-31
 swiper_index: 
