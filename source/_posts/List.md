@@ -3,7 +3,7 @@ title: "List"
 date: 2024-03-04
 description: "普通for遍历、迭代器遍历、增强for遍历、Lambda表达式遍历、列表迭代器遍历"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage92.jpg?raw=true
-tags: ["JavaSE","集合"]
+tags: ["Java SE","集合"]
 category: "学习笔记"
 updated: 2024-03-05
 swiper_index:

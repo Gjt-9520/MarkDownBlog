@@ -3,7 +3,7 @@ title: "Object和Objects"
 date: 2024-01-18
 description: "返回对象的字符串表现形式、比较两个对象是否相等、对象克隆(浅/深克隆)、非空判断"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage96.jpg?raw=true
-tags: ["JavaSE","API"]
+tags: ["Java SE","API"]
 category: "学习笔记"
 updated: 2024-01-19
 swiper_index:

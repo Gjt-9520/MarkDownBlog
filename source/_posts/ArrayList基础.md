@@ -3,7 +3,7 @@ title: "ArrayList基础"
 date: 2024-01-01
 description: "集合和数组的对比、ArrayList的构造方法和成员方法"
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage71.jpg?raw=true
-tags: ["JavaSE","集合"]
+tags: ["Java SE","集合"]
 category: "学习笔记"
 updated: 2024-01-02
 swiper_index:
