@@ -45,10 +45,13 @@ public class Test {
         System.out.println(zhang3List);
 
         // 打印结果:"张无忌 张强 张三丰"
-        list.stream().filter(name -> name.startsWith("张")).forEach(name -> System.out.print(name + " "));
+        list.stream().filter(name -> name.startsWith("张"))
+                .forEach(name -> System.out.print(name + " "));
         System.out.println();
         // 打印结果:"张无忌 张三丰"
-        list.stream().filter(name -> name.startsWith("张")).filter(name -> name.length() == 3).forEach(name -> System.out.print(name + " "));
+        list.stream().filter(name -> name.startsWith("张"))
+                .filter(name -> name.length() == 3)
+                .forEach(name -> System.out.print(name + " "));
     }
 }
 ```
@@ -93,7 +96,8 @@ public class Test {
         // });
 
         // 打印结果:"张无忌 张强 张三丰"
-        list.stream().filter(name -> name.startsWith("张")).forEach(name -> System.out.print(name + " "));
+        list.stream().filter(name -> name.startsWith("张"))
+                .forEach(name -> System.out.print(name + " "));
     }
 }
 ```
@@ -197,7 +201,8 @@ public class Test {
         ArrayList<String> list = new ArrayList<>();
         Collections.addAll(list, "张无忌", "张强", "张三丰", "赵敏", "周芷若", "张良", "谢广坤");
         // 打印结果:"张无忌 张强 张三丰 张良"
-        list.stream().filter(name -> name.startsWith("张")).forEach(name -> System.out.print(name + " "));
+        list.stream().filter(name -> name.startsWith("张"))
+                .forEach(name -> System.out.print(name + " "));
     }
 }
 ```
@@ -229,11 +234,15 @@ public class Test {
         System.out.println();
         
         // 打印结果:"赵敏 周芷若"
-        list.stream().skip(3).limit(2).forEach(name -> System.out.print(name + " "));
+        list.stream().skip(3)
+                .limit(2)
+                .forEach(name -> System.out.print(name + " "));
         System.out.println();
         
         // 打印结果:"赵敏 周芷若"
-        list.stream().limit(5).skip(3).forEach(name -> System.out.print(name + " "));
+        list.stream().limit(5)
+                .skip(3)
+                .forEach(name -> System.out.print(name + " "));
     }
 }
 ```
@@ -256,7 +265,8 @@ public class Test {
         Collections.addAll(list, "张无忌", "张强", "张三丰", "张无忌", "张强", "张三丰", "赵敏", "周芷若", "张良", "谢广坤");
     
         // 打印结果:"张无忌 张强 张三丰 赵敏 周芷若 张良 谢广坤"
-        list.stream().distinct().forEach(name -> System.out.print(name + " "));
+        list.stream().distinct()
+                .forEach(name -> System.out.print(name + " "));
     }
 }
 ```
@@ -284,7 +294,8 @@ public class Test {
         Collections.addAll(list2, "赵敏", "周芷若");
 
         // 打印结果:"张无忌 张强 张三丰 张良 谢广坤 赵敏 周芷若"
-        Stream.concat(list1.stream(), list2.stream()).forEach(name -> System.out.print(name + " "));
+        Stream.concat(list1.stream(), list2.stream())
+                .forEach(name -> System.out.print(name + " "));
     }
 }
 ```
@@ -321,7 +332,8 @@ public class Test {
         // 打印结果:"20 40 100 46 68 22 23"
 
         // 打印结果:"20 40 100 46 68 22 23"
-        list.stream().map(s -> Integer.parseInt(s.split("-")[1])).forEach(age -> System.out.print(age + " "));
+        list.stream().map(s -> Integer.parseInt(s.split("-")[1]))
+                .forEach(age -> System.out.print(age + " "));
     }
 }
 ```
