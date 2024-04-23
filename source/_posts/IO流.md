@@ -10,16 +10,18 @@ swiper_index:
 top_group_index: 
 ---
 
-# IO
+# IO流
 
 IO流:存储和读取数据的解决方案
 
-1. output:写(保存/存储)
-2. input:读(加载/读取)
+1. input:读(加载/读取)
+2. output:写(保存/存储)
 
 # 分类
 
-![IO流分类](../images/IO流分类.png)
+![IO流分类1](../images/IO流分类1.png)
 
-纯文本文件:windows自带的记事本打开能读懂的文件                
+纯文本文件:windows自带的记事本打开能读懂的文件         
+例如:txt文件,md文件,xml文件,lrc文件等                           
 
+![IO流分类2](../images/IO流分类2.png)

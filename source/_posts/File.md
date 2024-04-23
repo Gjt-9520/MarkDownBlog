@@ -179,7 +179,7 @@ public class Test {
 }
 ```
 
-### 其余的获取并遍历方法
+### 其余方法
 
 ![File获取并遍历](../images/File获取并遍历.png)
 
