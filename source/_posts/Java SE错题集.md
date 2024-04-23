@@ -1491,4 +1491,84 @@ public class Test {
 }
 ```
 
-## 
+## 修改文件中的数据
+
+文本文件中有以下的数据:2-1-9-4-7-8           
+将文件中的数据进行排序,变成以下的数据:1-2-4-7-8-9   
+
+方法一:
+
+```java
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringJoiner;
+
+public class Test {
+    public static void main(String[] args) throws IOException {
+        File src = new File("D:\\Project\\Test(IDEA)\\aaa.txt");
+        File dest = new File("D:\\Project\\bbb.txt");
+        method(src, dest);
+    }
+
+    public static void method(File src, File dest) throws IOException {
+        FileInputStream fis = new FileInputStream(src);
+        StringBuilder sb = new StringBuilder();
+        int read;
+        while ((read = fis.read()) != -1) {
+            sb.append((char) read);
+        }
+        fis.close();
+        String[] split = sb.toString().split("-");
+        ArrayList<Integer> list = new ArrayList<>();
+        for (String s : split) {
+            list.add(Integer.parseInt(s));
+        }
+        list.sort(null);
+        FileOutputStream fos = new FileOutputStream(dest);
+        StringJoiner sj = new StringJoiner("-", "", "");
+        for (Integer i : list) {
+            sj.add(Integer.toString(i));
+        }
+        fos.write(sj.toString().getBytes());
+        fos.close();
+    }
+}
+```
+
+方法二:
+
+```java
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Arrays;
+
+public class Test {
+    public static void main(String[] args) throws IOException {
+        File src = new File("D:\\Project\\Test(IDEA)\\aaa.txt");
+        File dest = new File("D:\\Project\\bbb.txt");
+        method(src, dest);
+    }
+
+    public static void method(File src, File dest) throws IOException {
+        FileInputStream fis = new FileInputStream(src);
+        StringBuilder sb = new StringBuilder();
+        int read;
+        while ((read = fis.read()) != -1) {
+            sb.append((char) read);
+        }
+        fis.close();
+        Integer[] array = Arrays.stream(sb.toString()
+                        .split("-"))
+                .map(Integer::parseInt)
+                .sorted()
+                .toArray(Integer[]::new);
+        FileOutputStream fos = new FileOutputStream(dest);
+        String s = Arrays.toString(array).replace(",", "-");
+        String result = s.substring(1, s.length() - 1);
+        fos.write(result.getBytes());
+        fos.close();
+    }
+}
+```
