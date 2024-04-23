@@ -1,0 +1,25 @@
+---
+title: "IO流"
+date: 2024-04-07
+description: ""
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage116.jpg?raw=true
+tags: ["Java SE","IO"]
+category: "学习笔记"
+updated: 2024-04-08
+swiper_index: 
+top_group_index: 
+---
+
+# IO
+
+IO流:存储和读取数据的解决方案
+
+1. output:写(保存/存储)
+2. input:读(加载/读取)
+
+# 分类
+
+![IO流分类](../images/IO流分类.png)
+
+纯文本文件:windows自带的记事本打开能读懂的文件                
+
