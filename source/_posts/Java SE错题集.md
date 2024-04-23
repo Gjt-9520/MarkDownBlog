@@ -1449,3 +1449,46 @@ public class Test {
     }
 }
 ```
+
+# IO
+
+## 拷贝文件夹
+
+拷贝一个文件夹,考虑子文件夹
+
+```java
+import java.io.*;
+
+public class Test {
+    public static void main(String[] args) throws IOException {
+        File src = new File("D:\\Project\\Test(IDEA)\\aaa");
+        File dest = new File("D:\\Project\\TestDirectory");
+        copyDir(src, dest);
+    }
+
+    public static void copyDir(File src, File dest) throws IOException {
+        dest.mkdirs();
+        File[] files = src.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile()) {
+                    FileInputStream fis = new FileInputStream(file);
+                    FileOutputStream fos = new FileOutputStream(new File(dest, file.getName()));
+                    int read;
+                    byte[] bytes = new byte[2];
+                    while ((read = fis.read(bytes)) != -1) {
+                        fos.write(bytes, 0, read);
+                    }
+                    fos.close();
+                    fis.close();
+                }
+                if (file.isDirectory()) {
+                    copyDir(file, new File(dest, file.getName()));
+                }
+            }
+        }
+    }
+}
+```
+
+## 
