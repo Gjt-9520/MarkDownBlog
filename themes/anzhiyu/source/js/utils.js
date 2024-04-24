@@ -604,15 +604,19 @@ const anzhiyu = {
       const hour = new Date().getHours();
       let message = "";
 
-      if (hour >= 0 && hour <= 5) {
+      if (hour >= 0 && hour <= 8) {
         message = "睡个好觉，保证精力充沛";
-      } else if (hour > 5 && hour <= 10) {
+      } else if (hour > 8 && hour <= 12) {
         message = "一日之计在于晨";
-      } else if (hour > 10 && hour <= 14) {
-        message = "吃饱了才有力气干活";
-      } else if (hour > 14 && hour <= 18) {
+      } else if (hour > 12 && hour <= 13) {
+        message = "吃饱了，才有力气干活";
+      } else if (hour > 13 && hour <= 19) {
         message = "集中精力，攻克难关";
-      } else if (hour > 18 && hour <= 24) {
+      } else if (hour > 19 && hour <= 20) {
+        message = "吃饱了，才有力气干活";
+      } else if (hour > 20 && hour <= 22){
+        message = "集中精力，攻克难关";
+      } else if (hour > 22 && hour <= 24) {
         message = "不要太劳累了，早睡更健康";
       }
 
