@@ -87,16 +87,6 @@ a.categoryButton.green {
   filter: blur(0);
   top: 15%;
 }
-a.categoryButton:after {
-  top: 47px;
-  width: 1rem;
-  left: 21px;
-  height: 2px;
-  background: var(--anzhiyu-white);
-  content: "";
-  border-radius: 1px;
-  position: absolute;
-}
 
 @media screen and (max-width: 768px) {
   .categoryGroup {
