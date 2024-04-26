@@ -10,9 +10,9 @@ swiper_index:
 top_group_index: 
 ---
 
-# Commons-io
+# Commons-IO
 
-Commons-io是apache开源基金组织提供的一组有关IO操作的开源工具包
+Commons-IO是apache开源基金组织提供的一组有关IO操作的开源工具包
 
 作用:提高IO流的开发效率
 
