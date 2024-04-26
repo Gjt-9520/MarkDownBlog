@@ -279,6 +279,14 @@ for (String s: list) {
 3. `at com.gujintao.test.main(test.java: 8)`     
 这个异常发生在`com.gujintao.test`包的main方法内,位置是第8行     
 
+## 导包
+
+步骤:
+1. 在项目中创建一个文件夹:lib
+2. 将jar包复制到lib文件夹
+3. 右键点击jar包,选择Add as Library -> 点击OK
+4. 在类中导包使用
+
 # 快捷键
 
 ## 代码操作
