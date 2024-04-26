@@ -1,9 +1,9 @@
 ---
-title: "Commons-io"
+title: "Commons-IO"
 date: 2024-04-16
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage125.jpg?raw=true
-tags: ["Java SE","IO"]
+tags: ["Java SE","IO","工具包"]
 category: "学习笔记"
 updated: 2024-04-17
 swiper_index: 
@@ -77,11 +77,9 @@ public class Test {
 }
 ```
 
-# 补充
+# IOUtils(数据相关)
 
-## IOUtils(数据相关)
-
-### 拷贝方法
+## 拷贝方法
 
 copy方法有多个重载方法,满足不同的输入输出流
 
@@ -95,7 +93,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.copy(Reader input, OutputStream output, String outputEncoding)` // 可指定输出流的编码表
 
-### 拷贝大文件的方法
+## 拷贝大文件的方法
 
 // 这个方法适合拷贝较大的数据流,比如2G以上
 
@@ -103,7 +101,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.copyLarge(Reader input, Writer output, char[] buffer)` // 可指定缓冲区大小
 
-### 将输入流转换成字符串
+## 将输入流转换成字符串
 
 `IOUtils.toString(Reader input)`
 
@@ -117,7 +115,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.toString(URL url, String encoding)`
 
-### 将输入流转换成字符数组
+## 将输入流转换成字符数组
 
 `IOUtils.toByteArray(InputStream input)`
 
@@ -131,7 +129,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.toByteArray(Reader input, String encoding)`
 
-### 字符串读写
+## 字符串读写
 
 `IOUtils.readLines(Reader input)`
 
@@ -145,7 +143,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.writeLines(Collection<?> lines, String lineEnding, OutputStream output, String encoding)`
 
-### 从一个流中读取内容
+## 从一个流中读取内容
 
 `IOUtils.read(InputStream input, byte[] buffer)`
 
@@ -155,7 +153,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.read(Reader input, char[] buffer, int offset, int length)`
 
-### 把数据写入到输出流中
+## 把数据写入到输出流中
 
 `IOUtils.write(byte[] data, OutputStream output)`
 
@@ -173,7 +171,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.write(CharSequence data, Writer output)`
 
-### 从一个流中读取内容,如果读取的长度不够,就会抛出异常
+## 从一个流中读取内容,如果读取的长度不够,就会抛出异常
 
 `IOUtils.readFully(InputStream input, int length)`
 
@@ -185,7 +183,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.readFully(Reader input, char[] buffer, int offset, int length)`
 
-### 比较
+## 比较
 
 `IOUtils.contentEquals(InputStream input1, InputStream input2)` // 比较两个流是否相等
 
@@ -193,7 +191,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.contentEqualsIgnoreEOL(Reader input1, Reader input2)` // 比较两个流,忽略换行符
 
-### 其他方法
+## 其他方法
 
 `IOUtils.skip(InputStream input, long toSkip)` // 跳过指定长度的流
 
@@ -203,9 +201,9 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `IOUtils.skipFully(Reader input, long toSkip)`
 
-## FileUtils(文件/文件夹相关)
+# FileUtils(文件/文件夹相关)
 
-### 复制文件夹
+## 复制文件夹
 
 `FileUtils.copyDirectory(File srcDir, File destDir)` // 复制文件夹(文件夹里面的文件内容也会复制)
 
@@ -213,7 +211,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.copyDirectoryToDirectory(File srcDir, File destDir)` // 以子目录的形式将文件夹复制到到另一个文件夹下
 
-### 复制文件
+## 复制文件
 
 `FileUtils.copyFile(File srcFile, File destFile)` // 复制文件
 
@@ -227,13 +225,13 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.copyURLToFile(URL source, File destination, int connectionTimeout, int readTimeout)`
 
-### 把字符串写入文件
+## 把字符串写入文件
 
 `FileUtils.writeStringToFile(File file, String data, String encoding)`
 
 `FileUtils.writeStringToFile(File file, String data, String encoding, boolean append)`
 
-### 把字节数组写入文件
+## 把字节数组写入文件
 
 `FileUtils.writeByteArrayToFile(File file, byte[] data)`
 
@@ -243,7 +241,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.writeByteArrayToFile(File file, byte[] data, int off, int len, boolean append)`
 
-### 把集合里面的内容写入文件
+## 把集合里面的内容写入文件
 
 // encoding：文件编码,lineEnding：每行以什么结尾
 
@@ -263,7 +261,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.writeLines(File file, String encoding, Collection<?> lines, String lineEnding, boolean append)`
 
-### 往文件里面写内容
+## 往文件里面写内容
 
 `FileUtils.write(File file, CharSequence data, Charset encoding)`
 
@@ -273,7 +271,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.write(File file, CharSequence data, String encoding, boolean append)`
 
-### 文件移动
+## 文件移动
 
 `FileUtils.moveDirectory(File srcDir, File destDir)` // 文件夹在内的所有文件都将移动
 
@@ -285,7 +283,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.moveToDirectory(File src, File destDir, boolean createDestDir)` // 移动文件或者目录到指定的文件夹内
 
-### 清空和删除文件夹
+## 清空和删除文件夹
 
 `FileUtils.deleteDirectory(File directory)` // 删除文件夹,包括文件夹和文件夹里面所有的文件
 
@@ -295,19 +293,19 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.deleteQuietly(File file)` // 删除,不会抛出异常
 
-### 创建文件夹
+## 创建文件夹
 
 `FileUtils.forceMkdir(File directory)` // 创建文件夹(可创建多级)
 
 `FileUtils.forceMkdirParent(File file)` // 创建文件的父级目录
 
-### 获取文件输入/输出流
+## 获取文件输入/输出流
 
 `FileUtils.openInputStream(File file)`
 
 `FileUtils.openOutputStream(File file)`
 
-### 读取文件
+## 读取文件
 
 `FileUtils.readFileToByteArray(File file)` // 把文件读取到字节数组
 
@@ -319,7 +317,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.readLines(File file, String encoding)`
 
-### 测试两个文件的修改时间
+## 测试两个文件的修改时间
 
 `FileUtils.isFileNewer(File file, Date date)`
 
@@ -333,7 +331,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.isFileOlder(File file, long timeMillis)`
 
-### 文件/文件夹的迭代
+## 文件/文件夹的迭代
 
 `FileUtils.iterateFiles(File directory, IOFileFilter fileFilter, IOFileFilter dirFilter)`
 
@@ -351,7 +349,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.listFilesAndDirs(File directory, IOFileFilter fileFilter, IOFileFilter dirFilter)`
 
-### 其他
+## 其他
 
 `FileUtils.isSymlink(File file)` // 判断是否是符号链接
 
@@ -371,7 +369,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 `FileUtils.contentEquals(File file1, File file2)` // 比较两个文件内容是否相同
 
-## FilenameUtils(文件名/后缀名相关)
+# FilenameUtils(文件名/后缀名相关)
 
 `FilenameUtils.concat(String basePath, String fullFilenameToAdd)` // 合并目录和文件名为文件全路径
 

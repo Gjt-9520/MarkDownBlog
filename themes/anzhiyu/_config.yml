@@ -31,18 +31,18 @@ nav:
   menu:
     - title: 菜单
       item:
-        # - name: 关于
-        #   link: /about/
-        #   icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
+        - name: 关于
+          link: /about/
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
+        - name: 归档
+          link: /archives/
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image.png?raw=true
         - name: 资源
           link: /link/
           icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/link.png?raw=true
-        # - name: 相册
-        #   link: /album/
-        #   icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
         - name: 图床
           link: https://image-resources-gjt.vercel.app/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image.png?raw=true
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
 
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
