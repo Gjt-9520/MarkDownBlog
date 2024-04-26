@@ -148,6 +148,17 @@ if site.data.about
                   a.comic-item(href=i.href, target="_blank", title=i.name)
                     .comic-item-cover
                       img(src=i.cover, alt=i.name)
+        .author-content-item.film-content 
+          .card-content
+            - let {film_tips, film_title, film_list} = item.film
+            .author-content-item-tips=film_tips
+            .author-content-item-title=film_title
+            .film-box
+              if film_list
+                each i in film_list
+                  a.film-item(href=i.href, target="_blank", title=i.name)
+                    .film-item-cover
+                      img(src=i.cover, alt=i.name)
       
       if page.content
         .author-content
