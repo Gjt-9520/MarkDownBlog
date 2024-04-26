@@ -56,6 +56,7 @@ public class Test {
         ArrayList<String> list3 = new ArrayList<>();
         // 指定字符编码,把文件中的数据,读到集合中
         FileUtil.readLines(file, "UTF-8", list3);
+        // 打印结果:"你好明天,你好后天"
         for (String s : list3) {
             System.out.print(s);
         }
@@ -64,6 +65,7 @@ public class Test {
         ArrayList<String> list4 = new ArrayList<>();
         // 按照UTF-8的形式,把文件中的数据,读到集合中
         FileUtil.readUtf8Lines(file, list4);
+        // 打印结果:"你好明天,你好后天"
         for (String s : list4) {
             System.out.print(s);
         }
