@@ -3,7 +3,7 @@ title: "Hutool-IO"
 date: 2024-04-17
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage126.jpg?raw=true
-tags: ["Java SE","IO","工具包"]
+tags: ["Java SE","IO","工具包","Hutool"]
 category: "学习笔记"
 updated: 2024-04-18
 swiper_index: 
@@ -72,3 +72,8 @@ public class Test {
     }
 }
 ```
+
+# 细节
+
+1. **Hutool的相对路径,不是相对于当前项目而言的,而是相对class文件而言的**
+2. **Hutool的FileUtil.writeLines方法会默认调用JavaBean类的toString方法将数据写入到指定文件中**
