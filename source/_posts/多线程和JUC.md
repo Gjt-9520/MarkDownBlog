@@ -1,5 +1,5 @@
 ---
-title: "多线程"
+title: "多线程和JUC"
 date: 2024-04-20
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage129.jpg?raw=true
@@ -325,9 +325,6 @@ public class Test {
 ```java
 public class MyThread1 extends Thread {
 
-    public MyThread1() {
-    }
-
     public MyThread1(String name) {
         super(name);
     }
@@ -343,9 +340,6 @@ public class MyThread1 extends Thread {
 
 ```java
 public class MyThread2 extends Thread {
-
-    public MyThread2() {
-    }
 
     public MyThread2(String name) {
         super(name);
@@ -385,9 +379,6 @@ public class Test {
 ```java
 public class MyThread extends Thread {
 
-    public MyThread() {
-    }
-
     public MyThread(String name) {
         super(name);
     }
@@ -424,9 +415,6 @@ public class Test {
 
 ```java
 public class MyThread extends Thread {
-
-    public MyThread() {
-    }
 
     public MyThread(String name) {
         super(name);
@@ -470,9 +458,6 @@ public class Test {
 
 ```java
 public class MyThread extends Thread {
-
-    public MyThread() {
-    }
 
     public MyThread(String name) {
         super(name);
@@ -525,7 +510,7 @@ public class Test {
 
 把操作共享数据的代码锁起来
 
-格式:
+### 格式
 
 ```markdown
 synchronized(锁){
@@ -541,9 +526,6 @@ synchronized(锁){
 
 ```java
 public class MyThread extends Thread {
-
-    public MyThread() {
-    }
 
     public MyThread(String name) {
         super(name);
@@ -579,5 +561,165 @@ public class MyThread extends Thread {
 ### 细节
 
 1. 同步代码块不能写在循环的外面
-2. 锁对象一定要是唯一的,一般可以写当前文件的字节码文件对象(XXX.class)
+2. 锁对象一定要是唯一的,一般可以写当前类的字节码文件对象(XXX.class)
 
+## 同步方法
+
+把`synchronized`关键字加到方法上
+
+格式:`修饰符 synchronized 返回值类型 方法名(方法参数){...}`
+
+### 特点
+
+1. 同步方法是锁住方法里面的所有代码
+2. 锁对象不能自己指定(Java规定)             
+a.非静态:this                    
+b.静态:当前类的字节码文件对象                
+
+练习纠错:
+
+```java
+public class MyThread extends Thread {
+
+    public MyThread(String name) {
+        super(name);
+    }
+
+    // 这个类的所有对象都共享ticket数据
+    static int ticket = 0;
+
+    @Override
+    public void run() {
+        while (true) {
+            if (method()) break;
+        }
+    }
+
+    // 同步方法
+    private synchronized boolean method() {
+        if (ticket < 100) {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ticket++;
+            System.out.println(getName() + "正在卖第" + ticket + "张票!");
+        } else {
+            return true;
+        }
+        return false;
+    }
+}
+```
+
+### 补充
+
+**将StringBuilder的实例用于多个线程是不安全的,如果需要这样的同步,则建议使用StringBuffer**
+
+# Lock锁
+
+JDK5之后提供了一个新的锁对象Lock,Lock比使用synchronized方法和语句可以获得更广泛的锁定操作              
+
+- `void lock()`:获得锁(手动上锁)
+- `void unlock()`:释放锁(手动释放锁)
+
+**Lock是接口,不能直接实例化,一般采用其实现类ReentrantLock来实例化**                  
+
+`ReentrantLock()`:创建一个ReentrantLock的实例
+
+练习纠错:
+
+```java
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class MyThread extends Thread {
+    public MyThread(String name) {
+        super(name);
+    }
+
+    // 这个类的所有对象都共享ticket数据
+    static int ticket = 0;
+
+    // 创建一个ReentrantLock的实例
+    static Lock lock = new ReentrantLock();
+
+    @Override
+    public void run() {
+        while (true) {
+            // 获得锁
+            lock.lock();
+            try {
+                if (ticket < 100) {
+                    Thread.sleep(100);
+                    ticket++;
+                    System.out.println(getName() + "正在卖第" + ticket + "张票!");
+                } else {
+                    break;
+                }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } finally {
+                // 释放锁
+                lock.unlock();
+            }
+        }
+    }
+}
+```
+
+# 死锁
+
+死锁是一种错误,产生的原因是**锁的嵌套**
+
+范例:
+
+```java
+public class MyThread extends Thread {
+
+    static final Object objA = new Object();
+    static final Object objB = new Object();
+
+    @Override
+    public void run() {
+        // 循环
+        while (true) {
+            if ("线程A".equals(getName())) {
+                synchronized (objA) {
+                    System.out.println("线程A拿到了A锁，准备拿B锁");
+                    synchronized (objB) {
+                        System.out.println("线程A拿到了B锁，顺利执行完一轮");
+                    }
+                }
+            } else if ("线程B".equals(getName())) {
+                synchronized (objB) {
+                    System.out.println("线程B拿到了B锁，准备拿A锁");
+                    synchronized (objA) {
+                        System.out.println("线程B拿到了A锁，顺利执行完一轮");
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+
+        t1.setName("线程A");
+        t2.setName("线程B");
+
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+# 等待唤醒机制
+
+等待唤醒机制(也被称作生产者和消费者模式)是一种十分经典的多线程协作的模式

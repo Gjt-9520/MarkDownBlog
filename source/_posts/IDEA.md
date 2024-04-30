@@ -342,7 +342,9 @@ for (String s: list) {
 
 ## 快速生成方法
 
-选中方法后,在main()方法外创建方法 `ctrl + enter`   
+选中方法名后,在main()方法外创建方法 `alt + enter`   
+
+选中代码后,在main()方法外创建方法 `ctrl + alt + M`
 
 ## 列选择模式 
 
