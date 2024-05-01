@@ -1613,3 +1613,140 @@ public class Test {
     }
 }
 ```
+
+# 多线程
+
+## 抢红包
+
+假设100块被分成了3个包,现在有5个人去抢,其中红包是共享数据,5个人是5条线程
+
+打印结果如下:
+
+```markdown
+XXX抢到了XXX元                 
+XXX抢到了XXX元                 
+XXX抢到了XXX元                 
+XXX没抢到                 
+XXX没抢到                 
+```
+
+```java
+import java.util.Random;
+
+public class MyRunnable implements Runnable {
+    // 总金额
+    static double money = 100.0;
+
+    // 红包个数
+    static int count = 3;
+
+    // 最小的红包大小
+    static final double minMoney = 0.01;
+
+    @Override
+    public void run() {
+        synchronized (MyRunnable.class) {
+            // 没有抢到红包
+            if (count == 0) {
+                System.out.println(Thread.currentThread().getName() + "没抢到");
+
+                // 抢到红包
+            } else {
+                double prize;
+                // 抢到最后一个红包
+                if (count == 1) {
+                    prize = money;
+
+                    // 抢到第一个、第二个红包
+                } else {
+                    Random r = new Random();
+                    // 第1个红包金额随机范围:0.01 ~ 99.98 == 0 ~ 99.97 == 0 ~ 100-(4-1)*0.01
+                    // 假设第1个红包金额为50
+                    // 则第2个红包金额随机范围:0.01 ~ 49.99 == 0 ~ 49.98 == 0 ~ (100-50)-(4-2)*0.01
+                    // 假设第2个红包金额为30
+                    // 则第3个红包为20=100-50-30
+                    prize = r.nextDouble(money - (4 - count) * minMoney);
+                }
+                System.out.println(Thread.currentThread().getName() + "抢到了" + prize);
+                // 剩余总金额
+                money -= prize;
+                // 剩余红包数量
+                count--;
+            }
+        }
+    }
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        MyRunnable m = new MyRunnable();
+        Thread t1 = new Thread(m, "张三");
+        Thread t2 = new Thread(m, "李四");
+        Thread t3 = new Thread(m, "王五");
+        Thread t4 = new Thread(m, "赵六");
+        Thread t5 = new Thread(m, "田七");
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+    }
+}
+```
+
+优化:保留小数点后两位四舍五入,使用BigDecimal
+
+```java
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Random;
+
+
+public class MyRunnable implements Runnable {
+    // 总金额
+    static BigDecimal money = BigDecimal.valueOf(100.0);
+
+    // 红包个数
+    static int count = 3;
+
+    // 最小的红包大小
+    static final BigDecimal minMoney = BigDecimal.valueOf(0.01);
+
+    @Override
+    public void run() {
+        synchronized (MyRunnable.class) {
+            // 没有抢到红包
+            if (count == 0) {
+                System.out.println(Thread.currentThread().getName() + "没抢到");
+
+                // 抢到红包
+            } else {
+                BigDecimal prize;
+                // 抢到最后一个红包
+                if (count == 1) {
+                    prize = money;
+
+                    // 抢到第一个、第二个红包
+                } else {
+                    Random r = new Random();
+                    // 第1个红包金额随机范围:0.01 ~ 99.98 == 0 ~ 99.97 == 0 ~ 100-(4-1)*0.01
+                    // 假设第1个红包金额为50
+                    // 则第2个红包金额随机范围:0.01 ~ 49.99 == 0 ~ 49.98 == 0 ~ (100-50)-(4-2)*0.01
+                    // 假设第2个红包金额为30
+                    // 则第3个红包为20=100-50-30
+                    double bounds = money.subtract(BigDecimal.valueOf(4 - count).multiply(minMoney)).doubleValue();
+                    prize = BigDecimal.valueOf(r.nextDouble(bounds));
+                }
+                prize = prize.setScale(2, RoundingMode.HALF_UP);
+                System.out.println(Thread.currentThread().getName() + "抢到了" + prize);
+                // 剩余总金额
+                money = money.subtract(prize);
+                // 剩余红包数量
+                count--;
+            }
+        }
+    }
+}
+```
