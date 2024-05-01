@@ -558,10 +558,17 @@ public class MyThread extends Thread {
 }
 ```
 
+### 步骤
+
+1. 循环
+2. 同步代码块
+3. 判断共享数据是否到了末尾(到了末尾)
+4. 判断共享数据是否到了末尾(没有到末尾,执行核心逻辑)
+
 ### 细节
 
 1. 同步代码块不能写在循环的外面
-2. 锁对象一定要是唯一的,一般可以写当前类的字节码文件对象(XXX.class)
+2. 锁对象一定要是唯一的,一般可以写当前类的字节码文件对象(XXX.class)=
 
 ## 同步方法
 
@@ -723,3 +730,222 @@ public class Test {
 # 等待唤醒机制
 
 等待唤醒机制(也被称作生产者和消费者模式)是一种十分经典的多线程协作的模式
+
+- 生产者-生产数据
+- 消费者-消费数据
+
+![生产者和消费者](../images/生产者和消费者.png)
+
+## 常用方法实现
+
+![等待唤醒机制常用方法](../images/等待唤醒机制常用方法.png)
+
+范例:
+
+```java
+// 桌子:控制生产者和消费者的执行
+public class Desk {
+    // 是否有面条:0没有面条,1有面条
+    public static int foodFlag = 0;
+
+    // 总个数
+    public static int count = 10;
+
+    // 锁对象
+    public static final Object lock = new Object();
+}
+```
+
+```java
+// 生产者
+public class Cook extends Thread {
+    @Override
+    public void run() {
+        while (true) {
+            synchronized (Desk.lock) {
+                // 判断共享数据是否到了末尾
+                if (Desk.count == 0) {
+                    // 到了末尾
+                    break;
+                } else {
+                    // 没有到末尾,执行核心逻辑
+                    // 判断桌子上是否有食物
+                    // 如果有就等待
+                    if (Desk.foodFlag == 1) {
+                        // 让当前线程和锁进行绑定
+                        try {
+                            Desk.lock.wait();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    } else {
+                        // 如果没有就制作食物
+                        System.out.println("厨师做了一碗面条");
+                        // 修改桌子上的食物状态
+                        Desk.foodFlag = 1;
+                        // 唤醒等待的消费者开吃
+                        // 唤醒这把锁绑定的所有线程
+                        Desk.lock.notifyAll();
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+```java
+// 消费者
+public class Foodie extends Thread {
+    @Override
+    public void run() {
+        while (true) {
+            synchronized (Desk.lock) {
+                // 判断共享数据是否到了末尾
+                if (Desk.count == 0) {
+                    // 到了末尾
+                    break;
+                } else {
+                    // 没有到末尾,执行核心逻辑
+                    // 判断桌子上是否有面条
+                    // 如果没有就等待
+                    if (Desk.foodFlag == 0) {
+                        // 让当前线程和锁进行绑定
+                        try {
+                            Desk.lock.wait();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    } else {
+                        // 如果有就开吃
+                        // 把吃的总数减1
+                        Desk.count--;
+                        System.out.println("吃货正在吃面条,还能再吃" + Desk.count + "碗");
+                        // 吃完之后唤醒厨师开做
+                        // 唤醒这把锁绑定的所有线程
+                        Desk.lock.notifyAll();
+                        // 修改桌子的状态
+                        Desk.foodFlag = 0;
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        // 创建线程对象
+        Cook c = new Cook();
+        Foodie f = new Foodie();
+        // 设置线程名称
+        c.setName("厨师");
+        f.setName("吃货");
+        // 开启线程
+        c.start();
+        f.start();
+    }
+}
+```
+
+## 阻塞队列方式实现
+
+![阻塞队列方式实现](../images/阻塞队列方式实现.png)
+
+阻塞队列继承结构:
+
+![阻塞队列继承结构](../images/阻塞队列继承结构.png)
+
+细节:**生产者和消费者必须使用同一个阻塞队列**
+
+范例:
+
+```java
+import java.util.concurrent.ArrayBlockingQueue;
+
+// 生产者
+public class Cook extends Thread {
+    ArrayBlockingQueue<String> queue;
+
+    public Cook(ArrayBlockingQueue<String> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            // 不断的把面条放到阻塞队列当中
+            try {
+                queue.put("面条");
+                System.out.println("厨师放了一碗面条");
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+}
+```
+
+```java
+import java.util.concurrent.ArrayBlockingQueue;
+
+// 消费者
+public class Foodie extends Thread {
+    ArrayBlockingQueue<String> queue;
+
+    public Foodie(ArrayBlockingQueue<String> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            // 不断的从阻塞队列中获取面条
+            String food;
+            try {
+                food = queue.take();
+                System.out.println("吃货吃了一碗" + food);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+}
+```
+
+```java
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class Test {
+    public static void main(String[] args) {
+        // 创建阻塞队列的对象,这里设置阻塞队列里的容量是1,即1碗面条
+        ArrayBlockingQueue<String> queue = new ArrayBlockingQueue<>(1);
+
+        // 创建线程的对象,并把阻塞队列传递过去
+        Cook c = new Cook(queue);
+        Foodie f = new Foodie(queue);
+        // 设置线程名称
+        c.setName("厨师");
+        f.setName("吃货");
+        // 开启线程
+        c.start();
+        f.start();
+    }
+}
+```
+
+**这种方式里,由于sout不是放在锁中的,打印的结果可能会出现混乱,但是内存中的共享数据不会受到影响,依旧是等待唤醒机制**
+
+# 线程状态
+
+![线程的状态](../images/线程的状态.png)
+
+在Java中只有以下的6种线程状态:
+1. 新建(`new`) ---> 创建线程对象
+2. 就绪(`RUNNABLE`) ---> start方法
+3. 阻塞(`BLOCKED`) ---> 无法获得锁对象
+4. 等待(`WAITING`) ---> wait方法
+5. 计时等待(`TIMED_WAITING`) ---> sleep方法
+6. 结束(`TERMINATED`) ---> 全部代码运行完毕
