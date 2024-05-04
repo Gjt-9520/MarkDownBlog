@@ -129,7 +129,7 @@ public class Server {
         // 连接客户端
         ServerSocket serverSocket = new ServerSocket(10000);
         Socket socket = serverSocket.accept();
-        // 读取服务器数据据并写入本地文件中
+        // 读取服务器数据并写入本地文件中
         File file = new File("C:\\Users\\gujintao\\Desktop\\untitled\\File\\gujintao2.JPG");
         BufferedInputStream bis = new BufferedInputStream(socket.getInputStream());
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
@@ -194,7 +194,7 @@ public class Server {
         Socket socket = serverSocket.accept();
         // 文件名不重复
         String str = UUID.randomUUID().toString().replace("-", "");
-        // 读取服务器数据据并写入本地文件中
+        // 读取服务器数据并写入本地文件中
         File file = new File("C:\\Users\\gujintao\\Desktop\\untitled\\File\\" + str + ".JPG");
         BufferedInputStream bis = new BufferedInputStream(socket.getInputStream());
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
@@ -263,7 +263,7 @@ public class MyRunnable implements Runnable {
         try {
             // 文件名不重复
             String str = UUID.randomUUID().toString().replace("-", "");
-            // 读取服务器数据据并写入本地文件中
+            // 读取服务器数据并写入本地文件中
             File file = new File("C:\\Users\\gujintao\\Desktop\\untitled\\File\\" + str + ".JPG");
             BufferedInputStream bis = new BufferedInputStream(socket.getInputStream());
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
@@ -358,7 +358,7 @@ public class MyRunnable implements Runnable {
         try {
             // 文件名不重复
             String str = UUID.randomUUID().toString().replace("-", "");
-            // 读取服务器数据据并写入本地文件中
+            // 读取服务器数据并写入本地文件中
             File file = new File("C:\\Users\\gujintao\\Desktop\\untitled\\File\\" + str + ".JPG");
             BufferedInputStream bis = new BufferedInputStream(socket.getInputStream());
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
@@ -372,7 +372,6 @@ public class MyRunnable implements Runnable {
             bw.write("服务器成功接收文件!");
             bw.newLine();
             bw.flush();
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {

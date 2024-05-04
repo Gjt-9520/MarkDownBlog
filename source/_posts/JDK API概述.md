@@ -10,7 +10,7 @@ swiper_index:
 top_group_index:
 ---
 
-# [JDK API 官方文档链接](https:// www.oracle.com/cn/java/technologies/java-se-api-doc.html)
+# [JDK API 官方文档链接](https://www.oracle.com/cn/java/technologies/java-se-api-doc.html)
 
 # API
 
