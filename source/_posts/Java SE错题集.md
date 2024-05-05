@@ -1,7 +1,7 @@
 ---
 title: "Java SE错题集"
 date: 2023-12-17
-description: "错题巩固"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage85.jpg?raw=true
 tags: ["Java SE","练习"]
 category: "学习笔记"

@@ -1,7 +1,7 @@
 ---
 title: "BigDecimal"
 date: 2024-01-20
-description: "计算机中的小数"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage75.jpg?raw=true
 tags: ["Java SE","API"]
 category: "学习笔记"

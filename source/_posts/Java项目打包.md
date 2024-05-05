@@ -1,7 +1,7 @@
 ---
 title: "Java项目打包"
 date: 2024-01-14
-description: "在无需安装JDK的情况下也能运行java项目"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage86.jpg?raw=true
 tags: ["打包"]
 category: "学习笔记"

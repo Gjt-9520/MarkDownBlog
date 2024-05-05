@@ -1,7 +1,7 @@
 ---
 title: "static"
 date: 2024-01-04
-description: "静态变量、静态方法、重新认识main方法"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage98.jpg?raw=true
 tags: ["Java SE","面向对象"]
 category: "学习笔记"

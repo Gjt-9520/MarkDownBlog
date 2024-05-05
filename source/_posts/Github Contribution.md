@@ -1,7 +1,7 @@
 ---
 title: "Github"
 date: 2024-04-03
-description: "Contribution Chart"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage112.jpg?raw=true
 tags: ["Github"]
 category: "学习笔记"

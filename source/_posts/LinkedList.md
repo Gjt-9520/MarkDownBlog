@@ -1,7 +1,7 @@
 ---
 title: "LinkedList"
 date: 2024-03-15
-description: "特点、特有方法、底层原理、底层源码分析"
+description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage91.jpg?raw=true
 tags: ["Java SE","集合"]
 category: "学习笔记"
