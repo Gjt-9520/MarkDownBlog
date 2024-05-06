@@ -750,6 +750,15 @@ Xpath更加适合做信息检索
 
 Xpath使用**路径表达式**来定位XML文档中的元素节点或属性节点
 
+### 步骤
+
+1. 导入jar包(dom4j.jar和jaxen.jar),Xpath技术依赖Dom4j技术
+2. 通过Dom4j的SAXReader获取Document对象
+3. 利用Xpath提供的API,结合XPath的语法选取XML文档元素节点,进行解析操作
+4. Document中与Xpath相关的API如下
+
+![Document中与Xpath相关的API](../images/Document中与Xpath相关的API.png)
+
 
 
 

@@ -31,7 +31,7 @@ slf4j-api:日志规范
 logback-core:基础模块          
 logback-classic:功能模块            
 
-2. src目录下新建logback的核心配置文件logback.xml
+2. **src目录下**新建logback的核心配置文件logback.xml
 
 3. 在代码中获取日志对象:`public static final Logger LOGGER = LoggerFactory.getLogger("类对象");`
 

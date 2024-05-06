@@ -3,7 +3,7 @@ title: "BigDecimal"
 date: 2024-01-20
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage75.jpg?raw=true
-tags: ["Java SE","API"]
+tags: ["Java SE"]
 category: "学习笔记"
 updated: 2024-01-21
 swiper_index:
