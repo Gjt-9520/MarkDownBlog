@@ -405,7 +405,7 @@ d.通过`xsi:schemaLocation`指定名称空间所对应的约束文件路径
 </persons>
 ```
 
-# XML解析技术
+# 解析技术
 
 XML解析就是使用程序读取XML中的数据
 
@@ -415,17 +415,20 @@ XML解析就是使用程序读取XML中的数据
 
 ## DOM解析
 
-### 解析工具
+## 解析工具
 
 ![DOM常见的解析工具](../images/DOM常见的解析工具.png)
 
-### 解析思想
+## 解析思想
 
 ![DOM解析思想](../images/DOM解析概述.png)
 
-### dom4j
+## Dom4j
 
-常用方法:                                  
+- [Dom4j官网](https://dom4j.github.io/)
+
+### 常用方法
+
 `public SAXReader()`:创建Dom4j的解析器对象               
 `Document read(String url)`:加载XML文件成为Document对象                
 `Element getRootElement()`:获得根标签对象                 
@@ -669,6 +672,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Test {
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws DocumentException {
         ArrayList<User> list = new ArrayList<>();
         File file = new File("D:\\Project\\Test\\src\\com\\jinzhao\\test5\\user.xml");
@@ -686,35 +691,67 @@ public class Test {
             User user = new User(id, username, password, personId, phoneId, Boolean.parseBoolean(admin));
             list.add(user);
         }
-        String login = login(list);
-        switch (login) {
-            case "0" -> System.out.println("登录成功!欢迎管理员!");
-            case "1" -> System.out.println("登录成功!欢迎用户!");
-            default -> System.out.println("登录失败!用户名/密码有误!");
+        while (true) {
+            login(list);
         }
     }
 
-    public static String login(ArrayList<User> list) {
-        Scanner scanner = new Scanner(System.in);
+    // 验证密码是否正确,正确则登录成功,错误则提示密码有误
+    public static boolean login(ArrayList<User> list) {
+        int index = isUserNameRight(list);
+        // 用户名不存在,提示先注册
+        if (index == -1) {
+            System.out.println("用户名不存在,请先注册!");
+            return false;
+        } else {
+            // 用户名存在,验证密码
+            System.out.print("请输入密码:");
+            String password = scanner.nextLine();
+            for (User user : list) {
+                if (user.getPassword().equals(password)) {
+                    User nowUser = list.get(index);
+                    if (nowUser.isAdmin()) {
+                        System.out.println("登录成功!欢迎" + nowUser.getUsername() + "管理员!");
+                    } else {
+                        System.out.println("登录成功!欢迎" + nowUser.getUsername() + "用户!");
+                    }
+                    return true;
+                }
+            }
+        }
+        System.out.println("密码输入有误,请重新登录!");
+        return false;
+    }
+
+    // 验证用户名是否存在,存在则返回其索引,不存在返回-1
+    public static int isUserNameRight(ArrayList<User> list) {
         System.out.println("======登录界面======");
         System.out.print("请输入用户名:");
         String username = scanner.nextLine();
-        System.out.print("请输入密码:");
-        String password = scanner.nextLine();
-        for (User user : list) {
-            if (username.equals(user.getUsername()) && password.equals(user.getPassword())) {
-                // 登录成功
-                if (user.isAdmin()) {
-                    // 管理员
-                    return "0";
-                }
-                // 普通用户
-                return "1";
+        for (int i = 0; i < list.size(); i++) {
+            User user = list.get(i);
+            if (user.getUsername().equals(username)) {
+                return i;
             }
         }
-        // 登录失败
-        return "-1";
+        return -1;
     }
 }
 ```
+
+# 检索技术
+
+dom4j需要进行文件的全部解析,然后再寻找数据                   
+Xpath更加适合做信息检索
+
+## Xpath
+
+Xpath使用**路径表达式**来定位XML文档中的元素节点或属性节点
+
+
+
+
+
+
+
 

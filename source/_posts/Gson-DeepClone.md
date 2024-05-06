@@ -12,14 +12,16 @@ top_group_index:
 
 # Gson-DeepClone
 
+- [Gson官网](https://github.com/google/gson)
+
 ## 深克隆   
 
 ```java
 Gson gson = new Gson();
-        // 把对象变成一个字符串
-        String str = gson.toJson(user1);
-        // 再把字符串变回对象
-        User user2 = gson.fromJson(str,User.class);
+// 把对象变成一个字符串
+String str = gson.toJson(user1);
+// 再把字符串变回对象
+User user2 = gson.fromJson(str,User.class);
 ```
 
 范例:     

@@ -1,26 +1,14 @@
 ---
-title: "日志"
-date: 2024-04-26
+title: "Logback"
+date: 2024-05-01
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage134.jpg?raw=true
-tags: ["Java SE"]
+cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage4.png?raw=true
+tags: ["Java SE","工具包"]
 category: "学习笔记"
-updated: 2024-04-27
+updated: 2024-05-02
 swiper_index: 
 top_group_index: 
 ---
-
-# 日志
-
-程序中的日志:用来记录程序运行过程中的信息,并可以进行永久存储
-
-# 优势
-
-![日志的优势](../images/日志的优势.png)
-
-# 体系结构
-
-![日志的体系结构](../images/日志体系结构.png)
 
 # Logback
 
