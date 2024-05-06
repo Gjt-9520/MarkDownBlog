@@ -17,7 +17,7 @@ top_group_index:
 
 # JDK
 
-定义:Java的开发工具包   
+定义:Java的开发Library   
 说明:包括JVM、核心类库、开发工具   
 
 # JRE

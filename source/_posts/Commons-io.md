@@ -3,7 +3,7 @@ title: "Commons-IO"
 date: 2024-04-16
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage125.jpg?raw=true
-tags: ["Java SE","IO","工具包"]
+tags: ["Java SE","IO","Library"]
 category: "学习笔记"
 updated: 2024-04-17
 swiper_index: 
@@ -14,7 +14,7 @@ top_group_index:
 
 - [Apache Commons官网](https://commons.apache.org/)
 
-Commons-IO是Apache开源基金组织提供的一组有关IO操作的开源工具包
+Commons-IO是Apache开源基金组织提供的一组有关IO操作的开源Library
 
 作用:提高IO流的开发效率
 
