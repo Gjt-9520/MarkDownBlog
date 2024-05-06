@@ -1,11 +1,11 @@
 ---
 title: "Dom4j"
-date: 2024-05-02
+date: 2024-04-03
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage5.png?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage83.jpg?raw=true
 tags: ["Java SE","工具包"]
 category: "学习笔记"
-updated: 2024-05-03
+updated: 2024-04-04
 swiper_index: 
 top_group_index: 
 ---
