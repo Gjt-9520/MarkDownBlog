@@ -275,7 +275,8 @@ public class Test {
         // 打印结果:"3"
         System.out.println(persons1.size());
 
-        List<Node> persons2 = document.selectNodes("//person[@id=2]");
+        // 细节:双引号的里面用单引号
+        List<Node> persons2 = document.selectNodes("//person[@id='2']");
         // 打印结果:"2"
         System.out.println(persons2.size());
     }
