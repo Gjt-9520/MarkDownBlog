@@ -12,7 +12,7 @@ top_group_index:
 
 # DDL
 
-DDL全称Data Definition Language,数据定义语言,用来定义数据库对象(数据库,表,字段)
+DDL全称Data Definition Language(数据定义语言),用来定义数据库对象(数据库,表,字段)
 
 # 数据库操作
 

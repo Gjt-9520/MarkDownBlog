@@ -27,7 +27,7 @@ BigDecimal的作用:
 1. `public BigDecimal(double val)` -- 通过传递double类型的小数来创建BigDecimal对象       
 2. `public BigDecimal(String val)` -- 通过传递字符串来创建BigDecimal对象         
 
-注意事项: 
+细节: 
 1. **如果要表示的数字不大,没有超出double的取值范围,建议使用静态方法创建BigDecimal对象**
 2. **如果要表示的数字比较大,超出double的取值范围,建议使用传递字符串类型的构造方法**
 
