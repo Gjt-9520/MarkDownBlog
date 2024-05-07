@@ -1,5 +1,5 @@
 ---
-title: "SQL-DQL"
+title: "DQL"
 date: 2024-05-06
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage8.png?raw=true

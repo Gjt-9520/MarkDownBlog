@@ -1,5 +1,5 @@
 ---
-title: "SQL-DML"
+title: "DML"
 date: 2024-05-05
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage7.png?raw=true
