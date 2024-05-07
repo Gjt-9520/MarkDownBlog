@@ -130,16 +130,16 @@ select * from emp where idcard like '_________________X';
 
 ```cmd
 # 根据性别分组,统计男性员工和女性员工的数量
-select gender 性别, count(*) 员工数量 from emp group by gender;
+select gender, count(*) from emp group by gender;
 
 # 根据性别分组,统计男性员工和女性员工的平均年龄
-select gender 性别, avg(age) 平均年龄 from emp group by gender;
+select gender, avg(age) from emp group by gender;
 
 # 查询年龄小于45的员工,并根据工作地址分组,获取员工数量大于等于3的工作地址
-select workAddress 工作地址, count(*) 员工数量 from emp where age < 45 group by workAddress having count(*) >= 3;
+select workAddress, count(*) from emp where age < 45 group by workAddress having count(*) >= 3;
 
 # 统计各个工作地址上班的男性及女性员工的数量
-select workAddress 工作地址, gender 性别, count(*) 员工数量 from emp group by gender,workAddress;
+select workAddress, gender, count(*) from emp group by gender,workAddress;
 ```
 
 # 排序查询
@@ -161,13 +161,13 @@ select workAddress 工作地址, gender 性别, count(*) 员工数量 from emp g
 
 ```cmd
 # 根据年龄对公司的员工进行升序排序
-select name 姓名,age 年龄 from emp order by age;
+select name,age from emp order by age;
 
 # 根据入职时间,对员工进行降序排序
-select name 姓名,entrydate 入职时间 from emp order by entrydate desc;
+select name,entrydate from emp order by entrydate desc;
 
 # 根据年龄对公司的员工进行升序排序,如果年龄相同,再按照入职时间进行降序排序
-select name 姓名,age 年龄,entrydate 入职时间 from emp order by age,entrydate desc;
+select name,age,entrydate from emp order by age,entrydate desc;
 ```
 
 # 分页查询
@@ -212,10 +212,10 @@ select * from emp where (age >= 20 && age <= 23) && gender='女';
 select * from emp where gender='男' && (age > 20 && age <= 40) && name like '___';
 
 # 统计员工表中,年龄小于60岁的男性员工和女性员工的人数
-select gender 性别,count(*) 员工人数 from emp where age < 60 group by gender;
+select gender,count(*) from emp where age < 60 group by gender;
 
 # 查询所有年龄小于等于35岁员工的姓名和年龄,并对查询结果按年龄升序排序,如果年龄相同按入职时间降序排序
-select name 姓名,age 年龄 from emp where age <= 35 order by age,entrydate desc;
+select name,age from emp where age <= 35 order by age,entrydate desc;
 
 # 查询性别为男,且年龄在20(不含)-40岁(含)以内的前5个员工信息,对查询的结果按年龄升序排序,如果年龄相同按入职时间升序排序
 select * from emp where gender='男' && (age > 20 && age <= 40) order by age,entrydate limit 5;
@@ -224,4 +224,3 @@ select * from emp where gender='男' && (age > 20 && age <= 40) order by age,ent
 # 编写和执行顺序
 
 ![编写和执行顺序](../images/SQL-DQL编写顺序和执行顺序.png)
-
