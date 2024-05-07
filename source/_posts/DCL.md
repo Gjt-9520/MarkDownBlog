@@ -20,8 +20,7 @@ DCL全称Data Control Language(数据控制语言),用来管理数据库用户�
 
 ## 查询用户
 
-`use mysql;`           
-`select * from user;`    
+先`use mysql;`后`select * from user;`    
 
 ## 创建用户
 

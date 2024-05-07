@@ -33,7 +33,7 @@ DDL全称Data Definition Language(数据定义语言),用来定义数据库对�
 
 ## 创建表
 
-```cmd
+```sql
 create table 表名(
 字段1 字段1类型 [comment '字段1注释'],
 字段2 字段2类型 [comment '字段2注释'],
@@ -83,16 +83,17 @@ MySQL中的数据类型有很多,主要分为三类:数值类型、字符串类�
 6. 身份证号(二代身份证号均为18位,身份证中有X这样的字符)
 7. 入职时间(取值年月日即可)
 
-```cmd
-create table tb_emp (
-  id int comment '编号',
-  empid varchar(10) comment '员工工号',
-  name varchar(10) comment '姓名',
-  gender char(1) comment '性别',
-  age tinyint unsigned comment '年龄',
-  idcard char(18) comment '身份证号',
-  entrydate date comment '入职时间'
-)  comment '用户表'; 
+```sql
+create table tb_emp
+(
+    id        int comment '编号',
+    empId     varchar(10) comment '员工工号',
+    name      varchar(10) comment '姓名',
+    gender    char(1) comment '性别',
+    age       tinyint unsigned comment '年龄',
+    idCard    char(18) comment '身份证号',
+    entryDate date comment '入职时间'
+) comment '用户表';
 ```
 
 ## 修改表
