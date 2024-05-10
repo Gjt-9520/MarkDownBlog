@@ -318,8 +318,8 @@ private V put(K key, V value, boolean replaceOld) {
     Entry<K,V> parent;
     
     // 表示当前的比较规则
-    // 如果我们是采取默认的自然排序,那么此时comparator记录的是null,cpr记录的也是null
-    // 如果我们是采取比较去排序方式,那么此时comparator记录的是就是比较器
+    // 如果采取默认的自然排序,那么此时comparator记录的是null,cpr记录的也是null
+    // 如果采取比较去排序方式,那么此时comparator记录的是就是比较器
     Comparator<? super K> cpr = comparator;
     // 表示判断当前是否有比较器对象
     // 如果传递了比较器对象,就执行if里面的代码,此时以比较器的规则为准
