@@ -3,7 +3,7 @@ title: "MySQL和SQL概述"
 date: 2024-05-03
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage5.jpg?raw=true
-tags: ["MySQL"]
+tags: ["MySQL","SQL"]
 category: "学习笔记"
 updated: 2024-05-04
 swiper_index: 
