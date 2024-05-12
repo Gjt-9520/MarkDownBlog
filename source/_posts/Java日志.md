@@ -1,5 +1,5 @@
 ---
-title: "日志"
+title: "Java日志"
 date: 2024-04-26
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage134.jpg?raw=true
