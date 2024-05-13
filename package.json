@@ -26,6 +26,6 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-util": "^3.3.0",
     "hexo-wordcount": "^6.0.1",
-    "pnpm": "^8.15.6"
+    "pnpm": "^9.1.1"
   }
 }
