@@ -12,36 +12,113 @@ top_group_index:
 
 # 逻辑存储结构
 
-![InnoDB逻辑存储结构](../images/InnoDB逻辑存储结构.png)
-
-1. 表空间
-表空间是InnoDB存储引擎逻辑结构的最高层                  
-如果用户启用了参数innodb_file_per_table(在8.0版本中默认开启),则每张表都会有一个表空间(xxx.ibd)                    
-一个mysql实例可以对应多个表空间,用于存储记录、索引等数据
-
-2. 段
-段,分为数据段(Leaf node segment)、索引段(Non-leaf node segment)、回滚段(Rollback segment)                  
-InnoDB是索引组织表,数据段就是B+树的叶子节点,索引段即为B+树的非叶子节点                        
-段用来管理多个Extent(区)          
-
-3. 区
-区,表空间的单元结构,每个区的大小为1M        
-默认情况下,InnoDB存储引擎页大小为16K,即一个区中一共有64个连续的页                      
-
-4. 页
-页,是InnoDB存储引擎磁盘管理的最小单元,每个页的大小默认为16KB              
-为了保证页的连续性,InnoDB存储引擎每次从磁盘申请4-5个区
-
-5. 行
-行,InnoDB存储引擎数据是按行进行存放的                    
-在行中,默认有两个隐藏字段:                           
-`Trx_id`:每次对某条记录进行改动时,都会把对应的事务id赋值给trx_id隐藏列                 
-`Roll_pointer`:每次对某条引记录进行改动时,都会把旧的版本写入到undo日志中,然后这个隐藏列就相当于一个指针,可以通过它来找到该记录修改前的信息
+![InnoDB逻辑存储结构](../images/InnoDB逻辑存储结构详细.png)
 
 # 架构
 
+MySQL5.5版本开始,默认使用InnoDB存储引擎,它擅长事务处理,具有崩溃恢复特性,在日常开发中使用非常广泛             
+
+下面是InnoDB架构图,左侧为内存结构,右侧为磁盘结构:
+
+![InnoDB架构](../images/InnoDB架构.png)
+
+## 内存结构
+
+### 缓冲池
+
+![InnoDB架构_内存结构_缓冲池](../images/InnoDB架构_内存结构_缓冲池.png)
+
+### 更改缓冲区
+
+![InnoDB架构_内存结构_更改缓冲区](../images/InnoDB架构_内存结构_更改缓冲区.png)
+
+### 自适应哈希索引
+
+![InnoDB架构_内存结构_自适应哈希索引](../images/InnoDB架构_内存结构_自适应哈希索引.png)
+
+### 日志缓冲区
+
+![InnoDB架构_内存结构_日志缓冲区](../images/InnoDB架构_内存结构_日志缓冲区.png)
+
+## 磁盘结构
+
+### 系统表空间、单表独立表空间
+
+![InnoDB架构_磁盘结构1](../images/InnoDB架构_磁盘结构1.png)
+
+### 通用表空间、撤销表空间、临时表空间
+
+![InnoDB架构_磁盘结构2](../images/InnoDB架构_磁盘结构2.png)
+
+### 双写缓冲区、重做日志
+
+![InnoDB架构_磁盘结构3](../images/InnoDB架构_磁盘结构3.png)
+
+## 后台线程
+
+![InnoDB架构_后台线程](../images/InnoDB架构_后台线程.png)
 
 # 事务原理
 
+## 事务
+
+事务是一组操作的集合,它是一个不可分割的工作单位,事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求,即这些操作要么同时成功,要么同时失败
+
+## 特性(ACID)
+
+- 原子性(Atomicity):事务是不可分割的最小操作单元,要么全部成功,要么全部失败
+- 一致性(Consistency):事务完成时,必须使所有的数据都保持一致状态
+- 隔离性(Isolation):数据库系统提供的隔离机制,保证事务在不受外部并发操作影响的独立环境下运行
+- 持久性(Durability):事务一旦提交或回滚,它对数据库中的数据的改变就是永久的
+
+对于这四大特性,实际上分为两个部分                
+其中的原子性、一致性、持久化,实际上是由InnoDB中的两份日志来保证的,一份是redo log日志,一份是undo log日志                          
+而持久性是通过数据库的锁,是通过加上MVCC来保证的
+
+![事务特性](../images/事务特性.png)
+
+## redo log
+
+重做日志,记录的是事务提交时数据页的物理修改,是用来实现事务的持久性                   
+
+该日志文件由两部分组成:              
+1. 重做日志缓冲(redo log buffer)
+2. 重做日志文件(redo log file)
+
+前者是在内存中,后者在磁盘中            
+当事务提交之后会把所有修改信息都存到该日志文件中,用于在刷新脏页到磁盘,发生错误时,进行数据恢复使用                 
+
+![redo log](../images/redo%20log.png)
+
+## undo log
+
+回滚日志,用于记录数据被修改前的信息,作用包含两个:提供回滚(保证事务的原子性)和MVCC(多版本并发控制)              
+
+undo log和redo log记录物理日志不一样,它是逻辑日志,可以认为当delete一条记录时,undo log中会记录一条对应的insert记录,反之亦然,当update一条记录时,它记录一条对应相反的update记录          当执行rollback时,就可以从undo log中的逻辑记录读取到相应的内容并进行回滚                     
+
+Undo log销毁:undo log在事务执行时产生,事务提交时,并不会立即删除undo log,因为这些日志可能还用于MVCC                  
+Undo log存储:undo log采用段的方式进行管理和记录,存放在前面介绍的 rollback segment回滚段中,内部包含1024个undo log segment
 
 # MVCC
+
+## 基本概念
+
+### 当前读
+
+读取的是记录的最新版本,读取时还要保证其他并发事务不能修改当前记录,会对读取的记录进行加锁               
+对于我们日常的操作,如:select ... lock in share mode(共享锁),select ...for update、update、insert、delete(排他锁)都是一种当前读
+
+### 快照读
+
+简单的select（不加锁）就是快照读,快照读,读取的是记录数据的可见版本,有可能是历史数据,不加锁,是非阻塞读                     
+
+- Read Committed:每次select,都生成一个快照读
+- Repeatable Read:开启事务后第一个select语句才是快照读的地方
+- Serializable:快照读会退化为当前读
+
+### MVCC
+
+全称Multi-Version Concurrency Control,多版本并发控制                  
+指维护一个数据的多个版本,使得读写操作没有冲突,快照读为MySQL实现MVCC提供了一个非阻塞读功能                   
+MVCC的具体实现,还需要依赖于数据库记录中的三个隐式字段、undo log日志、readView
+
