@@ -71,9 +71,12 @@ MySQL5.5版本开始,默认使用InnoDB存储引擎,它擅长事务处理,具有
 - 隔离性(Isolation):数据库系统提供的隔离机制,保证事务在不受外部并发操作影响的独立环境下运行
 - 持久性(Durability):事务一旦提交或回滚,它对数据库中的数据的改变就是永久的
 
-对于这四大特性,实际上分为两个部分                
-其中的原子性、一致性、持久化,实际上是由InnoDB中的两份日志来保证的,一份是redo log日志,一份是undo log日志                          
-而持久性是通过数据库的锁,是通过加上MVCC来保证的
+其中:
+
+- 原子性 -- undo log
+- 持久性 -- redo log
+- 一致性 -- undo log + redo log
+- 隔离性 -- 锁 + MVCC
 
 ![事务特性](../images/事务特性.png)
 
@@ -106,11 +109,11 @@ Undo log存储:undo log采用段的方式进行管理和记录,存放在前面�
 ### 当前读
 
 读取的是记录的最新版本,读取时还要保证其他并发事务不能修改当前记录,会对读取的记录进行加锁               
-对于我们日常的操作,如:select ... lock in share mode(共享锁),select ...for update、update、insert、delete(排他锁)都是一种当前读
+对于日常的操作,如:select ... lock in share mode(共享锁),select ...for update、update、insert、delete(排他锁)都是一种当前读
 
 ### 快照读
 
-简单的select（不加锁）就是快照读,快照读,读取的是记录数据的可见版本,有可能是历史数据,不加锁,是非阻塞读                     
+简单的select(不加锁)就是快照读,快照读,读取的是记录数据的可见版本,有可能是历史数据,不加锁,是非阻塞读                     
 
 - Read Committed:每次select,都生成一个快照读
 - Repeatable Read:开启事务后第一个select语句才是快照读的地方
@@ -120,5 +123,40 @@ Undo log存储:undo log采用段的方式进行管理和记录,存放在前面�
 
 全称Multi-Version Concurrency Control,多版本并发控制                  
 指维护一个数据的多个版本,使得读写操作没有冲突,快照读为MySQL实现MVCC提供了一个非阻塞读功能                   
-MVCC的具体实现,还需要依赖于数据库记录中的三个隐式字段、undo log日志、readView
+MVCC的具体实现,还需要依赖于数据库记录中的三个隐式字段、undo log版本链、ReadView
 
+## 隐藏字段
+
+![隐藏字段](../images/隐藏字段.png)
+
+查看stu的表结构信息:`ibd2sdi XXX.ibd`
+
+## undo log版本链
+
+回滚日志,在insert、update、delete的时候产生的便于数据回滚的日志                   
+当insert的时候,产生的undo log日志只在回滚时需要,在事务提交后,可被立即删除                        
+而update、delete的时候,产生的undo log日志不仅在回滚时需要,在快照读时也需要,不会立即被删除           
+
+![undo log版本链](../images/undo%20log版本链.png)
+
+## readView
+
+ReadView(读视图)是快照读SQL执行时MVCC提取数据的依据,记录并维护系统当前活跃的事务(未提交的)id
+
+![ReadView四个核心字段](../images/ReadView四个核心字段.png)
+
+![ReadView](../images/ReadView.png)
+
+### RC隔离级别下范例
+
+范例1:
+
+![ReadView范例1](../images/ReadView范例1.png)
+
+范例2:
+
+![ReadView范例2](../images/ReadView范例2.png)
+
+### RR隔离级别下范例
+
+![ReadView范例](../images/ReadView范例3.png)
