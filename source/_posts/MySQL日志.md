@@ -72,7 +72,7 @@ general_log = 1
 general_log_file = mysql_query.log
 ```
 
-开启了查询日志之后,在MySQL的数据存放目录,也就是 /var/lib/mysql/目录下就会出现mysql_query.log文件  
+开启了查询日志之后,在MySQL的数据存放目录,也就是/var/lib/mysql/目录下就会出现mysql_query.log文件  
 之后所有的客户端的增删改查操作都会记录在该日志文件之中,长时间运行后,该日志文件将会非常大
 
 # 慢查询日志
@@ -89,7 +89,7 @@ long_query_time = 2
 ```
 
 默认情况下,不会记录管理语句,也不会记录不使用索引进行查找的查询            
-可以使用log_slow_admin_statements和log_queries_not_using_indexes更改此行为:
+如果需要记录管理语句,记录不使用索引进行查找的查询,可以使用log_slow_admin_statements和log_queries_not_using_indexes更改此行为,修改MySQL的配置文件/etc/my.cnf文件,添加如下内容:
 
 ```sql
 # 记录执行较慢的管理语句
