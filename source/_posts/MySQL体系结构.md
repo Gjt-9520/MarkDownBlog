@@ -2,7 +2,7 @@
 title: "MySQL体系结构"
 date: 2024-05-12
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage14.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage14.jpg?raw=true
 tags: ["MySQL"]
 category: "学习笔记"
 updated: 2024-05-13

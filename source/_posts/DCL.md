@@ -2,7 +2,7 @@
 title: "DCL"
 date: 2024-05-07
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage9.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage9.jpg?raw=true
 tags: ["MySQL","SQL"]
 category: "学习笔记"
 updated: 2024-05-08
