@@ -14,6 +14,8 @@ top_group_index:
 
 # Web
 
+![Web开发](../images/Web开发.png)
+
 ## Web网站开发模式
 
 ![Web网站开发模式](../images/web网站开发模式.png)

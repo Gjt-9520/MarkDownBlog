@@ -62,7 +62,7 @@ Element:饿了么团队研发的,一套为开发者、设计师和产品经理�
 
 组件:组成网页的部件,例如超链接、按钮、图片、表格、表单、分页条等
 
-[官方网站](https://element-plus.org/zh-CN/)
+[Element官方网站](https://element-plus.org/zh-CN/)
 
 ### 快速入门
 
@@ -78,7 +78,7 @@ Element:饿了么团队研发的,一套为开发者、设计师和产品经理�
 
 ![Nginx1](../images/Nginx1.png)
 
-[官方网站](https://nginx.org/)
+[Nginx官方网站](https://nginx.org/)
 
 ![Nginx2](../images/Nginx2.png)
 
