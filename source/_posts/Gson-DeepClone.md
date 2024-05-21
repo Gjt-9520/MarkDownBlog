@@ -3,7 +3,7 @@ title: "Gson-DeepClone"
 date: 2023-12-24
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage84.jpg?raw=true
-tags: ["Java SE","Library"]
+tags: ["Java SE","Library","gson"]
 category: "学习笔记"
 updated: 2023-12-25
 
@@ -12,7 +12,7 @@ top_group_index:
 
 # Gson-DeepClone
 
-- [Gson官网](https://github.com/google/gson)
+- [Gson官方网站](https://github.com/google/gson)
 
 ## 深克隆   
 

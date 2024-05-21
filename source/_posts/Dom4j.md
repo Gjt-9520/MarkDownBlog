@@ -3,14 +3,14 @@ title: "Dom4j"
 date: 2024-04-03
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage83.jpg?raw=true
-tags: ["Java SE","Library"]
+tags: ["Java SE","Library","dom4j"]
 category: "学习笔记"
 updated: 2024-04-04
  
 top_group_index: 
 ---
 
-- [Dom4j官网](https://dom4j.github.io/)
+- [Dom4j官方网站](https://dom4j.github.io/)
 
 # 常用方法                                 
 
