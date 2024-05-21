@@ -1,5 +1,5 @@
 ---
-title: "Vue项目"
+title: "Vue入门项目"
 date: 2024-05-31
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage33.jpg?raw=true
