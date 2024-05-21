@@ -23,14 +23,14 @@ Spring家族旗下这么多的技术,最基础、最核心的是SpringFramework
 
 # 快速入门
 
-![Springboot快速入门](../images/Springboot快速入门案例.png)
+![SpringBoot快速入门](../images/SpringBoot快速入门案例.png)
 
 步骤:
 1. 创建SpringBoot工程,并勾选web开发相关依赖
 2. 定义HelloController类,添加方法hello(),并添加注解
 3. 运行测试
 
-![Springboot快速入门](../images/Springboot快速入门1.png)
+![SpringBoot快速入门](../images/SpringBoot快速入门1.png)
 
 ```java
 package com.jinzhao.controller;
