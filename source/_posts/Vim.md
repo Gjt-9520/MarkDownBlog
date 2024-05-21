@@ -6,7 +6,7 @@ cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage101.jpg?r
 tags: ["Terminal"]
 category: "学习笔记"
 updated: 2023-12-02
-swiper_index:
+
 top_group_index:
 ---
 
