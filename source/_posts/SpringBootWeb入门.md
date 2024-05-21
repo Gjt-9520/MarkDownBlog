@@ -53,13 +53,13 @@ public class HelloController {
 
 ## 创建maven项目
 
-在idea中创建一个maven项目,正常填写项目的坐标信息,如下图所示:
+在IDEA中创建一个maven项目,正常填写项目的坐标信息,如下图所示:
 
-![image-20221017094402319](assets/image-20221017094402319.png) 
+![创建maven项目1](../images/创建maven项目1.png) 
 
 输入项目的基本信息之后,点击finish,就可以创建一个maven项目
 
-![image-20221017094510482](assets/image-20221017094510482.png) 
+![创建maven项目2](../images/创建maven项目2.png) 
 
 但是这个maven项目目前并不是springboot项目,还需要做如下两步操作
 
@@ -68,12 +68,12 @@ public class HelloController {
 1. 在pom.xml中指定springboot的父工程
 
 ```xml
-<!-- springboot父工程-->
+<!--SpringBoot父工程-->
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.7.4</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath/>
 </parent>
 ```
 
@@ -109,6 +109,6 @@ public class HelloController {
 
 2. 并在resources目录下准备一份配置文件,application.properties(创建一个新的file文件,命名为application.properties)
 
-![image-20221017095239911](assets/image-20221017095239911.png) 
+![手动创建SpringBoot项目基本结构](../images/手动创建SpringBoot项目基本结构.png) 
 
 到此呢,就手动创建好了这样一个springboot项目
