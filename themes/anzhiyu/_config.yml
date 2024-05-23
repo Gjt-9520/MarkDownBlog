@@ -1039,7 +1039,7 @@ css_prefix: true
 
 # 首页顶部相关配置
 home_top:
-  enable: false # 开关
+  enable: true # 开关
   timemode: date #date/updated
   title: 生命不息，
   subTitle: 探索不止!
