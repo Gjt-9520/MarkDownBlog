@@ -118,4 +118,3 @@ where id = 1;
 delete
 from tb_emp;
 ```
-
