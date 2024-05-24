@@ -2,7 +2,7 @@
 title: "Vue入门项目"
 date: 2024-05-31
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage33.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage33.jpg?raw=true
 tags: ["Web","Vue","Element","Nginx"]
 category: "学习笔记"
 updated: 2024-06-01

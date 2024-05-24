@@ -77,6 +77,11 @@
       descr: Hexo框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/hexo.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HexoPage.png?raw=true
+    - name: Vue
+      link: https://cn.vuejs.org/
+      descr: Vue框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Vue.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/VuePage.png?raw=true
     
 - class_name: 数据库
   flink_style: flexcard
