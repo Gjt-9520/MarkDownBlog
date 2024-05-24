@@ -37,9 +37,11 @@ top_group_index:
 1. `win + r`输入cmd,`ctrl + shift + enter`启动管理员终端
 2. `mysql -u root -p`后输入密码进入MySQL
 
+例如接本地虚拟机上的MySQL:`mysql -h192.168.1.13 -P3306 -uroot -p123456`
+
 # 关系型数据库
 
-关系型数据库(RDBMS)是建立在关系模型基础上,由多张相互连接的二维表组成的数据库
+关系型数据库(RDBMS)是建立在关系模型基础上,由多张相互连接的**二维表**组成的数据库
 
 特点:
 1. 使用表存储数据,格式统一,便于维护
@@ -51,7 +53,7 @@ top_group_index:
 
 # SQL
 
-SQL全称Structured Query Language,结构化查询语言,是操作关系型数据库的编程语言,定义了一套操作关系型数据库统一标准          
+SQL全称Structured Query Language,结构化查询语言,是操作关系型数据库的编程语言,定义了一套操作关系型数据库**统一标准**          
 
 ## 通用语法
 
@@ -65,3 +67,7 @@ SQL全称Structured Query Language,结构化查询语言,是操作关系型数�
 ## 分类
 
 ![SQL分类](../images/SQL分类.png)
+
+# 开发
+
+![开发](../images/开发_数据库.png)
