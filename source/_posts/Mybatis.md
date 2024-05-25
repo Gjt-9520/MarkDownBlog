@@ -10,4 +10,8 @@ updated: 2024-06-07
 top_group_index: 
 ---
 
+# MyBatis
 
+MyBatis是一款优秀的**持久层**框架,用于简化JDBC的开发
+
+[官方网站](https://mybatis.org/mybatis-3/zh_CN/index.html)

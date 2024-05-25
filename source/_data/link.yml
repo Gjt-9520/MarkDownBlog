@@ -7,6 +7,7 @@
       descr: Git仓库云托管平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GitHub.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GitHubPage.png?raw=true
+    
     - name: Gitee
       link: https://gitee.com/
       descr: Git仓库云托管平台(中国)
@@ -22,26 +23,31 @@
       descr: 在线视频平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/bilibili.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/BiliBiliPage.png?raw=true
+    
     - name: LeetCode
       link: https://leetcode.cn/
       descr: 在线编程练习平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/LeetCode.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/LeetCodePage.png?raw=true
+    
     - name: StackOverflow
       link: https://stackoverflow.com/
       descr: 编程问答社区
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/stackoverflow.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/stackoverflowPage.png?raw=true
+    
     - name: NowCoder
       link: https://www.nowcoder.com/
       descr: 在线编程练习和招聘平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/nowcoder.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/nowcoderPage.png?raw=true
+    
     - name: CSDN
       link: https://www.csdn.net/
       descr: IT技术社区和在线学习平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/csdn.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/CSDNPage.png?raw=true
+    
     - name: RUNOOB
       link: https://www.runoob.com/
       descr: 初学者在线学习平台
@@ -57,11 +63,18 @@
       descr: 托管服务平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/netlify.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/netlifyPage.png?raw=true
+    
     - name: Vercel
       link: https://vercel.com/
       descr: 托管服务平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercel.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercelPage.png?raw=true
+    
+    - name: Tomcat
+      link: https://tomcat.apache.org/
+      descr: Web服务器和Servlet容器
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Tomcat.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/TomcatPage.png?raw=true
 
 - class_name: 框架
   flink_style: flexcard
@@ -69,20 +82,46 @@
   link_list:    
     - name: Astro
       link: https://astro.build/
-      descr: Astro框架
+      descr: 以内容驱动的网站的Web框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astro.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astroPage.png?raw=true
+    
     - name: Hexo
       link: https://hexo.io/zh-cn/
-      descr: Hexo框架
+      descr: 博客框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/hexo.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HexoPage.png?raw=true
+    
     - name: Vue
       link: https://cn.vuejs.org/
-      descr: Vue框架
+      descr: JavaScript框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Vue.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/VuePage.png?raw=true
     
+    - name: MyBatis
+      link: https://mybatis.org/mybatis-3/zh_CN/index.html
+      descr: 持久层框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MyBatis.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MyBatisPage.png?raw=true
+    
+    - name: Junit
+      link: https://junit.org/junit5/docs/current/user-guide/
+      descr: 单元测试框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Junit.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JunitPage.png?raw=true
+    
+    - name: Logback
+      link: https://logback.qos.ch/index.html
+      descr: Java日志框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Logback.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/LogbackPage.png?raw=true
+    
+    - name: Spring
+      link: https://spring.io/
+      descr: Java开发框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Spring.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/SpringPage.png?raw=true
+
 - class_name: 数据库
   flink_style: flexcard
   hundredSuffix: ""
@@ -113,6 +152,76 @@
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflare.jpg?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflarePage.png?raw=true
 
+- class_name: 工具和库
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:    
+    - name: ApacheCommons
+      link: https://commons.apache.org/
+      descr: 通用的Java组件和库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Commons.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/CommonsPage.png?raw=true
+    
+    - name: Axios
+      link: https://www.axios-http.cn/
+      descr: 基于Promise的HTTP客户端
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Axios.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/AxiosPage.png?raw=true
+    
+    - name: Nginx
+      link: https://nginx.org/
+      descr: Web服务器软件和HTTP服务器
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Nginx.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/NginxPage.png?raw=true
+    
+    - name: Dom4j
+      link: https://dom4j.github.io/
+      descr: Java XML的解析器库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Dom4j.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Dom4jPage.png?raw=true
+    
+    - name: Jaxen
+      link: https://central.sonatype.com/artifact/jaxen/jaxen/overview
+      descr: Java XML的解析器库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Jaxen.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JaxenPage.png?raw=true
+    
+    - name: Hamcrest
+      link: https://github.com/hamcrest/JavaHamcrest
+      descr: 编写测试断言的Java库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Hamcrest.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HamcrestPage.png?raw=true
+    
+    - name: Gson
+      link: https://github.com/google/gson
+      descr: 处理JSON数据的库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Gson.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GsonPage.png?raw=true
+    
+    - name: Hutool
+      link: https://apidoc.gitee.com/dromara/hutool/
+      descr: Java工具库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Hutool.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HutoolPage.png?raw=true
+    
+    - name: Slf4j
+      link: https://www.slf4j.org/index.html
+      descr: Java日志门面库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/slf4j.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/slf4jPage.png?raw=true
+    
+    - name: Maven
+      link: https://maven.apache.org/
+      descr: Java项目管理和构建工具
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Maven.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MavenPage.png?raw=true
+    
+    - name: Element
+      link: https://element-plus.org/zh-CN/
+      descr: 基于Vue的组件库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Element.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/ElementPage.png?raw=true
+
 - class_name: 图形用户界面
   flink_style: flexcard
   hundredSuffix: ""
@@ -127,3 +236,18 @@
       descr: Java客户端应用平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFX.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFXPage.png?raw=true
+
+- class_name: 可视化
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: DataStructure
+      link: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+      descr: 数据结构可视化
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/DataStructure.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/DataStructurePage.png?raw=true
+    - name: Echarts
+      link: https://echarts.apache.org/zh/index.html
+      descr: 图表可视化
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Echarts.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/EchartsPage.png?raw=true
