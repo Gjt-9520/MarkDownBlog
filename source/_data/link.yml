@@ -14,7 +14,7 @@
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GITEE.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GiteePage.png?raw=true
 
-- class_name: 编程学习网站
+- class_name: 编程学习
   flink_style: flexcard
   hundredSuffix: ""
   link_list:
@@ -54,7 +54,7 @@
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOB.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOBPage.png?raw=true
 
-- class_name: 托管服务
+- class_name: 托管平台
   flink_style: flexcard
   hundredSuffix: ""
   link_list:
@@ -82,7 +82,7 @@
   link_list:    
     - name: Astro
       link: https://astro.build/
-      descr: 以内容驱动的网站的Web框架
+      descr: Web框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astro.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astroPage.png?raw=true
     
@@ -148,7 +148,7 @@
   link_list:
     - name: CloudFlare
       link: https://www.cloudflare.com/
-      descr: 网络基础设施和安全服务平台
+      descr: 网络安全服务平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflare.jpg?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflarePage.png?raw=true
 
@@ -164,25 +164,25 @@
     
     - name: Axios
       link: https://www.axios-http.cn/
-      descr: 基于Promise的HTTP客户端
+      descr: HTTP客户端
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Axios.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/AxiosPage.png?raw=true
     
     - name: Nginx
       link: https://nginx.org/
-      descr: Web服务器软件和HTTP服务器
+      descr: HTTP服务器
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Nginx.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/NginxPage.png?raw=true
     
     - name: Dom4j
       link: https://dom4j.github.io/
-      descr: Java XML的解析器库
+      descr: Java XML的解析器
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Dom4j.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Dom4jPage.png?raw=true
     
     - name: Jaxen
       link: https://central.sonatype.com/artifact/jaxen/jaxen/overview
-      descr: Java XML的解析器库
+      descr: Java XML的解析器
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Jaxen.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JaxenPage.png?raw=true
     
