@@ -61,7 +61,7 @@ load data local infile '/root/sql1.log' into table tb_user fields terminated by 
 
 ![数据组织方式](../images/数据组织方式.png)
 
-行数据,都是存储在聚集索引的叶子节点上的     
+行数据,都是存储在聚集索引的叶子结点上的     
 
 InnoDB的逻辑结构图:
 

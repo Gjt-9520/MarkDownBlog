@@ -748,13 +748,13 @@ Xpath更加适合做信息检索
 
 - [Xpath官方网站](https://central.sonatype.com/artifact/jaxen/jaxen/overview)
 
-Xpath使用**路径表达式**来定位XML文档中的元素节点或属性节点
+Xpath使用**路径表达式**来定位XML文档中的元素结点或属性结点
 
 ### 步骤
 
 1. **导入jar包(dom4j.jar和jaxen.jar)**,Xpath技术依赖Dom4j技术,
 2. 通过Dom4j的`SAXReader`对象获取Document对象
-3. 利用Xpath提供的API,结合XPath的语法选取XML文档元素节点,进行解析操作
+3. 利用Xpath提供的API,结合XPath的语法选取XML文档元素结点,进行解析操作
 4. Document中与Xpath相关的API如下
 
 ![Document中与Xpath相关的API](../images/Document中与Xpath相关的API.png)
@@ -774,9 +774,9 @@ Xpath使用**路径表达式**来定位XML文档中的元素节点或属性节�
 
 #### 绝对路径
 
-从根节点开始逐层查找节点列表并打印信息
+从根结点开始逐层查找结点列表并打印信息
 
-`/根节点/子节点/孙节点`(`/contactList/contact/name`):从根节点开始,一级一级向下查找,**不能跨级**
+`/根结点/子结点/孙结点`(`/contactList/contact/name`):从根结点开始,一级一级向下查找,**不能跨级**
  
 范例:
 
@@ -828,9 +828,9 @@ public class Test {
 
 #### 相对路径
 
-先得到根结点,再采用相对路径获取下一级节点的子节点并打印信息
+先得到根结点,再采用相对路径获取下一级结点的子结点并打印信息
 
-`./子节点/孙节点`(`./contact/name`):从当前节点开始,一级一级向下查找,**不能跨级**
+`./子结点/孙结点`(`./contact/name`):从当前结点开始,一级一级向下查找,**不能跨级**
 
 范例:
 
@@ -885,11 +885,11 @@ public class Test {
 
 #### 全文检索
 
-直接全文搜索所有的某某节点并打印
+直接全文搜索所有的某某结点并打印
 
-1. `//contact`:找contact节点,无论节点在哪里                 
-2. `//contact/name`:找contact,无论在哪一级,但name一定是contact的子节点                  
-3. `//contact//name`:找contact,无论在哪一级,name只要是contact的子孙节点                
+1. `//contact`:找contact结点,无论结点在哪里                 
+2. `//contact/name`:找contact,无论在哪一级,但name一定是contact的子结点                  
+3. `//contact//name`:找contact,无论在哪一级,name只要是contact的子孙结点                
 
 范例:
 

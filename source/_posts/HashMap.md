@@ -322,16 +322,16 @@ HashMap里面每一个对象包含以下内容:
 `int hash;` -- 键的哈希值                
 `final K key;` -- 键                  
 `V value;` -- 值               
-`Node<K,V> next;` -- 下一个节点的地址值                
+`Node<K,V> next;` -- 下一个结点的地址值                
 2. 红黑树中的键值对对象
 包含:            
 `int hash;` -- 键的哈希值            
 `final K key;` -- 键                  
 `V value;` -- 值               
-`TreeNode<K,V> parent;` -- 父节点的地址值           
-`TreeNode<K,V> left;` -- 左子节点的地址值           
-`TreeNode<K,V> right;` -- 右子节点的地址值         
-`boolean red;` -- 节点的颜色              
+`TreeNode<K,V> parent;` -- 父结点的地址值           
+`TreeNode<K,V> left;` -- 左子结点的地址值           
+`TreeNode<K,V> right;` -- 右子结点的地址值         
+`boolean red;` -- 结点的颜色              
 
 ## 添加元素
 
@@ -424,15 +424,15 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,boolean evict) {
         if (b1 && ((k = p.key) == key || (key != null && key.equals(k)))){
             e = p;
         } else if (p instanceof TreeNode){
-            // 判断数组中获取出来的键值对是不是红黑树中的节点
-            // 如果是,则调用方法putTreeVal,把当前的节点按照红黑树的规则添加到树当中
+            // 判断数组中获取出来的键值对是不是红黑树中的结点
+            // 如果是,则调用方法putTreeVal,把当前的结点按照红黑树的规则添加到树当中
             e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
         } else {
-            // 如果从数组中获取出来的键值对不是红黑树中的节点
+            // 如果从数组中获取出来的键值对不是红黑树中的结点
             // 表示此时下面挂的是链表
             for (int binCount = 0; ; ++binCount) {
                 if ((e = p.next) == null) {
-                    // 此时就会创建一个新的节点,挂在下面形成链表
+                    // 此时就会创建一个新的结点,挂在下面形成链表
                     p.next = newNode(hash, key, value, null);
                     // 判断当前链表长度是否超过8,如果超过8,就会调用方法treeifyBin
                     // treeifyBin方法的底层还会继续判断
