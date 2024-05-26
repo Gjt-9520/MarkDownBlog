@@ -1,9 +1,9 @@
 ---
-title: "Mybatis入门"
+title: "MyBatis入门"
 date: 2024-06-06
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage39.jpg?raw=true
-tags: ["Mybatis","MySQL","SQL"]
+tags: ["MyBatis","Lombok"]
 category: "学习笔记"
 updated: 2024-06-07
   
@@ -322,5 +322,89 @@ public interface UserMapper {
 
 # 数据库连接池
 
+数据库连接池是一个容器,负责分配、管理数据库连接
 
-# lombok
+它允许应用程序重复使用一个现有的数据库连接,而不是再重新建立一个
+
+释放空闲时间超过最大空闲时间的连接,来避免因为没有释放连接而引起的数据库连接泄露
+
+优势:
+1. 资源重用
+2. 提升系统响应速度
+3. 避免数据库连接泄露
+
+![数据库连接池接口](../images/数据库连接池接口.png)
+
+[Druid官方网站](https://github.com/alibaba/druid)
+
+## 切换Druid数据库连接池
+
+步骤:
+
+1. 引入Druid的相关依赖
+
+```xml
+<dependency>
+     <groupId>com.alibaba</groupId>
+     <artifactId>druid</artifactId>
+     <version>1.2.22</version>
+</dependency>
+```
+
+2. 进行JDBC配置
+
+```properties
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://192.168.1.13:3306/springboot_web
+spring.datasource.username=root
+spring.datasource.password=123456
+```
+
+或者
+
+```properties
+spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.druid.url=jdbc:mysql://192.168.1.13:3306/springboot_web
+spring.datasource.druid.username=root
+spring.datasource.druid.password=123456
+```
+
+# Lombok
+
+Lombok是一个实用的Java类库,能通过注解的形式自动生成构造器、getter/setter、equals、hashcode、toString等方法,并自动化生成日志变量,简化Java开发、提高效率
+
+![Lombok常用注解](../images/Lombok常用注解.png)
+
+细节:**Lombok会在编译时自动生成对应的Java代码,实用Lombok时,还需要安装一个Lombok插件(IDEA自带)**
+
+范例:
+
+1. 引入Lombok依赖
+
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.24</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+2. 添加Lomback注解
+
+```java
+package com.jinzhao.pojo;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
+    private Integer id;
+    private String name;
+    private Short age;
+    private Short gender;
+    private String phone;
+}
+```
