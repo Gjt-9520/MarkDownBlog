@@ -258,7 +258,7 @@
     
     - name: Slf4j
       link: https://www.slf4j.org/index.html
-      descr: Java日志门面库
+      descr: Java日志库
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/slf4j.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/slf4jPage.png?raw=true
     

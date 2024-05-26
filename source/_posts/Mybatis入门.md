@@ -236,6 +236,10 @@ class SpringBootMybatisQuickstartApplicationTests {
 }
 ```
 
+# IDEA配置SQL提示
+
+![IDEA配置SQL提示](../images/IDEA配置SQL提示.png)
+
 # JDBC
 
 JDBC(Java DataBase Connectivity),是SUN公司提供的一套使用Java语言操作关系型数据库的API(规范)
