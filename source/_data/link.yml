@@ -1,3 +1,63 @@
+- class_name: 数据库
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:   
+    - name: MongoDB
+      link: https://www.mongodb.com/
+      descr: NoSQL数据库管理系统
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongoDB.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongodbPage.png?raw=true
+    
+- class_name: 搜索引擎
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:      
+    - name: Algolia
+      link: https://www.algolia.com/
+      descr: Algolia Search搜索引擎平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Algolia.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/algoliaPage.png?raw=true
+
+- class_name: 网络安全
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: CloudFlare
+      link: https://www.cloudflare.com/
+      descr: 网络安全服务平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflare.jpg?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflarePage.png?raw=true
+
+- class_name: 图形用户界面
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: PythonGUI
+      link: https://openjfx.cn/
+      descr: Python客户端应用平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/PythonGUI.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/PythonGUIPage.png?raw=true
+    - name: JavaFX
+      link: https://openjfx.cn/
+      descr: Java客户端应用平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFX.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFXPage.png?raw=true
+
+- class_name: 可视化
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: DataStructure
+      link: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+      descr: 数据结构可视化
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/DataStructure.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/DataStructurePage.png?raw=true
+    - name: Echarts
+      link: https://echarts.apache.org/zh/index.html
+      descr: 图表可视化
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Echarts.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/EchartsPage.png?raw=true
+
 - class_name: Git仓库 
   flink_style: flexcard
   hundredSuffix: ""
@@ -13,6 +73,50 @@
       descr: Git仓库云托管平台(中国)
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GITEE.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GiteePage.png?raw=true
+
+- class_name: 托管平台
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: Netlify
+      link: https://app.netlify.com/
+      descr: 托管服务平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/netlify.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/netlifyPage.png?raw=true
+    
+    - name: Vercel
+      link: https://vercel.com/
+      descr: 托管服务平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercel.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercelPage.png?raw=true
+    
+    - name: Tomcat
+      link: https://tomcat.apache.org/
+      descr: Web服务器和Servlet容器
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Tomcat.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/TomcatPage.png?raw=true
+
+- class_name: 图标库
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: Font Awesome
+      link: https://fontawesome.com/
+      descr: fa6图标库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Fontawesome.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/FontawesomePage.png?raw=true
+
+    - name: Icon Font
+      link: https://www.iconfont.cn/?spm=a313x.search_index.i3.d4d0a486a.18d13a816HXGZR
+      descr: 阿里巴巴图标库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/iconfont.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/iconfontPage.png?raw=true
+
+    - name: Google Fonts
+      link: https://fonts.google.com/icons
+      descr: 谷歌图标库
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Googlefonts.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GooglefontsPage.png?raw=true
 
 - class_name: 编程学习
   flink_style: flexcard
@@ -53,28 +157,6 @@
       descr: 初学者在线学习平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOB.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RUNOOBPage.png?raw=true
-
-- class_name: 托管平台
-  flink_style: flexcard
-  hundredSuffix: ""
-  link_list:
-    - name: Netlify
-      link: https://app.netlify.com/
-      descr: 托管服务平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/netlify.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/netlifyPage.png?raw=true
-    
-    - name: Vercel
-      link: https://vercel.com/
-      descr: 托管服务平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercel.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/vercelPage.png?raw=true
-    
-    - name: Tomcat
-      link: https://tomcat.apache.org/
-      descr: Web服务器和Servlet容器
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Tomcat.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/TomcatPage.png?raw=true
 
 - class_name: 框架
   flink_style: flexcard
@@ -121,36 +203,6 @@
       descr: Java开发框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Spring.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/SpringPage.png?raw=true
-
-- class_name: 数据库
-  flink_style: flexcard
-  hundredSuffix: ""
-  link_list:   
-    - name: MongoDB
-      link: https://www.mongodb.com/
-      descr: NoSQL数据库管理系统
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongoDB.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongodbPage.png?raw=true
-    
-- class_name: 搜索引擎
-  flink_style: flexcard
-  hundredSuffix: ""
-  link_list:      
-    - name: Algolia
-      link: https://www.algolia.com/
-      descr: Algolia Search搜索引擎平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Algolia.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/algoliaPage.png?raw=true
-
-- class_name: 网络安全
-  flink_style: flexcard
-  hundredSuffix: ""
-  link_list:
-    - name: CloudFlare
-      link: https://www.cloudflare.com/
-      descr: 网络安全服务平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflare.jpg?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/cloudflarePage.png?raw=true
 
 - class_name: 工具和库
   flink_style: flexcard
@@ -222,32 +274,8 @@
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Element.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/ElementPage.png?raw=true
 
-- class_name: 图形用户界面
-  flink_style: flexcard
-  hundredSuffix: ""
-  link_list:
-    - name: PythonGUI
-      link: https://openjfx.cn/
-      descr: Python客户端应用平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/PythonGUI.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/PythonGUIPage.png?raw=true
-    - name: JavaFX
-      link: https://openjfx.cn/
-      descr: Java客户端应用平台
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFX.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JavaFXPage.png?raw=true
-
-- class_name: 可视化
-  flink_style: flexcard
-  hundredSuffix: ""
-  link_list:
-    - name: DataStructure
-      link: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
-      descr: 数据结构可视化
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/DataStructure.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/DataStructurePage.png?raw=true
-    - name: Echarts
-      link: https://echarts.apache.org/zh/index.html
-      descr: 图表可视化
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Echarts.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/EchartsPage.png?raw=true
+    - name: Apifox
+      link: https://app.apifox.com/
+      descr: API设计与管理平台
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Apifox.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/ApifoxPage.png?raw=true
