@@ -20,7 +20,7 @@ top_group_index:
 
 范例:
 
-```sql
+```xml
 <if test="name!=null">
     name like concat('%',#{name},'%')
 </if>
@@ -35,6 +35,7 @@ top_group_index:
 范例:
 
 ```xml
+<!--resultType:单条记录所封装的类型-->
 <select id="list3" resultType="com.jinzhao.pojo.Emp">
     select *
     from emp
@@ -59,7 +60,7 @@ top_group_index:
 
 范例:
 
-```java
+```xml
 <update id="update2">
     update emp
     <set>
@@ -78,12 +79,64 @@ top_group_index:
 
 # `<foreach>`
 
+作用:循环遍历
 
+属性:
+1. collection:集合名称
+2. item:集合遍历出来的元素/项
+3. separator:每一次遍历使用的分隔符
+4. open:遍历开始前拼接的片段
+5. close:遍历开始后拼接的片段
 
+范例:
 
+```xml
+<delete id="deleteByIdList">
+    delete from emp where id in
+    <foreach collection="idList" item="id" separator="," open="(" close=")">
+        #{id}
+    </foreach>
+</delete>
+```
 
+# `<sql>`和`<include>`
 
-# `<sql>`
+![sql和include](../images/sql和include.png)
 
+- `<sql id="...">...</sql>`:抽取片段        
+- `<include refid="..."/>`:引用片段
 
-# `<include>`
+范例:
+
+```xml
+<!--抽取片段-->
+<sql id="commonSelect">select id,
+                                  username,
+                                  password,
+                                  name,
+                                  gender,
+                                  image,
+                                  job,
+                                  entry_date,
+                                  dept_id,
+                                  create_time,
+                                  update_time
+                           from emp</sql>
+    
+<select id="list3" resultType="com.jinzhao.pojo.Emp">
+<!--引用片段-->
+<include refid="commonSelect"/>
+<where>
+    <if test="name != null">
+        name like concat('%', #{name}, '%')
+    </if>
+    <if test="gender != null">
+        and gender = #{gender}
+    </if>
+    <if test="begin != null and end != null">
+        and entry_date between #{begin} and #{end}
+    </if>
+</where>
+order by update_time desc
+</select>
+```
