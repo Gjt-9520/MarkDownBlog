@@ -10,10 +10,6 @@ updated: 2024-06-12
 top_group_index: 
 ---
 
-# API文档
-
-[TLIAS智能学习辅助系统-API文档](https://markdown-blog-gjt.vercel.app/2024/06/09/%E7%8F%AD%E7%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-API%E6%96%87%E6%A1%A3/)
-
 # 准备工作
 
 ![环境搭建](../images/班级管理系统环境搭建.png)
