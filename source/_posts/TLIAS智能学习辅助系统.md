@@ -1,14 +1,18 @@
 ---
-title: "班级管理系统"
-date: 2024-06-10
+title: "TLIAS智能学习辅助系统"
+date: 2024-06-11
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage422.jpg?raw=true
 tags: ["SpringBoot","Web"]
 category: "项目开发"
-updated: 2024-06-11
+updated: 2024-06-12
   
 top_group_index: 
 ---
+
+# API文档
+
+[TLIAS智能学习辅助系统-API文档](https://markdown-blog-gjt.vercel.app/2024/06/09/%E7%8F%AD%E7%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-API%E6%96%87%E6%A1%A3/)
 
 # 准备工作
 
@@ -74,7 +78,7 @@ VALUES (1, 'jinyong', '123456', '金庸', 1, '1.jpg', 4, '2000-01-01', 2, now(),
 
 ## 准备对应的实体类
 
-Dept类:
+部门-Dept类:
 
 ```java
 package pojo;
@@ -96,7 +100,7 @@ public class Dept {
 }
 ```
 
-Emp类:
+员工-Emp类:
 
 ```java
 package pojo;
@@ -126,7 +130,7 @@ public class Emp {
 }
 ```
 
-Result类:
+统一响应结果-Result类:
 
 ```java
 package pojo;
@@ -169,8 +173,12 @@ mybatis.configuration.map-underscore-to-camel-case=true
 mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 ```
 
-# API文档
+# 部门管理
 
-[班级管理系统-API文档]()
+## 查询部门
 
-# 
+
+
+## 删除部门
+
+## 新增部门

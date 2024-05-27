@@ -82,6 +82,10 @@ public class Test {
 }
 ```
 
+### Lombok中的使用
+
+使用`@Slf4j`注解即可直接调用`log`对象及其相关方法
+
 ## 配置文件详解
 
 logback日志系统的特性都是通过核心配置文件logback.xml控制的
