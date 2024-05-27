@@ -44,7 +44,7 @@ create table emp
     gender      tinyint unsigned not null comment '性别, 说明: 1 男, 2 女',
     image       varchar(300) comment '图像',
     job         tinyint unsigned comment '职位, 说明: 1 班主任,2 讲师, 3 学工主管, 4 教研主管, 5 咨询师',
-    entry_date  date comment '入职时间',
+    entrydate   date comment '入职时间',
     dept_id     int unsigned comment '部门ID',
     create_time datetime    not null comment '创建时间',
     update_time datetime    not null comment '修改时间'
@@ -52,7 +52,7 @@ create table emp
 
 -- 员工表导入数据
 INSERT INTO emp
-(id, username, password, name, gender, image, job, entry_date, dept_id, create_time, update_time)
+(id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time)
 VALUES (1, 'jinyong', '123456', '金庸', 1, '1.jpg', 4, '2000-01-01', 2, now(), now()),
        (2, 'zhangwuji', '123456', '张无忌', 1, '2.jpg', 2, '2015-01-01', 2, now(), now()),
        (3, 'yangxiao', '123456', '杨逍', 1, '3.jpg', 2, '2008-05-01', 2, now(), now()),
@@ -776,9 +776,477 @@ XML配置文件:
 
 ## 员工列表查询
 
+### 分页查询
 
+![分页查询分析](../images/TLIAS员工管理功能_分页查询分析.png)
+
+PageBean类:
+
+```java
+package com.jinzhao.pojo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+// 分页查询中,查询到的数据列表、总记录数封装成的实体类
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PageBean {
+    // 总记录数
+    private Long total;
+    // 数据列表
+    private List rows;
+}
+```
+
+Controller类:
+
+```java
+@Slf4j
+@RestController
+@RequestMapping("/emps")
+public class EmpController {
+    @Autowired
+    private EmpService empService;
+
+    @GetMapping
+    // @RequestParam(defaultValue = "默认值"):设置请求参数默认值
+    public Result listEmp(@RequestParam(defaultValue = "1") Integer page,
+                          @RequestParam(defaultValue = "10") Integer pageSize) {
+        // 日志记录
+        log.info("分页查询,参数:{},{}", page, pageSize);
+        // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+        PageBean pageBean = empService.list(page, pageSize);
+        return Result.success(pageBean);
+    }
+}
+```
+
+Service接口类:
+
+```java
+public interface EmpService {
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    PageBean list(Integer page, Integer pageSize);
+}
+```
+
+Service实现类:
+
+```java
+@Service
+public class EmpServiceImpl implements EmpService {
+    @Autowired
+    private EmpMapper empMapper;
+
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    @Override
+    public PageBean list(Integer page, Integer pageSize) {
+        // 获取总记录数
+        Long total = empMapper.getTotal();
+        // 根据每页展示记录数计算出每页的起始索引
+        Integer start = (page - 1) * pageSize;
+        // 获取数据列表
+        List<Emp> rows = empMapper.getRows(start, pageSize);
+        // 将获取到的数据列表、总记录数封装成实体类返回
+        return new PageBean(total, rows);
+    }
+}
+```
+
+Mapper类:
+
+```java
+@Mapper
+public interface EmpMapper {
+    // 查询总记录数
+    Long getTotal();
+    // 查询数据列表
+    List<Emp> getRows(Integer page, Integer pageSize);
+}
+```
+
+XML配置文件:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinzhao.Mapper.EmpMapper">
+    <!--查询数据列表-->
+    <select id="getRows" resultType="com.jinzhao.pojo.Emp">
+        select id,
+               username,
+               password,
+               name,
+               gender,
+               image,
+               job,
+               entrydate,
+               dept_id,
+               create_time,
+               update_time
+        from emp
+        limit #{page},#{pageSize}
+    </select>
+    <!--查询总记录数-->
+    <select id="getTotal" resultType="java.lang.Long">
+        select count(*)
+        from emp
+    </select>
+</mapper>
+```
+
+### 分页插件PageHelper
+
+Maven引入:
+
+```xml
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>2.1.0</version>
+</dependency>
+```
+
+PageBean类:
+
+```java
+package com.jinzhao.pojo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+// 分页查询中,查询到的数据列表、总记录数封装成的实体类
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PageBean {
+    // 总记录数
+    private Long total;
+    // 数据列表
+    private List rows;
+}
+```
+
+Controller类:
+
+```java
+@Slf4j
+@RestController
+@RequestMapping("/emps")
+public class EmpController {
+    @Autowired
+    private EmpService empService;
+
+    @GetMapping
+    // @RequestParam(defaultValue = "默认值"):设置请求参数默认值
+    public Result listEmp(@RequestParam(defaultValue = "1") Integer page,
+                          @RequestParam(defaultValue = "10") Integer pageSize) {
+        // 日志记录
+        log.info("分页查询,参数:{},{}", page, pageSize);
+        // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+        PageBean pageBean = empService.list(page, pageSize);
+        return Result.success(pageBean);
+    }
+}
+```
+
+Service接口类:
+
+```java
+public interface EmpService {
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    PageBean list(Integer page, Integer pageSize);
+}
+```
+
+Service实现类:
+
+```java
+@Service
+public class EmpServiceImpl implements EmpService {
+    @Autowired
+    private EmpMapper empMapper;
+
+    // 使用分页插件PageHelper根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    @Override
+    public PageBean list(Integer page, Integer pageSize) {
+        // 设置分页参数:当前页码、每页展示
+        PageHelper.startPage(page, pageSize);
+
+        // 执行查询操作
+        List<Emp> empList = empMapper.list();
+        Page<Emp> p = (Page<Emp>) empList;
+
+        // 封装PageBean对象
+        // p.getTotal()获取总记录数
+        // p.getResult()获取数据列表
+        return new PageBean(p.getTotal(), p.getResult());
+    }
+}
+```
+
+Mapper类:
+
+```java
+@Mapper
+public interface EmpMapper {
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    // 根据条件进行分页查询
+    List<Emp> list();
+}
+```
+
+XML配置文件:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinzhao.Mapper.EmpMapper">
+    <!--只需要最简单的查询即可,PageHelper会自动的对这个查询进行分页操作,并对操作结果封装到Page对象中-->
+    <select id="list" resultType="com.jinzhao.pojo.Emp">
+        select id,
+               username,
+               password,
+               name,
+               gender,
+               image,
+               job,
+               entrydate,
+               dept_id,
+               create_time,
+               update_time
+        from emp
+    </select>
+</mapper>
+```
+
+### 分页查询(带条件)
+
+Maven引入:
+
+```xml
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>2.1.0</version>
+</dependency>
+```
+
+PageBean类:
+
+```java
+package com.jinzhao.pojo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+// 分页查询中,查询到的数据列表、总记录数封装成的实体类
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PageBean {
+    // 总记录数
+    private Long total;
+    // 数据列表
+    private List rows;
+}
+```
+
+Controller类:
+
+```java
+@Slf4j
+@RestController
+@RequestMapping("/emps")
+public class EmpController {
+    @Autowired
+    private EmpService empService;
+
+    @GetMapping
+    public Result listEmp(String name,
+                          Short gender,
+                          @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate begin,
+                          @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate end,
+                          @RequestParam(defaultValue = "1") Integer page,
+                          @RequestParam(defaultValue = "10") Integer pageSize) {
+        // 日志记录
+        log.info("分页查询,参数:{},{},{},{},{},{}", name, gender, begin, end, page, pageSize);
+        // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+        // 根据条件进行分页查询
+        PageBean pageBean = empService.list(name, gender, begin, end, page, pageSize);
+        return Result.success(pageBean);
+    }
+}
+
+```
+
+Service接口类:
+
+```java
+public interface EmpService {
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    // 根据条件进行分页查询
+    PageBean list(String name, Short gender, LocalDate begin, LocalDate end, Integer page, Integer pageSize);
+}
+```
+
+Service实现类:
+
+```java
+@Service
+public class EmpServiceImpl implements EmpService {
+    @Autowired
+    private EmpMapper empMapper;
+
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    // 根据条件进行分页查询
+    @Override
+    public PageBean list(String name, Short gender, LocalDate begin, LocalDate end, Integer page, Integer pageSize) {
+        // 使用分页插件PageHelper
+        // 设置分页参数:当前页码、每页展示
+        PageHelper.startPage(page, pageSize);
+
+        // 执行查询操作
+        List<Emp> empList = empMapper.list(name, gender, begin, end);
+        Page<Emp> p = (Page<Emp>) empList;
+
+        // 封装PageBean对象
+        // p.getTotal()获取总记录数
+        // p.getResult()获取数据列表
+        return new PageBean(p.getTotal(), p.getResult());
+    }
+}
+```
+
+Mapper类:
+
+```java
+@Mapper
+public interface EmpMapper {
+    // 根据当前页码、每页展示记录数进行分页查询,返回数据列表、总记录数
+    // 根据条件进行分页查询
+    List<Emp> list(String name, Short gender, LocalDate begin, LocalDate end);
+}
+```
+
+XML配置文件:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinzhao.Mapper.EmpMapper">
+    <select id="list" resultType="com.jinzhao.pojo.Emp">
+        select id,username,password,name,gender,image,job,entrydate,dept_id,create_time,update_time
+        from emp
+        <!--条件查询-->
+        <where>
+            <if test="name != null">
+                name like concat('%', #{name}, '%')
+            </if>
+            <if test="gender != null">
+                and gender = #{gender}
+            </if>
+            <if test="begin != null and end != null">
+                and entrydate between #{begin} and #{end}
+            </if>
+        </where>
+        order by update_time desc
+    </select>
+</mapper>
+```
 
 ## 删除员工
+
+Controller类:
+
+```java
+@Slf4j
+@RestController
+@RequestMapping("/emps")
+public class EmpController {
+    @Autowired
+    private EmpService empService;
+
+    @DeleteMapping("/{ids}")
+    public Result deleteEmp(@PathVariable List<Integer> ids) {
+        // 日志记录
+        log.info("删除员工,{}", ids);
+        // 批量删除员工
+        empService.delete(ids);
+        return Result.success();
+    }
+}
+```
+
+Service接口类:
+
+```java
+public interface EmpService {
+    // 批量删除员工
+    void delete(List<Integer> ids);
+}
+```
+
+Service实现类:
+
+```java
+@Service
+public class EmpServiceImpl implements EmpService {
+    @Autowired
+    private EmpMapper empMapper;
+
+    // 批量删除员工
+    @Override
+    public void delete(List<Integer> ids) {
+        empMapper.delete(ids);
+    }
+}
+```
+
+Mapper类:
+
+```java
+@Mapper
+public interface EmpMapper {
+    // 批量删除员工
+    void delete(List<Integer> ids);
+}
+```
+
+XML配置文件:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinzhao.Mapper.EmpMapper">
+    <!--批量删除员工-->
+    <delete id="delete">
+        delete from emp where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
+```
 
 ## 添加员工
 
