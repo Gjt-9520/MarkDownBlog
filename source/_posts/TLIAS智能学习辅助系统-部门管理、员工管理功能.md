@@ -1,5 +1,5 @@
 ---
-title: "TLIAS智能学习辅助系统"
+title: "TLIAS智能学习辅助系统-部门管理、员工管理功能"
 date: 2024-06-11
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/project/TLIAS%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F/TLIAS%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F.png?raw=true
@@ -1614,7 +1614,7 @@ public Result uploadImage(MultipartFile image) throws Exception {
 
 ### 阿里云OSS
 
-![阿里云OSS官方网站](https://oss.console.aliyun.com/overview)
+[阿里云OSS官方网站](https://oss.console.aliyun.com/)
 
 阿里云对象存储OSS(Object Storage Service),是一款海量、安全、低成本、高可靠的云存储服务
 
@@ -2088,6 +2088,7 @@ properties配置文件:
 
 ```properties
 spring.application.name=ClassManagementSystem
+
 # 服务器
 server.port=8080
 server.address=localhost
@@ -2113,4 +2114,131 @@ aliyun.oss.endpoint=https://oss-cn-beijing.aliyuncs.com
 aliyun.oss.accessKeyId=LTAI5tSbaiqU1HXrfJLUUxsu
 aliyun.oss.accessKeySecret=rs9U2CVba9svGB8G5V7umFtLMZVxVT
 aliyun.oss.bucketName=springboot-web-class-management-system
+```
+
+# 配置文件
+
+## 配置文件properties由yml代替
+
+```yml
+# 服务器
+server:
+  port: 8080
+  address: localhost
+
+spring:
+  # 数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.13:3306/springboot_web
+    username: root
+    password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+mybatis:
+  configuration:
+    # 驼峰命名
+    map-underscore-to-camel-case: true
+    # 日志记录
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 阿里云OSS
+aliyun:
+  oss:
+    endpoint: 
+    accessKeyId: 
+    accessKeySecret: 
+    bucketName: 
+```
+
+## 将阿里云OSS配置属性批量注入
+
+添加Maven依赖:自动识别被`@ConfigurationProperties`注解标识的类对象
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-configuration-processor</artifactId>
+</dependency>
+```
+
+AliOSSProperties类:                            
+1. 封装阿里云OSS的配置属性,生成getter/setter方法
+2. 将配置文件中的阿里云OSS属性值映射到对象AliOSSProperties的属性上
+3. 将该AliOSSProperties对象交给IOC容器管理
+
+```java
+package com.jinzhao.pojo;
+
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+// 阿里云OSS中的配置属性
+@Data
+@Component
+@ConfigurationProperties(prefix = "aliyun.oss")
+public class AliOSSProperties {
+    private String endpoint;
+    private String accessKeyId;
+    private String accessKeySecret;
+    private String bucketName;
+}
+```
+
+AliOSSUtils工具类:
+
+```java
+package com.jinzhao.utils;
+
+import com.aliyun.oss.OSS;
+import com.aliyun.oss.OSSClientBuilder;
+import com.jinzhao.pojo.AliOSSProperties;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.UUID;
+
+// 阿里云OSS 工具类
+@Component
+public class AliOSSUtils {
+
+    @Autowired
+    private AliOSSProperties aliOSSProperties;
+
+    // 实现上传图片到OSS
+    public String upload(MultipartFile file) throws IOException {
+        // 获取阿里云OSS参数
+        String endpoint = aliOSSProperties.getEndpoint();
+        String accessKeyId = aliOSSProperties.getAccessKeyId();
+        String accessKeySecret = aliOSSProperties.getAccessKeySecret();
+        String bucketName = aliOSSProperties.getBucketName();
+
+        // 获取上传的文件的输入流
+        InputStream inputStream = file.getInputStream();
+
+        // 避免文件覆盖
+        String originalFilename = file.getOriginalFilename();
+        assert originalFilename != null;
+        String fileName = UUID.randomUUID() + originalFilename.substring(originalFilename.lastIndexOf("."));
+
+        // 上传文件到 OSS
+        OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+        ossClient.putObject(bucketName, fileName, inputStream);
+
+        // 文件访问路径
+        String url = endpoint.split("//")[0] + "//" + bucketName + "." + endpoint.split("//")[1] + "/" + fileName;
+        // 关闭OSSClient
+        ossClient.shutdown();
+        // 把上传到OSS的路径返回
+        return url;
+    }
+}
 ```

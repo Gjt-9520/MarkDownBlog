@@ -107,9 +107,9 @@ top_group_index:
 
 ```json
 {
-    "code":1,
-    "msg":"success",
-    "data":null
+  "code":1,
+  "msg":"success",
+  "data":null
 }
 ```
 
@@ -157,9 +157,9 @@ top_group_index:
 
 ```json
 {
-    "code":1,
-    "msg":"success",
-    "data":null
+  "code":1,
+  "msg":"success",
+  "data":null
 }
 ```
 
@@ -266,9 +266,9 @@ top_group_index:
 
 ```json
 {
-    "code":1,
-    "msg":"success",
-    "data":null
+  "code":1,
+  "msg":"success",
+  "data":null
 }
 ```
 
@@ -412,9 +412,9 @@ top_group_index:
 
 ```json
 {
-    "code":1,
-    "msg":"success",
-    "data":null
+  "code":1,
+  "msg":"success",
+  "data":null
 }
 ```
 
@@ -609,9 +609,9 @@ top_group_index:
 
 ```json
 {
-    "code":1,
-    "msg":"success",
-    "data":null
+  "code":1,
+  "msg":"success",
+  "data":null
 }
 ```
 
@@ -651,9 +651,9 @@ top_group_index:
 
 ```json
 {
-    "code": 1,
-    "msg": "success",
-    "data": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-02-00-27-0400.jpg"
+  "code": 1,
+  "msg": "success",
+  "data": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-02-00-27-0400.jpg"
 }
 ```
 
@@ -685,7 +685,7 @@ top_group_index:
 ```json
 {
 	"username": "jinyong",
-    "password": "123456"
+  "password": "123456"
 }
 ```
 
@@ -724,4 +724,3 @@ top_group_index:
 > 	"data": null
 > }
 > ```
-  
