@@ -161,11 +161,21 @@ public class Result {
 
 ```properties
 spring.application.name=ClassManagementSystem
+
+# 服务器
+server.port=8080
+server.address=localhost
+
+# 数据库
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://192.168.1.13:3306/springboot_web
 spring.datasource.username=root
 spring.datasource.password=123456
+
+# 驼峰命名
 mybatis.configuration.map-underscore-to-camel-case=true
+
+# 日志记录
 mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 ```
 
@@ -1549,6 +1559,7 @@ xml配置文件:
 ```properties
 # 配置单个文件最大上传大小
 spring.servlet.multipart.max-file-size=1MB
+
 # 配置单个请求最大上传大小
 spring.servlet.multipart.max-request-size=10MB
 ```
@@ -1633,10 +1644,10 @@ import java.util.UUID;
 // 阿里云OSS 工具类
 @Component
 public class AliOSSUtils {
-    private String endpoint = "https://oss-cn-beijing.aliyuncs.com";
-    private String accessKeyId = "LTAI5tSbaiqU1HXrfJLUUxsu";
-    private String accessKeySecret = "rs9U2CVba9svGB8G5V7umFtLMZVxVT";
-    private String bucketName = "springboot-web-class-management-system";
+    private String endpoint = "";
+    private String accessKeyId = "";
+    private String accessKeySecret = "";
+    private String bucketName = "";
 
     // 实现上传图片到OSS
     public String upload(MultipartFile file) throws IOException {
@@ -1645,6 +1656,7 @@ public class AliOSSUtils {
 
         // 避免文件覆盖
         String originalFilename = file.getOriginalFilename();
+        assert originalFilename != null;
         String fileName = UUID.randomUUID() + originalFilename.substring(originalFilename.lastIndexOf("."));
 
         // 上传文件到 OSS
@@ -1820,10 +1832,10 @@ import java.util.UUID;
 // 阿里云OSS 工具类
 @Component
 public class AliOSSUtils {
-    private String endpoint = "https://oss-cn-beijing.aliyuncs.com";
-    private String accessKeyId = "LTAI5tSbaiqU1HXrfJLUUxsu";
-    private String accessKeySecret = "rs9U2CVba9svGB8G5V7umFtLMZVxVT";
-    private String bucketName = "springboot-web-class-management-system";
+    private String endpoint = "";
+    private String accessKeyId = "";
+    private String accessKeySecret = "";
+    private String bucketName = "";
 
     // 实现上传图片到OSS
     public String upload(MultipartFile file) throws IOException {
@@ -1832,6 +1844,7 @@ public class AliOSSUtils {
 
         // 避免文件覆盖
         String originalFilename = file.getOriginalFilename();
+        assert originalFilename != null;
         String fileName = UUID.randomUUID() + originalFilename.substring(originalFilename.lastIndexOf("."));
 
         // 上传文件到 OSS
@@ -2069,4 +2082,35 @@ xml配置文件:
         where id = #{id}
     </select>
 </mapper>
+```
+
+properties配置文件:
+
+```properties
+spring.application.name=ClassManagementSystem
+# 服务器
+server.port=8080
+server.address=localhost
+
+# 数据库
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://192.168.1.13:3306/springboot_web
+spring.datasource.username=root
+spring.datasource.password=123456
+
+# 驼峰命名
+mybatis.configuration.map-underscore-to-camel-case=true
+
+# 日志记录
+mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 文件上传
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=100MB
+
+# 阿里云OSS
+aliyun.oss.endpoint=https://oss-cn-beijing.aliyuncs.com
+aliyun.oss.accessKeyId=LTAI5tSbaiqU1HXrfJLUUxsu
+aliyun.oss.accessKeySecret=rs9U2CVba9svGB8G5V7umFtLMZVxVT
+aliyun.oss.bucketName=springboot-web-class-management-system
 ```
