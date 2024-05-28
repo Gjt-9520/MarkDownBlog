@@ -1,5 +1,5 @@
 ---
-title: "UUID(通用唯一识别码)"
+title: "UUID"
 date: 2024-06-12
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage44.jpg?raw=true
