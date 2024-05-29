@@ -267,6 +267,12 @@
       descr: 处理JSON数据的库
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Gson.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/GsonPage.png?raw=true
+
+    - name: JWT
+      link: https://jwt.io/
+      descr: JWT令牌
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JWT.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/JWTPage.png?raw=true
     
     - name: Hutool
       link: https://apidoc.gitee.com/dromara/hutool/

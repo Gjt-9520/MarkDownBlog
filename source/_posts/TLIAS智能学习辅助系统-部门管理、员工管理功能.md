@@ -1641,7 +1641,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.util.UUID;
 
-// 阿里云OSS 工具类
+// 阿里云OSS工具类
 @Component
 public class AliOSSUtils {
     private String endpoint = "";
@@ -1829,7 +1829,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.util.UUID;
 
-// 阿里云OSS 工具类
+// 阿里云OSS工具类
 @Component
 public class AliOSSUtils {
     private String endpoint = "";
@@ -2206,7 +2206,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
 
-// 阿里云OSS 工具类
+// 阿里云OSS工具类
 @Component
 public class AliOSSUtils {
 
@@ -2239,6 +2239,31 @@ public class AliOSSUtils {
         ossClient.shutdown();
         // 把上传到OSS的路径返回
         return url;
+    }
+}
+```
+
+# 全局异常处理器
+
+![全局异常处理器](../images/全局异常处理器.png)
+
+GlobalExceptionHandler类:全局异常处理器
+
+```java
+package com.jinzhao.exception;
+
+import com.jinzhao.pojo.Result;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+// 全局异常处理器
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+    // 捕获所有的异常
+    @ExceptionHandler(Exception.class)
+    public Result ex(Exception ex) {
+        ex.printStackTrace();
+        return Result.error("对不起,操作失败,请联系管理员");
     }
 }
 ```
