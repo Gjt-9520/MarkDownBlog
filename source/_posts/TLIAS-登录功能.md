@@ -1,5 +1,5 @@
 ---
-title: "TLIAS智能学习辅助系统-登录功能"
+title: "TLIAS-登录功能"
 date: 2024-06-14
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/project/TLIAS%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F/TLIAS%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F_%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD.png?raw=true

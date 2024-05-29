@@ -1,5 +1,5 @@
 ---
-title: "TLIAS智能学习辅助系统-API文档"
+title: "TLIAS-API文档-部门管理、员工管理、登录功能"
 date: 2024-06-10
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage43.jpg?raw=true

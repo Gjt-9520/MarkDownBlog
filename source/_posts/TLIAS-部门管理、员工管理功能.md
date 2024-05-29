@@ -1,5 +1,5 @@
 ---
-title: "TLIAS智能学习辅助系统-部门管理、员工管理功能"
+title: "TLIAS-部门管理、员工管理功能"
 date: 2024-06-11
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/project/TLIAS%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F/TLIAS%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F.png?raw=true
