@@ -16,13 +16,19 @@ top_group_index:
 
 # 技巧
 
-## 快速生成main()方法
+## 快速生成
 
-`psvm`
+### main方法
 
-## 快速生成打印输出语句
+`psvm` + Enter 或者 `main` + Enter
 
-`sout`
+![main](../images/main.gif)
+
+### 打印输出语句
+
+`sout` + Enter
+
+![sout](../images/sout.gif)
 
 范例: 
 
@@ -57,22 +63,163 @@ public class HelloWorld {
 
 `System.out.printf("ab%s","c");`表示: 只打印abc,不换行    
 
-## 快速生成for循环
+### 本身迭代的for循环
 
-`循环次数.fori`
+`变量.for` + Enter
+
+![for](../images/for.gif)
+
+### 变量for循环
+
+`变量.fori` + Enter
+
+![fori](../images/fori.gif)
+
+### 倒序for循环
+
+`变量.forr` + Enter
+
+![forr](../images/forr.gif)
+
+### 数组遍历
+
+正序遍历: `数组名.fori`
 
 范例: 
 
 ```java
 public class test {
     public static void main(String[] args) {
-        // 100.fori快速生成循环次数为100的for循环
-        for (int i = 0; i < 100; i++) {
-            System.out.printIn("HelloWorld");
+        int[] array = {12, 213, 414};
+        // array.fori快速生成数组遍历
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
     }
 }
 ```
+
+逆序遍历: `数组名.forr`
+
+范例 :
+
+```java
+public class test {
+    public static void main(String[] args) {
+        int[] array = {12, 213, 414};
+        // array.forr快速生成数组遍历
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.println(array[i]);
+        }
+    }
+}
+```
+
+### 增强for
+
+`单列集合/数组名.for`
+
+范例:                   
+
+```java
+// list.for快速生成增强for
+for (String s: list) {
+    System.out.print(s);
+}
+```
+
+### 变量定义
+
+`变量.var` + Enter
+
+![var](../images/var.gif)
+
+### 判断是否为空
+
+`变量.null` + Enter
+
+![null](../images/null.gif)
+
+### 判断是否为非空
+
+`变量.notnull` + Enter
+
+![notnull](../images/notnull.gif)
+
+或者
+
+`变量.nn` + Enter
+
+![nn](../images/nn.gif)
+
+### 括号
+
+`变量.arg` + Enter
+
+![arg](../images/arg.gif)
+
+或者
+
+`变量.par` + Enter
+
+![par](../images/par.gif)
+
+### 全局变量
+
+`变量.field` + Enter
+
+![field](../images/field.gif)
+
+### if判断
+
+`判断条件.if` + Enter
+
+![if](../images/if.gif)
+
+### 强制转换
+
+`变量.cast` + Enter
+
+![cast](../images/cast.gif)
+
+### 变量承接强转
+
+`变量.castvar` + Enter
+
+![castvar](../images/castvar.gif)
+
+### 返回函数
+
+`变量.return` + Enter
+
+![return](../images/return.gif)
+
+### try
+
+`变量.try` + Enter
+
+![try](../images/try.gif)
+
+### switch
+
+`变量.switch` + Enter
+
+![switch](../images/switch.gif)
+
+### JavaBean
+
+1. 快捷键 `alt + insert`     
+选择构造函数、`Getter`和`Setter`
+2. 安装`IDEA`插件: `ptg`     
+右键点击`Ptg To JavaBean`   
+
+### 正则表达式
+
+步骤:                 
+1. 安装`IDEA`插件: `any-rule`     
+2. 右键点击`AnyRule`,选择要用的正则表达式    
+3. 删除前后的`/^`和`/`,这个表示从头开始匹配到末尾,这个在Java的`matches`方法已经实现,所以重复,可删除
+4. 在正则表达式中的`\`中再加上一个`\`,因为在Java中`\\`表示`\`
 
 ## 键盘录入
 
@@ -206,68 +353,6 @@ public class test {
     }
 }
 ```
-
-## 快速生成数组遍历
-
-正序遍历: `数组名.fori`
-
-范例: 
-
-```java
-public class test {
-    public static void main(String[] args) {
-        int[] array = {12, 213, 414};
-        // array.fori快速生成数组遍历
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-    }
-}
-```
-
-逆序遍历: `数组名.forr`
-
-范例 :
-
-```java
-public class test {
-    public static void main(String[] args) {
-        int[] array = {12, 213, 414};
-        // array.forr快速生成数组遍历
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.println(array[i]);
-        }
-    }
-}
-```
-
-## 快速生成增强for
-
-`单列集合/数组名.for`
-
-范例:                   
-
-```java
-// list.for快速生成增强for
-for (String s: list) {
-    System.out.print(s);
-}
-```
-
-## 快速生成JavaBean
-
-1. 快捷键 `alt + insert`     
-选择构造函数、`Getter`和`Setter`
-2. 安装`IDEA`插件: `ptg`     
-右键点击`Ptg To JavaBean`   
-
-## 快速生成正则表达式
-
-步骤:                 
-1. 安装`IDEA`插件: `any-rule`     
-2. 右键点击`AnyRule`,选择要用的正则表达式    
-3. 删除前后的`/^`和`/`,这个表示从头开始匹配到末尾,这个在Java的`matches`方法已经实现,所以重复,可删除
-4. 在正则表达式中的`\`中再加上一个`\`,因为在Java中`\\`表示`\`
 
 ## 阅读异常
 

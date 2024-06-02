@@ -186,11 +186,11 @@
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astro.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/astroPage.png?raw=true
     
-    - name: Hexo
-      link: https://hexo.io/zh-cn/
-      descr: 博客框架
-      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/hexo.png?raw=true
-      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HexoPage.png?raw=true
+    - name: MyBatisPlus
+      link: https://baomidou.com/
+      descr: 持久层框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MyBatisPlus.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MyBatisPlusPage.png?raw=true
     
     - name: Vue
       link: https://cn.vuejs.org/
@@ -221,6 +221,12 @@
       descr: Java开发框架
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Spring.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/SpringPage.png?raw=true
+    
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      descr: 博客框架
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/hexo.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/HexoPage.png?raw=true
 
 - class_name: 工具和库
   flink_style: flexcard
