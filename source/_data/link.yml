@@ -2,6 +2,12 @@
   flink_style: flexcard
   hundredSuffix: ""
   link_list:   
+    - name: MySQL
+      link: https://www.mysql.com/cn/
+      descr: MySQL数据库管理系统
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MySQL.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MySQLPage.png?raw=true
+
     - name: MongoDB
       link: https://www.mongodb.com/
       descr: NoSQL数据库管理系统
@@ -315,3 +321,9 @@
       descr: API设计与管理平台
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Apifox.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/ApifoxPage.png?raw=true
+
+    - name: Swagger
+      link: https://swagger.io/
+      descr: 设计、构建和文档化RESTful Web服务的工具集
+      avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Swagger.png?raw=true
+      siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/SwaggerPage.png?raw=true

@@ -31,12 +31,12 @@ nav:
   menu:
     - title: 菜单
       item:
-        - name: 关于
-          link: /about/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
         - name: 归档
           link: /archives/
           icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image.png?raw=true
+        - name: 关于
+          link: /about/
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
         - name: 资源
           link: /link/
           icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/link.png?raw=true
@@ -74,8 +74,8 @@ copy:
 # formal:
 #   name: link || icon
 social:
-  Github: https://github.com/Gjt-9520 || anzhiyu-icon-github
-  BiliBili: https://space.bilibili.com/3493129313323717 || anzhiyu-icon-bilibili
+  Github: https://github.com/Gjt-9520 || anzhiyu-icon-github 
+  Gitee: https://gitee.com/gjt_1538048299 || icon-gitee
 
 # 作者卡片 状态
 author_status:
@@ -966,7 +966,8 @@ note:
   light_bg_offset: 0
 
 icons:
-  ali_iconfont_js: # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
+  # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
+  ali_iconfont_js: https://at.alicdn.com/t/c/font_4573049_xkpplf2nfal.js?spm=a313x.manage_type_myprojects.i1.10.401d3a81MWhpgA&file=font_4573049_xkpplf2nfal.js
   fontawesome: true #是否启用fontawesome6图标
   fontawesome_animation_css: #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css
 
