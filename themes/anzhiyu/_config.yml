@@ -1055,7 +1055,7 @@ home_top:
       path: /categories/项目开发/
       shadow: var(--anzhiyu-shadow-red)
       class: green
-      icon: anzhiyu-icon-dove
+      icon: anzhiyu-icon-cube
     - name: 生活
       path: /categories/生活日常/
       shadow: var(--anzhiyu-shadow-green)
