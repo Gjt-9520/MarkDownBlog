@@ -10,6 +10,8 @@ updated: 2024-06-12
 top_group_index: 
 ---
 
+- [TLIAS项目-Gitee仓库](https://gitee.com/gjt_1538048299/tlias)
+
 # 准备工作
 
 ![环境搭建](../images/班级管理系统环境搭建.png)
