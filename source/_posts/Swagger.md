@@ -3,7 +3,7 @@ title: "Swagger"
 date: 2024-06-22
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage49.jpg?raw=true
-tags: ["SpringBoot"]
+tags: ["SpringBoot","API文档"]
 category: "学习笔记"
 updated: 2024-06-23
   
