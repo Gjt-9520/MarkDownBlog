@@ -4,19 +4,19 @@
   link_list:   
     - name: MySQL
       link: https://www.mysql.com/cn/
-      descr: MySQL数据库
+      descr: MySQL数据库管理系统
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MySQL.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/MySQLPage.png?raw=true
 
     - name: MongoDB
       link: https://www.mongodb.com/
-      descr: NoSQL数据库
+      descr: NoSQL数据库管理系统
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongoDB.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/mongodbPage.png?raw=true
 
     - name: Redis
       link: https://redis.io/
-      descr: Redis数据库
+      descr: Redis数据结构服务器
       avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/Redis.png?raw=true
       siteshot: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/site/RedisPage.png?raw=true
     
