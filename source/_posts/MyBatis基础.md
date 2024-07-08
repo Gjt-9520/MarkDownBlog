@@ -80,7 +80,7 @@ VALUES (1, 'jinyong', '123456', '金庸', 1, '1.jpg', 4, '2000-01-01', 2, now(),
        (17, 'chenyouliang', '123456', '陈友谅', 1, '17.jpg', NULL, '2015-03-21', NULL, now(), now());
 ```
 
-2. 创建SpringBoot项目工程,引入相关依赖:`Spring Web`、`Mybatis Framework`、`MySQL Driver`、`Lombok`
+2. 创建SpringBoot项目工程,引入相关依赖:`Spring Web`、`MyBatis Framework`、`MySQL Driver`、`Lombok`
 
 ```xml
 <dependency>

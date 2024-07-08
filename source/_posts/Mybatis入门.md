@@ -21,7 +21,7 @@ MyBatis是一款优秀的**持久层**框架,用于简化JDBC的开发
 步骤:
 1. 准备工作(**创建SpringBoot工程,数据库表及其对应的实体类**)
 
-创建SpringBoot工程时,添加依赖:勾选`Mybatis Framework`和`MySQL Driver`
+创建SpringBoot工程时,添加依赖:勾选`MyBatis Framework`和`MySQL Driver`
 
 创建对应的数据库表:
 
@@ -170,7 +170,7 @@ public class User {
 }
 ```
 
-2. 引入Mybatis的相关依赖,配置Mybatis(**数据库的连接信息**)
+2. 引入MyBatis的相关依赖,配置MyBatis(**数据库的连接信息**)
 
 在resources/application.properties中配置:
 
@@ -223,7 +223,7 @@ import java.util.List;
 
 // SpringBoot整合单元测试的注解
 @SpringBootTest
-class SpringBootMybatisQuickstartApplicationTests {
+class SpringBootMyBatisQuickstartApplicationTests {
     // 通过依赖注入,创建代理对象
     @Autowired
     private UserMapper userMapper;
