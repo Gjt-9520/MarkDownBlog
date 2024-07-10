@@ -1,63 +1,18 @@
 ---
-title: "MyBatisPlus"
-date: 2024-07-15
+title: "MyBatisPlus核心功能"
+date: 2024-07-16
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage63.jpg?raw=true
+cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage64.jpg?raw=true
 tags: ["MyBatisPlus"]
 category: "学习笔记"
-updated: 2024-07-16
+updated: 2024-07-17
   
 top_group_index: 
 ---
 
-# MyBatisPlus
-
-[MyBatisPlus官方网站](https://baomidou.com/)
-
-特点:
-1. 润物无声:只做增强不做改变,引入它不会对现有工程产生影响,如丝般顺滑
-2. 效率至上:只需简单配置,即可快速进行单表CRUD操作,节省大量时间
-
-# 快速入门
-
-## 使用步骤
-
-1. 引入MyBatisPlus的起步依赖,代替MyBatis依赖
-
-```xml
-<dependency>
-    <groupId>com.baomidou</groupId>
-    <artifactId>mybatis-plus-boot-starter</artifactId>
-    <version>3.5.6</version>
-</dependency>
-```
-
-2. 定义Mapper接口并继承BaseMapper
-
-```java
-public interface UserMapper extends BaseMapper<User> {
-}
-```
-
-## 基本原理
-
-MyBatisPlus通过扫描实体类,并基于反射获取实体类信息作为数据库表信息
-
-- 类名驼峰转下划线作为表名
-- 名为id的字段作为主键
-- 变量名驼峰转下划线作为表的字段名
-
-## 常用注解
-
-![常用注解](../images/MyBatisPlus常用注解.png)
-
-## 常见配置
-
-![常见配置](../images/MyBatisPlus常用配置.png)
-
 # 核心功能
 
-## 条件构造器
+# 条件构造器
 
 ![条件构造器](../images/MyBatisPlus条件构造器.png)
 
@@ -66,7 +21,7 @@ MyBatisPlus通过扫描实体类,并基于反射获取实体类信息作为数�
 - **`UpdateWrapper`和`LambdaUpdateWrapper`通常只有在set语句比较特殊时,才使用**
 - **尽量使用`LambdaQueryWrapper`和`LambdaUpdateWrapper`,避免硬编码**
 
-### 范例
+## 范例
 
 准备工作:
 
@@ -288,13 +243,13 @@ class UserMapperTest {
 }
 ```
 
-## 自定义SQL
+# 自定义SQL
 
 **利用MyBatisPlus的Wrapper来构建复杂的Where条件,然后自己定义SQL语句中剩下的部分**
 
 ![自定义SQL](../images/MyBatisPlus自定义SQL.png)
 
-### 范例
+## 范例
 
 测试类:
 
@@ -332,11 +287,11 @@ UserMapper.xml:
 </update>
 ```
 
-## IService接口
+# IService接口
 
 ![IService接口](../images/MyBatisPlus_IService接口.png)
 
-### 基本用法
+## 基本用法
 
 ![IService接口基本用法](../images/MyBatisPlus_IService接口基本用法.png)
 
@@ -386,7 +341,7 @@ void testQuery() {
 }
 ```
 
-### 开发业务接口范例
+## 开发业务接口范例
 
 ![开发基础业务接口范例](../images/开发基础业务接口范例.png)
 
@@ -470,7 +425,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description = "用户VO实体")
+@ApiModel(description = "用户VO")
 public class UserVO {
 
     @ApiModelProperty("用户id")
@@ -683,9 +638,9 @@ public interface UserMapper extends BaseMapper<User> {
 }
 ```
 
-### Lambda方法范例
+## Lambda方法范例
 
-#### lambdaQuery-查询
+## lambdaQuery
 
 需求:实现一个根据复杂条件查询用户的接口,查询条件如下:                   
 - name:用户名关键字,可以为空
@@ -763,7 +718,8 @@ UserServiceImpl.java:
  */
 @Override
 public List<User> queryUsers(String name, Integer status, Integer minBalance, Integer maxBalance) {
-    return lambdaQuery().like(name != null, User::getUsername, name)
+    return lambdaQuery()
+            .like(name != null, User::getUsername, name)
             .eq(status != null, User::getStatus, status)
             .gt(minBalance != null, User::getBalance, minBalance)
             .lt(maxBalance != null, User::getBalance, maxBalance)
@@ -780,7 +736,7 @@ lambdaQuery方法中除了可以构建条件,还需要在链式编程的最后�
 
 MyBatisPlus会根据链式编程的最后一个方法来判断最终的返回结果
 
-#### lambdaUpdate-更新
+## lambdaUpdate
 
 需求:改造根据id修改用户余额的接口,要求如下:
 - 完成对用户状态校验
@@ -825,11 +781,11 @@ public void deductBalance(Long id, Integer money) {
 }
 ```
 
-### 批量新增对比
+## 批量新增对比
 
 需求:批量插入10万条用户数据,并对比速度
-1. 普通for循环插入
-2. IService的批量插入
+- 普通for循环插入
+- IService的批量插入
 
 ```java
 // 批量插入10万条用户数据
@@ -917,21 +873,3 @@ spring:
 - 普通for循环逐条插入速度极差,不推荐
 - MyBatisPlus的批量新增,基于预编译的批处理,性能不错
 - 配置jdbc参数,开rewriteBatchedStatements,性能最好
-
-# 扩展功能
-
-## 代码生成器
-
-## DB静态工具
-
-## 逻辑删除
-
-## 枚举处理器
-
-## JSON处理器
-
-# 插件功能
-
-## 分页插件基本用法
-
-## 通用分页实体与MyBatis转换

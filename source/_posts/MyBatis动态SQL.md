@@ -1,5 +1,5 @@
 ---
-title: "MyBatis-动态SQL"
+title: "MyBatis动态SQL"
 date: 2024-06-08
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage41.jpg?raw=true
