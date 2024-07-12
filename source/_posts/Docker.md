@@ -1,5 +1,5 @@
 ---
-title: "Docker入门"
+title: "Docker"
 date: 2024-07-19
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage67.jpg?raw=true
@@ -58,7 +58,21 @@ Docker最常见的命令就是操作镜像、容器的命令
 
 ![常见命令](../images/Docker常见命令.png)
 
-![命令列表](../images/Docker常见命令列表.png)
+- `docker pull`:拉取镜像
+- `docker push`:推送镜像到DockerRegistry
+- `docker images`:查看本地镜像
+- `docker rmi`:删除本地镜像
+- `docker run`:创建并运行容器(不能重复创建)
+- `docker stop`:停止指定容器
+- `docker start`:启动指定容器
+- `docker restart`:重新启动容器
+- `docker rm`:删除指定容器
+- `docker ps`:查看容器
+- `docker logs`:查看容器运行日志
+- `docker exec`:进入容器
+- `docker save`:保存镜像到本地压缩文件
+- `docker load`:加载本地压缩文件到镜像
+- `docker inspect`:查看容器详细信息
 
 ## 修改命令别名
 
@@ -75,7 +89,7 @@ Docker最常见的命令就是操作镜像、容器的命令
 **在执行`docker run`命令时,使用`-v 数据卷:容器内目录`可以完成数据卷挂载**                    
 **当创建容器时,如果挂载了数据卷且数据卷不存在,会自动创建数据卷**
 
-## 数据卷命令
+## 操作命令
 
 - `docker volume create`:创建数据卷
 - `docker volume ls`:查看所有数据卷
@@ -94,32 +108,13 @@ Docker最常见的命令就是操作镜像、容器的命令
 
 ### 范例
 
-MySQL容器的数据挂载
+MySQL容器的数据挂载:
 1. 查看mysql容器,判断是否有数据卷挂载
 2. 基于宿主机目录实现MySQL数据目录、配置文件、初始化脚本的挂载(查阅官方镜像文档)
 
 挂载/root/mysql/data到容器内的/var/lib/mysql目录                                                  
 挂载/root/mysql/init到容器内的/docker-entrypoint-initdb.d目录               
 挂载/root/mysql/conf到容器内的/etc/mysql/conf.d目录                 
-
-```cmd
-cd ~
-mkdir mysql
-cd mysql
-mkdir data
-mkdir init
-mkdir conf
-
-docker run -d \
-  --name mysql \
-  -p 3306:3306 \
-  -e TZ=Asia/Shanghai \
-  -e MYSQL_ROOT_PASSWORD=123456 \
-  -v /root/mysql/data:/var/lib/mysql \
-  -v /root/mysql/init:/docker-entrypoint-initdb.d \
-  -v /root/mysql/conf:/etc/mysql/conf.d \
-  mysql
-```
 
 # 自定义镜像
 
@@ -146,7 +141,10 @@ docker run -d \
 
 ![Docker网络](../images/Docker网络.png)
 
-网络操作命令:
+## 操作命令
+
+**在执行`docker run`命令时,使用`--network 指定网络`可以指定容器连接加入指定网络** 
+
 - `docker network create`:创建一个网络
 - `docker network ls`:查看所有网络
 - `docker network rm`:删除指定网络
@@ -155,9 +153,67 @@ docker run -d \
 - `docker network disconnect`:使指定容器连接离开某网络
 - `docker network inspect`:查看网络详细信息
 
-# DockerCompose
+# Docker Compose
 
 Docker Compose通过一个单独的**docker-compose.yml**模板文件(YAML格式)来定义一组相关联的应用容器,帮助实现**多个相互关联的Docker容器的快速部署**
 
+![Docker Compose](../images/DockerCompose.png)
 
+## 范例
 
+范例:
+
+黑马商城的docker-compose.yml:
+
+```yml
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - "./mysql/conf:/etc/mysql/conf.d"
+      - "./mysql/data:/var/lib/mysql"
+      - "./mysql/init:/docker-entrypoint-initdb.d"
+    networks:
+      - hm-net
+  hmall:
+    build:
+       context: .
+       dockerfile: Dockerfile
+    container_name: hmall
+    ports:
+      - "8080:8080"
+    networks:
+      - hm-net
+    depends_on:
+      - mysql
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "18080:18080"
+      - "18081:18081"
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+      - "./nginx/html:/usr/share/nginx/html"
+    depends_on:
+      - hmall
+    networks:
+      - hm-net
+networks:
+  hm-net:
+    name: hmall
+```
+
+## 基础命令
+
+命令格式:`docker compose [OPTIONS] [COMMAND]`
+
+![Docker Compose基础命令](../images/DockerCompose基础命令.png)
