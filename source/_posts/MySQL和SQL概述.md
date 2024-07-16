@@ -4,7 +4,7 @@ date: 2024-05-03
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage5.jpg?raw=true
 tags: ["MySQL","SQL"]
-category: "学习笔记"
+category: "数据库"
 updated: 2024-05-04
  
 top_group_index: 

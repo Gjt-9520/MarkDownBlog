@@ -4,7 +4,7 @@ date: 2024-06-25
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage54.jpg?raw=true
 tags: ["Redis"]
-category: "学习笔记"
+category: "数据库"
 updated: 2024-06-26
   
 top_group_index: 

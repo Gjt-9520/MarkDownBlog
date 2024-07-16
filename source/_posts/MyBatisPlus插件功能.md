@@ -4,7 +4,7 @@ date: 2024-07-18
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage66.jpg?raw=true
 tags: ["MyBatisPlus"]
-category: "学习笔记"
+category: "数据库"
 updated: 2024-07-19
   
 top_group_index: 

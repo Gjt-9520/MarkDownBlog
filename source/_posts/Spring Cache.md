@@ -1,20 +1,20 @@
 ---
-title: "Spring Cache"
+title: "SpringCache"
 date: 2024-07-02
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage57.jpg?raw=true
-tags: ["Spring Cache"]
+tags: ["SpringCache"]
 category: "学习笔记"
 updated: 2024-07-03
   
 top_group_index: 
 ---
 
-# Spring Cache
+# SpringCache
 
-Spring Cache是一个框架,实现了基于**注解**的缓存功能,只需要简单地加一个注解,就能实现缓存功能
+SpringCache是一个框架,实现了基于**注解**的缓存功能,只需要简单地加一个注解,就能实现缓存功能
 
-Spring Cache提供了一层抽象,底层可以切换不同的缓存实现,例如：
+SpringCache提供了一层抽象,底层可以切换不同的缓存实现,例如：
 - EHCache
 - Caffeine
 - Redis
@@ -40,7 +40,7 @@ Spring Cache提供了一层抽象,底层可以切换不同的缓存实现,例如
 
 # 注意事项
 
-1. **如果使用Spring Cache缓存数据,key的生成是cacheName::key**                 
+1. **如果使用SpringCache缓存数据,key的生成是cacheName::key**                 
 
 例如`@CachePut(cacheNames = "userCache",key = "zhangsan")`缓存数据,生成的key是`userCache::zhangsan`
 
