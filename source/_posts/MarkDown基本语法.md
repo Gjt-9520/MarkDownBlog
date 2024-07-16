@@ -4,7 +4,7 @@ date: 2023-11-26
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage93.jpg?raw=true
 tags: ["MarkDown"]
-category: "学习笔记"
+category: "笔记"
 updated: 2023-11-27
  
 top_group_index: 

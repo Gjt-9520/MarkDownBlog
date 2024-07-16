@@ -4,7 +4,7 @@ date: 2023-12-02
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage80.jpg?raw=true
 tags: ["Terminal"]
-category: "学习笔记"
+category: "笔记"
 updated: 2023-12-03
 
 top_group_index:

@@ -3,8 +3,8 @@ title: "IO流综合练习"
 date: 2024-04-18
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage127.jpg?raw=true
-tags: ["Java SE","IO","练习"]
-category: "学习笔记"
+tags: ["JavaSE","IO","练习"]
+category: "笔记"
 updated: 2024-04-19
  
 top_group_index: 

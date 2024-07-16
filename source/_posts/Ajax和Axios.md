@@ -4,7 +4,7 @@ date: 2024-05-30
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage32.jpg?raw=true
 tags: ["Axios"]
-category: "学习笔记"
+category: "笔记"
 updated: 2024-05-31
  
 top_group_index: 

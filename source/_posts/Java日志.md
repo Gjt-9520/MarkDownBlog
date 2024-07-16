@@ -3,8 +3,8 @@ title: "Java日志"
 date: 2024-04-26
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage134.jpg?raw=true
-tags: ["Java SE","Logback"]
-category: "学习笔记"
+tags: ["JavaSE","Logback"]
+category: "笔记"
 updated: 2024-04-27
  
 top_group_index: 

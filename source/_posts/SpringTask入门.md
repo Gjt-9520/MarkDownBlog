@@ -4,7 +4,7 @@ date: 2024-07-08
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage59.jpg?raw=true
 tags: ["SpringTask"]
-category: "学习笔记"
+category: "笔记"
 updated: 2024-07-09
   
 top_group_index: 

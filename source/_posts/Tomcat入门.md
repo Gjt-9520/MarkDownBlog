@@ -4,7 +4,7 @@ date: 2024-06-04
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage411.jpg?raw=true
 tags: ["Tomcat"]
-category: "学习笔记"
+category: "笔记"
 updated: 2024-06-05
  
 top_group_index: 

@@ -3,8 +3,8 @@ title: "File综合练习"
 date: 2024-04-06
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage115.jpg?raw=true
-tags: ["Java SE","IO","练习"]
-category: "学习笔记"
+tags: ["JavaSE","IO","练习"]
+category: "笔记"
 updated: 2024-04-07
  
 top_group_index: 

@@ -3,8 +3,8 @@ title: "IO流"
 date: 2024-04-07
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage116.jpg?raw=true
-tags: ["Java SE","IO"]
-category: "学习笔记"
+tags: ["JavaSE","IO"]
+category: "笔记"
 updated: 2024-04-08
  
 top_group_index: 

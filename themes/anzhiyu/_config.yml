@@ -1046,18 +1046,18 @@ home_top:
   subTitle: 探索不止!
   siteText: 
   category:
-    - name: 学习
-      path: /categories/学习笔记/
+    - name: 笔记
+      path: /categories/笔记/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-book
     - name: 项目
-      path: /categories/项目开发/
+      path: /categories/项目/
       shadow: var(--anzhiyu-shadow-red)
       class: green
       icon: anzhiyu-icon-cube
-    - name: 生活
-      path: /categories/生活日常/
+    - name: 算法
+      path: /categories/算法/
       shadow: var(--anzhiyu-shadow-green)
       class: red
       icon: anzhiyu-icon-fire

@@ -4,7 +4,7 @@ date: 2024-06-01
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage34.jpg?raw=true
 tags: ["Maven"]
-category: "学习笔记"
+category: "笔记"
 updated: 2024-06-02
  
 top_group_index: 

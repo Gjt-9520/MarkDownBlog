@@ -4,7 +4,7 @@ date: 2024-06-18
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage53.jpg?raw=true
 tags: ["SpringBoot"]
-category: "学习笔记"
+category: "笔记"
 updated: 2024-06-19
   
 top_group_index: 

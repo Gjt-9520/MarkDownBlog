@@ -4,7 +4,7 @@ date: 2024-02-27
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage94.jpg?raw=true
 tags: ["MarkDown"]
-category: "学习笔记"
+category: "笔记"
 updated: 2024-02-28
 
 top_group_index:

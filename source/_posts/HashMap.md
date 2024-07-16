@@ -3,8 +3,8 @@ title: "HashMap"
 date: 2024-03-22
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage105.jpg?raw=true
-tags: ["Java SE","集合"]
-category: "学习笔记"
+tags: ["JavaSE","集合"]
+category: "笔记"
 updated: 2024-03-23
  
 top_group_index: 

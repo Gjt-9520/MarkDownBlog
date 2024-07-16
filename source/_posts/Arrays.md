@@ -3,8 +3,8 @@ title: "Arrays"
 date: 2024-02-29
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage73.jpg?raw=true
-tags: ["Java SE"]
-category: "学习笔记"
+tags: ["JavaSE"]
+category: "笔记"
 updated: 2024-03-01
 
 top_group_index:

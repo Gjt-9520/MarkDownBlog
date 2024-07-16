@@ -3,8 +3,8 @@ title: "TCP通信综合练习"
 date: 2024-04-23
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage132.jpg?raw=true
-tags: ["Java SE","练习","TCP"]
-category: "学习笔记"
+tags: ["JavaSE","练习","TCP"]
+category: "笔记"
 updated: 2024-04-24
  
 top_group_index: 
