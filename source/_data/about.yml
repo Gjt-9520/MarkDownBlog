@@ -52,27 +52,26 @@
     buff_top: 审美 Online
     buff_bottom: 动手能力 MAX 
   comic:
-    comic_tips: 珍藏
+    comic_tips: 爱好游戏
     comic_title: 
     comic_list:
-      - name: 蝴蝶效应
+      - name: Grand Theft Auto V
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite1.png?raw=true
-      - name: 三体
+        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game1.jpg?raw=true
+      - name: Assassin's Creed Odyssey
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite11.png?raw=true
-      - name: 黑客帝国2
+        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game2.jpg?raw=true
+      - name: Resident Evil
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite7.png?raw=true
-      - name: 环太平洋
+        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game3.jpg?raw=true
+      - name: Titanfall II
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite4.png?raw=true
-      - name: 前目的地
+        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game4.png?raw=true
+      - name: RedDeadRedemption II
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite12.png?raw=true
-
+        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game5.jpg?raw=true
   film:
-    film_tips: 佳作
+    film_tips: 珍藏佳作
     film_title: 
     film_list:
       - name: 银翼杀手2049
@@ -90,3 +89,18 @@
       - name: 盗梦空间
         href: 
         cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite10.png?raw=true
+      # - name: 蝴蝶效应
+      #   href: 
+      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite1.png?raw=true
+      # - name: 三体
+      #   href: 
+      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite11.png?raw=true
+      # - name: 黑客帝国2
+      #   href: 
+      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite7.png?raw=true
+      # - name: 环太平洋
+      #   href: 
+      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite4.png?raw=true
+      # - name: 前目的地
+      #   href: 
+      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite12.png?raw=true
