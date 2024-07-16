@@ -3,7 +3,7 @@ title: "SpringBootWeb入门"
 date: 2024-06-02
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage35.jpg?raw=true
-tags: ["Web","SpringBoot"]
+tags: ["SpringBoot"]
 category: "学习笔记"
 updated: 2024-06-03
  

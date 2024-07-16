@@ -3,7 +3,7 @@ title: "Tomcat入门"
 date: 2024-06-04
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage411.jpg?raw=true
-tags: ["Web","Tomcat"]
+tags: ["Tomcat"]
 category: "学习笔记"
 updated: 2024-06-05
  

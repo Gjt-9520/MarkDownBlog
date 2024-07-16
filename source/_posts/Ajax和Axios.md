@@ -3,7 +3,7 @@ title: "Ajax和Axios"
 date: 2024-05-30
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage32.jpg?raw=true
-tags: ["Web","Axios"]
+tags: ["Axios"]
 category: "学习笔记"
 updated: 2024-05-31
  

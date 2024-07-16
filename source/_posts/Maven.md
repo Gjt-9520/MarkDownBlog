@@ -3,7 +3,7 @@ title: "Maven"
 date: 2024-06-01
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage34.jpg?raw=true
-tags: ["Web","Maven"]
+tags: ["Maven"]
 category: "学习笔记"
 updated: 2024-06-02
  
@@ -12,7 +12,9 @@ top_group_index:
 
 # Maven
 
-Maven是Apache旗下的一个开源项目,是**一款用于管理和构建Java项目的工具**,它基于**项目对象模型(Project Object Model,POM)**的概念,通过一小段描述信息来管理项目的构建
+Maven是Apache旗下的一个开源项目,是**一款用于管理和构建Java项目的工具**
+
+它基于**项目对象模型**(Project Object Model,POM)的概念,通过一小段描述信息来管理项目的构建
 
 [Maven官方网站](https://maven.apache.org/)
 

@@ -3,7 +3,7 @@ title: "JavaScript"
 date: 2024-05-28
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage30.jpg?raw=true
-tags: ["Web","JavaScript"]
+tags: ["JavaScript"]
 category: "学习笔记"
 updated: 2024-05-29
  

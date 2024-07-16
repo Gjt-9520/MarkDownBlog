@@ -3,7 +3,7 @@ title: "Maven高级"
 date: 2024-06-20
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage51.jpg?raw=true
-tags: ["SpringBoot"]
+tags: ["Maven"]
 category: "学习笔记"
 updated: 2024-06-21
   
@@ -138,7 +138,7 @@ top_group_index:
 
 ## 配置范例
 
-访问私服:http://192.168.150.101:8081
+访问私服:http://192.168.149.127:8081
 
 访问密码:admin/admin
 

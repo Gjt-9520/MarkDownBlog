@@ -3,7 +3,7 @@ title: "HTTP协议"
 date: 2024-06-03
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage36.jpg?raw=true
-tags: ["Web","HTTP"]
+tags: ["HTTP"]
 category: "学习笔记"
 updated: 2024-06-04
  

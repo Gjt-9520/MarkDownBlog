@@ -3,7 +3,7 @@ title: "Vue概述"
 date: 2024-05-29
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage31.jpg?raw=true
-tags: ["Web","Vue"]
+tags: ["Vue"]
 category: "学习笔记"
 updated: 2024-05-30
  
