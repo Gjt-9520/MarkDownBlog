@@ -43,6 +43,9 @@ nav:
         - name: 图床
           link: https://image-resources-gjt.vercel.app/
           icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
+        - name: 音乐
+          link: /music/?id=12318689426&server=netease
+          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/music.png?raw=true
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示

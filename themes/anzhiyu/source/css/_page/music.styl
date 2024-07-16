@@ -87,6 +87,7 @@ if hexo-config('nav_music.enable') == false
 
 #anMusic-page
   #anMusicRefreshBtn, #anMusicBtnGetSong, #anMusicSwitching
+    display: none !important;
     position: fixed;
     display: flex;
     width: 50px;
@@ -151,9 +152,8 @@ if hexo-config('nav_music.enable') == false
               font-size 2rem
               font-weight 700
               color #fff
-
           .aplayer-lrc
-            height 800%
+            height 600%
             margin-top 10px
             mask-image linear-gradient(to bottom, #000, #000, #000, #000, #000, #000, #000, #000, #000, #000, #0000, #0000)
             p
@@ -175,7 +175,7 @@ if hexo-config('nav_music.enable') == false
             right 0
             bottom 50px
             .aplayer-bar-wrap 
-              margin 0 160px 0 150px
+              margin 20px 140px -6px 160px
               .aplayer-bar
                 height: 6px;
                 border-radius: 4px;
@@ -200,6 +200,7 @@ if hexo-config('nav_music.enable') == false
               display flex
               justify-content flex-end
               .aplayer-volume-wrap
+                display: none !important;
                 .aplayer-volume-bar-wrap
                   bottom: 0;
                   right: -5px;
@@ -227,10 +228,8 @@ if hexo-config('nav_music.enable') == false
                 position absolute
                 left 80px
                 display inline
-
               .aplayer-icon-menu
                 display none
-
       .aplayer-list
           width 60%
           height 100%
@@ -321,7 +320,7 @@ if hexo-config('nav_music.enable') == false
             .aplayer-lrc
               margin-top 40px
               height auto
-              max-height 200%
+              max-height 400%
               min-height 100%
               mask-image linear-gradient(to bottom, #000, #000, #000, #000, #0000, #0000)
               p
@@ -364,10 +363,10 @@ if hexo-config('nav_music.enable') == false
                   right 0
                 .aplayer-icon-order
                   position absolute
-                  left 22px
+                  left 2%
                 .aplayer-icon-loop
                   position absolute
-                  right 25px
+                  right 2%
                 .aplayer-icon-menu
                   display inline
                   position absolute
