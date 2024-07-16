@@ -4,7 +4,7 @@
 
 # Site
 title: 今朝
-subtitle: '今朝有酒今朝醉'
+subtitle: '有酒今朝醉'
 description: ''
 keywords:
 author: 今朝
@@ -102,3 +102,9 @@ theme: anzhiyu
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# APlayer
+# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
+aplayer:
+  meting: false
+  asset_inject: false

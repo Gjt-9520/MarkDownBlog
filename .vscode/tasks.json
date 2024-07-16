@@ -20,7 +20,7 @@
             }
         },
         {
-            "label": "hexo s",
+            "label": "hexo cl & g & s",
             "type": "shell",
             "command": "hexo s",
             "group": {

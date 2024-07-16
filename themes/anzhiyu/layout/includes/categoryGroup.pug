@@ -3,7 +3,7 @@
       #catalog-bar
         #catalog-list
           .catalog-list-item(id='首页')
-            a() 首页
+            a(href="/") 首页
           !=catalog_list("categories")
         .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()")
           i.anzhiyufont.anzhiyu-icon-angle-double-right
