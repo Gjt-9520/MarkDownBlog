@@ -1,9 +1,9 @@
 ---
-title: "yml"
+title: "Yml"
 date: 2024-06-13
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage45.jpg?raw=true
-tags: ["yml","properties"]
+tags: ["Yml","Properties"]
 category: "学习笔记"
 updated: 2024-06-14
   
