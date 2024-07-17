@@ -1,11 +1,11 @@
 ---
 title: "Docker入门"
-date: 2024-07-19
+date: 2024-07-21
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage67.jpg?raw=true
 tags: ["Docker"]
-category: "笔记"
-updated: 2024-07-20
+category: "配置"
+updated: 2024-07-22
   
 top_group_index: 
 ---
@@ -77,6 +77,20 @@ Docker最常见的命令就是操作镜像、容器的命令
 ## 修改命令别名
 
 先进入文件`vi /root/.bashrc`,然后修改命令别名,最后`source /root/.bashrc`使别名生效
+
+## 开启/关闭容器自启
+
+### 开启容器自启
+
+在docker运行容器时,可以增加参数`-–restart=always`
+
+如果容器已经启动,开启指定容器自启:`docker update –restart=always <CONTAINER ID>`
+
+### 关闭自启
+
+关闭指定容器自启:`docker update --restart=no <CONTAINER ID>`
+
+关闭所有自启动:`docker update --restart=no $(docker ps -q)`
 
 # 数据卷
 
