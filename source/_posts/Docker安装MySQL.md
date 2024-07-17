@@ -24,7 +24,7 @@ top_group_index:
 
 # 创建网络
 
-没有指定网络,可以先创建网络:`docker network create net`
+如果没有指定网络,可以先创建网络:`docker network create net`
 
 # 创建mysql目录
 
@@ -70,7 +70,7 @@ docker run \
 - `-v /root/mysql/data:/var/lib/mysql`:将主机的/root/mysql/data目录挂载到容器的/var/lib/mysql目录
 - `-v /root/mysql/conf:/etc/mysql`:将主机的/root/mysql/conf目录挂载到容器的/etc/mysql目录
 - `-v /root/mysql/init:/docker-entrypoint-initdb.d`:将主机的/root/mysql/init目录挂载到容器的/docker-entrypoint-initdb.d目录
-- `--network mysql-net`:指定容器的网络为net
+- `--network net`:指定容器的网络为net
 - `--restart unless-stopped`:容器退出后自动重启
 - `mysql`:指定镜像名称为mysql
 

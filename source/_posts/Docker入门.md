@@ -78,6 +78,13 @@ Docker最常见的命令就是操作镜像、容器的命令
 
 先进入文件`vi /root/.bashrc`,然后修改命令别名,最后`source /root/.bashrc`使别名生效
 
+例如:
+
+```markdown
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}\t{{.Names}}"'
+alias dis='docker images'
+```
+
 ## 开启/关闭容器自启
 
 ### 开启容器自启

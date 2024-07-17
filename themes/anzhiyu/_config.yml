@@ -1058,11 +1058,11 @@ home_top:
       shadow: var(--anzhiyu-shadow-red)
       class: green
       icon: anzhiyu-icon-cube
-    - name: 算法
-      path: /categories/算法/
+    - name: 配置
+      path: /categories/配置/
       shadow: var(--anzhiyu-shadow-green)
       class: red
-      icon: anzhiyu-icon-fire
+      icon: anzhiyu-icon-window-restore
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper: 
     enable: false
