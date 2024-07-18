@@ -523,3 +523,124 @@ public void listenObjectQueue(Map<String, Object> msg) {
     log.info("消费者接收到了消息" + msg);
 }
 ```
+
+# 黑马商城支付业务改造
+
+改造余额支付功能,将支付成功后基于OpenFeign的交易服务的更新订单状态接口的同步调用,改为基于RabbitMQ的异步通知
+
+![黑马商城支付业务改造](../images/黑马商城支付业务改造.png)
+
+改造步骤:
+
+说明:目前没有通知服务和积分服务,因此只关注交易服务
+1. 定义direct类型交换机,命名为pay.direct
+2. 定义消息队列,命名为trade.pay.success.queue
+3. 将trade.pay.success.queue与pay.direct绑定,BindingKey为pay.success
+4. 支付成功时不再调用交易服务更新订单状态的接口,而是发送一条消息到pay.direct,发送消息的RoutingKey为pay.success,消息内容是订单id
+
+pay-service(发送者)和trade-service(消费者)中添加SpringAMQP依赖:
+
+```xml
+<!--AMQP依赖,包含RabbitMQ-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-amqp</artifactId>
+</dependency>
+```
+
+添加nacos注册中心共享配置文件shared-rabbitmq.yaml并应用于pay-service和trade-service:
+
+```yaml
+spring:
+  rabbitmq:
+    host: 192.168.149.127 # RabbitMQ服务器的IP地址
+    port: 5672 # 指定RabbitMQ服务器的端口号
+    virtual-host: /hmall # 指定RabbitMQ的虚拟主机名
+    username: rabbitmq # 指定连接RabbitMQ的用户名
+    password: rabbitmq # 指定连接RabbitMQ的密码
+```
+
+hm-common中添加config文件RabbitMQConfig.java,并通过Spring自动装配:
+
+```java
+package com.hmall.common.config;
+
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RabbitMQConfig {
+    @Bean
+    public MessageConverter messageConverter(){
+        return new Jackson2JsonMessageConverter();
+    }
+}
+```
+
+5. 交易服务监听trade.pay.success.queue队列,接收到消息后更新订单状态为已支付
+
+pay-service中实现发送者:
+
+```java
+// private final TradeClient tradeClient;
+
+private final RabbitTemplate rabbitTemplate;
+
+@Override
+@Transactional
+public void tryPayOrderByBalance(PayOrderFormDTO payOrderFormDTO) {
+    // 1.查询支付单
+    PayOrder po = getById(payOrderFormDTO.getId());
+    // 2.判断状态
+    if (!PayStatus.WAIT_BUYER_PAY.equalsValue(po.getStatus())) {
+        // 订单不是未支付，状态异常
+        throw new BizIllegalException("交易已支付或关闭！");
+    }
+    // 3.尝试扣减余额
+    userClient.deductMoney(payOrderFormDTO.getPw(), po.getAmount());
+    // 4.修改支付单状态
+    boolean success = markPayOrderSuccess(payOrderFormDTO.getId(), LocalDateTime.now());
+    if (!success) {
+        throw new BizIllegalException("交易已支付或关闭！");
+    }
+    // 5.修改订单状态
+    // tradeClient.markOrderPaySuccess(po.getBizOrderNo());
+    try {
+        rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
+    } catch (Exception e) {
+        log.error("发送支付通知状态失败", e);
+        // TODO 兜底方案
+    }
+}
+```
+
+trade-service中实现消费者:
+
+```java
+package com.hmall.trade.listener;
+
+import com.hmall.trade.service.IOrderService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.annotation.Exchange;
+import org.springframework.amqp.rabbit.annotation.Queue;
+import org.springframework.amqp.rabbit.annotation.QueueBinding;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class PayStatusListener {
+
+    private final IOrderService orderService;
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(value = "trade.pay.success.queue", durable = "true"),
+            exchange = @Exchange(value = "pay.direct"),
+            key = "pay.success"))
+    public void listenPayStatus(Long orderId) {
+        orderService.markOrderPaySuccess(orderId);
+    }
+}
+```

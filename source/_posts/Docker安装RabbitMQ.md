@@ -1,11 +1,11 @@
 ---
 title: "Docker安装RabbitMQ"
-date: 2024-07-26
+date: 2024-07-25
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage83.jpg?raw=true
 tags: ["Docker","RabbitMQ"]
 category: "配置"
-updated: 2024-07-27
+updated: 2024-07-26
   
 top_group_index: 
 ---
