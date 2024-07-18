@@ -16,7 +16,7 @@ top_group_index:
 
 - `docker pull bladex/sentinel-dashboard`:下载最新版Sentinel镜像
 
-# 检查Docker下载的所有镜像
+# 检查镜像
 
 `docker images`
 
@@ -32,7 +32,6 @@ docker run \
  --name sentinel \
  -p 8858:8858 \
  --network net \
- --restart unless-stopped \
  bladex/sentinel-dashboard
 ```
 
@@ -42,7 +41,6 @@ docker run \
 - `--name sentinel`:指定容器名称为sentinel
 - `-p 8858:8858`:将容器的8858端口映射到主机的8858端口
 - `--network net`:指定容器的网络为net
-- `--restart unless-stopped`:容器退出后自动重启
 - `bladex/sentinel-dashboard`:指定镜像名称为bladex/sentinel-dashboard
 
 # 检查sentinel运行状态

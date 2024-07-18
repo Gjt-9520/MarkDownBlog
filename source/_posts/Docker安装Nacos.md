@@ -16,7 +16,7 @@ top_group_index:
 
 - `docker pull nacos/nacos-server:latest`:下载最新版Nacos镜像
 
-# 检查Docker下载的所有镜像
+# 检查镜像
 
 `docker images`
 
@@ -310,7 +310,6 @@ docker run \
   -p 9848:9848 \
   -p 9849:9849 \
   --network net \
-  --restart unless-stopped \
   nacos/nacos-server
 ```
 
@@ -323,7 +322,6 @@ docker run \
 - `-p 9848:9848`:将容器的9848端口映射到主机的9848端口
 - `-p 9849:9849`:将容器的9849端口映射到主机的9849端口
 - `--network net`:指定容器的网络为net
-- `--restart unless-stopped`:容器退出后自动重启
 - `nacos/nacos-server`:指定镜像名称为nacos/nacos-server
 
 # 检查nacos运行状态
@@ -331,6 +329,6 @@ docker run \
 - `docker ps`:检查容器是否运行
 - `docker inspect nacos`:查看容器详细信息
 
-确认nacos运行之后,即可在浏览器中输入`http://192.168.149.100:8848/nacos/`(其中`192.168.149.100`为nacos所在主机的ip地址,需替换成自己的)
+确认nacos运行之后,即可在浏览器中输入`http://192.168.149.100:8848/nacos`(其中`192.168.149.100`为nacos所在主机的ip地址,需替换成自己的)
 
 访问nacos的控制台,用户名和密码都是nacos

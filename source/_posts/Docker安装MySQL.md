@@ -18,7 +18,7 @@ top_group_index:
 
 - `docker pull mysql:xxx`:下载指定版本的Mysql镜像(xxx指具体版本号)
 
-# 检查Docker下载的所有镜像
+# 检查镜像
 
 `docker images`
 
@@ -71,7 +71,6 @@ docker run \
 - `-v /root/mysql/conf:/etc/mysql`:将主机的/root/mysql/conf目录挂载到容器的/etc/mysql目录
 - `-v /root/mysql/init:/docker-entrypoint-initdb.d`:将主机的/root/mysql/init目录挂载到容器的/docker-entrypoint-initdb.d目录
 - `--network net`:指定容器的网络为net
-- `--restart unless-stopped`:容器退出后自动重启
 - `mysql`:指定镜像名称为mysql
 
 # 检查mysql运行状态

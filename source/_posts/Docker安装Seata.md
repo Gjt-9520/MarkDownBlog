@@ -16,7 +16,7 @@ top_group_index:
 
 - `docker pull seataio/seata-server:1.5.2`:下载Seata1.5.2的镜像
 
-# 检查Docker下载的所有镜像
+# 检查镜像
 
 `docker images`
 
@@ -265,7 +265,6 @@ docker run \
     -v /root/seata:/seata-server/resources \
     --privileged=true \
     --network net \
-    --restart unless-stopped \
     seataio/seata-server:1.5.2
 ```
 
@@ -279,7 +278,6 @@ docker run \
 - `-v /root/seata:/seata-server/resources`:将主机的/root/seata目录挂载到容器的/seata-server/resources目录
 - `--privileged=true`:给予容器最高的权限
 - `--network net`:指定容器的网络为net
-- `--restart unless-stopped`:容器退出后自动重启
 - `seataio/seata-server:1.5.2`:指定镜像名称为seataio/seata-server:1.5.2
 
 # 检查seata运行状态
@@ -287,6 +285,6 @@ docker run \
 - `docker ps`:检查容器是否运行
 - `docker inspect seata`:查看容器详细信息
 
-确认seata运行之后,即可在浏览器中输入`http://192.168.149.100:7091`(其中`192.168.149.100`为nacos所在主机的ip地址,需替换成自己的)
+确认seata运行之后,即可在浏览器中输入`http://192.168.149.100:7091`(其中`192.168.149.100`为seata所在主机的ip地址,需替换成自己的)
 
 访问seata的控制台,用户名和密码都是seata
