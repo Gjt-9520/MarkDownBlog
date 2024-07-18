@@ -1,5 +1,5 @@
 ---
-title: "一键部署MySQL、Nginx、Nacos、Sentinel、Seata"
+title: "Docker Compose一键部署"
 date: 2024-07-26
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage82.jpg?raw=true
