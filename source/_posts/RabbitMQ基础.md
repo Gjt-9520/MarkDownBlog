@@ -511,6 +511,7 @@ public void testObjectQueue(){
     Map<String, Object> map = new HashMap<>(2);
     map.put("name","张三");
     map.put("age",18);
+    // 发送消息
     rabbitTemplate.convertAndSend(exchangeName, "red", map);
 }
 ```
