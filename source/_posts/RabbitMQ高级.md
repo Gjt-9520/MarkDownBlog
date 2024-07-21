@@ -357,9 +357,24 @@ spring:
         acknowledge-mode: auto # none,关闭ack;manual,手动ack;auto,自动ack
 ```
 
-## 失败重试策略
+## 消费者失败重试机制
 
+SpringAMQP提供了消费者失败重试机制,在消费者出现异常时利用本地重试,而不是无限的requeue到mq
 
+可以通过配置文件来开启重试机制:
+
+```yaml
+spring:
+  rabbitmq:
+    listener:
+      simple:
+        retry:
+          enabled: true # 开启消费者失败重试机制
+          initial-interval: 1000ms # 失败后的初始等待时间
+          multiplier: 2 # 失败后下次的等待时长倍数,下次等待时长 = initial-interval * multiplier
+          max-attempts: 3 # 最大重试次数
+          stateless: true # true无状态;false有状态,如果业务中包含事务,这里改为false
+```
 
 ## 业务幂等性
 
