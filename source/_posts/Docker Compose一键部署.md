@@ -3,7 +3,7 @@ title: "Docker Compose一键部署"
 date: 2024-07-26
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage82.jpg?raw=true
-tags: ["Docker","Mysql","Nginx","Nacos","Sentinel","Seata","RabbitMQ"]
+tags: ["Docker","Mysql","Nginx","Nacos","Sentinel","Seata","RabbitMQ","ElasticSearch","Kibana"]
 category: "配置"
 updated: 2024-07-27
   
@@ -12,7 +12,7 @@ top_group_index:
 
 # 准备工作
 
-将MySQL、Nginx、Nacos、Sentinel、Seata、RabbitMQ在容器运行前的准备工作做好(参考Docker安装系列文章)
+将MySQL、Nginx、Nacos、Sentinel、Seata、RabbitMQ、ElasticSearch、Kibana在容器运行前的准备工作做好(参考Docker安装系列文章)
 
 # Docker Compose一键部署
 
@@ -109,9 +109,41 @@ services:
       - seata
     networks:
       - net
+  
+  es:
+    image: elasticsearch:7.12.1
+    container_name: es
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - discovery.type=single-node
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+      - es-plugins:/usr/share/elasticsearch/plugins
+    privileged: true
+    depends_on:
+      - rabbitmq
+    networks:
+      - net
+  
+  kibana:
+    image: kibana:7.12.1
+    container_name: kibana
+    ports:
+      - 5601:5601
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es:9200
+    depends_on:
+      - es
+    networks:
+      - net
 
 volumes:
   mq-plugins:
+  es-data:
+  es-plugins:
 
 networks:
   net:

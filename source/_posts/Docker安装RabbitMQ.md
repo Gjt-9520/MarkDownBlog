@@ -63,3 +63,23 @@ docker run \
 确认rabbitmq运行之后,即可在浏览器中输入`http://192.168.149.100:15672`(其中`192.168.149.100`为rabbitmq所在主机的ip地址,需替换成自己的)
 
 访问rabbitmq的控制台,用户名和密码都是rabbitmq
+
+# 安装DelayExchange插件
+
+1. 查看RabbitMQ的插件目录对应的数据卷
+
+`docker volume ls`
+
+2. 进入RabbitMQ的插件目录
+
+`cd /var/lib/docker/volumes/mq-plugins/_data`
+
+3. 下载DelayExchange插件到挂载的插件目录下
+
+[官网插件地址](https://www.rabbitmq.com/community-plugins#overview)
+
+[Github插件地址](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases)
+
+4. 安装插件
+
+`docker exec -it rabbitmq rabbitmq-plugins enable rabbitmq_delayed_message_exchange`
