@@ -574,6 +574,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ConditionalOnClass(RabbitTemplate.class)
 public class RabbitMQConfig {
     @Bean
     public MessageConverter messageConverter(){
