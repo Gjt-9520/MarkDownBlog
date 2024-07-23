@@ -59,7 +59,7 @@ top_group_index:
 快速回到底部 `ctrl + end`   
 
 选中代码 `shift + 鼠标左键`  
-多行同时添加内容（光标） `ctrl + alt + up / down`  
+多行同时添加内容(光标) `ctrl + alt + up / down`  
 
 全局查找文件 `ctrl + shift + F`  
 全局替换 `ctrl + shift + H`    

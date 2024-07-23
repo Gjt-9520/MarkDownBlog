@@ -72,7 +72,7 @@ CREATE TABLE `user`
     `password`    VARCHAR(128) NOT NULL COMMENT '密码' COLLATE 'utf8_general_ci',
     `phone`       VARCHAR(20)  NULL     DEFAULT NULL COMMENT '注册手机号' COLLATE 'utf8_general_ci',
     `info`        JSON         NOT NULL COMMENT '详细信息',
-    `status`      INT(10)      NULL     DEFAULT '1' COMMENT '使用状态（1正常 2冻结）',
+    `status`      INT(10)      NULL     DEFAULT '1' COMMENT '使用状态(1正常 2冻结)',
     `balance`     INT(10)      NULL     DEFAULT NULL COMMENT '账户余额',
     `create_time` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -437,7 +437,7 @@ public class UserVO {
     @ApiModelProperty("详细信息")
     private String info;
 
-    @ApiModelProperty("使用状态（1正常 2冻结）")
+    @ApiModelProperty("使用状态(1正常 2冻结)")
     private Integer status;
 
     @ApiModelProperty("账户余额")

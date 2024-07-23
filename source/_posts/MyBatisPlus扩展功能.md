@@ -104,7 +104,7 @@ public class UserVO {
     @ApiModelProperty("详细信息")
     private String info;
 
-    @ApiModelProperty("使用状态（1正常 2冻结）")
+    @ApiModelProperty("使用状态(1正常 2冻结)")
     private Integer status;
 
     @ApiModelProperty("账户余额")
@@ -418,7 +418,7 @@ public class User {
     private String info;
 
     /**
-     * 使用状态（1正常 2冻结）
+     * 使用状态(1正常 2冻结)
      */
     private UserStatus status;
 
@@ -464,7 +464,7 @@ public class UserVO {
     @ApiModelProperty("详细信息")
     private String info;
 
-    @ApiModelProperty("使用状态（1正常 2冻结）")
+    @ApiModelProperty("使用状态(1正常 2冻结)")
     private UserStatus status;
 
     @ApiModelProperty("账户余额")
@@ -709,7 +709,7 @@ public class User {
     private UserInfo info;
 
     /**
-     * 使用状态（1正常 2冻结）
+     * 使用状态(1正常 2冻结)
      */
     private UserStatus status;
 
@@ -761,7 +761,7 @@ public class UserVO {
     @TableField(typeHandler = JacksonTypeHandler.class)
     private UserInfo info;
 
-    @ApiModelProperty("使用状态（1正常 2冻结）")
+    @ApiModelProperty("使用状态(1正常 2冻结)")
     private UserStatus status;
 
     @ApiModelProperty("账户余额")

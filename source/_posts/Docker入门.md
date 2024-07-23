@@ -117,6 +117,7 @@ alias dis='docker images'
 - `docker volume rm`:删除指定数据卷
 - `docker volume inspect`:查看某个数据卷的详情
 - `docker volume prune`:清除数据卷
+- `docker volume rm $(docker volume ls -qf dangling=true)`:删除所有无用的数据卷
 
 ## 本地目录挂载
 
