@@ -599,7 +599,7 @@ public void tryPayOrderByBalance(PayOrderFormDTO payOrderFormDTO) {
     PayOrder po = getById(payOrderFormDTO.getId());
     // 2.判断状态
     if (!PayStatus.WAIT_BUYER_PAY.equalsValue(po.getStatus())) {
-        // 订单不是未支付，状态异常
+        // 订单不是未支付,状态异常
         throw new BizIllegalException("交易已支付或关闭！");
     }
     // 3.尝试扣减余额

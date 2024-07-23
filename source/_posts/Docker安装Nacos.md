@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `config_info` (
   UNIQUE KEY `uk_configinfo_datagrouptenant` (`data_id`,`group_id`,`tenant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='config_info';
 
--- 正在导出表  nacos.config_info 的数据：~0 rows (大约)
+-- 正在导出表  nacos.config_info 的数据:~0 rows (大约)
 DELETE FROM `config_info`;
 
 -- 导出  表 nacos.config_info_aggr 结构
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `config_info_aggr` (
   UNIQUE KEY `uk_configinfoaggr_datagrouptenantdatum` (`data_id`,`group_id`,`tenant_id`,`datum_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='增加租户字段';
 
--- 正在导出表  nacos.config_info_aggr 的数据：~0 rows (大约)
+-- 正在导出表  nacos.config_info_aggr 的数据:~0 rows (大约)
 DELETE FROM `config_info_aggr`;
 
 -- 导出  表 nacos.config_info_beta 结构
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `config_info_beta` (
   UNIQUE KEY `uk_configinfobeta_datagrouptenant` (`data_id`,`group_id`,`tenant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='config_info_beta';
 
--- 正在导出表  nacos.config_info_beta 的数据：~0 rows (大约)
+-- 正在导出表  nacos.config_info_beta 的数据:~0 rows (大约)
 DELETE FROM `config_info_beta`;
 
 -- 导出  表 nacos.config_info_tag 结构
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `config_info_tag` (
   UNIQUE KEY `uk_configinfotag_datagrouptenanttag` (`data_id`,`group_id`,`tenant_id`,`tag_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='config_info_tag';
 
--- 正在导出表  nacos.config_info_tag 的数据：~0 rows (大约)
+-- 正在导出表  nacos.config_info_tag 的数据:~0 rows (大约)
 DELETE FROM `config_info_tag`;
 
 -- 导出  表 nacos.config_tags_relation 结构
@@ -137,19 +137,19 @@ CREATE TABLE IF NOT EXISTS `config_tags_relation` (
   KEY `idx_tenant_id` (`tenant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='config_tag_relation';
 
--- 正在导出表  nacos.config_tags_relation 的数据：~0 rows (大约)
+-- 正在导出表  nacos.config_tags_relation 的数据:~0 rows (大约)
 DELETE FROM `config_tags_relation`;
 
 -- 导出  表 nacos.group_capacity 结构
 DROP TABLE IF EXISTS `group_capacity`;
 CREATE TABLE IF NOT EXISTS `group_capacity` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-  `group_id` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'Group ID，空字符表示整个集群',
-  `quota` int unsigned NOT NULL DEFAULT '0' COMMENT '配额，0表示使用默认值',
+  `group_id` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'Group ID,空字符表示整个集群',
+  `quota` int unsigned NOT NULL DEFAULT '0' COMMENT '配额,0表示使用默认值',
   `usage` int unsigned NOT NULL DEFAULT '0' COMMENT '使用量',
-  `max_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个配置大小上限，单位为字节，0表示使用默认值',
-  `max_aggr_count` int unsigned NOT NULL DEFAULT '0' COMMENT '聚合子配置最大个数，，0表示使用默认值',
-  `max_aggr_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个聚合数据的子配置大小上限，单位为字节，0表示使用默认值',
+  `max_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个配置大小上限,单位为字节,0表示使用默认值',
+  `max_aggr_count` int unsigned NOT NULL DEFAULT '0' COMMENT '聚合子配置最大个数,,0表示使用默认值',
+  `max_aggr_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个聚合数据的子配置大小上限,单位为字节,0表示使用默认值',
   `max_history_count` int unsigned NOT NULL DEFAULT '0' COMMENT '最大变更历史数量',
   `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
@@ -157,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `group_capacity` (
   UNIQUE KEY `uk_group_id` (`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='集群、各Group容量信息表';
 
--- 正在导出表  nacos.group_capacity 的数据：~0 rows (大约)
+-- 正在导出表  nacos.group_capacity 的数据:~0 rows (大约)
 DELETE FROM `group_capacity`;
 
 -- 导出  表 nacos.his_config_info 结构
@@ -183,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `his_config_info` (
   KEY `idx_did` (`data_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='多租户改造';
 
--- 正在导出表  nacos.his_config_info 的数据：~0 rows (大约)
+-- 正在导出表  nacos.his_config_info 的数据:~0 rows (大约)
 DELETE FROM `his_config_info`;
 
 -- 导出  表 nacos.permissions 结构
@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   UNIQUE KEY `uk_role_permission` (`role`,`resource`,`action`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 正在导出表  nacos.permissions 的数据：~0 rows (大约)
+-- 正在导出表  nacos.permissions 的数据:~0 rows (大约)
 DELETE FROM `permissions`;
 
 -- 导出  表 nacos.roles 结构
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   UNIQUE KEY `idx_user_role` (`username`,`role`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 正在导出表  nacos.roles 的数据：~1 rows (大约)
+-- 正在导出表  nacos.roles 的数据:~1 rows (大约)
 DELETE FROM `roles`;
 INSERT INTO `roles` (`username`, `role`) VALUES
 	('nacos', 'ROLE_ADMIN');
@@ -216,11 +216,11 @@ DROP TABLE IF EXISTS `tenant_capacity`;
 CREATE TABLE IF NOT EXISTS `tenant_capacity` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `tenant_id` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'Tenant ID',
-  `quota` int unsigned NOT NULL DEFAULT '0' COMMENT '配额，0表示使用默认值',
+  `quota` int unsigned NOT NULL DEFAULT '0' COMMENT '配额,0表示使用默认值',
   `usage` int unsigned NOT NULL DEFAULT '0' COMMENT '使用量',
-  `max_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个配置大小上限，单位为字节，0表示使用默认值',
+  `max_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个配置大小上限,单位为字节,0表示使用默认值',
   `max_aggr_count` int unsigned NOT NULL DEFAULT '0' COMMENT '聚合子配置最大个数',
-  `max_aggr_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个聚合数据的子配置大小上限，单位为字节，0表示使用默认值',
+  `max_aggr_size` int unsigned NOT NULL DEFAULT '0' COMMENT '单个聚合数据的子配置大小上限,单位为字节,0表示使用默认值',
   `max_history_count` int unsigned NOT NULL DEFAULT '0' COMMENT '最大变更历史数量',
   `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
@@ -228,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `tenant_capacity` (
   UNIQUE KEY `uk_tenant_id` (`tenant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='租户容量信息表';
 
--- 正在导出表  nacos.tenant_capacity 的数据：~0 rows (大约)
+-- 正在导出表  nacos.tenant_capacity 的数据:~0 rows (大约)
 DELETE FROM `tenant_capacity`;
 
 -- 导出  表 nacos.tenant_info 结构
@@ -247,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `tenant_info` (
   KEY `idx_tenant_id` (`tenant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='tenant_info';
 
--- 正在导出表  nacos.tenant_info 的数据：~0 rows (大约)
+-- 正在导出表  nacos.tenant_info 的数据:~0 rows (大约)
 DELETE FROM `tenant_info`;
 
 -- 导出  表 nacos.users 结构
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 正在导出表  nacos.users 的数据：~1 rows (大约)
+-- 正在导出表  nacos.users 的数据:~1 rows (大约)
 DELETE FROM `users`;
 INSERT INTO `users` (`username`, `password`, `enabled`) VALUES
 	('nacos', '$2a$10$EuWPZHzz32dJN7jexM34MOeYirDdFAZm2kuWj7VEOJhhZkDrxfvUu', 1);
@@ -297,7 +297,7 @@ MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=1000&socketTimeout=
 - `SPRING_DATASOURCE_PLATFORM`:指定使用的数据库平台为MySQL
 - `MYSQL_SERVICE_HOST`、`MYSQL_SERVICE_PORT`、`MYSQL_SERVICE_DB_NAME`分别指定了MySQL服务的主机地址、端口号和数据库名称
 - `MYSQL_SERVICE_USER`、`MYSQL_SERVICE_PASSWORD`是连接MySQL服务的用户名和密码
-- `MYSQL_SERVICE_DB_PARAM`是一些连接数据库的参数，包括字符编码、连接超时时间、socket超时时间、自动重连、SSL和时区等设置
+- `MYSQL_SERVICE_DB_PARAM`是一些连接数据库的参数,包括字符编码、连接超时时间、socket超时时间、自动重连、SSL和时区等设置
 
 # 创建容器并运行
 

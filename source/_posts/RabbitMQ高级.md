@@ -643,9 +643,9 @@ public class PayOrderDTO {
     private String payChannelCode;
     @ApiModelProperty("支付金额,单位分")
     private Integer amount;
-    @ApiModelProperty("付类型,1：h5,2:小程序,3：公众号,4：扫码,5：余额支付")
+    @ApiModelProperty("付类型,1:h5,2:小程序,3:公众号,4:扫码,5:余额支付")
     private Integer payType;
-    @ApiModelProperty("付状态,0：待提交,1:待支付,2：支付超时或取消,3：支付成功")
+    @ApiModelProperty("付状态,0:待提交,1:待支付,2:支付超时或取消,3:支付成功")
     private Integer status;
     @ApiModelProperty("拓展字段,用于传递不同渠道单独处理的字段")
     private String expandJson;
@@ -805,7 +805,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
     if (items == null || items.size() < itemIds.size()) {
         throw new BadRequestException("商品不存在");
     }
-    // 1.4.基于商品价格、购买数量计算商品总价：totalFee
+    // 1.4.基于商品价格、购买数量计算商品总价:totalFee
     int total = 0;
     for (ItemDTO item : items) {
         total += item.getPrice() * itemNumMap.get(item.getId());

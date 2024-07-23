@@ -115,7 +115,7 @@ import lombok.EqualsAndHashCode;
 public class UserQuery extends PageQuery {
     @ApiModelProperty("用户名关键字")
     private String name;
-    @ApiModelProperty("用户状态：1-正常，2-冻结")
+    @ApiModelProperty("用户状态:1-正常,2-冻结")
     private Integer status;
     @ApiModelProperty("余额最小值")
     private Integer minBalance;

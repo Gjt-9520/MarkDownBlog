@@ -87,3 +87,21 @@ docker run \
 确认es运行之后,即可在浏览器中输入`http://192.168.149.100:9300`(其中`192.168.149.100`为es所在主机的ip地址,需替换成自己的)
 
 确认kibana运行之后,即可在浏览器中输入`http://192.168.149.100:5601`(其中`192.168.149.100`为kibana所在主机的ip地址,需替换成自己的)
+
+# 安装IK分词器插件
+
+1. 查看es的插件目录对应的数据卷
+
+`docker volume ls`
+
+2. 进入es的插件目录
+
+`cd /var/lib/docker/volumes/es-plugins/_data`
+
+3. 下载DelayExchange插件到挂载的插件目录下
+
+[Github插件地址](https://github.com/infinilabs/analysis-ik)
+
+4. 重启es,加载插件
+
+`docker restart es`

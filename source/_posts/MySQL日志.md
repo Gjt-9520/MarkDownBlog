@@ -27,7 +27,7 @@ top_group_index:
 
 参数说明:
 - log_bin_basename:当前数据库服务器的binlog日志的基础名称(前缀),具体的binlog文件名需要再该basename的基础上加上编号(编号从000001开始)              
-- log_bin_index：binlog的索引文件,里面记录了当前服务器关联的binlog文件有哪些                 
+- log_bin_index:binlog的索引文件,里面记录了当前服务器关联的binlog文件有哪些                 
 
 ## 格式
 

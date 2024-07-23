@@ -165,7 +165,7 @@ public class Test {
             // 获取到每一个符合正则表达式的字符串
             String str1 = matcher.group();
             // 将初步数据进行处理
-            String str2 = str1.replace("，", "").replace("。</br>", "");
+            String str2 = str1.replace(",", "").replace("。</br>", "");
             char[] charArr = str2.toCharArray();
             // 将处理好的数据转换成单个姓的字符串存入集合中
             for (char c : charArr) {
@@ -306,7 +306,7 @@ public class Test {
         List<String> familyNameTempList = ReUtil.findAll("赵钱孙李(.+)第五言福", str, 0);
         for (String str1 : familyNameTempList) {
             // 将初步数据进行处理
-            String str2 = str1.replace("，", "").replace("。</br>", "");
+            String str2 = str1.replace(",", "").replace("。</br>", "");
             char[] charArr = str2.toCharArray();
             // 将处理好的数据转换成单个姓的字符串存入集合中
             for (char c : charArr) {
@@ -724,7 +724,7 @@ public class Test {
             // 获取到每一个符合正则表达式的字符串
             String str1 = matcher.group();
             // 将初步数据进行处理
-            String str2 = str1.replace("，", "").replace("。</br>", "");
+            String str2 = str1.replace(",", "").replace("。</br>", "");
             char[] charArr = str2.toCharArray();
             // 将处理好的数据转换成单个姓的字符串存入集合中
             for (char c : charArr) {

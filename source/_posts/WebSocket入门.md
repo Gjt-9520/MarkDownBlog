@@ -75,7 +75,7 @@ websocket.html:
         setMessageInnerHTML("close");
     }
 
-    //监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
+    //监听窗口关闭事件,当窗口关闭时,主动去关闭websocket连接,防止连接还没断开就关闭窗口,server端会抛异常。
     window.onbeforeunload = function(){
         websocket.close();
     }
@@ -141,7 +141,7 @@ public class WebSocketServer {
      */
     @OnOpen
     public void onOpen(Session session, @PathParam("sid") String sid) {
-        System.out.println("客户端：" + sid + "建立连接");
+        System.out.println("客户端:" + sid + "建立连接");
         sessionMap.put(sid, session);
     }
 
@@ -152,7 +152,7 @@ public class WebSocketServer {
      */
     @OnMessage
     public void onMessage(String message, @PathParam("sid") String sid) {
-        System.out.println("收到来自客户端：" + sid + "的信息:" + message);
+        System.out.println("收到来自客户端:" + sid + "的信息:" + message);
     }
 
     /**
@@ -197,7 +197,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
- * WebSocket配置类，用于注册WebSocket的Bean
+ * WebSocket配置类,用于注册WebSocket的Bean
  */
 @Configuration
 public class WebSocketConfiguration {
@@ -234,7 +234,7 @@ public class WebSocketTask {
      */
     @Scheduled(cron = "0/5 * * * * ?")
     public void sendMessageToClient() {
-        webSocketServer.sendToAllClient("这是来自服务端的消息：" + DateTimeFormatter.ofPattern("HH:mm:ss").format(LocalDateTime.now()));
+        webSocketServer.sendToAllClient("这是来自服务端的消息:" + DateTimeFormatter.ofPattern("HH:mm:ss").format(LocalDateTime.now()));
     }
 }
 ```

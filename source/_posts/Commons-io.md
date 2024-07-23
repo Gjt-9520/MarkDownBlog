@@ -245,7 +245,7 @@ copy方法有多个重载方法,满足不同的输入输出流
 
 ## 把集合里面的内容写入文件
 
-// encoding：文件编码,lineEnding：每行以什么结尾
+// encoding:文件编码,lineEnding:每行以什么结尾
 
 `FileUtils.writeLines(File file, Collection<?> lines)`
 

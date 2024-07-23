@@ -37,7 +37,7 @@ public class Test {
     public static void main(String[] args) {
         BigInteger bd1 = BigInteger.valueOf(1);
         BigInteger bd2 = BigInteger.valueOf(2);
-        // 不会修改参与计算的BigInteger对象中的值，而是创建了一个新的BigInteger对象记录
+        // 不会修改参与计算的BigInteger对象中的值,而是创建了一个新的BigInteger对象记录
         BigInteger result = bd1.add(bd2);
         System.out.println(result);
         // 打印结果:"false"
@@ -309,7 +309,7 @@ public class Test {
 
 ## int/double/longValue(BigInteger val)
 
-转为int/double/long类型整数，超出范围数据有误      
+转为int/double/long类型整数,超出范围数据有误      
 
 范例:   
 

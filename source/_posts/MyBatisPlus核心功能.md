@@ -662,7 +662,7 @@ import lombok.Data;
 public class UserQuery {
     @ApiModelProperty("用户名关键字")
     private String name;
-    @ApiModelProperty("用户状态：1-正常,2-冻结")
+    @ApiModelProperty("用户状态:1-正常,2-冻结")
     private Integer status;
     @ApiModelProperty("余额最小值")
     private Integer minBalance;
@@ -809,7 +809,7 @@ void testSaveOneByOne() {
         userService.save(buildUser(i));
     }
     long e = System.currentTimeMillis();
-    System.out.println("耗时：" + (e - b));
+    System.out.println("耗时:" + (e - b));
 }
 
 // 测试IService的批量插入
@@ -827,7 +827,7 @@ void testSaveBatch() {
         }
     }
     long e = System.currentTimeMillis();
-    System.out.println("耗时：" + (e - b));
+    System.out.println("耗时:" + (e - b));
 }
 ```
 

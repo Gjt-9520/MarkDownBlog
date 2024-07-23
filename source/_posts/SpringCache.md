@@ -14,7 +14,7 @@ top_group_index:
 
 SpringCache是一个框架,实现了基于**注解**的缓存功能,只需要简单地加一个注解,就能实现缓存功能
 
-SpringCache提供了一层抽象,底层可以切换不同的缓存实现,例如：
+SpringCache提供了一层抽象,底层可以切换不同的缓存实现,例如:
 - EHCache
 - Caffeine
 - Redis

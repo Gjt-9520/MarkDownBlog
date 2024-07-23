@@ -248,7 +248,7 @@ a.`EMPTY`:表示标签体为空
 b.`ANY`:表示标签体可以为空也可以不为空            
 c.`PCDATA`:表示该元素的内容部分为字符串
 
-复杂元素：             
+复杂元素:             
 直接写子元素名称:多个子元素可以使用`,`或者`|`隔开;       
 ​`,`表示定义子元素的顺序;`|`:表示子元素只能出现任意一个                         
 ​`?`表示零次或一次,`+`表示一次或多次,`*`表示零次或多次;如果不写则表示出现一次    
@@ -385,7 +385,7 @@ d.通过`xsi:schemaLocation`指定名称空间所对应的约束文件路径
                             <element name="name" type="string"/>
                             <element name="age" type="string"/>
                         </sequence>
-                        <!--定义属性，required(必须的)/optional(可选的)-->
+                        <!--定义属性,required(必须的)/optional(可选的)-->
                         <attribute name="id" type="string" use="required"/>
                     </complexType>
                 </element>
