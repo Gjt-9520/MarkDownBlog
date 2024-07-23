@@ -4,7 +4,7 @@ date: 2024-07-29
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage87.jpg?raw=true
 tags: ["ElasticSearch"]
-category: "笔记"
+category: "数据库"
 updated: 2024-07-30
   
 top_group_index: 

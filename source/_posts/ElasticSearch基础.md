@@ -4,7 +4,7 @@ date: 2024-07-30
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage88.jpg?raw=true
 tags: ["ElasticSearch"]
-category: "笔记"
+category: "数据库"
 updated: 2024-07-31
   
 top_group_index: 
@@ -69,19 +69,21 @@ PUT /jinzhao
 
 ### 查看索引库
 
-`GET /索引库`
+语法:`GET /索引库`
 
 范例:`GET /jinzhao`
 
 ### 删除索引库
 
-`DELETE /索引库`
+语法:`DELETE /索引库`
 
 范例:`DELETE /jinzhao`
 
 ### 修改索引库
 
 索引库和mapping**一旦创建无法修改,但是可以添加新的字段**
+
+语法:
 
 ```cmd
 PUT /索引库名/_mapping
@@ -130,13 +132,13 @@ POST /jinzhao/_doc/1
 
 ## 查询文档
 
-`GET /索引库/_doc/文档id`
+语法:`GET /索引库/_doc/文档id`
 
 范例:`GET /jinzhao/_doc/1`
 
 ## 删除文档
 
-`DELETE /索引库/_doc/文档id`
+语法:`DELETE /索引库/_doc/文档id`
 
 范例:`DELETE /jinzhao/_doc/1`
 
