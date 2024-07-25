@@ -251,7 +251,7 @@ public class ItemDoc{
     @ApiModelProperty("评论数")
     private Integer commentCount;
 
-    @ApiModelProperty("是否是推广广告，true/false")
+    @ApiModelProperty("是否是推广广告,true/false")
     private Boolean isAD;
 
     @ApiModelProperty("更新时间")
@@ -309,4 +309,110 @@ void testGetDoc() throws IOException {
 
 ## 修改文档
 
+![修改文档](../images/修改文档.png)
+
+全量更新:
+
+```java
+@Test
+void testIndexDoc() throws IOException {
+    // 准备文档数据
+    Item item = itemService.getById(317578L);
+    // 把数据库数据转为文档数据
+    ItemDoc itemDoc = BeanUtil.copyProperties(item, ItemDoc.class);
+    // 更新数据
+    itemDoc.setBrand("华为");
+    itemDoc.setPrice(5999.00);
+    // 准备Request对象
+    IndexRequest request = new IndexRequest("items").id(itemDoc.getId());
+    // 准备请求参数
+    request.source(JSONUtil.toJsonStr(itemDoc), XContentType.JSON);
+    // 发送请求
+    client.index(request, RequestOptions.DEFAULT);
+}
+```
+
+局部更新:
+
+```java
+@Test
+void testUpdateDoc() throws IOException {
+    // 准备Request对象
+    UpdateRequest request = new UpdateRequest("items", "317578");
+    // 更新文档
+    request.doc(
+            "brand", "华为",
+            "price", 5999.00
+    );
+    // 发送请求
+    client.update(request, RequestOptions.DEFAULT);
+}
+```
+
 # 文档批量处理
+
+## 批量新增文档
+
+```java
+@Test
+void testBulkDoc() throws IOException {
+    int pageNo = 1, pageSize = 500;
+    while (true) {
+        // 准备文档数据
+        Page<Item> page = itemService.lambdaQuery()
+                .eq(Item::getStatus, 1)
+                .page(Page.of(pageNo, pageSize));
+        List<Item> records = page.getRecords();
+        if (records == null || records.isEmpty()) {
+            return;
+        }
+        // 准备Request请求
+        BulkRequest request = new BulkRequest();
+        // 准备请求参数
+        for (Item item : records) {
+            request.add(new IndexRequest("items")
+                    .id(item.getId().toString())
+                    .source(JSONUtil.toJsonStr(BeanUtil.copyProperties(item, ItemDoc.class)), XContentType.JSON));
+        }
+        // 发送请求
+        client.bulk(request, RequestOptions.DEFAULT);
+        pageNo++;
+    }
+}
+```
+
+## 批量删除文档
+
+```java
+@Test
+void testBulkDoc() throws IOException {
+    // 准备Request请求
+    BulkRequest request = new BulkRequest();
+    // 准备请求参数
+    request.add(new DeleteRequest("items", "317578"));
+    request.add(new DeleteRequest("items", "317577"));
+    // 发送请求
+    client.bulk(request, RequestOptions.DEFAULT);
+}
+```
+
+## 批量修改文档
+
+```java
+@Test
+void testBulkDoc() throws IOException {
+    // 准备Request请求
+    BulkRequest request = new BulkRequest();
+    // 准备请求参数
+    request.add(new UpdateRequest("items", "317578").doc(
+            "brand", "华为",
+            "price", 5999.00
+    ));
+    request.add(new UpdateRequest("items", "317577").doc(
+            "brand", "小米",
+            "price", 3999.00
+    ));
+    // 发送请求
+    client.bulk(request, RequestOptions.DEFAULT);
+}
+```
