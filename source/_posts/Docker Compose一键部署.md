@@ -149,6 +149,8 @@ networks:
   net:
 ```
 
+# Docker Compose常用命令
+
 - `docker compose up -d`:创建并启动所有服务容器
 - `docker compose down`:停止并移除所有服务容器和网络
 
@@ -158,3 +160,12 @@ networks:
 - `docker compose start`:启动所有服务容器
 - `docker compose stop`:停止所有服务容器
 - `docker compose restart`:重启所有服务容器
+
+# 服务地址
+
+- nacos:`http://192.168.149.100:8848/nacos`
+- sentinel:`http://192.168.149.100:8858`
+- seata:`http://192.168.149.100:8091`
+- rabbitmq:`http://192.168.149.100:15672`
+- es:`http://192.168.149.100:9200`
+- kibana:`http://192.168.149.100:5601`
