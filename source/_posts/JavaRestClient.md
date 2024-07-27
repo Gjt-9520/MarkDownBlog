@@ -4,7 +4,7 @@ date: 2024-07-31
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage89.jpg?raw=true
 tags: ["SpringBoot","ElasticSearch","JavaRestClient"]
-category: "笔记"
+category: "数据库"
 updated: 2024-08-01
   
 top_group_index: 
@@ -233,7 +233,7 @@ public class ItemDoc{
     @ApiModelProperty("商品名称")
     private String name;
 
-    @ApiModelProperty("价格（分）")
+    @ApiModelProperty("价格(分)")
     private Integer price;
 
     @ApiModelProperty("商品图片")
