@@ -246,7 +246,7 @@ GET /items/_search
     `function_score`
     `dis_max`
 
-## bool查询
+## 布尔查询
 
 布尔查询是一个或多个查询子句的组合
 
@@ -338,8 +338,8 @@ GET /items/_search
 Elasticsearch默认情况下只返回top10的数据,而如果要查询更多数据就需要修改分页参数
 
 通过修改from、size参数来控制要返回的分页结果:
-- from:从第几个文档开始
-- size:总共查询几个文档
+- `from`:从第几个文档开始
+- `size`:总共查询几个文档
 
 语法:
 
@@ -384,11 +384,345 @@ GET /items/_search
 
 Elasticsearch的数据一般会采用分片存储,也就是把一个索引中的数据分成N份,存储到不同节点上,查询数据时需要汇总各个分片的数据
 
+针对深度分页,ES提供了两种解决方案:
 
+- `search after`:分页时需要排序,原理是从上一次的排序值开始,查询下一页数据(**官方推荐使用的方式**)
+  - 优点:没有查询上限,支持深度分页
+  - 缺点:只能向后逐页查询,不能随机翻页
+  - 场景:数据迁移、手机滚动查询
 
-
-
+- `scroll`:原理将排序数据形成快照,保存在内存
 
 # 高亮
 
+高亮显示:在搜索结果中把搜索关键字突出显示
 
+语法:
+
+```cmd
+GET /items/_search
+{
+  "query": {
+    "match": {
+      "FIELD": "TEXT"
+    }
+  },
+  "highlight": {
+    "fields": {
+      "FIELD": {
+        "pre_tags": "<em>",
+        "post_tags": "</em>"
+      }
+    }
+  }
+}
+```
+
+范例:
+
+```cmd
+GET /items/_search
+{
+  "query": {
+    "match": {
+      "name": "华为手机"
+    }
+  },
+  "highlight": {
+    "fields": {
+      "name": {
+        "pre_tags": "<em>",
+        "post_tags": "</em>"
+      }
+    }
+  }
+}
+```
+
+或者
+
+```cmd
+GET /items/_search
+{
+  "query": {
+    "match": {
+      "name": "华为手机"
+    }
+  },
+  "highlight": {
+    "fields": {
+      "name": {}
+    }
+  }
+}
+```
+
+细节:**默认高亮显示的标签`<em></em>`**
+
+# 搜索的完整语法范例
+
+```cmd
+GET /items/_search
+{
+  "query": {
+    "match": {
+      "name": "华为手机"
+    }
+  },
+  "from": 0,
+  "size": 10,
+  "sort": [
+    {
+      "price": {
+        "order": "asc"
+      }
+    }
+  ],
+  "highlight": {
+    "fields": {
+      "name": {
+        "pre_tags": "<em>",
+        "post_tags": "</em>"
+      }
+    }
+  }
+}
+```
+
+# DSL查询的JavaRestClient实现
+
+## 快速入门
+
+1. 查询
+
+![DSL快速入门-查询](../images/DSL快速入门1.png)
+
+```java
+@Test
+void testMatchAll() throws IOException {
+    // 创建Request对象
+    SearchRequest request = new SearchRequest("items");
+    // 准备请求参数
+    request.source()
+            .query(QueryBuilders.matchAllQuery());
+    // 发送请求
+    SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+    System.out.println(response);
+}
+```
+
+2. 解析查询结果
+
+![DSL快速入门-解析查询结果](../images/DSL快速入门2.png)
+
+```java
+@Test
+void testMatchAll() throws IOException {
+    // 创建Request对象
+    SearchRequest request = new SearchRequest("items");
+    // 准备请求参数
+    request.source()
+            .query(QueryBuilders.matchAllQuery());
+    // 发送请求
+    SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+    // 解析结果
+    SearchHits searchHits = response.getHits();
+    // 查询的总条数
+    long total = searchHits.getTotalHits().value;
+    System.out.println("查询的总条数:" + total);
+    // 命中的数据
+    SearchHit[] hits = searchHits.getHits();
+    for (SearchHit hit : hits) {
+        // 得到source结果
+        String json = hit.getSourceAsString();
+        // 转为ItemsDoc
+        ItemDoc itemDoc = JSONUtil.toBean(json, ItemDoc.class);
+        System.out.println(itemDoc);
+    }
+}
+```
+
+## 构建查询条件
+
+在JavaRestAPI中,所有类型的query查询条件都是由`QueryBuilders`来构建的
+
+![QueryBuilders](../images/QueryBuilders.png)
+
+1. 全文检索查询
+
+![全文检索查询](../images/全文检索查询.png)
+
+2. 精确查询
+
+![精确查询](../images/精确查询.png)
+
+3. 布尔查询
+
+![布尔查询](../images/布尔查询.png)
+
+### 范例
+
+需求:利用JavaRestClient实现搜索功能,条件如下
+1. 搜索关键字为脱脂牛奶
+2. 品牌必须为德亚
+3. 价格必须低于300
+
+```java
+@Test
+void testSearch() throws IOException {
+    // 创建Request对象
+    SearchRequest request = new SearchRequest("items");
+    // 准备请求参数
+    BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
+            .must(QueryBuilders.matchQuery("name", "脱脂牛奶"))
+            .filter(QueryBuilders.termQuery("brand", "德亚"))
+            .filter(QueryBuilders.rangeQuery("price").lt(30000));
+    request.source()
+            .query(boolQuery);
+    // 发送请求
+    SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+    // 解析结果
+    SearchHits searchHits = response.getHits();
+    // 查询的总条数
+    long total = searchHits.getTotalHits().value;
+    System.out.println("查询的总条数:" + total);
+    // 命中的数据
+    SearchHit[] hits = searchHits.getHits();
+    for (SearchHit hit : hits) {
+        // 得到source结果
+        String json = hit.getSourceAsString();
+        // 转为ItemsDoc
+        ItemDoc itemDoc = JSONUtil.toBean(json, ItemDoc.class);
+        System.out.println(itemDoc);
+    }
+}
+```
+
+## 排序和分页
+
+与query类似,排序和分页参数都是基于`request.source()`来设置
+
+![排序和分页](../images/排序和分页.png)
+
+范例:
+
+```java
+@Test
+void testSortAndPage() throws IOException {
+    // 分页参数
+    int pageNo = 1;
+    int pageSize = 10;
+    // 创建Request对象
+    SearchRequest request = new SearchRequest("items");
+    // 准备请求参数
+    request.source().query(QueryBuilders.matchAllQuery());
+    // 分页
+    request.source().from((pageNo - 1) * pageSize).size(pageSize);
+    // 排序
+    request.source().sort("price", SortOrder.DESC).sort("sold", SortOrder.ASC);
+    // 发送请求
+    SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+    // 解析结果
+    SearchHits searchHits = response.getHits();
+    // 查询的总条数
+    long total = searchHits.getTotalHits().value;
+    System.out.println("查询的总条数:" + total);
+    // 命中的数据
+    SearchHit[] hits = searchHits.getHits();
+    for (SearchHit hit : hits) {
+        // 得到source结果
+        String json = hit.getSourceAsString();
+        // 转为ItemsDoc
+        ItemDoc itemDoc = JSONUtil.toBean(json, ItemDoc.class);
+        System.out.println(itemDoc);
+    }
+}
+```
+
+## 高亮显示
+
+![高亮显示](../images/高亮显示.png)
+
+1. 查询
+
+范例:
+
+```java
+@Test
+void testHighlight() throws IOException {
+    // 创建Request对象
+    SearchRequest request = new SearchRequest("items");
+    // 准备请求参数
+    request.source()
+            .query(QueryBuilders.matchQuery("name", "脱脂牛奶"))
+            .highlighter(SearchSourceBuilder.highlight()
+                    .field("name")
+                    .preTags("<em>")
+                    .postTags("</em>"));
+    // request.source()
+    //         .query(QueryBuilders.matchQuery("name", "脱脂牛奶"))
+    //         .highlighter(new HighlightBuilder()
+    //                 .field("name")
+    //                 .preTags("<em>")
+    //                 .postTags("</em>"));
+    // 发送请求
+    SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+}
+```
+
+2. 解析高亮显示的结果
+
+![高亮显示的结果解析](../images/高亮显示的结果解析.png)
+
+范例:
+
+```java
+@Test
+void testHighlight() throws IOException {
+    // 创建Request对象
+    SearchRequest request = new SearchRequest("items");
+    // 准备请求参数
+    request.source()
+            .query(QueryBuilders.matchQuery("name", "脱脂牛奶"))
+            .highlighter(SearchSourceBuilder.highlight()
+                    .field("name")
+                    .preTags("<em>")
+                    .postTags("</em>"));
+    // request.source()
+    //         .query(QueryBuilders.matchQuery("name", "脱脂牛奶"))
+    //         .highlighter(new HighlightBuilder()
+    //                 .field("name")
+    //                 .preTags("<em>")
+    //                 .postTags("</em>"));
+    // 发送请求
+    SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+    // 解析结果
+    SearchHits searchHits = response.getHits();
+    // 查询的总条数
+    long total = searchHits.getTotalHits().value;
+    System.out.println("查询的总条数:" + total);
+    // 命中的数据
+    SearchHit[] hits = searchHits.getHits();
+    for (SearchHit hit : hits) {
+        // 得到source结果
+        String json = hit.getSourceAsString();
+        // 转为ItemsDoc
+        ItemDoc itemDoc = JSONUtil.toBean(json, ItemDoc.class);
+        // 获取高亮结果
+        Map<String, HighlightField> hfs = hit.getHighlightFields();
+        if (hfs != null && !hfs.isEmpty()) {
+            // 根据高亮字段名获取高亮结果
+            HighlightField hf = hfs.get("name");
+            if (hf != null) {
+                StringBuilder sb = new StringBuilder();
+                for (Text fragment : hf.getFragments()) {
+                    sb.append(fragment.string());
+                }
+                String hfName = sb.toString();
+                itemDoc.setName(hfName);
+            }
+        }
+        System.out.println(itemDoc);
+    }
+}
+```
