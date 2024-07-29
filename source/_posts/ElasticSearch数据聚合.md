@@ -229,7 +229,9 @@ void testAgg() throws IOException {
     for (Terms.Bucket bucket : buckets) {
         // 获取key,即品牌名称
         String key = bucket.getKeyAsString();
-        System.out.println(key);
+        long docCount = bucket.getDocCount();
+        System.out.println("品牌:" + key);
+        System.out.println("文档数量:" + docCount);
     }
 }
 ```
