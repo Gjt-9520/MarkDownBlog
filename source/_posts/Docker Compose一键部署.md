@@ -151,6 +151,8 @@ networks:
 
 # Docker Compose常用命令
 
+![Docker Compose基础命令](../images/DockerCompose基础命令.png)
+
 - `docker compose up -d`:创建并启动所有服务容器
 - `docker compose down`:停止并移除所有服务容器和网络
 
