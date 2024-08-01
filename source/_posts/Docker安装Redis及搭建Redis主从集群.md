@@ -22,68 +22,130 @@ top_group_index:
 
 # 安装Redis
 
+## 创建并运行Redis容器
 
-
-
-# 搭建Redis主从集群
-
-
-## Docker Compose创建Redis容器
-
-```yaml
-version: "3.2"
-
-services:
-  r1:
-    image: redis
-    container_name: r1
-    network_mode: "host"
-    entrypoint: ["redis-server", "--port", "7001"]
-    volumes:
-      - ./7001/conf:/etc/redis/redis.conf
-      - ./7001/data:/data
-  r2:
-    image: redis
-    container_name: r2
-    network_mode: "host"
-    entrypoint: ["redis-server", "--port", "7002"]
-    volumes:
-      - ./7002/conf:/etc/redis/redis.conf
-      - ./7002/data:/data
-  r3:
-    image: redis
-    container_name: r3
-    network_mode: "host"
-    entrypoint: ["redis-server", "--port", "7003"]
-    volumes:
-      - ./7003/conf:/etc/redis/redis.conf
-      - ./7003/data:/data
+```cmd
+docker run \
+    -d \
+    --name redis \
+    -p 6379:6379 \
+    -v ./redis/data:/data \
+    -v ./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf \
+    redis
 ```
 
 解释:
-- `network_mode: "host"`:设置容器使用主机的网络模式
-- `entrypoint: ["redis-server", "--port", "7002"]`:设置容器启动时执行的命令为redis-server,并指定不同的端口号
 
-## 建立集群
+## 检查Redis容器运行状态
 
-命令:
-- Redis5.0以前:`slaveof <masterip> <masterport>`
-- Redis5.0以后:`replicaof <masterip> <masterport>`
+1. 检查容器是否运行:`docker ps`
 
-两种模式:
-- 永久生效:在redis.conf文件中利用slaveof命令指定master节点
-- 临时生效:直接利用redis-cli控制台输入slaveof命令,指定master节点
+2. 进入redis容器:`docker exec -it redis bash`
 
-这里使用临时模式,步骤如下:
+3. 进入redis-cli:`redis-cli`
 
-1. 连接r2节点:`docker exec -it r2 redis-cli -p 7002`
-2. 认r1主,也就是7001:`slaveof 192.168.1.8 7001`
-3. 查看r2节点是否成功认r1主:`info replication`
-4. 退出r2节点:`exit`
+# 搭建Redis主从集群
 
-5. 连接r3节点:`docker exec -it r3 redis-cli -p 7003`
-6. 认r1主,也就是7001:`slaveof 192.168.1.8 7001`
-7. 查看r3节点是否成功认r1主:`info replication`
-8. 退出r3节点:`exit`
+## 创建配置文件
 
-9. 验证:`docker exec -it r1 redis-cli -p 7001`
+1. 在工作目录中新建redis目录:`mkdir redis`
+
+2. 移动到redis目录:`cd redis`
+
+3. 在redis目录中新建conf目录:`mkdir conf`
+
+4. 在conf目录中新建配置文件:`touch redis-01.conf redis-02.conf redis-03.conf redis-04.conf redis-05.conf redis-06.conf`
+
+redis-01.conf范例:
+
+```yaml
+bind 192.168.149.100
+port 7001
+cluster-enabled yes
+cluster-config-file nodes-7001.conf
+cluster-node-timeout 5000
+appendonly yes
+masterauth 123456
+requirepass 123456
+```
+
+## 创建容器并启动
+
+1. Docker Compose创建Redis容器
+
+```yaml
+version: '3.8'
+
+services:
+  redis-01:
+    image: redis
+    container_name: redis-01
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./conf/redis-01.conf:/etc/redis-01.conf
+    command: redis-server /etc/redis-01.conf --port 7001
+
+  redis-02:
+    image: redis
+    container_name: redis-02
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./conf/redis-02.conf:/etc/redis-02.conf
+    command: redis-server /etc/redis-02.conf --port 7002
+
+  redis-03:
+    image: redis
+    container_name: redis-03
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./conf/redis-03.conf:/etc/redis-03.conf
+    command: redis-server /etc/redis-03.conf --port 7003
+
+  redis-04:
+    image: redis
+    container_name: redis-04
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./conf/redis-01.conf:/etc/redis-04.conf
+    command: redis-server /etc/redis-04.conf --port 7004
+
+  redis-05:
+    image: redis
+    container_name: redis-05
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./conf/redis-02.conf:/etc/redis-05.conf
+    command: redis-server /etc/redis-05.conf --port 7005
+
+  redis-06:
+    image: redis
+    container_name: redis-06
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./conf/redis-03.conf:/etc/redis-06.conf
+    command: redis-server /etc/redis-06.conf --port 7006
+```
+
+2. 启动Redis容器:`docker compose up -d`
+
+## 集群搭建
+
+1. 进入redis-01容器:`docker exec -it redis-01 bash`
+
+2. 创建集群:`redis-cli -a 123456 --cluster create 192.168.149.100:7001 192.168.149.100:7002 192.168.149.100:7003 192.168.149.100:7004 192.168.149.100:7005 192.168.149.100:7006 --cluster-replicas 1`
+
+3. 出现选择提示信息,输入`yes`
+
+## 检查Redis集群运行状态
+
+1. 进入redis-01容器:`docker exec -it redis-01 bash`
+
+2. 进入redis-cli:`redis-cli -c -h 192.168.149.100 -p 7001 -a 123456`
+
+3. 查看集群状态:`cluster info`
