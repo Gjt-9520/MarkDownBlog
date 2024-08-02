@@ -1,5 +1,5 @@
 ---
-title: "Docker安装Nacos"
+title: "安装Nacos"
 date: 2024-07-22
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage78.jpg?raw=true

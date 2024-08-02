@@ -1,5 +1,5 @@
 ---
-title: "Docker安装Sentinel"
+title: "安装Sentinel"
 date: 2024-07-24
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage79.jpg?raw=true

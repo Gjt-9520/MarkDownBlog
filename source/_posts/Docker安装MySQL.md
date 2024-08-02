@@ -1,5 +1,5 @@
 ---
-title: "Docker安装MySQL"
+title: "安装MySQL"
 date: 2024-07-22
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage77.jpg?raw=true

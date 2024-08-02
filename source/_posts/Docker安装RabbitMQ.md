@@ -1,5 +1,5 @@
 ---
-title: "Docker安装RabbitMQ"
+title: "安装RabbitMQ"
 date: 2024-07-25
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage83.jpg?raw=true

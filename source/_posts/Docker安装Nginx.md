@@ -1,5 +1,5 @@
 ---
-title: "Docker安装Nginx"
+title: "安装Nginx"
 date: 2024-07-22
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage81.jpg?raw=true

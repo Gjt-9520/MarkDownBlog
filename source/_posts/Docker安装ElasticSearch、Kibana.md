@@ -1,5 +1,5 @@
 ---
-title: "Docker安装ElasticSearch、Kibana"
+title: "安装ElasticSearch、Kibana"
 date: 2024-07-28
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage86.jpg?raw=true

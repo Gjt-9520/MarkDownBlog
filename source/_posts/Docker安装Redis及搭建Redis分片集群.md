@@ -1,5 +1,5 @@
 ---
-title: "Docker安装Redis及搭建Redis主从集群"
+title: "安装Redis及搭建Redis分片集群"
 date: 2024-08-03
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage92.jpg?raw=true
@@ -35,6 +35,11 @@ docker run \
 ```
 
 解释:
+- `-d`:设置后台运行容器
+- `-p 6379:6379`:将容器的6379端口映射到主机的6379端口
+- `-v ./redis/data:/data`:将主机的redis/data目录挂载到容器的/data目录
+- `-v ./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf`:将主机的redis/conf/redis.conf文件挂载到容器的/usr/local/etc/redis/redis.conf文件
+- `redis`:指定Redis镜像名称
 
 ## 检查Redis容器运行状态
 
@@ -44,9 +49,13 @@ docker run \
 
 3. 进入redis-cli:`redis-cli`
 
-# 搭建Redis主从集群
+# 搭建Redis分片集群
+
+![Redis分片集群](../images/Redis分片集群.jpeg)
 
 ## 创建配置文件
+
+以搭建三主三从架构的Redis分片集群为例:
 
 1. 在工作目录中新建redis目录:`mkdir redis`
 
@@ -138,9 +147,24 @@ services:
 
 1. 进入redis-01容器:`docker exec -it redis-01 bash`
 
-2. 创建集群:`redis-cli -a 123456 --cluster create 192.168.149.100:7001 192.168.149.100:7002 192.168.149.100:7003 192.168.149.100:7004 192.168.149.100:7005 192.168.149.100:7006 --cluster-replicas 1`
+2. 创建集群
 
-3. 出现选择提示信息,输入`yes`
+```cmd
+redis-cli \
+    -a 123456 \
+    --cluster create \
+    --cluster-replicas 1 \
+    192.168.149.100:7001 192.168.149.100:7002 192.168.149.100:7003 \
+    192.168.149.100:7004 192.168.149.100:7005 192.168.149.100:7006
+```
+
+解释:
+- `-a 123456`:指定Redis密码
+- `--cluster create`:创建集群
+- `--cluster-replicas 1`:每个节点创建一个副本
+  此时节点总数÷(replicas + 1)得到的就是master的数量n,因此节点列表中的前n个节点就是master,其它节点都是slave节点,随机分配到不同master
+
+出现选择提示信息,输入`yes`
 
 ## 检查Redis集群运行状态
 
@@ -148,4 +172,6 @@ services:
 
 2. 进入redis-cli:`redis-cli -c -h 192.168.149.100 -p 7001 -a 123456`
 
-3. 查看集群状态:`cluster info`
+3. 查看集群状态:`cluster info`、`info replication`、`cluster nodes`
+
+4. 操作Redis时,如果出现`(error) NOAUTH Authentication required.`的提示,则需要输入`auth 123456`密码进行认证
