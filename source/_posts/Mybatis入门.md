@@ -7,7 +7,7 @@ tags: ["MyBatis","Lombok"]
 category: "数据库"
 updated: 2024-06-07
   
-top_group_index: 5
+top_group_index: 
 ---
 
 # MyBatis

@@ -109,7 +109,7 @@ public class MyJframe extends JFrame implements ActionListener {
             this.getContentPane().add(no);
         }
 
-        JLabel text = new JLabel("你觉得自己帅吗？");
+        JLabel text = new JLabel("你觉得自己帅吗?");
         text.setFont(new Font("微软雅黑",Font.PLAIN,30));
         text.setBounds(120,150,300,50);
 

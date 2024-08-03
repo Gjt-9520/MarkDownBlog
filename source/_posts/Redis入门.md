@@ -12,7 +12,7 @@ top_group_index:
 
 # Redis
 
-Redis是一个基于**内存**的**key-value(键值对)**结构数据库。
+Redis是一个基于**内存**的**key-value(键值对)**结构数据库,
 
 特点:
 1. 基于内存存储,读写性能高

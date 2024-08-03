@@ -89,7 +89,6 @@ services:
   redis-01:
     image: redis
     container_name: redis-01
-    restart: always
     network_mode: "host"
     volumes:
       - ./conf/redis-01.conf:/etc/redis-01.conf
@@ -98,7 +97,6 @@ services:
   redis-02:
     image: redis
     container_name: redis-02
-    restart: always
     network_mode: "host"
     volumes:
       - ./conf/redis-02.conf:/etc/redis-02.conf
@@ -107,7 +105,6 @@ services:
   redis-03:
     image: redis
     container_name: redis-03
-    restart: always
     network_mode: "host"
     volumes:
       - ./conf/redis-03.conf:/etc/redis-03.conf
@@ -116,7 +113,6 @@ services:
   redis-04:
     image: redis
     container_name: redis-04
-    restart: always
     network_mode: "host"
     volumes:
       - ./conf/redis-01.conf:/etc/redis-04.conf
@@ -125,7 +121,6 @@ services:
   redis-05:
     image: redis
     container_name: redis-05
-    restart: always
     network_mode: "host"
     volumes:
       - ./conf/redis-02.conf:/etc/redis-05.conf
@@ -134,7 +129,6 @@ services:
   redis-06:
     image: redis
     container_name: redis-06
-    restart: always
     network_mode: "host"
     volumes:
       - ./conf/redis-03.conf:/etc/redis-06.conf
