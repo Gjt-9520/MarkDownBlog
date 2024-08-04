@@ -74,6 +74,20 @@ Docker最常见的命令就是操作镜像、容器的命令
 - `docker load`:加载本地压缩文件到镜像
 - `docker inspect`:查看容器详细信息
 
+## 开启/关闭Docker服务及开机自启
+
+- `systemctl start docker.service`:启动Docker服务
+
+- `systemctl stop docker.service`:停止Docker服务
+
+- `systemctl restart docker.service`:重启Docker服务
+
+- `systemctl is-enabled docker.service`:检查Docker服务是否开机启动
+
+- `systemctl enable docker.service`:设置Docker服务开机启动
+
+- `systemctl disable docker.service`:禁止Docker服务开机启动
+
 ## 修改命令别名
 
 先进入文件`vi /root/.bashrc`,然后修改命令别名,最后`source /root/.bashrc`使别名生效
