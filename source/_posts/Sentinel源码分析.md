@@ -138,7 +138,7 @@ public Order queryOrderById(Long orderId) {
 
 ### 基于注解标记资源
 
-可以通过给方法添加@SentinelResource注解的形式来标记资源
+可以通过给方法添加`@SentinelResource`注解的形式来标记资源
 
 ![image-20210925141507603](../images/image-20210925141507603.png)
 
