@@ -1,5 +1,5 @@
 ---
-title: "MyBatisPlus插件功能"
+title: "MyBatisPlus分页插件"
 date: 2024-07-18
 description: ""
 cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage66.jpg?raw=true
@@ -10,7 +10,7 @@ updated: 2024-07-19
 top_group_index: 
 ---
 
-# 插件功能
+# 内置拦截器
 
 ![MyBatisPlus提供的内置拦截器](../images/MyBatisPlus提供的内置拦截器.png)
 

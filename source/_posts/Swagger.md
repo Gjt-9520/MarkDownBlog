@@ -115,7 +115,7 @@ protected void addResourceHandlers(ResourceHandlerRegistry registry) {
 
 5. `@ApiImplicitParams`
 
-用在请求的方法上,包含多@ApiImplicitParam
+用在请求的方法上,包含多`@ApiImplicitParam`
 
 6. `@ApiImplicitParam`
 

@@ -402,6 +402,8 @@ public class test {
 
 多行注释 `ctrl + shift + /`       
 注释当前行或选中内容 `ctrl + /`      
+所有注释展开 `ctrl + shift + +`                   
+所有注释收缩 `ctrl + shift + -`             
 
 ## 移动代码
 
