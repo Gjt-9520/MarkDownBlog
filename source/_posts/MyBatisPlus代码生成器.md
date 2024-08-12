@@ -10,6 +10,8 @@ updated: 2024-08-12
 top_group_index: 
 ---
 
+[MyBatisPlus代码生成器](https://baomidou.com/guides/code-generator/#%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96)
+
 # 依赖引入
 
 ```xml
