@@ -117,6 +117,13 @@ protected void addResourceHandlers(ResourceHandlerRegistry registry) {
 
 用在请求的方法上,包含多`@ApiImplicitParam`
 
+```java
+@ApiImplicitParams({
+    @ApiImplicitParam(name="param1", value="参数1"),
+    @ApiImplicitParam(name="param2", value="参数2") 
+})
+```
+
 6. `@ApiImplicitParam`
 
 用于方法,表示单独的请求参数
