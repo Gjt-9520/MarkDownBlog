@@ -100,11 +100,12 @@ theme: anzhiyu
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: 'git'
-  respository: 'https://gitee.com/gjt_1538048299/mark-down-blog.git'
-  branch: 'main'
-
+# deploy:
+#   type: git
+#   repo: git@gitee.com:gjt_1538048299/mark-down-blog.git
+#   branch: main
+#   message: Update
+  
 # APlayer
 # https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
 aplayer:
