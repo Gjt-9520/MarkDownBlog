@@ -2,7 +2,7 @@
 title: "ElasticSearch数据聚合"
 date: 2024-08-02
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage91.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage91.jpg?raw=true
 tags: ["SpringBoot","ElasticSearch","DSL","JavaRestClient"]
 category: "数据库"
 updated: 2024-08-03

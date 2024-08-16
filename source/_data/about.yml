@@ -1,6 +1,6 @@
 - class_name: 关于页
   subtitle: 生命不息,探索不止!
-  avatarImg: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao2.JPG?raw=true
+  avatarImg: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/gujintao2.JPG?raw=true
   avatarSkills:
     left:
       - 🤖️ 数码科技爱好者
@@ -28,8 +28,8 @@
   map:
     title: 我现在住在
     StrengthenTitle: 中国，上海
-    background: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/shanghai.png?raw=true
-    backgroundDark: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/shanghai.png?raw=true
+    background: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/shanghai.png?raw=true
+    backgroundDark: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/shanghai.png?raw=true
   selfInfo:
     selfInfoTips1: 生于
     selfInfoContentYear: 2001
@@ -40,8 +40,8 @@
   personalities:
     author_name: 主人公
     personality_type: ENFJ-A
-    photo_url: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao.png?raw=true
-    personality_img: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/ENFJ_male.png?raw=true
+    photo_url: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/gujintao.png?raw=true
+    personality_img: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/ENFJ_male.png?raw=true
     name_url: https://www.16personalities.com/ch/enfj-%E4%BA%BA%E6%A0%BC
   maxim:
     maxim_tips: 座右铭
@@ -57,50 +57,50 @@
     comic_list:
       - name: Grand Theft Auto V
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game1.jpg?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/Game1.jpg?raw=true
       - name: Assassin's Creed Odyssey
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game2.jpg?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/Game2.jpg?raw=true
       - name: Resident Evil
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game3.jpg?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/Game3.jpg?raw=true
       - name: Titanfall II
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game4.png?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/Game4.png?raw=true
       - name: RedDeadRedemption II
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/Game5.jpg?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/Game5.jpg?raw=true
   film:
     film_tips: 珍藏佳作
     film_title: 
     film_list:
       - name: 银翼杀手2049
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite6.png?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite6.png?raw=true
       - name: 蝙蝠侠:黑暗骑士
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite8.png?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite8.png?raw=true
       - name: 星际穿越
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite5.png?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite5.png?raw=true
       - name: 流浪地球2
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite9.png?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite9.png?raw=true
       - name: 盗梦空间
         href: 
-        cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite10.png?raw=true
+        cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite10.png?raw=true
       # - name: 蝴蝶效应
       #   href: 
-      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite1.png?raw=true
+      #   cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite1.png?raw=true
       # - name: 三体
       #   href: 
-      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite11.png?raw=true
+      #   cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite11.png?raw=true
       # - name: 黑客帝国2
       #   href: 
-      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite7.png?raw=true
+      #   cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite7.png?raw=true
       # - name: 环太平洋
       #   href: 
-      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite4.png?raw=true
+      #   cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite4.png?raw=true
       # - name: 前目的地
       #   href: 
-      #   cover: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/favourite/favourite12.png?raw=true
+      #   cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/favourite/favourite12.png?raw=true

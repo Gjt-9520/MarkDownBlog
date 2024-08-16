@@ -2,7 +2,7 @@
 title: "安装Redis及搭建Redis分片集群"
 date: 2024-08-03
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage92.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage92.jpg?raw=true
 tags: ["Redis","Docker"]
 category: "配置"
 updated: 2024-08-04

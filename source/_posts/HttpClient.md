@@ -2,7 +2,7 @@
 title: "HttpClient"
 date: 2024-06-27
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage55.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage55.jpg?raw=true
 tags: ["HttpClient"]
 category: "笔记"
 updated: 2024-06-28

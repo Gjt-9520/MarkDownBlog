@@ -2,7 +2,7 @@
 title: "File"
 date: 2024-04-05
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage114.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage114.jpg?raw=true
 tags: ["JavaSE","IO"]
 category: "笔记"
 updated: 2024-04-06

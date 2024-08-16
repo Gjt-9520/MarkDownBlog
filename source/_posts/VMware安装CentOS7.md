@@ -2,7 +2,7 @@
 title: "VMware安装CentOS7"
 date: 2024-07-19
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage76.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage76.jpg?raw=true
 tags: ["Linux"]
 category: "配置"
 updated: 2024-07-20

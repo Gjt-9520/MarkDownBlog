@@ -33,19 +33,19 @@ nav:
       item:
         - name: 归档
           link: /archives/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image.png?raw=true
+          icon: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/image.png?raw=true
         - name: 关于
           link: /about/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/about.png?raw=true
+          icon: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/about.png?raw=true
         - name: 资源
           link: /link/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/link.png?raw=true
+          icon: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/link.png?raw=true
         - name: 图床
           link: https://image-resources-gjt.vercel.app/
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/picture.png?raw=true
+          icon: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/picture.png?raw=true
         - name: 音乐
           link: /music/?id=12318689426&server=netease
-          icon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/music.png?raw=true
+          icon: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/music.png?raw=true
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -146,11 +146,11 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/taiyang.png?raw=true
+favicon: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/taiyang.png?raw=true
 
 # Avatar (头像)
 avatar:
-  img: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/gujintao2.JPG?raw=true
+  img: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/gujintao2.JPG?raw=true
   effect: false
 
 # Disable all banner image
@@ -176,14 +176,14 @@ cover:
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
-  flink: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/404.gif?raw=true
-  post_page: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/404.gif?raw=true
+  flink: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/404.gif?raw=true
+  post_page: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/404.gif?raw=true
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: "请尝试站内搜索寻找文章"
-  background: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/404.gif?raw=true
+  background: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/404.gif?raw=true
 
 post_meta:
   page: # Home Page
@@ -786,7 +786,7 @@ preloader:
   source: 1
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/taiyang.png?raw=true # 自定加载动画义头像
+  avatar: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/taiyang.png?raw=true # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -1071,7 +1071,7 @@ home_top:
   banner:
     tips: 
     title: 图床
-    image: https://github.com/Gjt-9520/Resource/blob/main/Blogimage/image_resource.gif?raw=true
+    image: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Blogimage/image_resource.gif?raw=true
     link: https://image-resources-gjt.vercel.app/
 
 # 朋友圈配置

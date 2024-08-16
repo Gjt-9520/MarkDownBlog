@@ -2,7 +2,7 @@
 title: "TLIAS-记录日志操作"
 date: 2024-06-17
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage48.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage48.jpg?raw=true
 tags: ["SpringBoot"]
 category: "项目"
 updated: 2024-06-18

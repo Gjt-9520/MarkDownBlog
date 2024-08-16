@@ -2,7 +2,7 @@
 title: "Yml"
 date: 2024-06-13
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage45.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage45.jpg?raw=true
 tags: ["Yml","Properties"]
 category: "笔记"
 updated: 2024-06-14

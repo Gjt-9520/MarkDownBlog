@@ -2,7 +2,7 @@
 title: "Properties"
 date: 2024-04-19
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage128.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage128.jpg?raw=true
 tags: ["JavaSE","集合","Properties"]
 category: "笔记"
 updated: 2024-04-20

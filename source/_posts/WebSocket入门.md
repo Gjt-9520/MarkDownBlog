@@ -2,7 +2,7 @@
 title: "WebSocket入门"
 date: 2024-07-09
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage60.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage60.jpg?raw=true
 tags: ["WebSocket"]
 category: "笔记"
 updated: 2024-07-10

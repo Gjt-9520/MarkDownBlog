@@ -2,7 +2,7 @@
 title: "static"
 date: 2024-01-04
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage98.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage98.jpg?raw=true
 tags: ["JavaSE","面向对象"]
 category: "笔记"
 updated: 2024-01-05

@@ -2,7 +2,7 @@
 title: "MyBatis动态SQL"
 date: 2024-06-08
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage41.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage41.jpg?raw=true
 tags: ["MyBatis"]
 category: "数据库"
 updated: 2024-06-09

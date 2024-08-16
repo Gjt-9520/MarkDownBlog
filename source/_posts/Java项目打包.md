@@ -2,7 +2,7 @@
 title: "Java项目打包"
 date: 2024-01-14
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage86.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage86.jpg?raw=true
 tags: ["打包"]
 category: "笔记"
 updated: 2024-01-15

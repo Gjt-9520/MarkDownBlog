@@ -2,7 +2,7 @@
 title: "Arrays"
 date: 2024-02-29
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage73.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage73.jpg?raw=true
 tags: ["JavaSE"]
 category: "笔记"
 updated: 2024-03-01

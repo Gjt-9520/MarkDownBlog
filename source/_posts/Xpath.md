@@ -2,7 +2,7 @@
 title: "Xpath"
 date: 2024-05-02
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage112.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage112.jpg?raw=true
 tags: ["JavaSE","Dom4j"]
 category: "笔记"
 updated: 2024-05-03

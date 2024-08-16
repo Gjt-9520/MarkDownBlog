@@ -2,7 +2,7 @@
 title: "Ajax和Axios"
 date: 2024-05-30
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage32.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage32.jpg?raw=true
 tags: ["Axios"]
 category: "笔记"
 updated: 2024-05-31

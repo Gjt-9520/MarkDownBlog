@@ -2,7 +2,7 @@
 title: "Stream流综合练习"
 date: 2024-04-01
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage110.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage110.jpg?raw=true
 tags: ["JavaSE","集合","练习"]
 category: "笔记"
 updated: 2024-04-02

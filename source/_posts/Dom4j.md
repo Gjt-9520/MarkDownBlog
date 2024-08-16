@@ -2,7 +2,7 @@
 title: "Dom4j"
 date: 2024-04-03
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage83.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage83.jpg?raw=true
 tags: ["JavaSE","Dom4j"]
 category: "笔记"
 updated: 2024-04-04

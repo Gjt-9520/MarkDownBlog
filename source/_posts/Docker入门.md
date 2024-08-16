@@ -2,7 +2,7 @@
 title: "Docker入门"
 date: 2024-07-21
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage67.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage67.jpg?raw=true
 tags: ["Docker"]
 category: "配置"
 updated: 2024-07-22

@@ -2,7 +2,7 @@
 title: "DSL查询"
 date: 2024-08-01
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage90.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage90.jpg?raw=true
 tags: ["SpringBoot","ElasticSearch","DSL"]
 category: "数据库"
 updated: 2024-08-02

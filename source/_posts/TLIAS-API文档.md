@@ -2,7 +2,7 @@
 title: "TLIAS-API文档"
 date: 2024-06-10
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage43.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage43.jpg?raw=true
 tags: ["API"]
 category: "项目"
 updated: 2024-06-11

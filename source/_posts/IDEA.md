@@ -2,7 +2,7 @@
 title: "IDEA"
 date: 2023-11-30
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage82.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage82.jpg?raw=true
 tags: ["编译器"]
 category: "笔记"
 updated: 2023-12-01

@@ -2,7 +2,7 @@
 title: "CentOS7安装Docker"
 date: 2024-07-20
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage75.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage75.jpg?raw=true
 tags: ["Docker","yum"]
 category: "配置"
 updated: 2024-07-21

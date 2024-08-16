@@ -2,7 +2,7 @@
 title: "ArrayList基础"
 date: 2024-01-01
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Aimage-135/Aimage71.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Aimage-135/Aimage71.jpg?raw=true
 tags: ["JavaSE","集合"]
 category: "笔记"
 updated: 2024-01-02

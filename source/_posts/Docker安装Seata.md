@@ -2,7 +2,7 @@
 title: "安装Seata"
 date: 2024-07-25
 description: ""
-cover: https://github.com/Gjt-9520/Resource/blob/main/Bimage-135/Bimage80.jpg?raw=true
+cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage80.jpg?raw=true
 tags: ["Docker","Seata"]
 category: "配置"
 updated: 2024-07-26
