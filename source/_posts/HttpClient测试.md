@@ -1,11 +1,11 @@
 ---
 title: "HttpClient测试"
-date: 2024-08-13
+date: 2024-08-12
 description: ""
 cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage102.jpg?raw=true
 tags: ["SpringBoot"]
 category: "笔记"
-updated: 2024-08-14
+updated: 2024-08-13
   
 top_group_index: 
 ---
