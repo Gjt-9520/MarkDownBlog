@@ -814,17 +814,17 @@ aside:
     backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
   card_recent_post:
     enable: true
-    limit: 8 # if set 0 will show all
+    limit: 6 # if set 0 will show all
     sort: updated # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
     enable: true
     limit: 4 # if set 0 will show all
-    expand: none # none/true/false
+    expand: true # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
-    limit: 12 # if set 0 will show all
+    limit: 16 # if set 0 will show all
     color: false
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
@@ -839,7 +839,7 @@ aside:
   card_webinfo:
     enable: true
     post_count: true
-    last_push_date: false
+    last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site

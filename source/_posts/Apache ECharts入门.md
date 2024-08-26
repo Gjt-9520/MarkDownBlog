@@ -3,7 +3,7 @@ title: "Apache ECharts入门"
 date: 2024-07-11
 description: ""
 cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage61.jpg?raw=true
-tags: ["Apache ECharts"]
+tags: ["ECharts"]
 category: "笔记"
 updated: 2024-07-12
   
