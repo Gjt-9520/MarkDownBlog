@@ -193,3 +193,114 @@ spring:
 
 ## 远程调用
 
+以学成在线项目为例,实现内容管理服务:课程静态化后上传至MinIO时,远程调用媒资管理服务:上传文件的接口
+
+1. 依赖引入
+
+```xml
+<!-- Spring Cloud 微服务远程调用 -->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-openfeign</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.github.openfeign</groupId>
+    <artifactId>feign-httpclient</artifactId>
+</dependency>
+```
+
+2. 配置熔断
+
+开启Feign熔断保护,设置熔断的超时时间,为防止一次处理时间较长触发熔断,另外设置请求和连接的超时时间
+
+```yaml
+feign:
+  hystrix:
+    enabled: true
+  circuitbreaker:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000  #熔断超时时间
+ribbon:
+  ConnectTimeout: 60000 #连接超时时间
+  ReadTimeout: 60000 #读超时时间
+  MaxAutoRetries: 0 #重试次数
+  MaxAutoRetriesNextServer: 1 #切换实例的重试次数
+```
+
+3. 定义降级处理逻辑
+
+定义一个fallbackFactory类MediaServiceClientFallbackFactory实现FallbackFactory
+
+```java
+package com.xuecheng.content.feignclient;
+
+import feign.hystrix.FallbackFactory;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+
+/**
+ * @description 媒资管理服务调用失败的降级处理
+ */
+@Component
+@Slf4j
+public class MediaServiceClientFallbackFactory implements FallbackFactory<MediaServiceClient> {
+
+    @Override
+    public MediaServiceClient create(Throwable throwable) {
+        return new MediaServiceClient() {
+            // 发生熔断,上游服务会调用此方法执行降级逻辑,此方法可以对远程调用的异常做处理
+            @Override
+            public String upload(MultipartFile filedata, String objectName) throws IOException {
+                log.debug("远程调用上传文件的接口发生熔断:{}", throwable.getMessage(), throwable);
+                return "";
+            }
+        };
+    }
+}
+```
+
+4. 定义远程调用媒资服务的接口,并配置远程调用的服务名media-api和降级处理逻辑FallbackFactory
+
+```java
+package com.xuecheng.content.feignclient;
+
+import com.alibaba.nacos.common.http.param.MediaType;
+import com.xuecheng.content.config.MultipartSupportConfig;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+
+/**
+ * @description 远程调用媒资服务的接口
+ */
+@FeignClient(value = "media-api", configuration = {MultipartSupportConfig.class}, fallbackFactory = MediaServiceClientFallbackFactory.class)
+public interface MediaServiceClient {
+    
+    /**
+     * 上传文件
+     *
+     * @param filedata   文件
+     * @param objectName 如果传入objectName,则按照objectName目录去存储,如果没有传入,则按照年月日存储
+     * @return 上传结果
+     * @throws IOException 异常
+     */
+    @RequestMapping(value = "/media/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA)
+    String upload(@RequestPart("filedata") MultipartFile filedata,
+                  @RequestParam(value = "objectName", required = false) String objectName) throws IOException;
+}
+```
+
+5. 注入MediaServiceClient并引用upload方法
