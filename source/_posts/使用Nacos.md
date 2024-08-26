@@ -304,3 +304,5 @@ public interface MediaServiceClient {
 ```
 
 5. 注入MediaServiceClient并引用upload方法
+
+实际操作中把上传文件逻辑放到Service层,在Service层调用MediaServiceClient的upload方法

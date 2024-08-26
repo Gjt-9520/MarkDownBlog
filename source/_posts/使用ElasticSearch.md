@@ -10,6 +10,6 @@ updated: 2024-08-22
 top_group_index: 
 ---
 
-# 使用ElasticSearch
+# ElasticSearch
 
 
