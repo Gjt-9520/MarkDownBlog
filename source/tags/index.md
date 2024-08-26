@@ -5,4 +5,5 @@ type: "tags"
 aside: false
 top_img: false
 comments: false
+orderby: name
 ---
