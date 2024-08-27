@@ -12,7 +12,7 @@ top_group_index:
 
 # 下载镜像
 
-- [Docker Hub官方网站](https://hub.docker.com/)
+- [Docker Hub官网](https://hub.docker.com/)
 
 - `docker pull rabbitmq`:下载最新版RabbitMQ镜像(其实此命令就等同于`docker pull rabbitmq:latest`)
 

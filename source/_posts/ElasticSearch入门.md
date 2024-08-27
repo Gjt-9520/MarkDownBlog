@@ -20,13 +20,13 @@ top_group_index:
 
 Lucene是一个Java语言的搜索引擎类库,是Apache公司的顶级项目
 
-[Lucene官网地址](https://lucene.apache.org/)
+[Lucene官网](https://lucene.apache.org/)
 
 Lucene的优势:
 - 易扩展
 - 高性能(基于倒排索引)
 
-[ElasticSearch官网地址](https://www.elastic.co/cn/)
+[ElasticSearch官网](https://www.elastic.co/cn/)
 
 ElasticSearch具备下列优势:
 - 支持分布式,可水平扩展

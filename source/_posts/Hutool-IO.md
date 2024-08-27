@@ -14,7 +14,7 @@ top_group_index:
 
 ![Hutool-IO](../images/Hutool.png)
 
-- [Hutool官方网站](https://hutool.cn/)
+- [Hutool官网](https://hutool.cn/)
 
 - [Hutool API文档](https://apidoc.gitee.com/dromara/hutool/)
 

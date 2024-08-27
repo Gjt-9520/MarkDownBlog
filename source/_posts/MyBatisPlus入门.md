@@ -12,7 +12,7 @@ top_group_index:
 
 # MyBatisPlus
 
-[MyBatisPlus官方网站](https://baomidou.com/)
+[MyBatisPlus官网](https://baomidou.com/)
 
 特点:
 1. 润物无声:只做增强不做改变,引入它不会对现有工程产生影响,如丝般顺滑

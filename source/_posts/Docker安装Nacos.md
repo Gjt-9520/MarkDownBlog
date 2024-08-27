@@ -12,7 +12,7 @@ top_group_index:
 
 # 下载镜像
 
-- [Docker Hub官方网站](https://hub.docker.com/)
+- [Docker Hub官网](https://hub.docker.com/)
 
 - `docker pull nacos/nacos-server:latest`:下载最新版Nacos镜像
 

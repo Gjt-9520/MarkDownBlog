@@ -24,7 +24,7 @@ Java EE:Java Enterprise Edition,Java企业版
 
 Tomcat也被称为Web容器、Servlet容器(Servlet程序需要依赖于Tomcat才能运行)
 
-[Tomcat官方网站](https://tomcat.apache.org/)
+[Tomcat官网](https://tomcat.apache.org/)
 
 # 基本使用
 

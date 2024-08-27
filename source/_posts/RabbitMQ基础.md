@@ -72,7 +72,7 @@ RabbitMQ的整体架构及核心概念:
 
 ![AMQP](../images/AMQP.png)
 
-[Spring AMQP官方网站](https://spring.io/projects/spring-amqp)
+[Spring AMQP官网](https://spring.io/projects/spring-amqp)
 
 SpringAMQP收发消息步骤:
 1. 引入spring-boot-starter-amqp依赖

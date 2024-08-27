@@ -425,7 +425,7 @@ XML解析就是使用程序读取XML中的数据
 
 ## Dom4j
 
-- [Dom4j官方网站](https://dom4j.github.io/)
+- [Dom4j官网](https://dom4j.github.io/)
 
 ### 常用方法
 
@@ -746,7 +746,7 @@ Xpath更加适合做信息检索
 
 ## Xpath
 
-- [Jaxen官方网站](https://central.sonatype.com/artifact/jaxen/jaxen/overview)
+- [Jaxen官网](https://central.sonatype.com/artifact/jaxen/jaxen/overview)
 
 Xpath使用**路径表达式**来定位XML文档中的元素结点或属性结点
 

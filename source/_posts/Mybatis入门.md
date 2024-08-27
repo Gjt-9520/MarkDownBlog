@@ -14,7 +14,7 @@ top_group_index:
 
 MyBatis是一款优秀的**持久层**框架,用于简化JDBC的开发
 
-[官方网站](https://mybatis.org/mybatis-3/zh_CN/index.html)
+[MyBatis官网](https://mybatis.org/mybatis-3/zh_CN/index.html)
 
 # 快速入门
 
@@ -339,7 +339,7 @@ public interface UserMapper {
 
 ![数据库连接池接口](../images/数据库连接池接口.png)
 
-[Druid官方网站](https://github.com/alibaba/druid)
+[Druid官网](https://github.com/alibaba/druid)
 
 ## 切换Druid数据库连接池
 

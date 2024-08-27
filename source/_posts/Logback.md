@@ -14,9 +14,9 @@ top_group_index:
 
 Logback是基于slf4j的日志规范实现的框架,性能比之前使用的log4j要好
 
-- [slf4j官方网站](https://www.slf4j.org/index.html)
+- [slf4j官网](https://www.slf4j.org/index.html)
 
-- [logback官方网站](https://logback.qos.ch/index.html)
+- [logback官网](https://logback.qos.ch/index.html)
 
 ## 技术模块
 

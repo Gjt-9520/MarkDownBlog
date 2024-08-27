@@ -1616,7 +1616,7 @@ public Result uploadImage(MultipartFile image) throws Exception {
 
 ### 阿里云OSS
 
-[阿里云OSS官方网站](https://oss.console.aliyun.com/)
+[阿里云OSS官网](https://oss.console.aliyun.com/)
 
 阿里云对象存储OSS(Object Storage Service),是一款海量、安全、低成本、高可靠的云存储服务
 

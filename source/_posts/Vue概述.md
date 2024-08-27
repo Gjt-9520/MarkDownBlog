@@ -10,7 +10,7 @@ updated: 2024-05-30
 top_group_index: 
 ---
 
-[Vue官方网站](https://cn.vuejs.org/)
+[Vue官网](https://cn.vuejs.org/)
 
 # Vue
 

@@ -12,7 +12,7 @@ top_group_index:
 
 # Spring  
 
-[Spring官方网站](https://spring.io)
+[Spring官网](https://spring.io)
 
 [Spring官方模板](https://start.spring.io/)
 

@@ -19,7 +19,7 @@ Redis是一个基于**内存**的**key-value(键值对)**结构数据库,
 2. 适合存储热点数据(热点商品、资讯、新闻)
 3. 企业应用广泛
 
-[Redis官方网站](https://redis.io)
+[Redis官网](https://redis.io)
 
 [Redis中文网](https://www.redis.net.cn/)
 

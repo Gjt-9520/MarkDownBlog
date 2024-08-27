@@ -14,7 +14,7 @@ top_group_index:
 
 1. 下载在官网下载CentOS7的iso文件
 
-[CentOS官方网站](https://www.centos.org/download/)
+[CentOS官网](https://www.centos.org/download/)
 
 2. 启动VMWare,点击`创建新的虚拟机`
 

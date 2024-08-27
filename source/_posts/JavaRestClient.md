@@ -10,7 +10,7 @@ updated: 2024-08-01
 top_group_index: 
 ---
 
-[JavaRestClient官方网站](https://www.elastic.co/guide/en/elasticsearch/client/index.html)
+[JavaRestClient官网](https://www.elastic.co/guide/en/elasticsearch/client/index.html)
 
 # 客户端初始化
 

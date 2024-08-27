@@ -14,7 +14,7 @@ top_group_index:
 
 Apache ECharts是一款基于Javascript的数据可视化图表库,提供直观,生动,可交互,可个性化定制的数据可视化图表
 
-[Apache ECharts官方网站](https://echarts.apache.org/zh/index.html)
+[Apache ECharts官网](https://echarts.apache.org/zh/index.html)
 
 # 入门案例
 

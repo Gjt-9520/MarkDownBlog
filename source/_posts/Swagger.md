@@ -14,7 +14,7 @@ top_group_index:
 
 使用Swagger,只需要按照它的规范去定义接口及接口相关的信息,就可以做到生成接口文档,以及**在线接口调试**页面
 
-[Swagger官方网站](https://swagger.io/)
+[Swagger官网](https://swagger.io/)
 
 Knife4j是为Java MVC框架集成Swagger生成Api文档的增强解决方案
 
