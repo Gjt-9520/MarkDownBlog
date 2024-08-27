@@ -4,7 +4,7 @@ date: 2024-08-13
 description: ""
 cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage103.jpg?raw=true
 tags: ["Nacos"]
-category: "微服务"
+category: "实用"
 updated: 2024-08-14
   
 top_group_index: 
