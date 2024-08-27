@@ -2113,9 +2113,9 @@ spring.servlet.multipart.max-request-size=100MB
 
 # 阿里云OSS
 aliyun.oss.endpoint=https://oss-cn-beijing.aliyuncs.com
-aliyun.oss.accessKeyId=LTAI5tSbaiqU1HXrfJLUUxsu
-aliyun.oss.accessKeySecret=rs9U2CVba9svGB8G5V7umFtLMZVxVT
-aliyun.oss.bucketName=springboot-web-class-management-system
+aliyun.oss.accessKeyId=
+aliyun.oss.accessKeySecret=
+aliyun.oss.bucketName=
 ```
 
 # 配置文件
