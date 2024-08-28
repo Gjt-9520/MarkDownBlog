@@ -1,10 +1,10 @@
 ---
-title: "分布式任务处理"
+title: "使用XXL-JOB"
 date: 2024-08-18
 description: ""
 cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage108.jpg?raw=true
-tags: ["SpringBoot", "XXL-JOB"]
-category: "微服务"
+tags: ["XXL-JOB"]
+category: "实用"
 updated: 2024-08-19
   
 top_group_index: 
@@ -1011,4 +1011,3 @@ public class CoursePublishTask extends MessageProcessAbstract {
     }
 }
 ```
-

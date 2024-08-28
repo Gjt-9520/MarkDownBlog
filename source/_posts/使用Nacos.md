@@ -3,7 +3,7 @@ title: "使用Nacos"
 date: 2024-08-13
 description: ""
 cover: https://github.com/Gjt-9520/MarkDownBlog/blob/main/source/coverImages/Bimage-135/Bimage103.jpg?raw=true
-tags: ["Nacos"]
+tags: ["Nacos", "OpenFeign"]
 category: "实用"
 updated: 2024-08-14
   
