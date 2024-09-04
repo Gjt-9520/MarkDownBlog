@@ -63,7 +63,6 @@ Nginx是开源、高性能、高可靠的Web和反向代理服务器,而且支�
 nginx.conf文件:
 
 ```yaml
-
 #user  nobody; # 指定nginx运行用户
 worker_processes  1; # 设置Nginx的工作进程数为1,通常可以设置为CPU核心数
 
@@ -107,11 +106,12 @@ http {
                 server 127.0.0.1:63010 weight=10; 
         } 
 
-        # 教学机构前台
+        # 教学机构
         upstream uidevserver{
                 server 127.0.0.1:8601 weight=10;
         } 
 
+        # 学成在线
         server {
                 listen       80; # 监听80端口
                 server_name  www.51xuecheng.cn localhost; # 虚拟主机域名
@@ -221,7 +221,7 @@ http {
                 }
         }
 
-        # 教学机构前台
+        # 教学机构
         server {
                 listen       80;
                 server_name  teacher.51xuecheng.cn;
