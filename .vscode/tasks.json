@@ -4,7 +4,7 @@
         {
             "label": "hexo cl",
             "type": "shell",
-            "command": "hexo cl",
+            "command": "npx hexo cl",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -13,7 +13,7 @@
         {
             "label": "hexo g",
             "type": "shell",
-            "command": "hexo g",
+            "command": "npx hexo g",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -22,7 +22,7 @@
         {
             "label": "hexo cl & g & s",
             "type": "shell",
-            "command": "hexo s",
+            "command": "npx hexo s",
             "group": {
                 "kind": "build",
                 "isDefault": true
