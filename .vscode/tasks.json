@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "hexo cl",
+            "label": "hexo clear",
             "type": "shell",
             "command": "npx hexo cl",
             "group": {
@@ -11,9 +11,18 @@
             }
         },
         {
-            "label": "hexo g",
+            "label": "hexo generate",
             "type": "shell",
             "command": "npx hexo g",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "hexo show",
+            "type": "shell",
+            "command": "npx hexo s",
             "group": {
                 "kind": "build",
                 "isDefault": true
