@@ -67,6 +67,13 @@ Spring Cloud alibaba:Nacos服务注册中心,配置中心
     <type>pom</type>
     <scope>import</scope>
 </dependency>
+<dependency>
+    <groupId>com.alibaba.cloud</groupId>
+    <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+    <version>${spring-cloud-alibaba.version}</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
 ```
 
 子工程中的服务注册需要引入Nacos的依赖:
@@ -107,6 +114,13 @@ spring:
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-dependencies</artifactId>
     <version>${spring-cloud.version}</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+<dependency>
+    <groupId>com.alibaba.cloud</groupId>
+    <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+    <version>${spring-cloud-alibaba.version}</version>
     <type>pom</type>
     <scope>import</scope>
 </dependency>
