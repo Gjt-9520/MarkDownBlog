@@ -2,27 +2,27 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "hexo clear",
+            "label": "npx hexo clear",
             "type": "shell",
-            "command": "npx hexo cl",
+            "command": "npx hexo clear",
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "hexo generate",
+            "label": "npx hexo generate",
             "type": "shell",
-            "command": "npx hexo g",
+            "command": "npx hexo generate",
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "hexo show",
+            "label": "npx hexo server",
             "type": "shell",
-            "command": "npx hexo s",
+            "command": "npx hexo server",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -31,12 +31,12 @@
         {
             "label": "hexo cl & g & s",
             "type": "shell",
-            "command": "npx hexo s",
+            "command": "npx hexo server",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "dependsOn": ["hexo cl", "hexo g"]
+            "dependsOn": ["npx hexo clear", "npx hexo generate"]
         }
     ]
 }
