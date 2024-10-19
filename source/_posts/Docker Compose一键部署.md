@@ -36,7 +36,7 @@ services:
       - /root/mysql/conf:/etc/mysql/conf.d
       - /root/mysql/init:/docker-entrypoint-initdb.d
     networks:
-      - net
+      - root_net
 
   nginx:
     image: nginx
@@ -51,7 +51,7 @@ services:
     depends_on:
       - mysql
     networks:
-      - net
+      - root_net
 
   nacos:
     image: nacos/nacos-server
@@ -65,7 +65,7 @@ services:
     depends_on:
       - nginx
     networks:
-      - net
+      - root_net
 
   sentinel:
     image: bladex/sentinel-dashboard
@@ -75,7 +75,7 @@ services:
     depends_on:
       - nacos
     networks:
-      - net
+      - root_net
 
   seata:
     image: seataio/seata-server:1.5.2
@@ -91,7 +91,7 @@ services:
     depends_on:
       - sentinel
     networks:
-      - net
+      - root_net
 
   rabbitmq:
     image: rabbitmq:3.8-management
@@ -108,7 +108,7 @@ services:
     depends_on:
       - seata
     networks:
-      - net
+      - root_net
   
   es:
     image: elasticsearch:7.12.1
@@ -126,7 +126,7 @@ services:
     depends_on:
       - rabbitmq
     networks:
-      - net
+      - root_net
   
   kibana:
     image: kibana:7.12.1
@@ -138,7 +138,23 @@ services:
     depends_on:
       - es
     networks:
-      - net
+      - root_net
+      
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    volumes:
+      - /root/minio/data:/data
+      - /root/minio/conf:/root/.minio
+    command: server /data --console-address ":9001" --address ":9000"
+    depends_on:
+      - kibana
 
 volumes:
   mq-plugins:
@@ -146,7 +162,7 @@ volumes:
   es-plugins:
 
 networks:
-  net:
+  root_net:
 ```
 
 # Docker Compose常用命令
