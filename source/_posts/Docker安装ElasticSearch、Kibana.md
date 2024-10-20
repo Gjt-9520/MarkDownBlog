@@ -92,13 +92,13 @@ docker run \
 
 1. 查看es的插件目录对应的数据卷
 
-`docker volume ls`
+`docker volume ls`或者`docker volume inspect es-plugins`
 
 2. 进入es的插件目录
 
 `cd /var/lib/docker/volumes/es-plugins/_data`
 
-3. 下载DelayExchange插件到挂载的插件目录下
+3. 下载DelayExchange插件，解压后放到挂载的插件目录下
 
 [Github插件地址](https://github.com/infinilabs/analysis-ik)
 
