@@ -72,6 +72,10 @@ elasticsearch:7.12.1
 
 ## 2 docker安装kibana
 
+```shell
+docker pull kibana:7.12.1
+```
+
 创建容器(如果不提前下载好，在创建容器时，会先下载，然后创建容器)
 
 ```shell
@@ -90,9 +94,11 @@ kibana:7.12.1
 
 此时，在浏览器输入地址访问：http://192.168.200.130:5601，即可看到结果
 
-
-
 ## 3 docker安装logstash
+
+```shell
+docker pull logstash:7.12.1
+```
 
 ### 3.1 创建容器
 
