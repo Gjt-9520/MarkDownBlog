@@ -282,6 +282,20 @@ StringBuilder是可变的，线程不安全的。
 
 细节：由于StringBuffer和StringBuilder底层是数组实现，会涉及到扩容机制，因此在创建实例的适合，可以赋初始大小，减少扩容次数，提高性能。
 
+# StringBuilder怎么实现？
+
+StringBuilder主要是为了解决String对象的不可变性问题，提供高效动态的字符串拼接和修改操作。
+
+大致核心实现如下：
+
+1. 内部使用char数组来存储字符，count来记录存储的字符数。
+
+2. 通过方法如append()、insert()、replace()等操作，直接修改内部的字符数组，而不会像String那样创建新的对象。
+
+3. 每次进行字符串操作时，如果当前容量不足，它会通过扩展数组容量来容纳新的字符。初始化容量为16（无参构造默认16，有参构造size+16），每次扩容是原来容量的2倍+2。
+
+注意：JDK9之后，char数组优化成byte数组和coder标志位。
+
 # String类能被继承吗?
 
 不能被继承，因为string是final修饰的。
@@ -336,9 +350,13 @@ StringBuilder是可变的，线程不安全的。
 
 # 深拷贝和浅拷贝的区别？
 
-1. 浅拷贝：对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝。
+1. 浅拷贝：对基本数据类型进行值传递，对引用数据类型进行引用传递的拷贝。
+
+浅拷贝后的对象和原对象共享引用对象的实例。
 
 2. 深拷贝：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容。
+
+深拷贝会重现创建一个实例，使得深拷贝后的对象与原对象完全独立。修改一个对象不会影响另一个对象。
 
 根本区别：如果B拷贝了A，修改A，看B是否发生变化。
 
@@ -370,7 +388,7 @@ StringBuilder是可变的，线程不安全的。
 
 好处：提高了代码灵活性和扩展性，降低耦合性，不用硬编码具体哪个类。
 
-# 获得class对象的几种方式？
+# 怎么通过反射创建一个对象？
 
 1. 类名.class
 
@@ -383,11 +401,11 @@ StringBuilder是可变的，线程不安全的。
 1. JDBC中，利用反射动态加载了数据库驱动程序。
 `java Class.forName('com.mysql.jdbc.Driver');//加载MySQL的驱动类` 
 
-2. Tomcat服务器中通过反射调用了Sevlet的方法
+2. Tomcat服务器中通过反射调用了Sevlet的方法。
 
-3. 很多框架都用到反射机制，注入属性，调用方法，如Spring通过xml文件生成bean对象并给属性赋值
+3. 很多框架都用到反射机制，注入属性，调用方法，如Spring通过xml文件生成bean对象并给属性赋值。
 
-4. Eclispe、IDEA等开发工具利用反射动态刨析对象的类型与结构，动态提示对象的属性和方法
+4. Eclispe、IDEA等开发工具利用反射动态刨析对象的类型与结构，动态提示对象的属性和方法。
 
 # 如何通过反射创建对象并给属性赋值和调用方法?
 
@@ -741,6 +759,16 @@ foreach适用与简单的遍历，不需要访问当前索引。
 
 6. 不要在finally中return或者处理返回值。
 
+# 编译时异常和运行时异常的区别？
+
+1. 编译时异常是指在编写程序时编译器检查出来的异常，需要显示的进行处理，try catch进行捕获或者throw扔出。
+
+常见的编译异常，如FileNotFoundException，IOException等。
+
+2. 运行时异常，是在程序运行时抛出的异常，需要在代码编写时处理好逻辑，减少运行时异常。
+
+常见的运行时异常如算数异常，空指针异常，数组下标越界异常等。
+
 # Java中的参数传递是按值传递还是按引用传递？
 
 无论是基本数据类型，还是应用数据类型，都是按值传递。
@@ -834,7 +862,7 @@ Java中的动态代理主要通过java.lang.reflect.Proxy类和java.lang.reflect
 
 - Proxy：这是用来生成代理对象的类。它提供了一个静态方法newProxyInstance，用于创建代理对象。
 
-范例：
+JDK动态代理范例：
 
 ```java
 package com.gujintao.ProxyExample.JDK;
@@ -945,11 +973,11 @@ public class ProxyExample {
 
 # JDK动态代理和CGLIB动态代理有什么区别？
 
-- JDK动态代理：基于反射，只能代理实现了接口的类。通过实现InvocationHandler接口进行方法增强操作，通过proxy创建代理对象。
+- JDK动态代理：基于反射。通过实现InvocationHandler接口进行方法增强操作，通过proxy创建代理对象。只能代理实现了接口的类
 
-- CGLIB动态代理：基于字节码生成技术，通过继承的方式实现代理，所有要求被代理类和方法不能使用final修饰。
+- CGLIB动态代理：基于字节码生成技术。通过继承的方式生成目标类的子类来实现代理。所有要求被代理的类和方法不能使用final修饰。
 
-CGLIB范例：
+CGLIB动态代理范例：
 
 ```java
 package com.gujintao.ProxyExample.CGLIB;
@@ -1029,3 +1057,387 @@ public class ProxyExample {
 }
 ```
 
+# 注解原理是什么？
+
+注解其实就是一个标记，是一种提供元数据的机制，用于给代码添加说明信息。可以标记在类上、方法上、属性上等，标记自身也可以设置一些值。
+
+注解本身不影响程序的逻辑执行，但可以通过工具或框架来利用这些信息进行特定的处理，如代码生成、编译时检查、运行时处理等。
+
+# SPI机制是什么？
+
+SPI是一种插件机制，用于在运行时动态加载服务的实现。
+
+它通过定义接口(服务接口)并提供一种可扩展的方式来让服务的提供者(实现类)在运行时注入，实现解耦和模块化设计。
+
+SPI机制的核心概念：
+
+1. 服务接口:接口或抽象类，定义某个服务的规范或功能。
+
+2. 服务提供者:实现了服务接口的具体实现类。
+
+3. 服务加载器(serviceLoader):Java 提供的工具类，负责动态加载服务的实现类。通过serviceLoader可以在运行时发现和加载多个服务提供者。
+
+4. 配置文件:服务提供者通过在META-INF/services/目录下配置服务接口的文件来声明自己。这些文件的内容是实现该接口的类的完全限定名。
+
+# 泛型的作用？
+
+泛型就是把类型参数化，统一集合中的数据类型。
+
+# 什么是泛型擦除？
+
+在Java中，泛型擦除(Type Erasure)是指Java编译器在编译时处理泛型的一种机制。
+
+它的目的是为了保持与Java 1.4及之前版本的向后兼容性(那时候Java还没有引入泛型)。
+
+具体来说，Java编译器会在编译时擦除(移除)泛型信息，并用合适的类型替换泛型类型参数。
+
+通常情况下，编译器会用对象的上限替代这些类型参数。
+
+如果没有指定上限，则默认使用object作为类型替代。这样，在运行时，所有的泛型信息都不再保留，称为泛型擦除。
+
+# 什么是泛型的上下界限定符？
+
+上下界限定符用于对泛型类型参数进行范围限制。
+
+1. 上界限定符：`? extends T`
+
+通配符类型必须是T类型或者T的子类，通常用于读取操作。
+
+2. 下界限定符：`? super T`
+
+通配符类型必须是T类型或者T的父类，通常用于写入操作。
+
+# 什么是Integer缓存池？
+
+Java的Integer缓存池是用于缓存一部分常用的整数对象，以提高性能。
+
+默认情况下缓存范围是-128到127。
+
+通过自动装箱机制，缓存范围内的整数值会返回相同的Intege对象，从而避免重复创建相同值的对象。
+
+可以通过设置系统属性来自定义缓存范围进一步优化性能。
+
+Byte、Short、Integer、Long这4种包装类默认创建了数值[-128,127]的相应类型的缓存数据。
+
+Character创建了数值在[0,127]范围的缓存数据。
+
+Boolean直接返回 True or False。
+
+# 什么是BigDecimal？
+
+BigDecimal是一种高精度计算的类，可以避免由于二进制浮点数表示引起的精度丢失问题。
+
+BigDecimal是不可变类。
+
+```java
+package com.gujintao.others;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+/**
+ * @program: MvcProject
+ * @description: 测试BigDecimal
+ * @author: gujintao
+ * @create: 2024-10-26 00:43
+ **/
+public class TestBigDecimal {
+    public static void main(String[] args) {
+        BigDecimal number1 = new BigDecimal("10.345");
+        BigDecimal number2 = new BigDecimal("3.333");
+
+        // 加法
+        BigDecimal sum = number1.add(number2);
+        // 输出: 13.678
+        System.out.println("加法结果: " + sum);
+
+        // 减法
+        BigDecimal difference = number1.subtract(number2);
+        // 输出: 7.012
+        System.out.println("减法结果: " + difference);
+
+        // 乘法
+        BigDecimal product = number1.multiply(number2);
+        // 输出: 34.481085
+        System.out.println("乘法结果: " + product);
+
+        // 除法 (设置精度为2，并使用向下舍入)
+        BigDecimal quotient = number1.divide(number2, 2, RoundingMode.DOWN);
+        // 输出: 3.10
+        System.out.println("除法结果: " + quotient);
+
+        // 比较是否相等
+        int i = number1.compareTo(number2);
+        // 输出: false
+        System.out.println(i == 0 ? "true" : "false");
+    }
+}
+```
+
+# 使用new String("XXX")会创建几个对象？
+
+1到2个,取决于字符串常量池中有无已存在的String对象。
+
+```java
+public class StringExample {
+    public static void main(String[] args) {
+        String s1 = new String("XXX");
+        String s2 = "XXX";
+        
+        // 输出: false
+        System.out.println(s1 == s2);  
+        // 输出: true
+        System.out.println(s1.equals(s2));  
+    }
+}
+```
+
+`s1 = new String("XXX")`：
+
+"XXX"首先被检查是否已经在字符串常量池中。如果不在，则将其放入常量池中，创建第一个String对象。
+
+然后，new String("XXX")会创建一个新的String对象，并将其分配在堆内存中。这是第二个String对象。
+
+因此，s1引用的是堆内存中的新对象。
+
+`s2 = "XXX"`：
+
+"XXX"已经被放入字符串常量池中，所以s2直接引用常量池中的对象。
+
+# final、finally、finalize的区别？
+
+final：用于修饰类、方法或变量，表示不可修改或继承。
+
+finally：用于异常处理，保证相关代码无论是否发生异常都能执行。
+
+finalize()：是垃圾回收器在销毁对象之前调用的方法，但已经逐渐被弃用。
+
+# 为什么JDK9将String的char数组改为byte数组？
+
+主要是为了节省内存空间，提高内存利用率。
+
+在JDK9之前使用char数组,占2个字节。改为byte数组，并通过coder指定编码方式(LATIN1、UTF-16)。
+
+# 栈和队列在Java中的区别？
+
+1. 栈(Stack)：遵循后进先出(LIFO，LastIn,First Out)原则。即最后插入的元素最先被移除。
+
+主要操作包括push(入栈)和pop(出栈)。
+
+Java中的stack类(java.util.stack)实现了这个数据结构。
+
+栈：常用于函数调用、表达式求值、回溯算法(如深度优先搜索)等场景。
+
+栈的变体：
+
+双端队列(Deque)：支持在两端插入和删除元素，可以用作栈或队列。
+
+java.util.ArrayDeque和java.util.LinkedList 都实现了Deque接口，提供了栈和队列的功能。
+
+2. 队列(Queue)：遵循先进先出(FIFO，FirstIn,First Out)原则。即最早插入的元素最先被移除。
+
+主要操作包括enqueue(入队)和 dequeue(出队)。
+
+Java中的Queue接口( java.uti1.Queue )提供了此数据结构的实现如LinkedList和PriorityQueue。
+
+队列：常用于任务调度、资源管理、数据流处理(如广度优先搜索)等场景。
+
+队列的变体：
+
+优先队列(PriorityQueue)：队列中的元素按优先级排序，而不是按插入顺序。
+
+适用于需要按优先级处理任务的场景。
+
+阻塞队列(BlockingQueue)：支持阻塞操作，特别适合多线程环境中的生产者消费者问题。
+
+常用实现包括ArrayBlockingQueue、LinkedBlockingQueue和PriorityBlockingQueue。
+
+# 什么是网络编程？
+
+基本概念：
+
+1. IP地址：用于标识网络中的计算机。
+
+2. 端口号：用于标识计算机上的具体应用程序或进程。
+
+3. Socket(套接字)：网络通信的基本单位，通过IP地址和端口号标识。
+
+4. 协议：网络通信的规则，如TCP(传输控制协议)和UDP(用户数据报协议)。
+
+基于TCP的网络通信范例：
+
+服务器：
+
+```java
+package com.gujintao.socketExample;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+/**
+ * @program: MvcProject
+ * @description: 测试网络编程：服务器
+ * @author: gujintao
+ * @create: 2024-10-26 12:13
+ **/
+public class Server {
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(8080)) {
+            System.out.println("Server is listening on port 8080");
+
+            while (true) {
+                Socket socket = serverSocket.accept();
+                // 异步处理，优化可以用线程池
+                new ServerThread(socket).start();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+服务器异步线程：
+
+```java
+package com.gujintao.socketExample;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+/**
+ * @program: MvcProject
+ * @description: 测试网络编程：服务器异步线程
+ * @author: gujintao
+ * @create: 2024-10-26 12:14
+ **/
+class ServerThread extends Thread {
+    private final Socket socket;
+
+    public ServerThread(Socket socket) {
+        this.socket = socket;
+    }
+
+    @Override
+    public void run() {
+        try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            // 读取客户端消息
+            String message = in.readLine();
+            System.out.println("Received: " + message);
+
+            // 响应客户端
+            out.println("Hello, client!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+客户端：
+
+```java
+package com.gujintao.socketExample;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+/**
+ * @program: MvcProject
+ * @description: 测试网络编程：客户端
+ * @author: gujintao
+ * @create: 2024-10-26 12:16
+ **/
+public class Client {
+    public static void main(String[] args) {
+        try (Socket socket = new Socket("localhost", 8080);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            // 发送消息给服务器
+            out.println("Hello, server!");
+
+            // 接收服务器的响应
+            String response = in.readLine();
+            System.out.println("Server response: " + response);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+# 什么是迭代器？
+
+迭代器就是java集合框架提供的一种用来遍历集合元素的接口。
+
+可以遍历和修改集合的元素(set, map)。
+
+通过ltearator.hasNext()看是否有下一个元素。
+
+通过ltearator.next()返回其元素。
+
+```java
+package com.gujintao.others;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ * @program: MvcProject
+ * @description: 测试迭代器
+ * @author: gujintao
+ * @create: 2024-10-26 12:29
+ **/
+public class TestIterator {
+    public static void main(String[] args) {
+        List<String> list = Arrays.asList("A", "B", "C");
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            System.out.println(item);
+        }
+    }
+}
+```
+
+# 什么是BIO、NIO、AIO？
+
+BIO（Blocking I/O）、NIO（Non-blocking I/O，也称为New I/O）和AIO（Asynchronous I/O）是Java中处理I/O操作的三种不同模型。
+
+1. BIO
+
+每个连接都需要一个独立的线程来处理。
+
+当线程读取或写入数据时，如果数据没有准备好，线程会阻塞，直到数据准备好为止。
+
+适用于连接数较少且每个连接的处理时间较短的情况。
+
+2. NIO
+
+使用单个线程处理多个连接。
+
+通过Selector对象监听多个通道（Channel）上的事件（如可读、可写等）。
+
+不会阻塞线程，而是通过轮询的方式检查是否有事件发生。
+
+适用于高并发场景，可以处理大量连接。
+
+3. AIO
+
+完全异步的I/O操作。
+
+通过回调机制通知应用程序I/O操作完成。
+
+适用于高并发、高性能的I/O密集型应用。

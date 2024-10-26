@@ -1058,8 +1058,8 @@ home_top:
       shadow: var(--anzhiyu-shadow-red)
       class: green
       icon: anzhiyu-icon-cube
-    - name: 配置
-      path: /categories/配置/
+    - name: 面试
+      path: /categories/面试/
       shadow: var(--anzhiyu-shadow-green)
       class: red
       icon: anzhiyu-icon-window-restore
