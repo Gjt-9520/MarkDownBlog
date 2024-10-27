@@ -568,3 +568,61 @@ required和required new的区别:
 2. 没有实例变量的对象是无状态的Bean，是线程安全的。
 
 Bean在多线程环境下不安全，一般用Prototype模式或者使用ThreadLocal解决线程安全问题。
+
+# Lombok常用注解有哪些？
+
+1. @Getter
+
+用途：自动生成类中所有字段的getter方法。
+
+2. @Setter
+
+用途：自动生成类中所有字段的setter方法。
+
+3. @NoArgsConstructor
+
+用途：生成一个无参构造器。
+
+4. @AllArgsConstructor
+
+用途：生成一个包含所有字段的全参构造器。
+
+5. @RequiredArgsConstructor
+
+用途：生成一个包含所有final字段和带有@NonNull注解的字段的构造器。
+
+6. @ToString
+
+用途：生成toString方法，默认情况下会包含所有非静态字段。
+
+7. @EqualsAndHashCode
+
+用途：生成equals和hashCode方法，默认情况下会包含所有非静态字段。
+
+8. @Data
+
+用途：组合注解，包含了@Getter,@Setter,@ToString,@EqualsAndHashCode和@RequiredArgsConstructor。
+
+9. @Builder
+
+用途：为类生成一个内部构建器（Builder）模式。
+
+10. @Slf4j
+
+用途：为类生成一个SLF4J日志对象。
+
+11. @Log
+
+用途：为类生成一个java.util.logging日志对象。
+
+12. @Log4j
+
+用途：为类生成一个Log4j日志对象。
+
+13. @SneakyThrows
+
+用途：允许在方法中抛出受检异常（checked exception），而不需要在方法签名中声明。
+
+14. @Value
+
+用途：类似于@Data，但生成的是不可变类（所有字段都是final的）。

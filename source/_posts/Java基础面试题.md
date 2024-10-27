@@ -898,7 +898,7 @@ public class GreetingServiceImpl implements GreetingService {
 1. 创建InvocationHandler：实现InvocationHandler接口，定义如何处理代理对象上的方法调用
 
 ```java
-package com.gujintao.ProxyExample.JDK;
+package com.gujintao.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -910,7 +910,7 @@ import java.lang.reflect.Method;
  * @create: 2024-10-25 23:12
  */
 public class LoggingInvocationHandler implements InvocationHandler {
-    // 真实的服务对象
+    // 目标对象
     private final Object target;
 
     public LoggingInvocationHandler(Object target) {
@@ -922,7 +922,7 @@ public class LoggingInvocationHandler implements InvocationHandler {
         // 在方法调用前打印日志
         System.out.println("Before method: " + method.getName());
 
-        // 调用真实的方法
+        // 调用目标对象的方法
         Object result = method.invoke(target, args);
 
         // 在方法调用后打印日志
@@ -973,7 +973,7 @@ public class ProxyExample {
 
 # JDK动态代理和CGLIB动态代理有什么区别？
 
-- JDK动态代理：基于反射。通过实现InvocationHandler接口进行方法增强操作，通过proxy创建代理对象。只能代理实现了接口的类
+- JDK动态代理：基于反射。通过实现InvocationHandler接口进行方法增强操作，通过proxy创建代理对象。只能代理实现了接口的类。
 
 - CGLIB动态代理：基于字节码生成技术。通过继承的方式生成目标类的子类来实现代理。所有要求被代理的类和方法不能使用final修饰。
 
@@ -998,7 +998,7 @@ public class GreetingService {
 1. 创建MethodInterceptor：实现MethodInterceptor接口，定义如何处理代理对象上的方法调用
 
 ```java
-package com.gujintao.ProxyExample.CGLIB;
+package com.gujintao.cglib;
 
 
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -1014,12 +1014,12 @@ import java.lang.reflect.Method;
  **/
 public class LoggingMethodInterceptor implements MethodInterceptor {
     @Override
-    public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         // 在方法调用前打印日志
         System.out.println("Before method: " + method.getName());
 
-        // 调用真实的方法
-        Object result = methodProxy.invokeSuper(obj, args);
+        // 调用目标的方法
+        Object result = methodProxy.invokeSuper(o, objects);
 
         // 在方法调用后打印日志
         System.out.println("After method: " + method.getName());
