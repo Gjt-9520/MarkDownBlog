@@ -16,7 +16,7 @@ top_group_index:
 
 一般这种情况是就是被恶意攻击了
 
-解决方案:
+解决方案:查询返回空值；布隆过滤器；增强id的复杂度，避免被猜到id规律；做好数据的基础格式校验
 
 保底策略:给缓存业务添加降级限流策略
 
@@ -416,8 +416,20 @@ public Shop queryWithLogicalExpire(Long id) {
 
 ![Redis-双写一致性-基于Canal的异步通知](../images/Redis-双写一致性-基于Canal的异步通知.png)
 
-# 持久化
+# Redisson的分布式锁原理
 
+1. 可重入
 
+利用hash结构记录线程id和可重入次数
 
+2. 可重试
 
+利用信号量和PubSub功能实现等待、唤醒、获取锁失败的重试机制
+
+3. 超时续约
+
+利用watchDog，每隔一段时间（releaseTime/3），重置超时时间
+
+4. 主从一致性
+
+通过multiLock，实现联锁

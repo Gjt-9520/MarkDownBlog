@@ -536,7 +536,7 @@ public Class UserServiceImpl implements UserService(){
 @Resource注解用在属性上、setter方法上。
 
 # @Bean和@Component有什么区别？
-
+  
 都是使用注解定义Bean。
 
 @Bean是使用Java代码装配Bean，@Component是自动装配Bean。
