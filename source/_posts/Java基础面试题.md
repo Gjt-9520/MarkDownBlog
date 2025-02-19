@@ -244,9 +244,9 @@ Java允许实现多个接口，提供了类似于多重继承的功能，又避�
 
 # 自动装箱和自动拆箱是什么？
 
-1. 自动装箱(Autoboxing)：指的是Java 编译器自动将基本数据类型转换为它们对应的包装类型。比如，将int转换为Integer。
+1. 自动装箱(Autoboxing)：指的是Java编译器自动将基本数据类型转换为它们对应的包装类型。比如，将int转换为Integer。
 
-2. 自动拆箱(Unboxing)：指的是Java 编译器自动将包装类型转换为基本数据类型。比如，将Integer 转换为 int。
+2. 自动拆箱(Unboxing)：指的是Java编译器自动将包装类型转换为基本数据类型。比如，将Integer转换为int。
 
 # 重载和重写的区别?
 
@@ -344,7 +344,7 @@ StringBuilder主要是为了解决String对象的不可变性问题，提供高�
 
 # 如何自定义一个异常？
 
-首先，申明一个异常类继承exception或者runtimeException类。
+首先，声明一个异常类继承exception或者runtimeException类。
 
 其次编写两个构造方法，一个有参，一个无参。
 
@@ -523,6 +523,33 @@ public class ReflectionExample {
 Optional类是Java 8引入的一个容器类，用于表示一个值存在或不存在的请客。
 
 作用：处理null值的问题，避免空指针异常。
+
+```java
+// 明确方法可能返回空值
+public Optional<User> findUserById(int id) {
+    // 明确告知调用者：结果可能为空
+    return Optional.ofNullable(userRepository.findById(id));
+}
+
+// 调用方必须处理空值
+Optional<User> user = findUserById(123);
+user.ifPresent(u -> System.out.println(u.getName())); // 存在时执行
+User defaultUser = user.orElse(new User("Guest")); // 不存在时返回默认值
+
+// Optional链式写法
+String country = Optional.ofNullable(user)
+    .map(User::getAddress)   // 如果 user 存在，提取地址
+    .map(Address::getCountry) // 如果地址存在，提取国家
+    .orElse("Unknown"); // 任意环节为空则返回默认值
+
+// Optional + Stream 写法：
+List<Double> amounts = orders.stream()
+    .map(order -> Optional.ofNullable(order)
+        .map(Order::getAmount)
+        .orElse(null)) // 将无效订单映射为 null
+    .filter(Objects::nonNull) // 过滤掉 null
+    .collect(Collectors.toList());
+```
 
 # 讲一下I/O流？
 
@@ -816,7 +843,7 @@ class MyObject {
 
 # 面向对象和面向过程的区别？
 
-1. 面向对象编程(Object OrientedProgramming)将数据和方法封装成对象，作为程序的基本单元来组织代码，并且运用提炼出的 封装、继承和多态来作为代码设计指导注重代码复用和灵活性。
+1. 面向对象编程(Object OrientedProgramming)将数据和方法封装成对象，作为程序的基本单元来组织代码，并且运用提炼出的封装、继承和多态来作为代码设计指导注重代码复用和灵活性。
 
 2. 面向过程编程是以过程作为基本单元来组织代码的，是过程对应到代码中来就是函数，将函数和数据分离，更关注步骤和流程，其实就是一条道的思路，关心如何设计一系列顺序执行的过程实现。
 
@@ -1075,7 +1102,7 @@ SPI机制的核心概念：
 
 2. 服务提供者:实现了服务接口的具体实现类。
 
-3. 服务加载器(serviceLoader):Java 提供的工具类，负责动态加载服务的实现类。通过serviceLoader可以在运行时发现和加载多个服务提供者。
+3. 服务加载器(serviceLoader):Java提供的工具类，负责动态加载服务的实现类。通过serviceLoader可以在运行时发现和加载多个服务提供者。
 
 4. 配置文件:服务提供者通过在META-INF/services/目录下配置服务接口的文件来声明自己。这些文件的内容是实现该接口的类的完全限定名。
 
@@ -1238,7 +1265,7 @@ java.util.ArrayDeque和java.util.LinkedList 都实现了Deque接口，提供了�
 
 主要操作包括enqueue(入队)和 dequeue(出队)。
 
-Java中的Queue接口( java.uti1.Queue )提供了此数据结构的实现如LinkedList和PriorityQueue。
+Java中的Queue接口(java.uti1.Queue)提供了此数据结构的实现如LinkedList和PriorityQueue。
 
 队列：常用于任务调度、资源管理、数据流处理(如广度优先搜索)等场景。
 

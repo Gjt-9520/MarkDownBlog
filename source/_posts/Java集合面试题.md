@@ -74,7 +74,7 @@ CopyOnWriteArrayList是基于线程安全的动态数组，但所有可变操作
 
 # 如何移除list中的一个元素？
 
-1. 使用Iterator，顺序向下，如果找到元素，则使用 remove方法进行移除。
+1. 使用Iterator，顺序向下，如果找到元素，则使用remove方法进行移除。
 
 2. 倒序遍历List，如果找到元素，则使用remove方法进行移除。
 
@@ -303,7 +303,7 @@ JDK1.8使用的是synchronized+CAS来保证线程安全的。对于空结点，�
 
 3. 渐进式扩容
 
-JDK1.8后引入了渐进式扩容，降低了大数据量扩容情况下的开销基本过程就是: 当我们的元素个数达到数组容量×负载因子(默认0.75)时，就会进行2倍扩容。
+JDK1.8后引入了渐进式扩容，降低了大数据量扩容情况下的开销。基本过程就是: 当我们的元素个数达到数组容量×负载因子(默认0.75)时，就会进行2倍扩容。
 
 先创建一个容量为原数组2倍的新数组。然后后续每次有线程对当前数据结构进行操作(新增、修改等)，都会帮忙迁移部分的数组槽位上的数据(使用tranferlndex进行标记)，直到旧数组的数据完全迁移到新数组为止。
 
@@ -339,6 +339,6 @@ HashMap是单线程，所以能用containsKey方法判断有没有该key。但�
 
 解决方法：
 
-1. 使用线程安全的集合，如Vector、CopyOnWriteArrayLis、ConcurrentHashMap等或者使用Collections.SynchronizedList()方法对线程不安全的集合进行包装。
+1. 使用线程安全的集合，如Vector、CopyOnWriteArrayList、ConcurrentHashMap等或者使用Collections.SynchronizedList()方法对线程不安全的集合进行包装。
 
 2. 使用synchronized关键字或ReentranLock锁显式同步。

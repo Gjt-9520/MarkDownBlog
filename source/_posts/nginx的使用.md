@@ -175,6 +175,7 @@ http {
   #       server 101.31.7.25:8081; #node2
   #       server 101.31.7.26:8082; #node3      
   # }
+  
    #最少连接的方式，把请求分发给连接请求较少的那台服务器
   #  upstream server_group {
   #       least_conn;
